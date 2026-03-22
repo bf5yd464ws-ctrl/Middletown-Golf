@@ -1,0 +1,540 @@
+{
+  "year": 2025,
+  "schedule": [
+    { "date": "April 19", "course": "Hamilton Elks", "location": "Hamilton, Ohio", "format": "2-Man Single Best Ball", "entryFee": "$68", "resultsId": "april" },
+    { "date": "May 17", "course": "Shaker Run", "location": "Lebanon, Ohio", "format": "3-Man Single/Double/Triple Ball", "entryFee": "$73", "resultsId": "may1" },
+    { "date": "May 18", "course": "Yankee Trace", "location": "Centerville, Ohio", "format": "2-Man Customized Stableford", "entryFee": "$68", "resultsId": "may2" },
+    { "date": "June 14", "course": "Walden Ponds", "location": "Germantown, Ohio", "format": "4-Man Triple Best Ball", "entryFee": "$68", "resultsId": "june" },
+    { "date": "July 29", "course": "Kings Island", "location": "Mason, Ohio", "format": "2-Man Single Best Ball", "entryFee": "$68", "resultsId": "july" },
+    { "date": "August 16", "course": "Heatherwoode", "location": "Springboro, Ohio", "format": "3-Man Double Best Ball", "entryFee": "$68", "resultsId": "august" },
+    { "date": "September 13", "course": "Cassel Hills", "location": "Vandalia, Ohio", "format": "2-Man Best Ball", "entryFee": "$50", "resultsId": "september" },
+    { "date": "October 18", "course": "Wildwood", "location": "Middletown, Ohio", "format": "2-Man Best Ball", "entryFee": "$68", "resultsId": "october" }
+  ],
+  "tournaments": [
+    {
+      "id": "april",
+      "month": "April",
+      "date": "Saturday, April 19, 2025",
+      "course": "Hamilton Elks Golf Club",
+      "location": "Hamilton, Ohio",
+      "format": "2-Man Single Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["Don Hartness", "Mark Willenbrink"], "score": 63, "payout": 45 },
+        { "place": "T-2nd", "players": ["Roger Campbell", "Russ Yenser"], "score": 66, "payout": 18 },
+        { "place": "T-2nd", "players": ["David Simpson", "Steve Conway"], "score": 66, "payout": 18 },
+        { "place": "T-2nd", "players": ["Nick Edwards", "Dave Lainhart"], "score": 66, "payout": 18 },
+        { "place": "T-2nd", "players": ["Herb Holmes", "Steve Goertemiller"], "score": 66, "payout": 18 },
+        { "place": "6th", "players": ["Rich Mealey", "Brad Mattingly"], "score": 67, "payout": 0 },
+        { "place": "7th", "players": ["Dick Freeman", "Blind Score"], "score": 69, "payout": 0 },
+        { "place": "T-8th", "players": ["Mark Mattingly", "Dennis Daley"], "score": 70, "payout": 0 },
+        { "place": "T-8th", "players": ["Dave Saniga", "Jamie Harrison"], "score": 70, "payout": 0 },
+        { "place": "10th", "players": ["Jason Harrison", "Steve Harrison"], "score": 77, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Mark Willenbrink", "score": 70, "payout": 48 },
+        { "place": "2nd", "player": "Nick Edwards", "score": 71, "payout": 24 },
+        { "place": "3rd", "player": "Roger Campbell", "score": 72, "payout": 8 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#3 Red", "player": "Dave Lainhart" },
+        { "hole": "#5 Red", "player": "Steve Goertemiller" },
+        { "hole": "#3 White", "player": "Steve Goertemiller" },
+        { "hole": "#5 White", "player": "Rich Mealey" }
+      ]},
+      "skins": { "amount": 13, "winners": [
+        { "hole": "#2 Red", "player": "Herb Holmes" },
+        { "hole": "#8 Red", "player": "Nick Edwards" },
+        { "hole": "#1 White", "player": "Dave Saniga" },
+        { "hole": "#3 White", "player": "Steve Goertemiller" },
+        { "hole": "#4 White", "player": "Nick Edwards" },
+        { "hole": "#8 White", "player": "Roger Campbell" },
+        { "hole": "#9 White", "player": "Nick Edwards" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 84, "sideMoney": 21, "net": 72, "netPoints": 34, "payout": 9 },
+        { "name": "Steve Conway", "gross": 93, "sideMoney": 0, "net": 73, "netPoints": 32, "payout": 9 },
+        { "name": "Dennis Daley", "gross": 88, "sideMoney": 0, "net": 78, "netPoints": 18, "payout": 0 },
+        { "name": "Nick Edwards", "gross": 89, "sideMoney": 63, "net": 71, "netPoints": 36, "payout": 9 },
+        { "name": "Dick Freeman", "gross": 99, "sideMoney": 0, "net": 82, "netPoints": 10, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 85, "sideMoney": 13, "net": 76, "netPoints": 22, "payout": 49 },
+        { "name": "Steve Harrison", "gross": 106, "sideMoney": 0, "net": 86, "netPoints": 6, "payout": 0 },
+        { "name": "Jason Harrison", "gross": 106, "sideMoney": 0, "net": 89, "netPoints": 4, "payout": 0 },
+        { "name": "Jamie Harrison", "gross": 95, "sideMoney": 0, "net": 74, "netPoints": 28, "payout": 0 },
+        { "name": "Don Hartness", "gross": 100, "sideMoney": 0, "net": 77, "netPoints": 20, "payout": 45 },
+        { "name": "Herb Holmes", "gross": 82, "sideMoney": 13, "net": 73, "netPoints": 32, "payout": 9 },
+        { "name": "Dave Lainhart", "gross": 97, "sideMoney": 0, "net": 85, "netPoints": 8, "payout": 29 },
+        { "name": "Mark Mattingly", "gross": 90, "sideMoney": 0, "net": 78, "netPoints": 18, "payout": 0 },
+        { "name": "Brad Mattingly", "gross": 96, "sideMoney": 0, "net": 80, "netPoints": 14, "payout": 0 },
+        { "name": "Rich Mealey", "gross": 91, "sideMoney": 0, "net": 80, "netPoints": 14, "payout": 20 },
+        { "name": "Dave Saniga", "gross": null, "sideMoney": 13, "net": null, "netPoints": 2, "payout": 0 },
+        { "name": "David Simpson", "gross": 88, "sideMoney": 0, "net": 75, "netPoints": 26, "payout": 9 },
+        { "name": "Mark Willenbrink", "gross": 83, "sideMoney": 48, "net": 70, "netPoints": 38, "payout": 45 },
+        { "name": "Russ Yenser", "gross": 96, "sideMoney": 0, "net": 74, "netPoints": 28, "payout": 9 }
+      ]
+    },
+    {
+      "id": "may1",
+      "month": "May",
+      "subLabel": "Event 1",
+      "date": "Saturday, May 17, 2025",
+      "course": "Shaker Run Golf Club",
+      "location": "Lebanon, Ohio",
+      "format": "3-Man Single Ball Par 5 / Double Ball Par 4 / Triple Ball Par 3",
+      "teams": [
+        { "place": "1st", "players": ["Brad Mattingly", "Dave Lainhart", "Dave Saniga"], "score": 134, "payout": 120 },
+        { "place": "2nd", "players": ["Scott Shaw", "Steve Goertemiller", "Jason Harrison"], "score": 135, "payout": 60 },
+        { "place": "3rd", "players": ["Russ Yenser", "Jim Wendel", "Steve Harrison"], "score": 139, "payout": 0 },
+        { "place": "T-4th", "players": ["David Simpson", "Steve Conway", "Blind Score"], "score": 140, "payout": 0 },
+        { "place": "T-4th", "players": ["Roger Campbell", "Jeff Zimmer", "Blind Score"], "score": 140, "payout": 0 },
+        { "place": "6th", "players": ["John Stanton", "Jamie Harrison", "Don Hartness"], "score": 145, "payout": 0 },
+        { "place": "7th", "players": ["Dick Freeman", "Herb Holmes", "Mark Willenbrink"], "score": 146, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Dave Saniga", "score": 73, "payout": 54 },
+        { "place": "2nd", "player": "Brad Mattingly", "score": 74, "payout": 27 },
+        { "place": "T-3rd", "player": "Jim Wendel", "score": 76, "payout": 5 },
+        { "place": "T-3rd", "player": "Steve Conway", "score": 76, "payout": 5 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#2 Lakeside", "player": "Jeff Zimmer" },
+        { "hole": "#5 Lakeside", "player": "Roger Campbell" },
+        { "hole": "#3 Meadows", "player": "Steve Goertemiller" },
+        { "hole": "#8 Meadows", "player": "Dave Saniga" }
+      ]},
+      "skins": { "amount": 22, "winners": [
+        { "hole": "#1 Lakeside", "player": "Dave Saniga" },
+        { "hole": "#4 Lakeside", "player": "Steve Goertemiller" },
+        { "hole": "#8 Lakeside", "player": "Steve Harrison" },
+        { "hole": "#7 Meadows", "player": "Brad Mattingly" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 92, "sideMoney": 0, "net": 81, "netPoints": 16, "payout": 20 },
+        { "name": "Steve Conway", "gross": 94, "sideMoney": 5, "net": 76, "netPoints": 34, "payout": 0 },
+        { "name": "Dick Freeman", "gross": 95, "sideMoney": 0, "net": 79, "netPoints": 24, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 86, "sideMoney": 22, "net": 78, "netPoints": 30, "payout": 40 },
+        { "name": "Steve Harrison", "gross": 98, "sideMoney": 22, "net": 79, "netPoints": 24, "payout": 0 },
+        { "name": "Jason Harrison", "gross": 102, "sideMoney": 0, "net": 86, "netPoints": 6, "payout": 20 },
+        { "name": "Jamie Harrison", "gross": 102, "sideMoney": 0, "net": 83, "netPoints": 10, "payout": 0 },
+        { "name": "Don Hartness", "gross": 100, "sideMoney": 0, "net": 79, "netPoints": 24, "payout": 0 },
+        { "name": "Herb Holmes", "gross": 85, "sideMoney": 0, "net": 78, "netPoints": 30, "payout": 0 },
+        { "name": "Dave Lainhart", "gross": 93, "sideMoney": 0, "net": 83, "netPoints": 10, "payout": 40 },
+        { "name": "Brad Mattingly", "gross": 88, "sideMoney": 49, "net": 74, "netPoints": 36, "payout": 40 },
+        { "name": "Dave Saniga", "gross": 87, "sideMoney": 76, "net": 73, "netPoints": 38, "payout": 60 },
+        { "name": "Scott Shaw", "gross": 98, "sideMoney": 0, "net": 81, "netPoints": 16, "payout": 20 },
+        { "name": "David Simpson", "gross": 91, "sideMoney": 0, "net": 80, "netPoints": 18, "payout": 0 },
+        { "name": "John Stanton", "gross": 114, "sideMoney": 0, "net": 91, "netPoints": 2, "payout": 0 },
+        { "name": "Jim Wendel", "gross": 99, "sideMoney": 5, "net": 76, "netPoints": 34, "payout": 0 },
+        { "name": "Mark Willenbrink", "gross": 99, "sideMoney": 0, "net": 88, "netPoints": 4, "payout": 0 },
+        { "name": "Russ Yenser", "gross": 98, "sideMoney": 0, "net": 78, "netPoints": 30, "payout": 0 },
+        { "name": "Jeff Zimmer", "gross": 92, "sideMoney": 0, "net": 81, "netPoints": 16, "payout": 20 }
+      ]
+    },
+    {
+      "id": "may2",
+      "month": "May",
+      "subLabel": "Event 2",
+      "date": "Sunday, May 18, 2025",
+      "course": "The Golf Club at Yankee Trace",
+      "location": "Centerville, Ohio",
+      "format": "2-Man Customized Stableford",
+      "teams": [
+        { "place": "1st", "players": ["Herb Holmes", "Steve Goertemiller"], "score": 48, "payout": 80 },
+        { "place": "2nd", "players": ["Russ Yenser", "Roger Campbell"], "score": 44, "payout": 60 },
+        { "place": "3rd", "players": ["Scott Shaw", "Jeff Zimmer"], "score": 42, "payout": 40 },
+        { "place": "4th", "players": ["Dave Lainhart", "Nick Edwards"], "score": 41, "payout": 0 },
+        { "place": "5th", "players": ["Steve Conway", "David Simpson"], "score": 40, "payout": 0 },
+        { "place": "6th", "players": ["Brad Mattingly", "Mark Mattingly"], "score": 35, "payout": 0 },
+        { "place": "7th", "players": ["Mark Willenbrink", "Don Hartness"], "score": 34, "payout": 0 },
+        { "place": "8th", "players": ["David Saniga", "Jamie Harrison"], "score": 31, "payout": 0 },
+        { "place": "9th", "players": ["Dick Freeman", "Jim Wendel"], "score": 21, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Herb Holmes", "score": 69, "payout": 54 },
+        { "place": "2nd", "player": "Roger Campbell", "score": 70, "payout": 27 },
+        { "place": "T-3rd", "player": "David Simpson", "score": 71, "payout": 5 },
+        { "place": "T-3rd", "player": "Nick Edwards", "score": 71, "payout": 5 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#4", "player": "David Simpson" },
+        { "hole": "#7", "player": "Mark Willenbrink" },
+        { "hole": "#11", "player": "Nick Edwards" },
+        { "hole": "#14", "player": "Steve Goertemiller" }
+      ]},
+      "skins": { "amount": 17, "winners": [
+        { "hole": "#3", "player": "Herb Holmes" },
+        { "hole": "#7", "player": "Mark Willenbrink" },
+        { "hole": "#12", "player": "Steve Goertemiller" },
+        { "hole": "#13", "player": "Jeff Zimmer" },
+        { "hole": "#17", "player": "Herb Holmes" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 82, "sideMoney": 27, "net": 70, "netPoints": 34, "payout": 30 },
+        { "name": "Steve Conway", "gross": 95, "sideMoney": 0, "net": 76, "netPoints": 14, "payout": 0 },
+        { "name": "Nick Edwards", "gross": 88, "sideMoney": 5, "net": 71, "netPoints": 32, "payout": 20 },
+        { "name": "Dick Freeman", "gross": 97, "sideMoney": 0, "net": 81, "netPoints": 2, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 82, "sideMoney": 17, "net": 73, "netPoints": 28, "payout": 60 },
+        { "name": "Jamie Harrison", "gross": 97, "sideMoney": 0, "net": 77, "netPoints": 10, "payout": 0 },
+        { "name": "Don Hartness", "gross": 99, "sideMoney": 0, "net": 77, "netPoints": 10, "payout": 0 },
+        { "name": "Herb Holmes", "gross": 77, "sideMoney": 88, "net": 69, "netPoints": 36, "payout": 40 },
+        { "name": "Dave Lainhart", "gross": 88, "sideMoney": 0, "net": 77, "netPoints": 10, "payout": 0 },
+        { "name": "Mark Mattingly", "gross": 85, "sideMoney": 0, "net": 75, "netPoints": 18, "payout": 0 },
+        { "name": "Brad Mattingly", "gross": 91, "sideMoney": 0, "net": 76, "netPoints": 14, "payout": 0 },
+        { "name": "David Saniga", "gross": 89, "sideMoney": 0, "net": 74, "netPoints": 22, "payout": 0 },
+        { "name": "Scott Shaw", "gross": 91, "sideMoney": 0, "net": 73, "netPoints": 28, "payout": 20 },
+        { "name": "David Simpson", "gross": 83, "sideMoney": 5, "net": 71, "netPoints": 32, "payout": 20 },
+        { "name": "Jim Wendel", "gross": 103, "sideMoney": 0, "net": 79, "netPoints": 4, "payout": 0 },
+        { "name": "Mark Willenbrink", "gross": 87, "sideMoney": 17, "net": 75, "netPoints": 18, "payout": 20 },
+        { "name": "Russ Yenser", "gross": 95, "sideMoney": 0, "net": 74, "netPoints": 22, "payout": 30 },
+        { "name": "Jeff Zimmer", "gross": 83, "sideMoney": 17, "net": 73, "netPoints": 28, "payout": 20 }
+      ]
+    },
+    {
+      "id": "june",
+      "month": "June",
+      "date": "Saturday, June 14, 2025",
+      "course": "Walden Ponds Golf Club",
+      "location": "Germantown, Ohio",
+      "format": "4-Man Triple Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["David Simpson", "Steve Conway", "John O'Donnell", "John Stanton"], "score": 209, "payout": 160 },
+        { "place": "T-2nd", "players": ["Russ Yenser", "Roger Campbell", "Mark Willenbrink", "Don Hartness"], "score": 211, "payout": 40 },
+        { "place": "T-2nd", "players": ["Steve Harrison", "Jason Harrison", "Brad Mattingly", "Jim Wendel"], "score": 211, "payout": 40 },
+        { "place": "4th", "players": ["Herb Holmes", "Steve Goertemiller", "Rich Mealey", "Dick Freeman"], "score": 213, "payout": 0 },
+        { "place": "5th", "players": ["Dennis Daley", "David Saniga", "Nick Edwards", "Blind Score"], "score": 223, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "T-1st", "player": "Steve Harrison", "score": 70, "payout": 36 },
+        { "place": "T-1st", "player": "Steve Conway", "score": 70, "payout": 36 },
+        { "place": "T-3rd", "player": "Russ Yenser", "score": 73, "payout": 4 },
+        { "place": "T-3rd", "player": "Rich Mealey", "score": 73, "payout": 4 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#7", "player": "Herb Holmes" },
+        { "hole": "#9", "player": "Steve Goertemiller" },
+        { "hole": "#12", "player": "Rich Mealey" },
+        { "hole": "#17", "player": "Steve Goertemiller" }
+      ]},
+      "skins": { "amount": 15, "winners": [
+        { "hole": "#2", "player": "John O'Donnell" },
+        { "hole": "#6", "player": "David Saniga" },
+        { "hole": "#8", "player": "Brad Mattingly" },
+        { "hole": "#10", "player": "David Simpson" },
+        { "hole": "#11", "player": "Dennis Daley" },
+        { "hole": "#16", "player": "Roger Campbell" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 88, "sideMoney": 15, "net": 77, "netPoints": 22, "payout": 10 },
+        { "name": "Steve Conway", "gross": 87, "sideMoney": 36, "net": 70, "netPoints": 38, "payout": 40 },
+        { "name": "Dennis Daley", "gross": 82, "sideMoney": 15, "net": 76, "netPoints": 24, "payout": 0 },
+        { "name": "Nick Edwards", "gross": 101, "sideMoney": 0, "net": 87, "netPoints": 2, "payout": 0 },
+        { "name": "Dick Freeman", "gross": 95, "sideMoney": 0, "net": 80, "netPoints": 8, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 86, "sideMoney": 0, "net": 78, "netPoints": 16, "payout": 40 },
+        { "name": "Steve Harrison", "gross": 87, "sideMoney": 36, "net": 70, "netPoints": 38, "payout": 10 },
+        { "name": "Jason Harrison", "gross": 100, "sideMoney": 0, "net": 86, "netPoints": 4, "payout": 10 },
+        { "name": "Don Hartness", "gross": 96, "sideMoney": 0, "net": 77, "netPoints": 22, "payout": 10 },
+        { "name": "Herb Holmes", "gross": 83, "sideMoney": 0, "net": 77, "netPoints": 22, "payout": 20 },
+        { "name": "Brad Mattingly", "gross": 87, "sideMoney": 15, "net": 75, "netPoints": 28, "payout": 10 },
+        { "name": "Rich Mealey", "gross": 82, "sideMoney": 4, "net": 73, "netPoints": 34, "payout": 20 },
+        { "name": "John O'Donnell", "gross": 85, "sideMoney": 15, "net": 79, "netPoints": 14, "payout": 40 },
+        { "name": "David Saniga", "gross": 88, "sideMoney": 15, "net": 75, "netPoints": 28, "payout": 0 },
+        { "name": "David Simpson", "gross": 83, "sideMoney": 15, "net": 74, "netPoints": 30, "payout": 40 },
+        { "name": "John Stanton", "gross": 105, "sideMoney": 0, "net": 84, "netPoints": 6, "payout": 40 },
+        { "name": "Jim Wendel", "gross": 100, "sideMoney": 0, "net": 79, "netPoints": 14, "payout": 10 },
+        { "name": "Mark Willenbrink", "gross": 89, "sideMoney": 0, "net": 79, "netPoints": 14, "payout": 10 },
+        { "name": "Russ Yenser", "gross": 92, "sideMoney": 4, "net": 73, "netPoints": 34, "payout": 10 }
+      ]
+    },
+    {
+      "id": "july",
+      "month": "July",
+      "date": "Saturday, July 29, 2025",
+      "course": "Kings Island Golf Course",
+      "location": "Mason, Ohio",
+      "format": "2-Man Single Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["Steve Conway", "David Simpson"], "score": 28, "payout": 40 },
+        { "place": "T-2nd", "players": ["Roger Campbell", "Russ Yenser"], "score": 31, "payout": 16 },
+        { "place": "T-2nd", "players": ["Mark Mattingly", "Dave Lainhart"], "score": 31, "payout": 16 },
+        { "place": "T-2nd", "players": ["Mark Willenbrink", "Don Hartness"], "score": 31, "payout": 16 },
+        { "place": "T-5th", "players": ["Herb Holmes", "Steve Goertemiller"], "score": 33, "payout": 0 },
+        { "place": "T-5th", "players": ["John Stanton", "Danny Hause"], "score": 33, "payout": 0 },
+        { "place": "T-5th", "players": ["Rich Mealey", "Dick Freeman"], "score": 33, "payout": 0 },
+        { "place": "8th", "players": ["David Saniga", "Jamie Harrison"], "score": 34, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Mark Mattingly", "score": 31, "payout": 21 },
+        { "place": "2nd", "player": "David Simpson", "score": 32, "payout": 10 },
+        { "place": "3rd", "player": "Steve Conway", "score": 33, "payout": 4 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#2", "player": "Mark Mattingly" },
+        { "hole": "#5", "player": "Danny Hause" },
+        { "hole": "#8", "player": "Dave Lainhart" }
+      ]},
+      "skins": { "amount": 20, "winners": [
+        { "hole": "#3", "player": "David Simpson" },
+        { "hole": "#9", "player": "Mark Mattingly" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 43, "sideMoney": 0, "net": 36, "netPoints": 12, "payout": 8 },
+        { "name": "Steve Conway", "gross": 43, "sideMoney": 4, "net": 33, "netPoints": 14, "payout": 20 },
+        { "name": "Dick Freeman", "gross": 52, "sideMoney": 0, "net": 41, "netPoints": 3, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 42, "sideMoney": 0, "net": 37, "netPoints": 9, "payout": 0 },
+        { "name": "Jamie Harrison", "gross": 46, "sideMoney": 0, "net": 35, "netPoints": 13, "payout": 0 },
+        { "name": "Don Hartness", "gross": 51, "sideMoney": 0, "net": 39, "netPoints": 5, "payout": 8 },
+        { "name": "Danny Hause", "gross": 43, "sideMoney": 0, "net": 37, "netPoints": 9, "payout": 20 },
+        { "name": "Herb Holmes", "gross": 41, "sideMoney": 0, "net": 36, "netPoints": 12, "payout": 0 },
+        { "name": "Dave Lainhart", "gross": 48, "sideMoney": 0, "net": 42, "netPoints": 2, "payout": 28 },
+        { "name": "Mark Mattingly", "gross": 37, "sideMoney": 41, "net": 31, "netPoints": 16, "payout": 28 },
+        { "name": "Rich Mealey", "gross": 43, "sideMoney": 0, "net": 37, "netPoints": 9, "payout": 0 },
+        { "name": "David Saniga", "gross": 52, "sideMoney": 0, "net": 44, "netPoints": 1, "payout": 0 },
+        { "name": "David Simpson", "gross": 38, "sideMoney": 30, "net": 32, "netPoints": 15, "payout": 20 },
+        { "name": "John Stanton", "gross": 53, "sideMoney": 0, "net": 40, "netPoints": 4, "payout": 0 },
+        { "name": "Mark Willenbrink", "gross": 44, "sideMoney": 0, "net": 37, "netPoints": 9, "payout": 8 },
+        { "name": "Russ Yenser", "gross": 48, "sideMoney": 0, "net": 36, "netPoints": 12, "payout": 8 }
+      ]
+    },
+    {
+      "id": "august",
+      "month": "August",
+      "date": "Saturday, August 16, 2025",
+      "course": "Heatherwoode Golf Club",
+      "location": "Springboro, Ohio",
+      "format": "3-Man Double Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["Herb Holmes", "Jamie Harrison", "Mark Willenbrink"], "score": 132, "payout": 120 },
+        { "place": "2nd", "players": ["Roger Campbell", "Russ Yenser", "Don Hartness"], "score": 138, "payout": 60 },
+        { "place": "3rd", "players": ["Jim Wendel", "Steve Conway", "Mark Mattingly"], "score": 141, "payout": 0 },
+        { "place": "4th", "players": ["Dennis Daley", "Dave Lainhart", "Steve Goertemiller"], "score": 142, "payout": 0 },
+        { "place": "5th", "players": ["David Saniga", "David Simpson", "Dick Freeman"], "score": 144, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Steve Goertemiller", "score": 67, "payout": 39 },
+        { "place": "2nd", "player": "Jamie Harrison", "score": 70, "payout": 19 },
+        { "place": "3rd", "player": "Herb Holmes", "score": 71, "payout": 7 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#3", "player": "Steve Goertemiller" },
+        { "hole": "#8", "player": "Dennis Daley" },
+        { "hole": "#12", "player": "Steve Goertemiller" },
+        { "hole": "#17", "player": "Jamie Harrison" }
+      ]},
+      "skins": { "amount": 27, "winners": [
+        { "hole": "#2", "player": "Herb Holmes" },
+        { "hole": "#3", "player": "Dennis Daley" },
+        { "hole": "#4", "player": "Steve Goertemiller" },
+        { "hole": "#6", "player": "Steve Goertemiller" },
+        { "hole": "#7", "player": "Steve Goertemiller" },
+        { "hole": "#10", "player": "Mark Mattingly" },
+        { "hole": "#13", "player": "David Simpson" },
+        { "hole": "#15", "player": "Herb Holmes" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 87, "sideMoney": 0, "net": 76, "netPoints": 18, "payout": 20 },
+        { "name": "Steve Conway", "gross": 96, "sideMoney": 0, "net": 78, "netPoints": 16, "payout": 0 },
+        { "name": "Dennis Daley", "gross": 88, "sideMoney": 9, "net": 81, "netPoints": 10, "payout": 20 },
+        { "name": "Dick Freeman", "gross": 100, "sideMoney": 0, "net": 82, "netPoints": 6, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 75, "sideMoney": 66, "net": 67, "netPoints": 30, "payout": 40 },
+        { "name": "Jamie Harrison", "gross": 89, "sideMoney": 19, "net": 70, "netPoints": 28, "payout": 60 },
+        { "name": "Don Hartness", "gross": 95, "sideMoney": 0, "net": 73, "netPoints": 24, "payout": 20 },
+        { "name": "Herb Holmes", "gross": 78, "sideMoney": 25, "net": 71, "netPoints": 26, "payout": 40 },
+        { "name": "Dave Lainhart", "gross": null, "sideMoney": 0, "net": null, "netPoints": 2, "payout": 0 },
+        { "name": "Mark Mattingly", "gross": 84, "sideMoney": 9, "net": 75, "netPoints": 20, "payout": 0 },
+        { "name": "David Saniga", "gross": 96, "sideMoney": 0, "net": 82, "netPoints": 6, "payout": 0 },
+        { "name": "David Simpson", "gross": 83, "sideMoney": 9, "net": 73, "netPoints": 24, "payout": 0 },
+        { "name": "Jim Wendel", "gross": 102, "sideMoney": 0, "net": 80, "netPoints": 14, "payout": 0 },
+        { "name": "Mark Willenbrink", "gross": 91, "sideMoney": 0, "net": 80, "netPoints": 14, "payout": 40 },
+        { "name": "Russ Yenser", "gross": 100, "sideMoney": 0, "net": 81, "netPoints": 10, "payout": 20 }
+      ]
+    },
+    {
+      "id": "september",
+      "month": "September",
+      "date": "Saturday, September 13, 2025",
+      "course": "Cassel Hills Golf Course",
+      "location": "Vandalia, Ohio",
+      "format": "2-Man Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["Russ Yenser", "Roger Campbell"], "score": 64, "payout": 80 },
+        { "place": "2nd", "players": ["Steve Conway", "David Simpson"], "score": 66, "payout": 40 },
+        { "place": "3rd", "players": ["Steve Goertemiller", "Herb Holmes"], "score": 68, "payout": 0 },
+        { "place": "4th", "players": ["David Saniga", "Dick Freeman"], "score": 75, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Steve Conway", "score": 71, "payout": 30 },
+        { "place": "2nd", "player": "Russ Yenser", "score": 72, "payout": 15 },
+        { "place": "3rd", "player": "Roger Campbell", "score": 75, "payout": 7 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#4", "player": "Roger Campbell" },
+        { "hole": "#7", "player": "Dennis Daley" },
+        { "hole": "#9", "player": "Russ Yenser" },
+        { "hole": "#13", "player": "Dennis Daley" },
+        { "hole": "#16", "player": "Don Hartness" }
+      ]},
+      "skins": { "amount": 8, "winners": [
+        { "hole": "#1", "player": "Steve Conway" },
+        { "hole": "#7", "player": "Dick Freeman" },
+        { "hole": "#8", "player": "Dick Freeman" },
+        { "hole": "#9", "player": "Russ Yenser" },
+        { "hole": "#10", "player": "Roger Campbell" },
+        { "hole": "#11", "player": "Dick Freeman" },
+        { "hole": "#13", "player": "David Simpson" },
+        { "hole": "#17", "player": "Steve Goertemiller" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 89, "sideMoney": 15, "net": 75, "netPoints": 18, "payout": 60 },
+        { "name": "Steve Conway", "gross": 91, "sideMoney": 38, "net": 71, "netPoints": 24, "payout": 20 },
+        { "name": "Dick Freeman", "gross": 97, "sideMoney": 24, "net": 77, "netPoints": 12, "payout": 0 },
+        { "name": "Steve Goertemiller", "gross": 86, "sideMoney": 8, "net": 76, "netPoints": 15, "payout": 20 },
+        { "name": "Herb Holmes", "gross": 88, "sideMoney": 0, "net": 78, "netPoints": 9, "payout": 0 },
+        { "name": "David Saniga", "gross": 112, "sideMoney": 0, "net": 95, "netPoints": 3, "payout": 0 },
+        { "name": "David Simpson", "gross": 91, "sideMoney": 8, "net": 78, "netPoints": 9, "payout": 40 },
+        { "name": "Russ Yenser", "gross": 94, "sideMoney": 23, "net": 72, "netPoints": 21, "payout": 60 }
+      ]
+    },
+    {
+      "id": "october",
+      "month": "October",
+      "date": "Saturday, October 18, 2025",
+      "course": "Wildwood Golf Club",
+      "location": "Middletown, Ohio",
+      "format": "2-Man Best Ball",
+      "teams": [
+        { "place": "1st", "players": ["Jeff Zimmer", "David Simpson"], "score": 67, "payout": 100 },
+        { "place": "2nd", "players": ["Don Hartness", "John Stanton"], "score": 68, "payout": 80 },
+        { "place": "3rd", "players": ["Dennis Daley", "Dick Freeman"], "score": 69, "payout": 60 },
+        { "place": "T-4th", "players": ["Herb Holmes", "Roger Campbell"], "score": 71, "payout": 20 },
+        { "place": "T-4th", "players": ["Jamie Harrison", "Russ Yenser"], "score": 71, "payout": 20 },
+        { "place": "6th", "players": ["Mark Willenbrink", "Steve Goertemiller"], "score": 72, "payout": 0 },
+        { "place": "7th", "players": ["Rich Mealey", "Steve Conway"], "score": 73, "payout": 0 },
+        { "place": "8th", "players": ["David Saniga", "Scott Shaw"], "score": 74, "payout": 0 }
+      ],
+      "lowNet": [
+        { "place": "1st", "player": "Jeff Zimmer", "score": 75, "payout": 48 },
+        { "place": "T-2nd", "player": "Steve Goertemiller", "score": 77, "payout": 16 },
+        { "place": "T-2nd", "player": "Don Hartness", "score": 77, "payout": 16 }
+      ],
+      "ctp": { "amount": 20, "winners": [
+        { "hole": "#2", "player": "Steve Conway" },
+        { "hole": "#9", "player": "Jeff Zimmer" },
+        { "hole": "#10", "player": "David Simpson" },
+        { "hole": "#16", "player": "Russ Yenser" },
+        { "hole": "#18", "player": "Don Hartness" }
+      ]},
+      "ctp2": { "amount": 10, "winners": [
+        { "hole": "#2", "player": "David Saniga" },
+        { "hole": "#10", "player": "Steve Goertemiller" },
+        { "hole": "#16", "player": "David Saniga" }
+      ]},
+      "skins": { "amount": 13, "winners": [
+        { "hole": "#3", "player": "Jeff Zimmer" },
+        { "hole": "#7", "player": "Roger Campbell" },
+        { "hole": "#11", "player": "Jeff Zimmer" },
+        { "hole": "#12", "player": "Herb Holmes" },
+        { "hole": "#14", "player": "Dennis Daley" },
+        { "hole": "#16", "player": "Russ Yenser" }
+      ]},
+      "players": [
+        { "name": "Roger Campbell", "gross": 88, "sideMoney": 13, "net": 79, "netPoints": 22, "payout": 10 },
+        { "name": "Steve Conway", "gross": 103, "sideMoney": 0, "net": 85, "netPoints": 8, "payout": 0 },
+        { "name": "Dennis Daley", "gross": 85, "sideMoney": 13, "net": 78, "netPoints": 26, "payout": 30 },
+        { "name": "Dick Freeman", "gross": 97, "sideMoney": 0, "net": 81, "netPoints": 16, "payout": 30 },
+        { "name": "Steve Goertemiller", "gross": 85, "sideMoney": 16, "net": 77, "netPoints": 30, "payout": 0 },
+        { "name": "Jamie Harrison", "gross": 97, "sideMoney": 0, "net": 80, "netPoints": 20, "payout": 10 },
+        { "name": "Don Hartness", "gross": 100, "sideMoney": 16, "net": 77, "netPoints": 30, "payout": 40 },
+        { "name": "Herb Holmes", "gross": 87, "sideMoney": 13, "net": 80, "netPoints": 20, "payout": 10 },
+        { "name": "Rich Mealey", "gross": 95, "sideMoney": 0, "net": 85, "netPoints": 8, "payout": 0 },
+        { "name": "David Saniga", "gross": 99, "sideMoney": 0, "net": 84, "netPoints": 10, "payout": 20 },
+        { "name": "Scott Shaw", "gross": 101, "sideMoney": 0, "net": 86, "netPoints": 4, "payout": 0 },
+        { "name": "David Simpson", "gross": 89, "sideMoney": 0, "net": 78, "netPoints": 26, "payout": 70 },
+        { "name": "John Stanton", "gross": 104, "sideMoney": 0, "net": 81, "netPoints": 16, "payout": 40 },
+        { "name": "Mark Willenbrink", "gross": 98, "sideMoney": 0, "net": 86, "netPoints": 4, "payout": 0 },
+        { "name": "Russ Yenser", "gross": 99, "sideMoney": 13, "net": 81, "netPoints": 16, "payout": 30 },
+        { "name": "Jeff Zimmer", "gross": 84, "sideMoney": 74, "net": 75, "netPoints": 32, "payout": 70 }
+      ]
+    }
+  ],
+  "standings": {
+    "netPoints": [
+      { "pos": "1st", "player": "Herb Holmes", "total": 187 },
+      { "pos": "T-2nd", "player": "Steve Conway", "total": 180 },
+      { "pos": "T-2nd", "player": "David Simpson", "total": 180 },
+      { "pos": "4th", "player": "Steve Goertemiller", "total": 179 },
+      { "pos": "5th", "player": "Roger Campbell", "total": 176 },
+      { "pos": "6th", "player": "Russ Yenser", "total": 173 },
+      { "pos": "7th", "player": "Don Hartness", "total": 135 },
+      { "pos": "8th", "player": "David Saniga", "total": 110 },
+      { "pos": "9th", "player": "Jamie Harrison", "total": 109 },
+      { "pos": "10th", "player": "Mark Willenbrink", "total": 101 }
+    ],
+    "money": [
+      { "pos": "1st", "player": "Steve Goertemiller", "total": 249 },
+      { "pos": "2nd", "player": "David Simpson", "total": 199 },
+      { "pos": "T-3rd", "player": "Roger Campbell", "total": 167 },
+      { "pos": "T-3rd", "player": "Russ Yenser", "total": 167 },
+      { "pos": "T-5th", "player": "Don Hartness", "total": 123 },
+      { "pos": "T-5th", "player": "Mark Willenbrink", "total": 123 },
+      { "pos": "7th", "player": "Herb Holmes", "total": 119 },
+      { "pos": "8th", "player": "Jeff Zimmer", "total": 110 },
+      { "pos": "9th", "player": "Dave Lainhart", "total": 97 },
+      { "pos": "10th", "player": "Steve Conway", "total": 89 }
+    ],
+    "sideMoney": [
+      { "pos": "1st", "player": "Steve Goertemiller", "total": 142 },
+      { "pos": "2nd", "player": "Herb Holmes", "total": 139 },
+      { "pos": "3rd", "player": "David Saniga", "total": 104 },
+      { "pos": "T-4th", "player": "Roger Campbell", "total": 91 },
+      { "pos": "T-4th", "player": "Jeff Zimmer", "total": 91 },
+      { "pos": "6th", "player": "Steve Conway", "total": 83 },
+      { "pos": "7th", "player": "Nick Edwards", "total": 68 },
+      { "pos": "8th", "player": "David Simpson", "total": 67 },
+      { "pos": "9th", "player": "Mark Willenbrink", "total": 65 },
+      { "pos": "10th", "player": "Brad Mattingly", "total": 64 }
+    ]
+  },
+  "newsletters": [
+    {
+      "id": "april",
+      "month": "April",
+      "label": "April 2025",
+      "content": "The 2025 season is underway! Membership is open to all golfers. Contact Russ Yenser at 513-571-7931 for more information. This year prizes will again be awarded for accumulated totals in Money Winners, Net Points, and Side Games. The last 3 tournaments will be double points. Entry fees have increased slightly this year. Application fee is $25. Mail entries to: Russ Yenser, 503 Cranewood Drive, Trenton, Ohio 45067."
+    },
+    {
+      "id": "may",
+      "month": "May",
+      "label": "May 2025",
+      "content": "May featured our annual double-header weekend at Shaker Run and Yankee Trace. The Shaker Run format this year was 3-Man with Single Ball on Par 5s, Double Ball on Par 4s, and Triple Ball on Par 3s. At Yankee Trace we played a 2-Man Customized Stableford format."
+    },
+    {
+      "id": "june",
+      "month": "June",
+      "label": "June 2025",
+      "content": "The June tournament at Walden Ponds featured our 4-Man Triple Best Ball format. A great day of team golf with five foursomes competing."
+    },
+    {
+      "id": "august",
+      "month": "August",
+      "label": "August 2025",
+      "content": "The Heatherwoode tournament ran our 3-Man Double Best Ball format. Steve Goertemiller had an outstanding day shooting a net 67 for the Individual Low Net title."
+    },
+    {
+      "id": "september",
+      "month": "September",
+      "label": "September 2025",
+      "content": "Only 8 golfers turned out for the Cassel Hills event this year. Russ Yenser and Roger Campbell won the team competition with a 64. The smaller field made for a quick round but competitive play."
+    },
+    {
+      "id": "october",
+      "month": "October",
+      "label": "October 2025",
+      "content": "The season concluded at Wildwood Golf Club with 16 golfers. Jeff Zimmer and David Simpson took top honors at 67. A reminder for next year: entries are due 10 days in advance (14 days for Heatherwoode). Golfers who back out after paying will forfeit $20 of their entry fee. Please finish all holes — net points depend on complete scores."
+    },
+    {
+      "id": "yearend",
+      "month": "Year End",
+      "label": "Year End 2025",
+      "content": "The 2025 season is complete. Year-end bonus payouts at Wildwood: Side Money — Goertemiller $60, Holmes $40, Saniga $20. Net Points — Holmes $60, Simpson $40, Conway $20. Money Leaders — Goertemiller $60, Simpson $40. Changes for 2026: scorecards will be traded between teams, and all holes must be played out — players who do not finish holes may be disqualified. Tournament fees will increase slightly in 2026 due to rising golf costs. Hope to see everyone back and bring a friend!"
+    }
+  ]
+}
