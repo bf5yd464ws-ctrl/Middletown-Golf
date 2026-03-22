@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Application | Middletown Area Golf Association</title>
+<link rel="stylesheet" href="maga.css">
+<style>
+
+/* ── Page-specific styles ── */
+
+.membership-hero {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.membership-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(201,168,76,.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,.04) 0%, transparent 50%);
+}
+.membership-hero::after {
+  content: '⛳';
+  position: absolute;
+  font-size: 16rem;
+  opacity: .04;
+  bottom: -3rem;
+  right: -1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+.membership-hero h1 {
+  color: var(--white);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  position: relative;
+}
+.membership-hero .subtitle {
+  color: var(--gold-light);
+  font-size: .88rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-top: .5rem;
+  position: relative;
+}
+.membership-hero .gold-rule {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+  position: relative;
+}
+
+/* ── Content layout ── */
+.membership-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+/* ── Feature cards ── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.feature-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
+  text-align: center;
+}
+.feature-card .icon {
+  font-size: 2rem;
+  margin-bottom: .75rem;
+  display: block;
+}
+.feature-card h3 {
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin-bottom: .4rem;
+}
+.feature-card p {
+  font-size: .88rem;
+  color: var(--text-mid);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Apply CTA section ── */
+.apply-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin: 2rem 0;
+}
+.apply-header {
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.apply-header .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: .9;
+}
+.apply-header .text h2 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: .25rem;
+  border: none;
+}
+.apply-header .text p {
+  color: var(--gold-light);
+  font-size: .88rem;
+  margin: 0;
+  letter-spacing: .04em;
+}
+.apply-body {
+  padding: 2rem 2.5rem;
+}
+.apply-body p {
+  font-size: .97rem;
+  color: var(--text-mid);
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+/* ── CTA Button ── */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: var(--gold);
+  color: var(--green-dark);
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: .9rem 2.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 3px 12px rgba(201,168,76,.35);
+  border: none;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,168,76,.45);
+  text-decoration: none;
+  color: var(--green-dark);
+}
+.cta-btn:active { transform: translateY(0); }
+.cta-btn .arrow { font-size: 1.2rem; transition: transform .2s; }
+.cta-btn:hover .arrow { transform: translateX(4px); }
+
+.cta-note {
+  margin-top: .85rem;
+  font-size: .82rem;
+  color: var(--gray-mid);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.cta-note::before { content: '🔒'; font-size: .9rem; }
+
+/* ── Fee table ── */
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: .95rem;
+}
+.fee-table tr { border-bottom: 1px solid var(--gray-light); }
+.fee-table tr:last-child { border-bottom: none; }
+.fee-table td { padding: .7rem .5rem; }
+.fee-table td:first-child { color: var(--text-mid); }
+.fee-table td:last-child {
+  font-weight: 700;
+  color: var(--green-dark);
+  text-align: right;
+}
+
+/* ── Mail section ── */
+.mail-section {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  border-left: 4px solid var(--green-mid);
+  margin: 1.5rem 0;
+}
+.mail-section h3 {
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.mail-address {
+  font-size: .95rem;
+  color: var(--text-dark);
+  line-height: 2;
+  font-weight: 600;
+  padding-left: .25rem;
+}
+
+/* ── Contact row ── */
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.contact-tile {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--gray-light);
+  box-shadow: var(--shadow);
+}
+.contact-tile .label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: .3rem;
+}
+.contact-tile .value {
+  font-size: .97rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+.contact-tile a {
+  font-size: .9rem;
+  color: var(--green-mid);
+  display: block;
+  margin-top: .15rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .apply-header { flex-direction: column; gap: .75rem; padding: 1.5rem; }
+  .apply-header .number { font-size: 2.5rem; }
+  .apply-body { padding: 1.5rem; }
+  .contact-row { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="site-header">
+  <div class="org-name">Middletown Area Golf Association</div>
+  <div class="tagline">Recreational Golf Tournaments · Est. 2001</div>
+  <div class="header-divider"></div>
+</header>
+
+<!-- ── Nav ── -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#results">Results</a></li>
+    <li><a href="index.html#newsletters">Newsletters</a></li>
+    <li><a href="index.html#teetimes">Tee Times</a></li>
+    <li><a href="index.html#signup">Sign Up</a></li>
+    <li><a href="membership.html" class="active">Membership</a></li>
+  </ul>
+</nav>
+
+<!-- ── Hero ── -->
+<div class="membership-hero">
+  <h1>Membership Application</h1>
+  <div class="subtitle">Join the Middletown Area Golf Association</div>
+  <div class="gold-rule"></div>
+</div>
+
+<!-- ── Main content ── -->
+<div class="membership-container">
+
+  <!-- What you get -->
+  <div class="feature-grid">
+    <div class="feature-card">
+      <span class="icon">⛳</span>
+      <h3>8 Tournaments</h3>
+      <p>April through October at top courses in the Cincinnati–Dayton area</p>
+    </div>
+    <div class="feature-card">
+      <span class="icon">💰</span>
+      <h3>Cash Prizes</h3>
+      <p>Top finishers, skins, closest to pin, and year-end bonus payouts</p>
+    </div>
+    <div class="feature-card">
+      <span class="icon">📊</span>
+      <h3>Season Standings</h3>
+      <p>Net points, money list, side money, and career totals tracked all season</p>
+    </div>
+    <div class="feature-card">
+      <span class="icon">📰</span>
+      <h3>Newsletter</h3>
+      <p>"The 19th Hole" published throughout the season with results and news</p>
+    </div>
+  </div>
+
+  <!-- Apply CTA -->
+  <div class="apply-section">
+    <div class="apply-header">
+      <div class="number">1</div>
+      <div class="text">
+        <h2>Complete the Application</h2>
+        <p>Takes about 2 minutes · Secure Google Form</p>
+      </div>
+    </div>
+    <div class="apply-body">
+      <p>
+        Click the button below to open the membership application form. You'll provide your contact
+        information and golf details. Once submitted, Russ Yenser will follow up with confirmation
+        and payment instructions.
+      </p>
+
+      <!--
+        ══════════════════════════════════════════════════════
+        REPLACE THE href BELOW WITH YOUR GOOGLE FORM URL
+        ══════════════════════════════════════════════════════
+      -->
+      <a href="GOOGLE_FORM_URL_HERE" target="_blank" class="cta-btn">
+        Apply for Membership <span class="arrow">→</span>
+      </a>
+
+      <div class="cta-note">Powered by Google Forms · No account required</div>
+    </div>
+  </div>
+
+  <!-- Fees -->
+  <div class="section-card">
+    <h2>2026 Fee Schedule</h2>
+    <table class="fee-table">
+      <tr>
+        <td>Annual Application Fee</td>
+        <td>$25</td>
+      </tr>
+      <tr>
+        <td>Hamilton Elks (April)</td>
+        <td>$69 *</td>
+      </tr>
+      <tr>
+        <td>Shaker Run (May)</td>
+        <td>$79 *</td>
+      </tr>
+      <tr>
+        <td>Yankee Trace (May)</td>
+        <td>$69 *</td>
+      </tr>
+      <tr>
+        <td>Hueston Woods (June)</td>
+        <td>$69 *</td>
+      </tr>
+      <tr>
+        <td>Kings Island (July)</td>
+        <td>$69 *</td>
+      </tr>
+      <tr>
+        <td>Heatherwoode (August)</td>
+        <td>$69 *</td>
+      </tr>
+      <tr>
+        <td>Indian Ridge (September)</td>
+        <td>$60</td>
+      </tr>
+      <tr>
+        <td>Wildwood (October)</td>
+        <td>$69 *</td>
+      </tr>
+    </table>
+    <p style="font-size:.82rem;color:var(--gray-mid);margin-top:.5rem;">
+      * Carts not included in greens fee. Entry fees do not include side games (skins, closest to pin).
+      Entries must be received <strong>10 days before</strong> each event (14 days for Heatherwoode).
+    </p>
+  </div>
+
+  <!-- Mail payment -->
+  <div class="section-card">
+    <h2>Step 2 — Mail Your Payment</h2>
+    <p style="font-size:.95rem;color:var(--text-mid);">
+      You may mail your annual application fee and first tournament entry together.
+      Make checks payable to <strong>MAGA</strong> and send to:
+    </p>
+    <div class="mail-section">
+      <h3>📬 Mailing Address</h3>
+      <div class="mail-address">
+        Russ Yenser<br>
+        503 Cranewood Drive<br>
+        Trenton, Ohio 45067
+      </div>
+    </div>
+    <div class="info-box">
+      Golfers who back out of a tournament after paying will forfeit $20 of their entry fee,
+      except in cases of medical injury or illness.
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="section-card">
+    <h2>Questions?</h2>
+    <p style="font-size:.95rem;color:var(--text-mid);">
+      Membership is open to all golfers. Don't hesitate to reach out before applying.
+    </p>
+    <div class="contact-row">
+      <div class="contact-tile">
+        <div class="label">Association Contact</div>
+        <div class="value">Russ Yenser</div>
+        <a href="tel:5135717931">513-571-7931</a>
+      </div>
+      <div class="contact-tile">
+        <div class="label">Site Administrator</div>
+        <div class="value">TJ Cope</div>
+        <a href="mailto:maga.admin@tjcope.net">maga.admin@tjcope.net</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end membership-container -->
+
+<!-- ── Footer ── -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#results">Results</a>
+    <a href="index.html#newsletters">Newsletters</a>
+    <a href="membership.html">Membership</a>
+  </div>
+  <div>Middletown Area Golf Association · Middletown, Ohio · Est. 2001</div>
+  <div style="margin-top:.5rem;">
+    <a href="http://www.tjcope.net/maga" target="_blank">Original Site</a>
+  </div>
+</footer>
+
+</body>
+</html>
