@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results – Middletown Area Golf Association</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep:  #1a3a2a;
+      --green-mid:   #2d6a4f;
+      --green-light: #52b788;
+      --green-pale:  #d8f3dc;
+      --gold:        #c9a84c;
+      --gold-light:  #f0d080;
+      --white:       #ffffff;
+      --off-white:   #f8faf8;
+      --gray-100:    #f0f4f1;
+      --gray-200:    #dde8e0;
+      --gray-500:    #7a9483;
+      --text:        #1c2e22;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--green-deep);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .logo-badge {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+    }
+    .logo-sub {
+      font-size: 0.65rem;
+      color: var(--green-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav { display: flex; gap: 0.25rem; }
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    nav a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+    nav a.active { color: var(--gold); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--green-deep);
+      padding: 3rem 2rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 100% 50%, rgba(45,106,79,0.4) 0%, transparent 70%);
+    }
+    .page-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .breadcrumb a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 0.4rem; }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    .page-header h1 span { color: var(--gold-light); }
+    .page-header p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── YEAR FILTER BAR ── */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-right: 0.25rem;
+    }
+    .filter-btn {
+      padding: 0.3rem 0.75rem;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-500);
+      transition: all 0.15s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--green-deep);
+      color: var(--white);
+      border-color: var(--green-deep);
+    }
+
+    /* ── YEAR BLOCKS ── */
+    .year-block {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      box-shadow: 0 1px 12px rgba(26,58,42,0.06);
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .year-block:hover { box-shadow: 0 4px 24px rgba(26,58,42,0.1); }
+
+    .year-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      user-select: none;
+      background: var(--white);
+      transition: background 0.15s;
+    }
+    .year-header:hover { background: var(--gray-100); }
+
+    .year-header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .year-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-deep);
+    }
+    .year-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      background: var(--green-pale);
+      color: var(--green-mid);
+    }
+    .year-tag.current { background: var(--gold); color: var(--green-deep); }
+
+    .chevron {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      transition: transform 0.25s;
+    }
+    .year-block.open .chevron { transform: rotate(180deg); }
+
+    .year-body {
+      display: none;
+      border-top: 1px solid var(--gray-100);
+      padding: 1.25rem 1.5rem 1.5rem;
+      animation: fadeIn 0.2s ease;
+    }
+    .year-block.open .year-body { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESULTS GRID INSIDE YEAR ── */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+
+    .results-section-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.15s;
+      border: 1px solid var(--gray-200);
+      color: var(--green-mid);
+      background: var(--off-white);
+    }
+    .link-pill:hover {
+      background: var(--green-deep);
+      color: var(--white);
+      border-color: var(--green-deep);
+      transform: translateY(-1px);
+    }
+    .link-pill.disabled {
+      color: var(--gray-500);
+      background: var(--gray-100);
+      border-color: var(--gray-200);
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    /* ── ORIGINAL SITE LINK ── */
+    .original-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      color: var(--gray-500);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+    .original-link:hover { color: var(--green-mid); }
+    .original-link::before { content: '↗'; font-size: 0.8rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-deep);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 2.5rem 2rem 1.5rem;
+      text-align: center;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+    .footer-sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.5rem;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .footer-nav a {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .footer-nav a:hover { color: var(--gold); }
+    .footer-credit {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.25);
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-credit a { color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-credit a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) { nav { display: none; } }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page-header-inner { animation: fadeUp 0.5s ease both; }
+    .filter-bar { animation: fadeUp 0.5s 0.1s ease both; }
+    #years-container { animation: fadeUp 0.5s 0.18s ease both; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.htm" class="logo">
+      <div class="logo-badge">⛳</div>
+      <div class="logo-text">
+        <span class="logo-title">Middletown Area Golf</span>
+        <span class="logo-sub">Association</span>
+      </div>
+    </a>
+    <nav>
+      <a href="TeeTimes.htm">Tee Times</a>
+      <a href="Signup.htm">Signup</a>
+      <a href="index.htm">Schedule</a>
+      <a href="ResultsIndex.htm" class="active">Results</a>
+      <a href="NewslettersIndex.htm">Newsletters</a>
+      <a href="MembershipApplication.htm">Application</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.htm">Home</a>
+      <span>›</span>
+      Results
+    </div>
+    <h1>Tournament <span>Results</span></h1>
+    <p>Full results, money lists, net points, and top tens — every season since 2001.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar" id="filterBar">
+    <span class="filter-label">Jump to:</span>
+    <button class="filter-btn active" onclick="filterYear('all', this)">All Years</button>
+    <button class="filter-btn" onclick="filterYear('2025', this)">2025</button>
+    <button class="filter-btn" onclick="filterYear('2024', this)">2024</button>
+    <button class="filter-btn" onclick="filterYear('2023', this)">2023</button>
+    <button class="filter-btn" onclick="filterYear('2022', this)">2022</button>
+    <button class="filter-btn" onclick="filterYear('2021', this)">2021</button>
+    <button class="filter-btn" onclick="filterYear('2020', this)">2020</button>
+    <button class="filter-btn" onclick="filterYear('2010s', this)">2010s</button>
+    <button class="filter-btn" onclick="filterYear('2000s', this)">2000s</button>
+  </div>
+
+  <div id="years-container">
+
+    <!-- 2025 -->
+    <div class="year-block open" data-year="2025">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left">
+          <span class="year-label">2025</span>
+          <span class="year-tag current">Current Season</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2025/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2025/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2025/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2025/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2025/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2025/1-AprilResults.htm" class="link-pill">April</a>
+              <a href="2025/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2025/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2025/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2025/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2025/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2025/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="year-block" data-year="2024">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left">
+          <span class="year-label">2024</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2024/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2024/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2024/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2024/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2024/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2024/1-AprilResults.htm" class="link-pill">April</a>
+              <a href="2024/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2024/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2024/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2024/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2024/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2024/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="year-block" data-year="2023">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2023</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2023/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2023/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2023/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2023/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <span class="link-pill disabled">Career Totals</span>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2023/1-AprilResults.htm" class="link-pill">April</a>
+              <a href="2023/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2023/3-JuneResults.htm" class="link-pill">June</a>
+              <span class="link-pill disabled">July</span>
+              <a href="2023/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2023/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2023/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="year-block" data-year="2022">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2022</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2022/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2022/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2022/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2022/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2022/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2022/1-AprilResults.htm" class="link-pill">April</a>
+              <a href="2022/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2022/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2022/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2022/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2022/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2022/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2021 -->
+    <div class="year-block" data-year="2021">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2021</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2021/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2021/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2021/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2021/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2021/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <span class="link-pill disabled">April</span>
+              <a href="2021/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2021/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2021/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2021/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2021/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2021/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="year-block" data-year="2020">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2020</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2020/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2020/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2020/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2020/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2020/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <span class="link-pill disabled">April</span>
+              <a href="2020/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2020/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2020/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2020/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2020/6-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2020/7-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2019 -->
+    <div class="year-block" data-year="2019">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2019</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2019/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2019/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2019/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2019/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2019/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2019/1-AprilResults.htm" class="link-pill">April</a>
+              <a href="2019/2-MayResults.htm" class="link-pill">May</a>
+              <a href="2019/3-JuneResults.htm" class="link-pill">June</a>
+              <a href="2019/4-JulyResults.htm" class="link-pill">July</a>
+              <a href="2019/5-AugustResults.htm" class="link-pill">August</a>
+              <a href="2019/6-SeptemberResults.htm" class="link-pill">September</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2018 -->
+    <div class="year-block" data-year="2018">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2018</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2018/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2018/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2018/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2018/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2018/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2018/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2018/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2018/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2018/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2018/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2018/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2018/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2017 -->
+    <div class="year-block" data-year="2017">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2017</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2017/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2017/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2017/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2017/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2017/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2017/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2017/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2017/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2017/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2017/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2017/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2017/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2016 -->
+    <div class="year-block" data-year="2016">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2016</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2016/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2016/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2016/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2016/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2016/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2016/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2016/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2016/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2016/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2016/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2016/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2016/7-SeptemberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2015 -->
+    <div class="year-block" data-year="2015">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2015</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2015/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2015/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2015/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2015/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2015/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2014/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2015/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2015/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2015/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2015/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2015/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2015/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2015/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2014 -->
+    <div class="year-block" data-year="2014">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2014</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2014/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2014/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2014/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2014/SideMoneyList.htm" class="link-pill">Side Money</a>
+              <a href="2014/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2014/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2014/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2014/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2014/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2014/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2014/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2014/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2014/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2013 -->
+    <div class="year-block" data-year="2013">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2013</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2013/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2013/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2013/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2013/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2012/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2013/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2013/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2013/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2013/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2013/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2013/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2013/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2013/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2012 -->
+    <div class="year-block" data-year="2012">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2012</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2012/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2012/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2012/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2012/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2012/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2012/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2012/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2012/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2012/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2012/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2012/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2012/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2012/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2011 -->
+    <div class="year-block" data-year="2011">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2011</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2011/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2011/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2011/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2011/MoneyList.htm" class="link-pill">Money List</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2011/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2011/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2011/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2011/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2011/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2011/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2011/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2011/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2010 -->
+    <div class="year-block" data-year="2010">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2010</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2010/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2010/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2010/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2010/MoneyList.htm" class="link-pill">Money List</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2010/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2010/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2010/3-MayResults.htm" class="link-pill">May</a>
+              <span class="link-pill disabled">June</span>
+              <a href="2010/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2010/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2010/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2010/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2009 -->
+    <div class="year-block" data-year="2009">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2009</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2009/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2009/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2009/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2009/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2009/CareerTotals.htm" class="link-pill">Career Totals</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2009/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2009/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2009/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2009/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2009/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2009/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2009/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2009/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2008 -->
+    <div class="year-block" data-year="2008">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2008</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2008/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2008/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2008/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2008/MoneyList.htm" class="link-pill">Money List</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2008/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2008/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2008/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2008/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2008/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2008/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2008/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2008/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2007 -->
+    <div class="year-block" data-year="2007">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2007</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2007/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2007/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2007/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2007/MoneyList.htm" class="link-pill">Money List</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2007/1-MarchResults.htm" class="link-pill">March</a>
+              <a href="2007/2-AprilResults.htm" class="link-pill">April</a>
+              <a href="2007/3-MayResults.htm" class="link-pill">May</a>
+              <a href="2007/4-JuneResults.htm" class="link-pill">June</a>
+              <a href="2007/5-JulyResults.htm" class="link-pill">July</a>
+              <a href="2007/6-AugustResults.htm" class="link-pill">August</a>
+              <a href="2007/7-SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2007/8-OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2006 -->
+    <div class="year-block" data-year="2006">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2006</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2006/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2006/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2006/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2006/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2006/SeasonInfo.htm" class="link-pill">Season Overview</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2006/April1Results.htm" class="link-pill">April 1</a>
+              <a href="2006/April22Results.htm" class="link-pill">April 22</a>
+              <a href="2006/MayResults.htm" class="link-pill">May</a>
+              <a href="2006/JuneResults.htm" class="link-pill">June</a>
+              <a href="2006/JulyResults.htm" class="link-pill">July</a>
+              <a href="2006/AugustResults.htm" class="link-pill">August</a>
+              <a href="2006/SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2006/OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2005 -->
+    <div class="year-block" data-year="2005">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2005</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2005/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2005/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2005/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2005/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2005/SeasonInfo.htm" class="link-pill">Season Overview</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2005/MarchResults.htm" class="link-pill">March</a>
+              <a href="2005/AprilResults.htm" class="link-pill">April</a>
+              <a href="2005/MayResults.htm" class="link-pill">May</a>
+              <a href="2005/JuneResults.htm" class="link-pill">June</a>
+              <a href="2005/JulyResults.htm" class="link-pill">July</a>
+              <a href="2005/AugustResults.htm" class="link-pill">August</a>
+              <a href="2005/SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2005/OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2004 -->
+    <div class="year-block" data-year="2004">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2004</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2004/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2004/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2004/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2004/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2004/SeasonInfo.htm" class="link-pill">Season Overview</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2004/MarchResults.htm" class="link-pill">March</a>
+              <a href="2004/AprilResults.htm" class="link-pill">April</a>
+              <a href="2004/MayResults.htm" class="link-pill">May</a>
+              <a href="2004/JuneResults.htm" class="link-pill">June</a>
+              <a href="2004/JulyResults.htm" class="link-pill">July</a>
+              <a href="2004/AugustResults.htm" class="link-pill">August</a>
+              <a href="2004/SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2004/OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2003 -->
+    <div class="year-block" data-year="2003">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2003</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2003/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2003/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2003/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2003/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2003/SeasonInfo.htm" class="link-pill">Season Overview</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2003/MarchResults.htm" class="link-pill">March</a>
+              <a href="2003/AprilResults.htm" class="link-pill">April</a>
+              <a href="2003/MayResults.htm" class="link-pill">May</a>
+              <a href="2003/JuneResults.htm" class="link-pill">June</a>
+              <a href="2003/JulyResults.htm" class="link-pill">July</a>
+              <a href="2003/AugustResults.htm" class="link-pill">August</a>
+              <a href="2003/SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2003/OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2002 -->
+    <div class="year-block" data-year="2002">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left"><span class="year-label">2002</span></div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2002/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2002/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2002/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2002/MoneyList.htm" class="link-pill">Money List</a>
+              <a href="2002/SeasonInfo.htm" class="link-pill">Season Overview</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2002/MarchResults.htm" class="link-pill">March</a>
+              <a href="2002/AprilResults.htm" class="link-pill">April</a>
+              <a href="2002/MayResults.htm" class="link-pill">May</a>
+              <a href="2002/JuneResults.htm" class="link-pill">June</a>
+              <a href="2002/JulyResults.htm" class="link-pill">July</a>
+              <a href="2002/AugustResults.htm" class="link-pill">August</a>
+              <a href="2002/SeptemberResults.htm" class="link-pill">September</a>
+              <a href="2002/OctoberResults.htm" class="link-pill">October</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+    <!-- 2001 -->
+    <div class="year-block" data-year="2001">
+      <div class="year-header" onclick="toggleYear(this)">
+        <div class="year-header-left">
+          <span class="year-label">2001</span>
+          <span class="year-tag">Inaugural Season</span>
+        </div>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="year-body">
+        <div class="results-grid">
+          <div>
+            <div class="results-section-title">Overall Results</div>
+            <div class="link-list">
+              <a href="2001/TopTens.htm" class="link-pill">Top Tens</a>
+              <a href="2001/GrossPoints.htm" class="link-pill">Gross Points</a>
+              <a href="2001/NetPoints.htm" class="link-pill">Net Points</a>
+              <a href="2001/MoneyList.htm" class="link-pill">Money List</a>
+            </div>
+          </div>
+          <div>
+            <div class="results-section-title">Tournament Results</div>
+            <div class="link-list">
+              <a href="2001/MarchResults.htm" class="link-pill">March</a>
+              <a href="2001/AprilResults.htm" class="link-pill">April</a>
+              <a href="2001/MayResults.htm" class="link-pill">May</a>
+              <a href="2001/JuneResults.htm" class="link-pill">June</a>
+              <a href="2001/JulyResults.htm" class="link-pill">July</a>
+              <a href="2001/AugustResults.htm" class="link-pill">August</a>
+              <a href="2001/SeptemberResults.htm" class="link-pill">September</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.tjcope.net/maga/ResultsIndex.htm" target="_blank" rel="noopener" class="original-link">View on original site</a>
+      </div>
+    </div>
+
+  </div><!-- /years-container -->
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Middletown Area Golf Association</div>
+    <div class="footer-sub">Middletown, Ohio · Est. 2001</div>
+    <div class="footer-nav">
+      <a href="TeeTimes.htm">Tee Times</a>
+      <a href="Signup.htm">Signup</a>
+      <a href="index.htm">Schedule</a>
+      <a href="ResultsIndex.htm">Results</a>
+      <a href="NewslettersIndex.htm">Newsletters</a>
+      <a href="MembershipApplication.htm">Application</a>
+    </div>
+    <div class="footer-credit">
+      Original site: <a href="https://www.tjcope.net/maga" target="_blank" rel="noopener">www.tjcope.net/maga</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleYear(header) {
+    const block = header.closest('.year-block');
+    block.classList.toggle('open');
+  }
+
+  function filterYear(value, btn) {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const blocks = document.querySelectorAll('.year-block');
+    blocks.forEach(block => {
+      const year = parseInt(block.dataset.year);
+      let show = false;
+
+      if (value === 'all') {
+        show = true;
+      } else if (value === '2010s') {
+        show = year >= 2010 && year <= 2019;
+      } else if (value === '2000s') {
+        show = year >= 2001 && year <= 2009;
+      } else {
+        show = block.dataset.year === value;
+        if (show) {
+          block.classList.add('open');
+          block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      block.style.display = show ? '' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
