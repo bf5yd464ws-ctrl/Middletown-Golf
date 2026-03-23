@@ -1,1 +1,84 @@
-[{"date": "2026-04-18", "course": "Hamilton Elks", "event": "2 Man Single Best Ball"}, {"date": "2026-05-16", "course": "Shaker Run", "event": "3 Man Single/Double/Triple Ball"}, {"date": "2026-05-17", "course": "Yankee Trace", "event": "2 Man Customized Stableford"}, {"date": "2026-06-20", "course": "Hueston Woods", "event": "2 Man Both Balls"}, {"date": "2026-07-18", "course": "Kings Island", "event": "3 Man Double Best Ball"}, {"date": "2026-08-22", "course": "Heatherwoode", "event": "2 Man Single Best Ball"}, {"date": "2026-09-19", "course": "Indian Ridge", "event": "2 Man Best Ball"}, {"date": "2026-10-17", "course": "Wildwood", "event": "2 Man Best Ball"}]
+{
+  "schedule": [
+    {
+      "date": "April 18",
+      "course": "Hamilton Elks",
+      "format": "2 Man Single Best Ball",
+      "signUp": "Sign Up As Twosome",
+      "entryFee": "$69",
+      "firstTeeTime": "12:00",
+      "pairingsPosted": "Posted by Wed 4/15",
+      "resultsId": "april"
+    },
+    {
+      "date": "May 16",
+      "course": "Shaker Run",
+      "format": "3 Man Single Ball Par 5 / Double Ball Par 4 / Triple Ball Par 3",
+      "signUp": "Sign Up As Individual — Blind Draw After Golf",
+      "entryFee": "$79",
+      "firstTeeTime": "9:00",
+      "pairingsPosted": "Posted by Wed 5/13",
+      "resultsId": "may1"
+    },
+    {
+      "date": "May 17",
+      "course": "Yankee Trace",
+      "format": "2 Man Customized Stableford",
+      "signUp": "Sign Up As Twosome",
+      "entryFee": "$69",
+      "firstTeeTime": "1:00",
+      "pairingsPosted": "Posted by Wed 5/13",
+      "resultsId": "may2"
+    },
+    {
+      "date": "June 20",
+      "course": "Hueston Woods",
+      "format": "2 Man Both Balls",
+      "signUp": "Sign Up As Twosome",
+      "entryFee": "$69",
+      "firstTeeTime": "9:00",
+      "pairingsPosted": "Posted by Wed 6/17",
+      "resultsId": "june"
+    },
+    {
+      "date": "July 18",
+      "course": "Kings Island",
+      "format": "3 Man Double Best Ball",
+      "signUp": "Sign Up As Foursome — Blind Draw for Team after Golf",
+      "entryFee": "$69",
+      "firstTeeTime": "1:00",
+      "pairingsPosted": "Posted by Wed 7/15",
+      "resultsId": "july"
+    },
+    {
+      "date": "August 22",
+      "course": "Heatherwoode",
+      "format": "2 Man Single Best Ball",
+      "signUp": "Sign Up As Foursome",
+      "entryFee": "$69",
+      "firstTeeTime": "1:00",
+      "pairingsPosted": "Posted by Wed 8/19",
+      "resultsId": "august"
+    },
+    {
+      "date": "September 19",
+      "course": "Indian Ridge",
+      "format": "2 Man Best Ball",
+      "signUp": "Sign Up As Twosome",
+      "entryFee": "$60",
+      "firstTeeTime": "1:00",
+      "pairingsPosted": "Posted by Wed 9/16",
+      "resultsId": "september"
+    },
+    {
+      "date": "October 17",
+      "course": "Wildwood",
+      "format": "2 Man Best Ball",
+      "signUp": "Sign Up As Individual — Blind Draw Before Golf",
+      "entryFee": "$69",
+      "firstTeeTime": "12:00",
+      "pairingsPosted": "Posted by Wed 10/14",
+      "resultsId": "october"
+    }
+  ]
+}
