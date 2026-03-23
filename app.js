@@ -111,23 +111,32 @@ function renderHome() {
 }
 
 function renderScheduleTable(season) {
-  if (!season.schedule || season.schedule.length === 0) 
+  if (!season.schedule || season.schedule.length === 0)
     return '<p class="text-muted">No schedule available.</p>';
-  
-  const rows = season.schedule.map(e => `
-    <tr>
-      <td class="date-col">${e.date}</td>
-      <td class="course-col">${e.course}</td>
-      <td>${e.format}</td>
-      <td>${e.entryFee}</td>
-      <td><span class="text-muted">Upcoming</span></td>
-    </tr>`).join('');
-  
+
+  const cards = season.schedule.map((e, i) => {
+    const details = [
+      e.format    ? `<div class="evt-detail"><span class="evt-label">Format</span><span class="evt-value">${e.format}</span></div>` : '',
+      e.entryFee  ? `<div class="evt-detail"><span class="evt-label">Entry</span><span class="evt-value">${e.entryFee}</span></div>` : '',
+      e.firstTeeTime ? `<div class="evt-detail"><span class="evt-label">First Tee</span><span class="evt-value">${e.firstTeeTime}</span></div>` : '',
+      e.signUp    ? `<div class="evt-detail"><span class="evt-label">Sign Up</span><span class="evt-value">${e.signUp}</span></div>` : '',
+    ].filter(Boolean).join('');
+
+    return `
+    <div class="evt-card">
+      <div class="evt-header">
+        <div class="evt-number">${i + 1}</div>
+        <div class="evt-date">${e.date}</div>
+        <div class="evt-status upcoming">Upcoming</div>
+      </div>
+      <div class="evt-course">${e.course}</div>
+      <div class="evt-details">${details}</div>
+      ${e.pairingsPosted ? `<div class="evt-footer">${e.pairingsPosted}</div>` : ''}
+    </div>`;
+  }).join('');
+
   return `
-    <table class="schedule-table">
-      <thead><tr><th>Date</th><th>Course</th><th>Format</th><th>Entry</th><th>Status</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <div class="schedule-grid">${cards}</div>
     <p class="note">* Carts not included. Entries due 10 days before each event.</p>
   `;
 }
