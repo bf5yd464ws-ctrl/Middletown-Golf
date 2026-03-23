@@ -1,0 +1,41 @@
+{
+  "year": 2025,
+  "topTens": {
+    "netPoints": [
+      {"rank": "1st", "player": "Herb Holmes", "total": 187},
+      {"rank": "T-2nd", "player": "Steve Conway", "total": 180},
+      {"rank": "T-2nd", "player": "David Simpson", "total": 180},
+      {"rank": "4th", "player": "Steve Goertemiller", "total": 179},
+      {"rank": "5th", "player": "Roger Campbell", "total": 176},
+      {"rank": "6th", "player": "Russ Yenser", "total": 173},
+      {"rank": "7th", "player": "Don Hartness", "total": 135},
+      {"rank": "8th", "player": "David Saniga", "total": 110},
+      {"rank": "9th", "player": "Jamie Harrison", "total": 109},
+      {"rank": "10th", "player": "Mark Willenbrink", "total": 101}
+    ],
+    "moneyList": [
+      {"rank": "1st", "player": "Steve Goertemiller", "total": "$249"},
+      {"rank": "2nd", "player": "David Simpson", "total": "$199"},
+      {"rank": "T-3rd", "player": "Roger Campbell", "total": "$167"},
+      {"rank": "T-3rd", "player": "Russ Yenser", "total": "$167"},
+      {"rank": "T-5th", "player": "Don Hartness", "total": "$123"},
+      {"rank": "T-5th", "player": "Mark Willenbrink", "total": "$123"},
+      {"rank": "7th", "player": "Herb Holmes", "total": "$119"},
+      {"rank": "8th", "player": "Jeff Zimmer", "total": "$110"},
+      {"rank": "9th", "player": "Dave Lainhart", "total": "$97"},
+      {"rank": "10th", "player": "Steve Conway", "total": "$89"}
+    ],
+    "sideMoneyList": [
+      {"rank": "1st", "player": "Steve Goertemiller", "total": "$142"},
+      {"rank": "2nd", "player": "Herb Holmes", "total": "$139"},
+      {"rank": "3rd", "player": "David Saniga", "total": "$104"},
+      {"rank": "T-4th", "player": "Roger Campbell", "total": "$91"},
+      {"rank": "T-4th", "player": "Jeff Zimmer", "total": "$91"},
+      {"rank": "6th", "player": "Steve Conway", "total": "$83"},
+      {"rank": "7th", "player": "Nick Edwards", "total": "$68"},
+      {"rank": "8th", "player": "David Simpson", "total": "$67"},
+      {"rank": "9th", "player": "Mark Willenbrink", "total": "$65"},
+      {"rank": "10th", "player": "Brad Matingly", "total": "$64"}
+    ]
+  }
+}

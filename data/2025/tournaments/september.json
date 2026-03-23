@@ -1,0 +1,136 @@
+{
+  "year": 2025,
+  "month": "September",
+  "date": "Saturday, September 13, 2025",
+  "course": "Cassel Hills Golf Course",
+  "format": "2 Man Best Ball",
+  "teamResults": [
+    {
+      "place": "1st Place",
+      "team": "Russ Yenser - Roger Campbell",
+      "netScore": 64,
+      "payout": "$80"
+    },
+    {
+      "place": "2nd Place",
+      "team": "Steve Conway - David Simpson",
+      "netScore": 66,
+      "payout": "$40"
+    },
+    {
+      "place": "3rd Place",
+      "team": "Steve Goertemiller - Herb Holmes",
+      "netScore": 68,
+      "payout": null
+    },
+    {
+      "place": "4th Place",
+      "team": "David Saniga - Dick Freeman",
+      "netScore": 75,
+      "payout": null
+    }
+  ],
+  "closestToPin": [
+    {"hole": 4, "player": "Roger Campbell", "payout": "$20"},
+    {"hole": 7, "player": "Dennis Daley", "payout": "$20"},
+    {"hole": 9, "player": "Russ Yenser", "payout": "$20"},
+    {"hole": 13, "player": "Dennis Daley", "payout": "$20"},
+    {"hole": 16, "player": "Don Hartness", "payout": "$20"}
+  ],
+  "skins": [
+    {"hole": 1, "player": "Steve Conway", "payout": "$8"},
+    {"hole": 7, "player": "Dick Freeman", "payout": "$8"},
+    {"hole": 8, "player": "Dick Freeman", "payout": "$8"},
+    {"hole": 9, "player": "Russ Yenser", "payout": "$8"},
+    {"hole": 10, "player": "Roger Campbell", "payout": "$8"},
+    {"hole": 11, "player": "Dick Freeman", "payout": "$8"},
+    {"hole": 13, "player": "David Simpson", "payout": "$8"},
+    {"hole": 17, "player": "Steve Goertemiller", "payout": "$8"}
+  ],
+  "lowNetResults": [
+    {
+      "place": "1st place",
+      "player": "Steve Conway",
+      "score": 71,
+      "payout": "$30"
+    },
+    {
+      "place": "2nd place",
+      "player": "Russ Yenser",
+      "score": 72,
+      "payout": "$15"
+    },
+    {
+      "place": "3rd place",
+      "player": "Roger Campbell",
+      "score": 75,
+      "payout": "$7"
+    }
+  ],
+  "individualResults": [
+    {
+      "player": "Roger Campbell",
+      "grossScore": 89,
+      "sideMoney": 15,
+      "netScore": 75,
+      "netPoints": 18,
+      "totalPayout": "$60"
+    },
+    {
+      "player": "Steve Conway",
+      "grossScore": 91,
+      "sideMoney": 38,
+      "netScore": 71,
+      "netPoints": 24,
+      "totalPayout": "$20"
+    },
+    {
+      "player": "Dick Freeman",
+      "grossScore": 97,
+      "sideMoney": 24,
+      "netScore": 77,
+      "netPoints": 12,
+      "totalPayout": null
+    },
+    {
+      "player": "Steve Goertemiller",
+      "grossScore": 86,
+      "sideMoney": 8,
+      "netScore": 76,
+      "netPoints": 15,
+      "totalPayout": "$20"
+    },
+    {
+      "player": "Herb Holmes",
+      "grossScore": 88,
+      "sideMoney": 0,
+      "netScore": 78,
+      "netPoints": 9,
+      "totalPayout": null
+    },
+    {
+      "player": "David Saniga",
+      "grossScore": 112,
+      "sideMoney": 0,
+      "netScore": 95,
+      "netPoints": 3,
+      "totalPayout": null
+    },
+    {
+      "player": "David Simpson",
+      "grossScore": 91,
+      "sideMoney": 8,
+      "netScore": 78,
+      "netPoints": 9,
+      "totalPayout": "$40"
+    },
+    {
+      "player": "Russ Yenser",
+      "grossScore": 94,
+      "sideMoney": 23,
+      "netScore": 72,
+      "netPoints": 21,
+      "totalPayout": "$60"
+    }
+  ]
+}
