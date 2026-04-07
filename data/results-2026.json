@@ -1,0 +1,5 @@
+{
+  "_note": "2026 tournament results index. Add an entry to the tournaments array each time results are posted. The page field must match the exact HTML filename in the 2026/ folder.",
+  "year": 2026,
+  "tournaments": []
+}
