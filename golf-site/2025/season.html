@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2025 Season Standings — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div id="app-header"></div>
+<section class="page-hero">
+  <div class="container">
+    <h1>2025 Season Standings</h1>
+    <p>Final Results and Rankings</p>
+  </div>
+</section>
+<main class="page-content">
+  <div class="container">
+    <div class="page-breadcrumb">
+      <a href="../results.html">Results</a>
+      <span class="sep">/</span>
+      <span>2025</span>
+      <span class="sep">/</span>
+      <span>Season Standings</span>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="money-list">Money List</button>
+      <button class="tab-btn" data-tab="net-points">Net Points</button>
+      <button class="tab-btn" data-tab="side-money">Side Money</button>
+      <button class="tab-btn" data-tab="top-tens">Top Tens</button>
+      <button class="tab-btn" data-tab="career">Career Totals</button>
+    </div>
+
+    <!-- MONEY LIST TAB -->
+    <div class="tab-panel active" id="money-list">
+      <div class="result-section">
+        <h3>Money List</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">$249</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>David Simpson</td>
+              <td class="amount">$199</td>
+            </tr>
+            <tr>
+              <td class="rank">3T</td>
+              <td>Roger Campbell</td>
+              <td class="amount">$167</td>
+            </tr>
+            <tr>
+              <td class="rank">3T</td>
+              <td>Russ Yenser</td>
+              <td class="amount">$167</td>
+            </tr>
+            <tr>
+              <td class="rank">5T</td>
+              <td>Don Hartness</td>
+              <td class="amount">$123</td>
+            </tr>
+            <tr>
+              <td class="rank">5T</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">$123</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Herb Holmes</td>
+              <td class="amount">$119</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">$110</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Dave Lainhart</td>
+              <td class="amount">$97</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Steve Conway</td>
+              <td class="amount">$89</td>
+            </tr>
+            <tr>
+              <td class="rank">11T</td>
+              <td>David Saniga</td>
+              <td class="amount">$80</td>
+            </tr>
+            <tr>
+              <td class="rank">11T</td>
+              <td>John Stanton</td>
+              <td class="amount">$80</td>
+            </tr>
+            <tr>
+              <td class="rank">13</td>
+              <td>Jamie Harrison</td>
+              <td class="amount">$70</td>
+            </tr>
+            <tr>
+              <td class="rank">14T</td>
+              <td>Dennis Daley</td>
+              <td class="amount">$50</td>
+            </tr>
+            <tr>
+              <td class="rank">14T</td>
+              <td>Brad Mattingly</td>
+              <td class="amount">$50</td>
+            </tr>
+            <tr>
+              <td class="rank">16T</td>
+              <td>Rich Mealey</td>
+              <td class="amount">$40</td>
+            </tr>
+            <tr>
+              <td class="rank">16T</td>
+              <td>Scott Shaw</td>
+              <td class="amount">$40</td>
+            </tr>
+            <tr>
+              <td class="rank">18T</td>
+              <td>Dick Freeman</td>
+              <td class="amount">$30</td>
+            </tr>
+            <tr>
+              <td class="rank">18T</td>
+              <td>Jason Harrison</td>
+              <td class="amount">$30</td>
+            </tr>
+            <tr>
+              <td class="rank">20</td>
+              <td>Nick Edwards</td>
+              <td class="amount">$29</td>
+            </tr>
+            <tr>
+              <td class="rank">21</td>
+              <td>Mark Mattingly</td>
+              <td class="amount">$28</td>
+            </tr>
+            <tr>
+              <td class="rank">22</td>
+              <td>Danny Hause</td>
+              <td class="amount">$20</td>
+            </tr>
+            <tr>
+              <td class="rank">23T</td>
+              <td>Steve Harrison</td>
+              <td class="amount">$10</td>
+            </tr>
+            <tr>
+              <td class="rank">23T</td>
+              <td>Jim Wendel</td>
+              <td class="amount">$10</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Jim Drury</td>
+              <td class="amount">$0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Jeff Kinsel</td>
+              <td class="amount">$0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Carl Kohs</td>
+              <td class="amount">$0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Bret Yenser</td>
+              <td class="amount">$0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- NET POINTS TAB -->
+    <div class="tab-panel" id="net-points">
+      <div class="result-section">
+        <h3>Net Points</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Herb Holmes</td>
+              <td class="amount">187</td>
+            </tr>
+            <tr>
+              <td class="rank">2T</td>
+              <td>Steve Conway</td>
+              <td class="amount">180</td>
+            </tr>
+            <tr>
+              <td class="rank">2T</td>
+              <td>David Simpson</td>
+              <td class="amount">180</td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">179</td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td>Roger Campbell</td>
+              <td class="amount">176</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td>Russ Yenser</td>
+              <td class="amount">173</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Don Hartness</td>
+              <td class="amount">135</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>David Saniga</td>
+              <td class="amount">110</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Jamie Harrison</td>
+              <td class="amount">109</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">101</td>
+            </tr>
+            <tr>
+              <td class="rank">11</td>
+              <td>Brad Mattingly</td>
+              <td class="amount">92</td>
+            </tr>
+            <tr>
+              <td class="rank">12</td>
+              <td>Dick Freeman</td>
+              <td class="amount">81</td>
+            </tr>
+            <tr>
+              <td class="rank">13</td>
+              <td>Dennis Daley</td>
+              <td class="amount">78</td>
+            </tr>
+            <tr>
+              <td class="rank">14</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">76</td>
+            </tr>
+            <tr>
+              <td class="rank">15</td>
+              <td>Mark Mattingly</td>
+              <td class="amount">72</td>
+            </tr>
+            <tr>
+              <td class="rank">16</td>
+              <td>Nick Edwards</td>
+              <td class="amount">70</td>
+            </tr>
+            <tr>
+              <td class="rank">17</td>
+              <td>Steve Harrison</td>
+              <td class="amount">68</td>
+            </tr>
+            <tr>
+              <td class="rank">18</td>
+              <td>Jim Wendel</td>
+              <td class="amount">66</td>
+            </tr>
+            <tr>
+              <td class="rank">19</td>
+              <td>Rich Mealey</td>
+              <td class="amount">65</td>
+            </tr>
+            <tr>
+              <td class="rank">20</td>
+              <td>Scott Shaw</td>
+              <td class="amount">48</td>
+            </tr>
+            <tr>
+              <td class="rank">21</td>
+              <td>Dave Lainhart</td>
+              <td class="amount">32</td>
+            </tr>
+            <tr>
+              <td class="rank">22</td>
+              <td>John Stanton</td>
+              <td class="amount">28</td>
+            </tr>
+            <tr>
+              <td class="rank">23</td>
+              <td>Jason Harrison</td>
+              <td class="amount">14</td>
+            </tr>
+            <tr>
+              <td class="rank">24</td>
+              <td>Danny Hause</td>
+              <td class="amount">9</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Jim Drury</td>
+              <td class="amount">0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Jeff Kinsel</td>
+              <td class="amount">0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Carl Kohs</td>
+              <td class="amount">0</td>
+            </tr>
+            <tr>
+              <td class="rank">25T</td>
+              <td>Bret Yenser</td>
+              <td class="amount">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SIDE MONEY TAB -->
+    <div class="tab-panel" id="side-money">
+      <div class="result-section">
+        <h3>Side Money</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">$142</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>Herb Holmes</td>
+              <td class="amount">$139</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td>David Saniga</td>
+              <td class="amount">$104</td>
+            </tr>
+            <tr>
+              <td class="rank">4T</td>
+              <td>Roger Campbell</td>
+              <td class="amount">$91</td>
+            </tr>
+            <tr>
+              <td class="rank">4T</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">$91</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td>Steve Conway</td>
+              <td class="amount">$83</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Nick Edwards</td>
+              <td class="amount">$68</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>David Simpson</td>
+              <td class="amount">$67</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">$65</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Brad Mattingly</td>
+              <td class="amount">$64</td>
+            </tr>
+            <tr>
+              <td class="rank">11</td>
+              <td>Steve Harrison</td>
+              <td class="amount">$58</td>
+            </tr>
+            <tr>
+              <td class="rank">12</td>
+              <td>Mark Mattingly</td>
+              <td class="amount">$50</td>
+            </tr>
+            <tr>
+              <td class="rank">13</td>
+              <td>Russ Yenser</td>
+              <td class="amount">$40</td>
+            </tr>
+            <tr>
+              <td class="rank">14</td>
+              <td>Dennis Daley</td>
+              <td class="amount">$37</td>
+            </tr>
+            <tr>
+              <td class="rank">15</td>
+              <td>Dick Freeman</td>
+              <td class="amount">$24</td>
+            </tr>
+            <tr>
+              <td class="rank">16</td>
+              <td>Jamie Harrison</td>
+              <td class="amount">$19</td>
+            </tr>
+            <tr>
+              <td class="rank">17</td>
+              <td>Don Hartness</td>
+              <td class="amount">$16</td>
+            </tr>
+            <tr>
+              <td class="rank">18</td>
+              <td>Jim Wendel</td>
+              <td class="amount">$5</td>
+            </tr>
+            <tr>
+              <td class="rank">19</td>
+              <td>Rich Mealey</td>
+              <td class="amount">$4</td>
+            </tr>
+            <tr>
+              <td class="rank">20+</td>
+              <td>Jim Drury, Jason Harrison, Danny Hause, Jeff Kinsel, Carl Kohs, Dave Lainhart, Scott Shaw, John Stanton, Bret Yenser</td>
+              <td class="amount">$0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TOP TENS TAB -->
+    <div class="tab-panel" id="top-tens">
+      <div class="result-section">
+        <h3>Top Ten - Net Points</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Herb Holmes</td>
+              <td class="amount">187</td>
+            </tr>
+            <tr>
+              <td class="rank">2T</td>
+              <td>Steve Conway</td>
+              <td class="amount">180</td>
+            </tr>
+            <tr>
+              <td class="rank">2T</td>
+              <td>David Simpson</td>
+              <td class="amount">180</td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">179</td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td>Roger Campbell</td>
+              <td class="amount">176</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td>Russ Yenser</td>
+              <td class="amount">173</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Don Hartness</td>
+              <td class="amount">135</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>David Saniga</td>
+              <td class="amount">110</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Jamie Harrison</td>
+              <td class="amount">109</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">101</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="result-section" style="margin-top: 2rem;">
+        <h3>Top Ten - Money</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">$249</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>David Simpson</td>
+              <td class="amount">$199</td>
+            </tr>
+            <tr>
+              <td class="rank">3T</td>
+              <td>Roger Campbell</td>
+              <td class="amount">$167</td>
+            </tr>
+            <tr>
+              <td class="rank">3T</td>
+              <td>Russ Yenser</td>
+              <td class="amount">$167</td>
+            </tr>
+            <tr>
+              <td class="rank">5T</td>
+              <td>Don Hartness</td>
+              <td class="amount">$123</td>
+            </tr>
+            <tr>
+              <td class="rank">5T</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">$123</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Herb Holmes</td>
+              <td class="amount">$119</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">$110</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Dave Lainhart</td>
+              <td class="amount">$97</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Steve Conway</td>
+              <td class="amount">$89</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="result-section" style="margin-top: 2rem;">
+        <h3>Top Ten - Side Money</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">$142</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>Herb Holmes</td>
+              <td class="amount">$139</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td>David Saniga</td>
+              <td class="amount">$104</td>
+            </tr>
+            <tr>
+              <td class="rank">4T</td>
+              <td>Roger Campbell</td>
+              <td class="amount">$91</td>
+            </tr>
+            <tr>
+              <td class="rank">4T</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">$91</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td>Steve Conway</td>
+              <td class="amount">$83</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Nick Edwards</td>
+              <td class="amount">$68</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>David Simpson</td>
+              <td class="amount">$67</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">$65</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Brad Mattingly</td>
+              <td class="amount">$64</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CAREER TOTALS TAB -->
+    <div class="tab-panel" id="career">
+      <div class="result-section">
+        <h3>Career Totals - Money</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th class="amount">Career Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>Herb Holmes</td>
+              <td class="amount">$4,159</td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>Russ Yenser</td>
+              <td class="amount">$3,928</td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td>Roger Campbell</td>
+              <td class="amount">$3,659</td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>Dave Lainhart</td>
+              <td class="amount">$3,405</td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td>Steve Goertemiller</td>
+              <td class="amount">$3,403</td>
+            </tr>
+            <tr>
+              <td class="rank">6</td>
+              <td>Don Hartness</td>
+              <td class="amount">$3,068</td>
+            </tr>
+            <tr>
+              <td class="rank">7</td>
+              <td>Steve Harrison</td>
+              <td class="amount">$2,817</td>
+            </tr>
+            <tr>
+              <td class="rank">8</td>
+              <td>Dennis Daley</td>
+              <td class="amount">$2,658</td>
+            </tr>
+            <tr>
+              <td class="rank">9</td>
+              <td>Rich Mealey</td>
+              <td class="amount">$2,513</td>
+            </tr>
+            <tr>
+              <td class="rank">10</td>
+              <td>Mark Mattingly</td>
+              <td class="amount">$2,459</td>
+            </tr>
+            <tr>
+              <td class="rank">11</td>
+              <td>Jim Drury</td>
+              <td class="amount">$2,108</td>
+            </tr>
+            <tr>
+              <td class="rank">12</td>
+              <td>Mark Willenbrink</td>
+              <td class="amount">$1,642</td>
+            </tr>
+            <tr>
+              <td class="rank">13</td>
+              <td>Dick Freeman</td>
+              <td class="amount">$1,727</td>
+            </tr>
+            <tr>
+              <td class="rank">14</td>
+              <td>John Stanton</td>
+              <td class="amount">$1,713</td>
+            </tr>
+            <tr>
+              <td class="rank">15</td>
+              <td>David Simpson</td>
+              <td class="amount">$1,404</td>
+            </tr>
+            <tr>
+              <td class="rank">16</td>
+              <td>Steve Conway</td>
+              <td class="amount">$984</td>
+            </tr>
+            <tr>
+              <td class="rank">17</td>
+              <td>Scott Shaw</td>
+              <td class="amount">$720</td>
+            </tr>
+            <tr>
+              <td class="rank">18</td>
+              <td>John O'Donnell</td>
+              <td class="amount">$701</td>
+            </tr>
+            <tr>
+              <td class="rank">19</td>
+              <td>Jim Wendel</td>
+              <td class="amount">$487</td>
+            </tr>
+            <tr>
+              <td class="rank">20</td>
+              <td>David Saniga</td>
+              <td class="amount">$475</td>
+            </tr>
+            <tr>
+              <td class="rank">21</td>
+              <td>Brad Mattingly</td>
+              <td class="amount">$415</td>
+            </tr>
+            <tr>
+              <td class="rank">22</td>
+              <td>Bret Yenser</td>
+              <td class="amount">$385</td>
+            </tr>
+            <tr>
+              <td class="rank">23</td>
+              <td>Danny Hause</td>
+              <td class="amount">$245</td>
+            </tr>
+            <tr>
+              <td class="rank">24</td>
+              <td>Jason Harrison</td>
+              <td class="amount">$148</td>
+            </tr>
+            <tr>
+              <td class="rank">25</td>
+              <td>Jamie Harrison</td>
+              <td class="amount">$140</td>
+            </tr>
+            <tr>
+              <td class="rank">26</td>
+              <td>Nick Edwards</td>
+              <td class="amount">$29</td>
+            </tr>
+            <tr>
+              <td class="rank">27</td>
+              <td>Jeff Zimmer</td>
+              <td class="amount">$150</td>
+            </tr>
+            <tr>
+              <td class="rank">28</td>
+              <td>Carl Kohs</td>
+              <td class="amount">-</td>
+            </tr>
+            <tr>
+              <td class="rank">29</td>
+              <td>Jeff Kinsel</td>
+              <td class="amount">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="divider" style="margin: 2rem 0;"></div>
+    <div style="text-align: center; margin: 2rem 0;">
+      <a href="../results.html" class="btn btn-outline">Back to Results</a>
+    </div>
+  </div>
+</main>
+<div id="app-footer"></div>
+<script src="../js/nav.js"></script>
+<script>
+  document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const tabName = this.getAttribute('data-tab');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.getElementById(tabName).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

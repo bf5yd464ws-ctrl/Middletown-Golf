@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Tournament Results</h1>
+    <p>Season standings, money lists, net points, and monthly results from 2001 to present.</p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container">
+
+    <!-- 2025 Season — most recent complete year -->
+    <div class="section-head">
+      <h2>2025 Season</h2>
+      <span class="badge badge-past">Completed</span>
+      <a href="2025/season.html" style="margin-left:auto;">View season standings &rarr;</a>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-head"><h3>Season Standings</h3></div>
+      <div class="card-body">
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <a href="2025/season.html" class="btn btn-primary btn-sm">All Standings</a>
+          <a href="2025/season.html#money" class="btn btn-outline btn-sm">Money List</a>
+          <a href="2025/season.html#net" class="btn btn-outline btn-sm">Net Points</a>
+          <a href="2025/season.html#side" class="btn btn-outline btn-sm">Side Money</a>
+          <a href="2025/season.html#career" class="btn btn-outline btn-sm">Career Totals</a>
+        </div>
+        <div class="divider"></div>
+        <div class="section-head" style="margin-bottom:0.75rem;"><h3 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">Monthly Results</h3></div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;" id="results-2025-months"></div>
+      </div>
+    </div>
+
+    <!-- 2025 Snapshot -->
+    <div class="section-head mt-3"><h2>2025 Money Leaders</h2></div>
+    <div class="card mb-3">
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Rank</th><th>Player</th><th>Winnings</th><th>Side Money</th><th>Net Points</th></tr></thead>
+          <tbody>
+            <tr><td class="rank">1</td><td class="highlight">Steve Goertemiller</td><td class="amount">$249</td><td>$142</td><td>179</td></tr>
+            <tr><td class="rank">2</td><td class="highlight">David Simpson</td><td class="amount">$199</td><td>$67</td><td>180</td></tr>
+            <tr><td class="rank">3T</td><td>Roger Campbell</td><td class="amount">$167</td><td>$91</td><td>176</td></tr>
+            <tr><td class="rank">3T</td><td>Russ Yenser</td><td class="amount">$167</td><td>$40</td><td>173</td></tr>
+            <tr><td class="rank">5T</td><td>Don Hartness</td><td class="amount">$123</td><td>$16</td><td>135</td></tr>
+            <tr><td class="rank">5T</td><td>Mark Willenbrink</td><td class="amount">$123</td><td>$65</td><td>101</td></tr>
+            <tr><td class="rank">7</td><td>Herb Holmes</td><td class="amount">$119</td><td>$139</td><td>187</td></tr>
+            <tr><td class="rank">8</td><td>Jeff Zimmer</td><td class="amount">$110</td><td>$91</td><td>76</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Archive -->
+    <div class="section-head">
+      <h2>Results Archive</h2>
+    </div>
+    <p class="text-muted text-sm mb-2">Results from prior seasons. Earlier years link to the original archive.</p>
+
+    <!-- Item 6: Year decade filter -->
+    <div class="yr-filter" id="yr-filter" role="group" aria-label="Filter by decade">
+      <button class="yr-filter-btn active" data-range="all">All Years</button>
+      <button class="yr-filter-btn" data-range="2020">2020s</button>
+      <button class="yr-filter-btn" data-range="2010">2010s</button>
+      <button class="yr-filter-btn" data-range="2000">2000s</button>
+    </div>
+
+    <div class="results-years" id="archive-grid"></div>
+
+  </div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/nav.js"></script>
+<script>
+  // Load 2025 monthly result links
+  fetch('data/results-2025.json').then(r => r.json()).then(data => {
+    document.getElementById('results-2025-months').innerHTML =
+      data.tournaments.map(t =>
+        `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month}${t.note ? ' *' : ''}</a>`
+      ).join('');
+  });
+
+  // Archive grid — all years 2024 back to 2001, linking to local pages
+  fetch('data/results-index.json').then(r => r.json()).then(data => {
+    const grid = document.getElementById('archive-grid');
+    grid.innerHTML = data.years.map(y => {
+      const base   = y.year + '/';
+      const decade = Math.floor(y.year / 10) * 10;
+      const months = (y.months || []).map(m =>
+        `<a href="${base}${m}-results.html" class="yr-link">${m.substring(0,3).charAt(0).toUpperCase() + m.substring(1,3)}</a>`
+      ).join('');
+      return `
+        <div class="yr-card" data-year="${y.year}" data-decade="${decade}">
+          <div class="yr-card-head">
+            <span>${y.year}</span>
+            ${y.note ? `<span style="font-size:0.7rem;opacity:0.7;">${y.note}</span>` : ''}
+          </div>
+          <div class="yr-card-body">
+            <div class="yr-links mb-1">
+              <a href="${base}season.html" class="yr-link season">Season</a>
+            </div>
+            <div class="yr-links">${months}</div>
+          </div>
+        </div>`;
+    }).join('');
+
+    /* Wire up decade filter buttons */
+    document.querySelectorAll('.yr-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.yr-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const range = btn.dataset.range;
+        document.querySelectorAll('.yr-card').forEach(card => {
+          if (range === 'all') {
+            card.style.display = '';
+          } else {
+            card.style.display = card.dataset.decade === range ? '' : 'none';
+          }
+        });
+      });
+    });
+  }).catch(() => {
+    document.getElementById('archive-grid').innerHTML = '<p class="text-muted text-sm">Archive data unavailable.</p>';
+  });
+</script>
+</body>
+</html>

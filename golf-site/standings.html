@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Season Standings — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Season Standings</h1>
+    <p>Rankings, points, and winnings for every season.</p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container">
+
+    <!-- Tab bar + year selector -->
+    <div class="rpt-tab-bar">
+      <div class="rpt-tabs">
+        <button class="rpt-tab active" id="tab-lb"  onclick="showTab('leaderboard')">
+          🏆 Season Leaderboard
+        </button>
+        <button class="rpt-tab"        id="tab-pts" onclick="showTab('points')">
+          📊 Points Breakdown
+        </button>
+      </div>
+      <div class="rpt-year-sel">
+        <label for="year-select">Season:</label>
+        <select id="year-select" onchange="loadYear(+this.value)">
+          <option value="2026">2026</option>
+          <option value="2025">2025</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- ── Season Leaderboard panel ── -->
+    <div id="panel-leaderboard" class="rpt-panel">
+      <div class="rpt-header">
+        <div class="rpt-title-group">
+          <span class="rpt-icon rpt-icon--gold">🏆</span>
+          <div>
+            <h2 class="rpt-title">Season Leaderboard</h2>
+            <p class="rpt-subtitle" id="lb-subtitle">Rankings for 2026 Season</p>
+          </div>
+        </div>
+        <span class="rpt-meta" id="lb-meta"></span>
+      </div>
+
+      <div class="table-scroll">
+        <table class="rpt-table" id="lb-table">
+          <thead>
+            <tr>
+              <th class="col-rank">Rank</th>
+              <th class="col-name">Name</th>
+              <th class="col-pts">Points</th>
+              <th class="col-trend">Trend</th>
+              <th class="col-num" title="Rounds played">Rounds</th>
+              <th class="col-num" title="Tournament wins">Wins</th>
+              <th class="col-num" title="Birdies / Eagles">B&thinsp;/&thinsp;E</th>
+              <th class="col-money">Tourn&nbsp;$</th>
+              <th class="col-money">Side&nbsp;$</th>
+              <th class="col-money">Team&nbsp;$</th>
+              <th class="col-money col-total">Total&nbsp;$</th>
+            </tr>
+          </thead>
+          <tbody id="lb-body">
+            <tr><td colspan="11" class="rpt-loading">Loading&hellip;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── Points Breakdown panel ── -->
+    <div id="panel-points" class="rpt-panel" style="display:none;">
+      <div class="rpt-header">
+        <div class="rpt-title-group">
+          <span class="rpt-icon rpt-icon--orange">📊</span>
+          <div>
+            <h2 class="rpt-title">Points Breakdown</h2>
+            <p class="rpt-subtitle" id="pts-subtitle">Points earned per tournament in 2026</p>
+          </div>
+        </div>
+        <span class="rpt-meta" id="pts-meta"></span>
+      </div>
+
+      <div class="table-scroll">
+        <table class="rpt-table rpt-table--pts" id="pts-table">
+          <thead id="pts-thead">
+            <tr><th colspan="4" class="rpt-loading">Loading&hellip;</th></tr>
+          </thead>
+          <tbody id="pts-body"></tbody>
+          <tfoot id="pts-foot"></tfoot>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/nav.js"></script>
+<script>
+  /* ── State ── */
+  let currentYear = 2026;
+  let ptsData     = null;
+  let ptsSort     = { col: 'total', dir: 'desc' };
+
+  /* ── Tab switching ── */
+  function showTab(tab) {
+    document.getElementById('panel-leaderboard').style.display = tab === 'leaderboard' ? '' : 'none';
+    document.getElementById('panel-points').style.display      = tab === 'points'      ? '' : 'none';
+    document.getElementById('tab-lb').classList.toggle('active',  tab === 'leaderboard');
+    document.getElementById('tab-pts').classList.toggle('active', tab === 'points');
+    history.replaceState(null, '', tab === 'points' ? '#points' : '#');
+  }
+
+  /* ── Year loading ── */
+  function loadYear(year) {
+    currentYear = year;
+    ptsData = null;
+    renderLeaderboard(year);
+    renderBreakdown(year);
+  }
+
+  /* ── Formatters ── */
+  function fmt$(v) {
+    return (v > 0) ? '$' + Number(v).toFixed(0) : '—';
+  }
+  function rankBadge(rank, isTied) {
+    const label = isTied ? 'T' + rank : String(rank);
+    const cls   = rank <= 3 ? ' rank-' + rank : '';
+    return `<span class="rank-badge${cls}">${label}</span>`;
+  }
+  function trendHtml(trend) {
+    const map = {
+      hot:    ['↑ Hot',    'trend-hot'],
+      steady: ['→ Steady', 'trend-steady'],
+      cold:   ['↓ Cold',   'trend-cold'],
+    };
+    const t = map[trend];
+    return t ? `<span class="${t[1]}">${t[0]}</span>` : '<span class="trend-none">—</span>';
+  }
+  function rowCls(rank) {
+    return rank === 1 ? 'row-gold' : rank === 2 ? 'row-silver' : rank === 3 ? 'row-bronze' : '';
+  }
+  function fmtDate(iso) {
+    return iso ? new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+  }
+
+  /* ── Season Leaderboard ── */
+  async function renderLeaderboard(year) {
+    const tbody = document.getElementById('lb-body');
+    tbody.innerHTML = '<tr><td colspan="11" class="rpt-loading">Loading&hellip;</td></tr>';
+    document.getElementById('lb-subtitle').textContent = 'Rankings for ' + year + ' Season';
+    document.getElementById('lb-meta').textContent = '';
+
+    try {
+      const data = await fetch('data/leaderboard-' + year + '.json').then(r => r.json());
+      const rows = data.leaderboard || [];
+
+      document.getElementById('lb-meta').textContent =
+        rows.length + ' golfer' + (rows.length !== 1 ? 's' : '') +
+        (data.lastUpdated ? ' · Updated ' + fmtDate(data.lastUpdated) : '');
+
+      if (!rows.length) {
+        tbody.innerHTML = `<tr><td colspan="11" class="rpt-empty">No data yet for the ${year} season — check back after the first tournament.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = rows.map(p => `
+        <tr class="${rowCls(p.rank)}">
+          <td class="col-rank">${rankBadge(p.rank, p.isTied)}</td>
+          <td class="col-name">${p.firstName} ${p.lastName}</td>
+          <td class="col-pts text-pts">${p.points}</td>
+          <td class="col-trend">${trendHtml(p.trend)}</td>
+          <td class="col-num">${p.roundsPlayed}</td>
+          <td class="col-num">${p.tournamentsWon}</td>
+          <td class="col-num">${p.birdies}/${p.eagles}</td>
+          <td class="col-money">${fmt$(p.tournamentWinnings)}</td>
+          <td class="col-money">${fmt$(p.sideWinnings)}</td>
+          <td class="col-money">${fmt$(p.teamWinnings)}</td>
+          <td class="col-money col-total text-money">${fmt$(p.totalWinnings)}</td>
+        </tr>`).join('');
+    } catch(e) {
+      tbody.innerHTML = `<tr><td colspan="11" class="rpt-empty">Could not load standings for ${year}.</td></tr>`;
+    }
+  }
+
+  /* ── Points Breakdown ── */
+  async function renderBreakdown(year) {
+    const thead = document.getElementById('pts-thead');
+    const tbody = document.getElementById('pts-body');
+    const tfoot = document.getElementById('pts-foot');
+    thead.innerHTML = '<tr><th colspan="4" class="rpt-loading">Loading&hellip;</th></tr>';
+    tbody.innerHTML = tfoot.innerHTML = '';
+    document.getElementById('pts-subtitle').textContent = 'Points earned per tournament in ' + year;
+    document.getElementById('pts-meta').textContent = '';
+
+    try {
+      ptsData = await fetch('data/points-' + year + '.json').then(r => r.json());
+      ptsSort = { col: 'total', dir: 'desc' };
+      paintBreakdown();
+    } catch(e) {
+      thead.innerHTML = `<tr><td colspan="4" class="rpt-empty">Could not load points breakdown for ${year}.</td></tr>`;
+    }
+  }
+
+  function sortBreakdown(col) {
+    ptsSort = ptsSort.col === col
+      ? { col, dir: ptsSort.dir === 'desc' ? 'asc' : 'desc' }
+      : { col, dir: 'desc' };
+    if (ptsData) paintBreakdown();
+  }
+
+  function paintBreakdown() {
+    const data = ptsData;
+    if (!data) return;
+
+    const thead = document.getElementById('pts-thead');
+    const tbody = document.getElementById('pts-body');
+    const tfoot = document.getElementById('pts-foot');
+    const tournaments = data.tournaments || [];
+    const rows        = data.breakdown  || [];
+
+    document.getElementById('pts-meta').textContent =
+      rows.length + ' golfer' + (rows.length !== 1 ? 's' : '') +
+      ' · ' + tournaments.length + ' tournament' + (tournaments.length !== 1 ? 's' : '');
+
+    /* Sort */
+    const sorted = [...rows].sort((a, b) => {
+      let diff = 0;
+      if (ptsSort.col === 'total') {
+        diff = (b.totalPoints || 0) - (a.totalPoints || 0);
+        if (diff === 0) diff = a.lastName.localeCompare(b.lastName);
+      } else if (ptsSort.col === 'name') {
+        diff = a.lastName.localeCompare(b.lastName);
+      } else {
+        const av = a.tournamentPoints[ptsSort.col] ?? -1;
+        const bv = b.tournamentPoints[ptsSort.col] ?? -1;
+        diff = bv - av;
+        if (diff === 0) diff = a.lastName.localeCompare(b.lastName);
+      }
+      return ptsSort.dir === 'asc' ? -diff : diff;
+    });
+
+    /* Recalculate display ranks */
+    sorted.forEach((p, i) => {
+      if (i === 0 || p.totalPoints !== sorted[i - 1].totalPoints) {
+        p._rank = i + 1;
+      } else {
+        p._rank = sorted[i - 1]._rank;
+      }
+    });
+    sorted.forEach(p => {
+      p._tied = sorted.filter(q => q._rank === p._rank).length > 1;
+    });
+
+    /* Sort icon helper */
+    function si(col) {
+      if (ptsSort.col !== col) return '<span class="sort-icon sort-dim">↕</span>';
+      return `<span class="sort-icon">${ptsSort.dir === 'desc' ? '↓' : '↑'}</span>`;
+    }
+    function sh(col, label) {
+      return `<button class="sort-btn" onclick="sortBreakdown('${col}')">${label} ${si(col)}</button>`;
+    }
+
+    /* Header */
+    const totalCols = 2 + tournaments.length + 1;
+    thead.innerHTML = `
+      <tr>
+        <th class="col-rank">Rank</th>
+        <th class="col-name">${sh('name', 'Name')}</th>
+        ${tournaments.map(t => `<th class="col-tourn">${sh(t.id, t.name)}</th>`).join('')}
+        <th class="col-pts">${sh('total', 'Total')}</th>
+      </tr>`;
+
+    /* Empty state */
+    if (!sorted.length) {
+      tbody.innerHTML = `<tr><td colspan="${totalCols}" class="rpt-empty">No data yet for the ${data.year} season — check back after the first tournament.</td></tr>`;
+      tfoot.innerHTML = '';
+      return;
+    }
+
+    /* Body */
+    tbody.innerHTML = sorted.map(p => {
+      const rc = rowCls(p._rank);
+      return `
+        <tr class="${rc}">
+          <td class="col-rank">${rankBadge(p._rank, p._tied)}</td>
+          <td class="col-name">${p.firstName} ${p.lastName}</td>
+          ${tournaments.map(t => {
+            const v = p.tournamentPoints[t.id];
+            return `<td class="col-tourn">${v != null ? v : '<span class="pts-none">—</span>'}</td>`;
+          }).join('')}
+          <td class="col-pts text-pts">${p.totalPoints}</td>
+        </tr>`;
+    }).join('');
+
+    /* Footer — column totals */
+    const colTotals = {};
+    tournaments.forEach(t => {
+      colTotals[t.id] = rows.reduce((s, p) => s + (p.tournamentPoints[t.id] || 0), 0);
+    });
+    const grand = rows.reduce((s, p) => s + (p.totalPoints || 0), 0);
+    tfoot.innerHTML = `
+      <tr class="row-totals">
+        <td class="col-rank"></td>
+        <td class="col-name col-name--total">Total Awarded</td>
+        ${tournaments.map(t => `<td class="col-tourn">${colTotals[t.id] || 0}</td>`).join('')}
+        <td class="col-pts">${grand}</td>
+      </tr>`;
+  }
+
+  /* ── Init ── */
+  /* Read year from select default (could extend to URL param later) */
+  renderLeaderboard(currentYear);
+  renderBreakdown(currentYear);
+
+  /* Honour #points hash */
+  if (window.location.hash === '#points') showTab('points');
+</script>
+</body>
+</html>

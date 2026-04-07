@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tee Times — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Tee Times &amp; Pairings</h1>
+    <p>Pairings are posted each Wednesday before the tournament. Check back to find your group and start time.</p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container">
+
+    <!-- Event summary card -->
+    <div class="card mb-3" id="event-card">
+      <div class="card-head">
+        <h2 id="tt-title">Loading&hellip;</h2>
+        <span class="badge badge-green">Posted</span>
+      </div>
+      <div class="card-body">
+        <div class="event-meta" id="tt-meta"></div>
+      </div>
+    </div>
+
+    <div class="section-head"><h2>Pairings</h2></div>
+    <div id="tt-groups">
+      <div style="color:var(--text-muted);padding:1rem;">Loading tee times&hellip;</div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="info-box gold mt-2">
+      <strong>Scoring categories:</strong> Net best ball &middot; Skins &middot; Association handicap &middot; USGA handicap &middot; Course handicap
+    </div>
+
+    <div class="info-box mt-2">
+      Looking for historical tee times? They are archived at the
+      <a href="https://www.tjcope.net/maga/TeeTimes.htm" target="_blank" rel="noopener">original site archive</a>.
+    </div>
+
+  </div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/nav.js"></script>
+<script>
+  fetch('data/teetimes.json').then(r => r.json()).then(data => {
+    const c = data.current;
+
+    if (!c.posted || !c.groups || c.groups.length === 0) {
+      document.getElementById('event-card').style.display = 'none';
+      document.getElementById('tt-groups').innerHTML = `
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;text-align:center;">
+          <p style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.4rem;">No tee times posted yet</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);">Pairings are posted each Wednesday before the tournament. Check back closer to the event date.</p>
+        </div>`;
+      return;
+    }
+
+    document.getElementById('tt-title').textContent = c.event;
+    document.getElementById('tt-meta').innerHTML = [
+      { lbl: 'Date',      val: c.displayDate },
+      { lbl: 'Course',    val: c.course },
+      { lbl: 'Format',    val: c.format },
+      { lbl: 'First Tee', val: c.startTime },
+    ].map(i => `<div class="event-meta-item"><span class="lbl">${i.lbl}</span><span class="val">${i.val}</span></div>`).join('');
+
+    document.getElementById('tt-groups').innerHTML = c.groups.map(g => `
+      <div class="tee-group">
+        <div class="tee-time-badge">${g.time}</div>
+        <div class="tee-players">
+          ${g.players.map(p => `<span class="player-tag">${p}</span>`).join('')}
+        </div>
+      </div>`).join('');
+  }).catch(() => {
+    document.getElementById('event-card').style.display = 'none';
+    document.getElementById('tt-groups').innerHTML = '<p style="color:var(--text-muted);">Pairings will appear here each Wednesday before the tournament.</p>';
+  });
+</script>
+</body>
+</html>

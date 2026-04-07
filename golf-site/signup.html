@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Tournament Sign Up</h1>
+    <p>Entry forms for the 2026 season.</p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container" id="signup-container">
+    <div style="text-align:center;padding:3rem 1rem;color:var(--text-muted);">Loading&hellip;</div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/nav.js"></script>
+<script>
+  async function init() {
+    const year = new Date().getFullYear();
+    const container = document.getElementById('signup-container');
+
+    let data;
+    try {
+      data = await fetch('data/schedule-' + year + '.json').then(r => r.json());
+    } catch(e) {
+      container.innerHTML = `<div class="info-box">Could not load schedule. Please contact <a href="mailto:russyenser@gmail.com">russyenser@gmail.com</a>.</div>`;
+      return;
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // All tournaments whose date hasn't passed yet
+    const future = data.tournaments.filter(t => new Date(t.date + 'T12:00:00') >= today);
+
+    if (!future.length) {
+      // Off-season: all tournaments done
+      container.innerHTML = `
+        <div class="signup-state-card">
+          <div class="signup-state-icon">🏆</div>
+          <h2 class="signup-state-title">Season Complete</h2>
+          <p class="signup-state-msg">All ${year} tournaments have concluded. The ${year + 1} schedule will be posted in early spring.</p>
+          <a href="index.html" class="btn btn-primary">View Schedule</a>
+        </div>`;
+      return;
+    }
+
+    const upNext = future[0];
+    const deadlineDate  = upNext.deadlineDate ? new Date(upNext.deadlineDate + 'T00:00:00') : null;
+    const deadlinePassed = deadlineDate && deadlineDate < today;
+
+    if (!deadlinePassed && upNext.signupFile) {
+      // Signup is open — redirect straight to the tournament's form page
+      window.location.replace(upNext.signupFile);
+      return;
+    }
+
+    if (!deadlinePassed && !upNext.signupFile) {
+      // Open window but no form built yet
+      showComingSoon(container, upNext);
+      return;
+    }
+
+    // Deadline has passed — find the next tournament that's still open for signup
+    const nextOpen = future.find(t => {
+      const dl = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+      return !dl || dl >= today;
+    });
+
+    showDeadlinePassed(container, upNext, nextOpen);
+  }
+
+  function showDeadlinePassed(container, closed, nextOpen) {
+    let nextCard = '';
+    if (nextOpen) {
+      const formLink = nextOpen.signupFile
+        ? `<a href="${nextOpen.signupFile}" class="btn btn-signup" style="margin-top:1.1rem;display:block;text-align:center;">Sign Up for ${nextOpen.course} →</a>`
+        : `<p class="text-muted text-sm" style="margin-top:0.75rem;">Signup form for this event opens closer to the date.</p>`;
+      nextCard = `
+        <div class="signup-next-card">
+          <div class="signup-next-label">Next Open Tournament</div>
+          <div class="signup-next-course">${nextOpen.course}</div>
+          <div class="signup-next-meta">${nextOpen.displayDate}&nbsp;&middot;&nbsp;${nextOpen.format}</div>
+          ${formLink}
+        </div>`;
+    } else {
+      nextCard = `<div class="info-box mt-2" style="text-align:left;">No further open signups at this time. Check back soon.</div>`;
+    }
+
+    container.innerHTML = `
+      <div class="signup-state-card signup-state-card--closed">
+        <div class="signup-state-icon">🔒</div>
+        <h2 class="signup-state-title">Signup Deadline Has Passed</h2>
+        <p class="signup-state-msg">
+          The entry deadline for <strong>${closed.course}</strong>
+          (${closed.displayDate}) has passed.
+        </p>
+        <div class="signup-contact-box">
+          <p>Have a conflict or need to make a late entry? Contact Russ Yenser directly:</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.6rem;">
+            <a href="tel:5135717931" class="btn btn-outline btn-sm">📞 513-571-7931</a>
+            <a href="mailto:russyenser@gmail.com" class="btn btn-outline btn-sm">✉️ russyenser@gmail.com</a>
+          </div>
+        </div>
+        ${nextCard}
+      </div>`;
+  }
+
+  function showComingSoon(container, t) {
+    container.innerHTML = `
+      <div class="signup-state-card">
+        <div class="signup-state-icon">📋</div>
+        <h2 class="signup-state-title">Signup Form Coming Soon</h2>
+        <p class="signup-state-msg">
+          The entry form for <strong>${t.course}</strong> (${t.displayDate}) will be posted closer to the event.
+        </p>
+        <div class="signup-tourn-details">
+          <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
+          <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
+          <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
+          <div class="t-detail"><span class="lbl">Deadline</span><span class="val">${t.entryDeadline || '10 days prior'}</span></div>
+        </div>
+        <p style="font-size:0.83rem;color:var(--text-muted);margin-top:1rem;">
+          Questions? Contact
+          <a href="tel:5135717931">Russ Yenser at 513-571-7931</a> or
+          <a href="mailto:russyenser@gmail.com">russyenser@gmail.com</a>.
+        </p>
+        <a href="index.html" class="btn btn-outline btn-sm" style="margin-top:1rem;">&larr; Back to Schedule</a>
+      </div>`;
+  }
+
+  init();
+</script>
+</body>
+</html>

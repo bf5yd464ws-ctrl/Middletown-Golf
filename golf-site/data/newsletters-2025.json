@@ -1,0 +1,14 @@
+{
+  "_note": "2025 newsletter issues. Each issue links to its local HTML page. To add future years, create newsletters-YYYY.json.",
+  "year": 2025,
+  "title": "The 19th Hole",
+  "issues": [
+    { "month": "April",     "label": "April 2025",     "page": "2025/april-newsletter.html" },
+    { "month": "May",       "label": "May 2025",       "page": "2025/may-newsletter.html" },
+    { "month": "June",      "label": "June 2025",      "page": "2025/june-newsletter.html" },
+    { "month": "August",    "label": "August 2025",    "page": "2025/august-newsletter.html" },
+    { "month": "September", "label": "September 2025", "page": "2025/september-newsletter.html" },
+    { "month": "October",   "label": "October 2025",   "page": "2025/october-newsletter.html" },
+    { "month": "Year End",  "label": "Year End 2025",  "page": "2025/yearend-newsletter.html" }
+  ]
+}

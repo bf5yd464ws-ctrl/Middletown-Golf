@@ -1,0 +1,29 @@
+{
+  "_note": "Master index of all seasons. Each year links to its local season.html page. months array drives the month buttons shown in the archive grid.",
+  "years": [
+    { "year": 2024, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2023, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2022, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2021, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2020, "months": ["april","may","june","july","august","september","october"], "note": "COVID-19 season" },
+    { "year": 2019, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2018, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2017, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2016, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2015, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2014, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2013, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2012, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2011, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2010, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2009, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2008, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2007, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2006, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2005, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2004, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2003, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2002, "months": ["april","may","june","july","august","september","october"] },
+    { "year": 2001, "months": ["april","may","june","july","august","september"], "note": "Founding year" }
+  ]
+}

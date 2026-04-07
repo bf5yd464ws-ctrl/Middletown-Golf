@@ -1,0 +1,87 @@
+{
+  "_note": "Season leaderboard. Sorted by points descending. Update after each tournament. trend: hot | steady | cold | null",
+  "year": 2025,
+  "lastUpdated": "2025-10-18T18:00:00Z",
+  "leaderboard": [
+    {
+      "rank": 1, "isTied": false,
+      "firstName": "Herb",  "lastName": "Holmes",
+      "points": 187, "trend": "hot",
+      "roundsPlayed": 7, "tournamentsWon": 2,
+      "birdies": 18, "eagles": 1,
+      "tournamentWinnings": 119.00, "sideWinnings": 139.00, "teamWinnings": 0, "totalWinnings": 258.00
+    },
+    {
+      "rank": 2, "isTied": false,
+      "firstName": "David", "lastName": "Simpson",
+      "points": 180, "trend": "hot",
+      "roundsPlayed": 7, "tournamentsWon": 2,
+      "birdies": 9, "eagles": 0,
+      "tournamentWinnings": 199.00, "sideWinnings": 67.00, "teamWinnings": 0, "totalWinnings": 266.00
+    },
+    {
+      "rank": 3, "isTied": false,
+      "firstName": "Steve", "lastName": "Goertemiller",
+      "points": 179, "trend": "steady",
+      "roundsPlayed": 8, "tournamentsWon": 1,
+      "birdies": 12, "eagles": 0,
+      "tournamentWinnings": 249.00, "sideWinnings": 142.00, "teamWinnings": 0, "totalWinnings": 391.00
+    },
+    {
+      "rank": 4, "isTied": false,
+      "firstName": "Roger", "lastName": "Campbell",
+      "points": 176, "trend": "steady",
+      "roundsPlayed": 7, "tournamentsWon": 1,
+      "birdies": 8, "eagles": 0,
+      "tournamentWinnings": 167.00, "sideWinnings": 91.00, "teamWinnings": 0, "totalWinnings": 258.00
+    },
+    {
+      "rank": 5, "isTied": false,
+      "firstName": "Russ",  "lastName": "Yenser",
+      "points": 173, "trend": "steady",
+      "roundsPlayed": 7, "tournamentsWon": 1,
+      "birdies": 10, "eagles": 0,
+      "tournamentWinnings": 167.00, "sideWinnings": 40.00, "teamWinnings": 0, "totalWinnings": 207.00
+    },
+    {
+      "rank": 6, "isTied": false,
+      "firstName": "Don",   "lastName": "Hartness",
+      "points": 135, "trend": "steady",
+      "roundsPlayed": 6, "tournamentsWon": 1,
+      "birdies": 7, "eagles": 1,
+      "tournamentWinnings": 123.00, "sideWinnings": 16.00, "teamWinnings": 0, "totalWinnings": 139.00
+    },
+    {
+      "rank": 7, "isTied": false,
+      "firstName": "Mark",  "lastName": "Willenbrink",
+      "points": 101, "trend": "steady",
+      "roundsPlayed": 8, "tournamentsWon": 2,
+      "birdies": 11, "eagles": 0,
+      "tournamentWinnings": 123.00, "sideWinnings": 65.00, "teamWinnings": 0, "totalWinnings": 188.00
+    },
+    {
+      "rank": 8, "isTied": false,
+      "firstName": "Jeff",  "lastName": "Zimmer",
+      "points": 76, "trend": "cold",
+      "roundsPlayed": 5, "tournamentsWon": 1,
+      "birdies": 6, "eagles": 0,
+      "tournamentWinnings": 110.00, "sideWinnings": 91.00, "teamWinnings": 0, "totalWinnings": 201.00
+    },
+    {
+      "rank": 9, "isTied": false,
+      "firstName": "Bob",   "lastName": "Conway",
+      "points": 65, "trend": "cold",
+      "roundsPlayed": 4, "tournamentsWon": 1,
+      "birdies": 5, "eagles": 0,
+      "tournamentWinnings": 75.00, "sideWinnings": 25.00, "teamWinnings": 0, "totalWinnings": 100.00
+    },
+    {
+      "rank": 10, "isTied": false,
+      "firstName": "Gary",  "lastName": "Saniga",
+      "points": 58, "trend": "cold",
+      "roundsPlayed": 3, "tournamentsWon": 1,
+      "birdies": 4, "eagles": 0,
+      "tournamentWinnings": 50.00, "sideWinnings": 0, "teamWinnings": 0, "totalWinnings": 50.00
+    }
+  ]
+}

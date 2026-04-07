@@ -1,0 +1,28 @@
+{
+  "_instructions": "To post new tee times: update the 'current' object with the tournament details and groups array. Set 'posted' to true. Save and publish — the Tee Times page updates automatically.",
+  "current": {
+    "posted": false,
+    "event": "",
+    "date": "",
+    "displayDate": "",
+    "course": "",
+    "format": "",
+    "startTime": "",
+    "groups": []
+  },
+  "archive": [
+    {
+      "event": "October 2025 — Wildwood Golf Club",
+      "date": "2025-10-18",
+      "displayDate": "October 18, 2025",
+      "course": "Wildwood Golf Club",
+      "format": "2 Man Single Best Ball",
+      "groups": [
+        { "time": "10:38 AM", "players": ["Steve Conway", "Rich Mealey", "Roger Campbell", "Herb Holmes"] },
+        { "time": "10:46 AM", "players": ["Russ Yenser", "Jamie Harrison", "Jeff Zimmer", "David Simpson"] },
+        { "time": "10:54 AM", "players": ["Dennis Daley", "Dick Freeman", "Dave Saniga", "Scott Shaw"] },
+        { "time": "11:02 AM", "players": ["Mark Willenbrink", "Steve Goertemiller", "Don Hartness", "John Stanton"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>The 19th Hole</h1>
+    <p>The official newsletter of the Middletown Area Golf Association &mdash; published after each tournament.</p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container">
+
+    <!-- 2025 — most recent year -->
+    <div class="nl-year">
+      <div class="nl-year-header">
+        <h2>2025</h2>
+        <span class="badge badge-gold" style="margin-left:0.5rem;">Most Recent</span>
+        <div class="nl-rule"></div>
+      </div>
+      <div class="nl-pills" id="nl-2025">
+        <div style="color:var(--text-muted);font-size:0.85rem;">Loading&hellip;</div>
+      </div>
+    </div>
+
+    <!-- Archive years 2024–2013 from newsletters.json -->
+    <div id="nl-archive">
+      <div style="color:var(--text-muted);font-size:0.85rem;">Loading archive&hellip;</div>
+    </div>
+
+    <div class="info-box mt-3">
+      Looking for older issues? Newsletters from 2001&ndash;2012 are available at the
+      <a href="https://www.tjcope.net/maga/NewslettersIndex.htm" target="_blank" rel="noopener">original site archive</a>.
+    </div>
+
+  </div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/nav.js"></script>
+<script>
+  // Load 2025 issues
+  fetch('data/newsletters-2025.json').then(r => r.json()).then(data => {
+    const pills = document.getElementById('nl-2025');
+    pills.innerHTML = data.issues.map((issue, i) => {
+      const isLatest = i === data.issues.length - 1;
+      return `<a href="${issue.page}" class="nl-pill${isLatest ? ' current' : ''}">${issue.label}</a>`;
+    }).join('');
+  });
+
+  // Load archive years (2024 down to 2013) from newsletters.json — all local pages
+  fetch('data/newsletters.json').then(r => r.json()).then(data => {
+    const archive = document.getElementById('nl-archive');
+    archive.innerHTML = data.years.map(yr => `
+      <div class="nl-year">
+        <div class="nl-year-header">
+          <h2>${yr.year}</h2>
+          <div class="nl-rule"></div>
+        </div>
+        <div class="nl-pills">
+          ${yr.issues.map(issue =>
+            `<a href="${issue.page}" class="nl-pill">${issue.label} ${yr.year}</a>`
+          ).join('')}
+        </div>
+      </div>`).join('');
+  }).catch(() => {
+    document.getElementById('nl-archive').innerHTML = '';
+  });
+</script>
+</body>
+</html>

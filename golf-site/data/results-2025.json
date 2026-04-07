@@ -1,0 +1,17 @@
+{
+  "_note": "2025 results index. Links to local HTML pages. Create results-YYYY.json for each new year.",
+  "year": 2025,
+  "seasonPage": "2025/season.html",
+  "standings": [
+    { "label": "Season Standings",  "page": "2025/season.html" }
+  ],
+  "tournaments": [
+    { "month": "April",     "course": "Hamilton Elks",    "date": "April 19, 2025",     "page": "2025/april-results.html" },
+    { "month": "May",       "course": "Shaker Run / Yankee Trace", "date": "May 17–18, 2025", "page": "2025/may-results.html" },
+    { "month": "June",      "course": "Walden Ponds",     "date": "June 14, 2025",      "page": "2025/june-results.html" },
+    { "month": "July",      "course": "Kings Island",     "date": "July 19, 2025",      "page": "2025/july-results.html", "note": "9 holes — weather" },
+    { "month": "August",    "course": "Heatherwoode",     "date": "August 16, 2025",    "page": "2025/august-results.html" },
+    { "month": "September", "course": "Cassel Hills",     "date": "September 13, 2025", "page": "2025/september-results.html" },
+    { "month": "October",   "course": "Wildwood Golf Club","date": "October 18, 2025",  "page": "2025/october-results.html" }
+  ]
+}

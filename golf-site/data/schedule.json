@@ -1,0 +1,263 @@
+{
+  "organization": {
+    "name": "Middletown Area Golf Association",
+    "shortName": "MAGA",
+    "contact": {
+      "name": "Russ Yenser",
+      "phone": "513-571-7931",
+      "email": "russyenser@gmail.com"
+    },
+    "mailingAddress": {
+      "attention": "Russ Yenser",
+      "street": "503 Cranewood Drive",
+      "city": "Trenton",
+      "state": "Ohio",
+      "zip": "45067",
+      "payableTo": "Middletown Area Golf Association"
+    },
+    "membershipFee": 25,
+    "entryDeadlineDays": 10,
+    "websiteContact": "russyenser@gmail.com"
+  },
+  "seasons": {
+    "2025": {
+      "year": 2025,
+      "tournaments": [
+        {
+          "id": 1,
+          "month": "April",
+          "date": "2025-04-19",
+          "displayDate": "April 19, 2025",
+          "course": "Hamilton Elks",
+          "courseUrl": "https://www.hamiltonelksgolfclub.com",
+          "format": "2 Man Single Best Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 68,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, April 16",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 2,
+          "month": "May",
+          "date": "2025-05-17",
+          "displayDate": "May 17, 2025",
+          "course": "Shaker Run",
+          "format": "3 Man Varied by Hole",
+          "signupNote": "Sign as Individual",
+          "entryFee": 73,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, May 14",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 3,
+          "month": "May",
+          "date": "2025-05-18",
+          "displayDate": "May 18, 2025",
+          "course": "Yankee Trace",
+          "format": "2 Man Stableford",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 68,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, May 14",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 4,
+          "month": "June",
+          "date": "2025-06-14",
+          "displayDate": "June 14, 2025",
+          "course": "Hueston Woods",
+          "format": "4 Man 3 Best Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 68,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, June 11",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 5,
+          "month": "July",
+          "date": "2025-07-19",
+          "displayDate": "July 19, 2025",
+          "course": "Kings Island",
+          "format": "2 Man 2 Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 68,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, July 16",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 6,
+          "month": "August",
+          "date": "2025-08-16",
+          "displayDate": "August 16, 2025",
+          "course": "Heatherwoode",
+          "format": "3 Man 2 Best Ball",
+          "signupNote": "Sign as Foursome",
+          "entryFee": 68,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, August 13",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 7,
+          "month": "September",
+          "date": "2025-09-13",
+          "displayDate": "September 13, 2025",
+          "course": "Cassel Hills",
+          "format": "2 Man Best Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 50,
+          "firstTeeTime": "TBD",
+          "pairingsPosted": "Wednesday, September 10",
+          "notes": "Carts not included in greens fee",
+          "status": "past"
+        },
+        {
+          "id": 8,
+          "month": "October",
+          "date": "2025-10-18",
+          "displayDate": "October 18, 2025",
+          "course": "Wildwood Golf Club",
+          "format": "2 Man Single Best Ball",
+          "signupNote": "Sign as Individual",
+          "entryFee": 68,
+          "firstTeeTime": "10:38 AM",
+          "pairingsPosted": "Wednesday, October 15",
+          "notes": "Carts not included in greens fee",
+          "resultsFile": "2025/7-OctoberResults.htm",
+          "status": "past"
+        }
+      ]
+    },
+    "2026": {
+      "year": 2026,
+      "tournaments": [
+        {
+          "id": 1,
+          "month": "April",
+          "date": "2026-04-18",
+          "displayDate": "April 18, 2026",
+          "course": "Hamilton Elks",
+          "courseUrl": "https://www.hamiltonelksgolfclub.com",
+          "format": "2 Man Single Best Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 69,
+          "firstTeeTime": "12:00 PM",
+          "pairingsPosted": "Wednesday, April 15",
+          "entryDeadline": "Wednesday, April 8",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming",
+          "signupFile": "2026/1-AprilSignup.htm"
+        },
+        {
+          "id": 2,
+          "month": "May",
+          "date": "2026-05-16",
+          "displayDate": "May 16, 2026",
+          "course": "Shaker Run",
+          "format": "3 Man Single/Double/Triple Ball",
+          "signupNote": "Sign as Individual",
+          "entryFee": 79,
+          "firstTeeTime": "9:00 AM",
+          "pairingsPosted": "Wednesday, May 13",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 3,
+          "month": "May",
+          "date": "2026-05-17",
+          "displayDate": "May 17, 2026",
+          "course": "Yankee Trace",
+          "format": "2 Man Customized Stableford",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 69,
+          "firstTeeTime": "1:00 PM",
+          "pairingsPosted": "Wednesday, May 13",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 4,
+          "month": "June",
+          "date": "2026-06-20",
+          "displayDate": "June 20, 2026",
+          "course": "Hueston Woods",
+          "format": "2 Man Both Balls",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 69,
+          "firstTeeTime": "9:00 AM",
+          "pairingsPosted": "Wednesday, June 17",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 5,
+          "month": "July",
+          "date": "2026-07-18",
+          "displayDate": "July 18, 2026",
+          "course": "Kings Island",
+          "format": "3 Man Double Best Ball",
+          "signupNote": "Sign as Foursome",
+          "entryFee": 69,
+          "firstTeeTime": "1:00 PM",
+          "pairingsPosted": "Wednesday, July 15",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 6,
+          "month": "August",
+          "date": "2026-08-22",
+          "displayDate": "August 22, 2026",
+          "course": "Heatherwoode",
+          "format": "2 Man Single Best Ball",
+          "signupNote": "Sign as Foursome",
+          "entryFee": 69,
+          "firstTeeTime": "1:00 PM",
+          "pairingsPosted": "Wednesday, August 19",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 7,
+          "month": "September",
+          "date": "2026-09-19",
+          "displayDate": "September 19, 2026",
+          "course": "Indian Ridge",
+          "format": "2 Man Best Ball",
+          "signupNote": "Sign as Twosome",
+          "entryFee": 60,
+          "firstTeeTime": "1:00 PM",
+          "pairingsPosted": "Wednesday, September 16",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        },
+        {
+          "id": 8,
+          "month": "October",
+          "date": "2026-10-17",
+          "displayDate": "October 17, 2026",
+          "course": "Wildwood",
+          "format": "2 Man Best Ball",
+          "signupNote": "Sign as Individual",
+          "entryFee": 69,
+          "firstTeeTime": "12:00 PM",
+          "pairingsPosted": "Wednesday, October 14",
+          "notes": "Carts not included in greens fee",
+          "status": "upcoming"
+        }
+      ]
+    }
+  }
+}

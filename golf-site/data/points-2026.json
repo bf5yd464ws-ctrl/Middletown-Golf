@@ -1,0 +1,7 @@
+{
+  "_note": "Points breakdown per tournament. Use null for a player who did not participate. totalPoints must equal the sum of all non-null tournamentPoints values.",
+  "year": 2026,
+  "lastUpdated": "2026-04-07T00:00:00Z",
+  "tournaments": [],
+  "breakdown": []
+}

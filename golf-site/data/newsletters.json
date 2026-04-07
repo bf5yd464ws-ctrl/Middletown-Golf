@@ -1,0 +1,156 @@
+{
+  "_note": "Newsletter archive index. All issues now link to local HTML pages using the pattern YYYY/month-newsletter.html. 2025 issues are in data/newsletters-2025.json.",
+  "years": [
+    {
+      "year": 2024,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2024/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2024/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2024/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2024/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2024/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2024/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2024/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2024/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2023,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2023/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2023/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2023/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2023/july-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2023/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2023/october-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2022,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2022/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2022/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2022/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2022/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2022/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2022/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2022/october-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2021,
+      "issues": [
+        { "month": "May",      "label": "May",      "page": "2021/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2021/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2021/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2021/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2021/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2021/october-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2020,
+      "issues": [
+        { "month": "March/April","label": "Mar/Apr","page": "2020/april-newsletter.html" },
+        { "month": "May",        "label": "May",    "page": "2020/may-newsletter.html" },
+        { "month": "June",       "label": "Jun",    "page": "2020/june-newsletter.html" },
+        { "month": "July",       "label": "Jul",    "page": "2020/july-newsletter.html" },
+        { "month": "August",     "label": "Aug",    "page": "2020/august-newsletter.html" },
+        { "month": "September",  "label": "Sep",    "page": "2020/september-newsletter.html" },
+        { "month": "October",    "label": "Oct",    "page": "2020/october-newsletter.html" },
+        { "month": "Year End",   "label": "Year End","page": "2020/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2019,
+      "issues": [
+        { "month": "March/April","label": "Mar/Apr","page": "2019/april-newsletter.html" },
+        { "month": "May",        "label": "May",    "page": "2019/may-newsletter.html" },
+        { "month": "June",       "label": "Jun",    "page": "2019/june-newsletter.html" },
+        { "month": "July",       "label": "Jul",    "page": "2019/july-newsletter.html" },
+        { "month": "August",     "label": "Aug",    "page": "2019/august-newsletter.html" },
+        { "month": "October",    "label": "Oct",    "page": "2019/october-newsletter.html" },
+        { "month": "Year End",   "label": "Year End","page": "2019/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2018,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2018/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2018/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2018/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2018/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2018/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2018/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2018/october-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2017,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2017/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2017/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2017/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2017/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2017/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2017/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2017/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2017/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2016,
+      "issues": [
+        { "month": "March",    "label": "Mar",      "page": "2016/march-newsletter.html" },
+        { "month": "April",    "label": "Apr",      "page": "2016/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2016/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2016/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2016/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2016/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2016/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2016/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2016/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2015,
+      "issues": [
+        { "month": "March",    "label": "Mar",      "page": "2015/march-newsletter.html" },
+        { "month": "April",    "label": "Apr",      "page": "2015/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2015/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2015/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2015/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2015/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2015/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2015/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2015/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2014,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2014/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2014/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2014/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2014/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2014/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2014/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2014/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2014/yearend-newsletter.html" }
+      ]
+    },
+    {
+      "year": 2013,
+      "issues": [
+        { "month": "April",    "label": "Apr",      "page": "2013/april-newsletter.html" },
+        { "month": "May",      "label": "May",      "page": "2013/may-newsletter.html" },
+        { "month": "June",     "label": "Jun",      "page": "2013/june-newsletter.html" },
+        { "month": "July",     "label": "Jul",      "page": "2013/july-newsletter.html" },
+        { "month": "August",   "label": "Aug",      "page": "2013/august-newsletter.html" },
+        { "month": "September","label": "Sep",      "page": "2013/september-newsletter.html" },
+        { "month": "October",  "label": "Oct",      "page": "2013/october-newsletter.html" },
+        { "month": "Year End", "label": "Year End", "page": "2013/yearend-newsletter.html" }
+      ]
+    }
+  ]
+}
