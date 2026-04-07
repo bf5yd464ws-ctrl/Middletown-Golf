@@ -51,74 +51,45 @@
       "year" : 2025
     },
     {
-      "date" : "2026-04-01",
-      "displayDate" : "April 1, 2026",
-      "event" : "Testing Tournament",
-      "format" : "2 Man Stroke Play",
+      "date" : "2026-04-09",
+      "displayDate" : "April 9, 2026",
+      "event" : "player test",
+      "format" : "best ball",
       "groups" : [
         {
           "players" : [
             {
-              "courseHandicap" : 0,
-              "handicapIndex" : -1.2,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Cole Yenser",
-              "usgaHandicapIndex" : 0
-            },
-            {
-              "courseHandicap" : 18,
-              "handicapIndex" : 15.6,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Russ Yenser",
-              "usgaHandicapIndex" : 21.5
-            },
-            {
-              "courseHandicap" : 16,
-              "handicapIndex" : 13.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Bret Yenser",
-              "usgaHandicapIndex" : 0
-            }
-          ],
-          "time" : "7:25 PM"
-        },
-        {
-          "players" : [
-            {
-              "courseHandicap" : 5,
-              "handicapIndex" : 16,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Jeff Zimmer",
-              "usgaHandicapIndex" : 4
-            },
-            {
-              "courseHandicap" : 30,
+              "courseHandicap" : 25,
               "handicapIndex" : 26.899999999999999,
               "isNet" : true,
               "isSkins" : true,
-              "name" : "John Stanton",
-              "usgaHandicapIndex" : 26
+              "name" : "Don Hartness",
+              "usgaHandicapIndex" : 27
             },
             {
-              "courseHandicap" : 6,
-              "handicapIndex" : 4.5999999999999996,
+              "courseHandicap" : 11,
+              "handicapIndex" : 13.800000000000001,
               "isNet" : true,
               "isSkins" : true,
-              "name" : "Jeff Yenser",
+              "name" : "Danny Hause",
+              "usgaHandicapIndex" : 0
+            },
+            {
+              "courseHandicap" : 17,
+              "handicapIndex" : 18.899999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jamie Harrison",
               "usgaHandicapIndex" : 0
             }
           ],
-          "time" : "7:25 PM"
+          "time" : "9:29 PM"
         }
       ],
       "id" : 1,
-      "name" : "Testing Tournament",
+      "name" : "player test",
       "posted" : true,
-      "startTime" : "7:25 PM",
+      "startTime" : "9:29 PM",
       "year" : 2026
     },
     {
