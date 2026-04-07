@@ -2,6 +2,7 @@
   "_note" : "2026 tournament schedule. To add a new year, create schedule-YYYY.json with the same structure.",
   "tournaments" : [
     {
+      "course" : "Testing Tournament",
       "courseUrl" : "https:\/\/www.masongrizzly.com\/",
       "date" : "2026-04-01",
       "deadlineDate" : "2026-04-08",
@@ -17,7 +18,7 @@
       "notes" : "Cards not included in green fees",
       "pairingsPosted" : "April 8, 2026",
       "resultsPage" : null,
-      "signupFile" : "2026\/april-signup.html",
+      "signupFile" : "2026\/april-testing-tournament-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
       "teeTimesPosted" : false,
