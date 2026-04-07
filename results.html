@@ -22,8 +22,25 @@
 <main class="page-content">
   <div class="container">
 
-    <!-- 2025 Season — most recent complete year -->
+    <!-- 2026 Season — current year -->
     <div class="section-head">
+      <h2>2026 Season</h2>
+      <span class="badge badge-green">In Progress</span>
+    </div>
+
+    <div class="card mb-3" id="results-2026-card">
+      <div class="card-head"><h3>Monthly Results</h3></div>
+      <div class="card-body">
+        <div id="results-2026-months">
+          <p style="font-size:0.85rem;color:var(--text-muted);">No results posted yet. Check back after each tournament.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 2025 Season — most recent complete year -->
+    <div class="section-head mt-3">
       <h2>2025 Season</h2>
       <span class="badge badge-past">Completed</span>
       <a href="2025/season.html" style="margin-left:auto;">View season standings &rarr;</a>
@@ -90,6 +107,16 @@
 
 <script src="js/nav.js"></script>
 <script>
+  // Load 2026 monthly result links
+  fetch('data/results-2026.json?v=' + Date.now()).then(r => r.json()).then(data => {
+    if (data.tournaments && data.tournaments.length > 0) {
+      document.getElementById('results-2026-months').innerHTML =
+        data.tournaments.map(t =>
+          `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month}</a>`
+        ).join('');
+    }
+  }).catch(() => {});
+
   // Load 2025 monthly result links
   fetch('data/results-2025.json').then(r => r.json()).then(data => {
     document.getElementById('results-2025-months').innerHTML =
