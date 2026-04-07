@@ -284,8 +284,9 @@ table.data-table td.highlight { font-weight: 600; }
 .badge-gold   { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
 .badge-gray   { background: #eee; color: #666; }
 .badge-upcoming { background: #d4ead9; color: #1a5c2e; }
-.badge-past   { background: #eee; color: #777; }
-.badge-next   { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
+.badge-past     { background: #eee; color: #777; }
+.badge-next     { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
+.badge-recent   { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
 
 /* --- Info Box --- */
 .info-box {
@@ -345,6 +346,11 @@ table.data-table td.highlight { font-weight: 600; }
   opacity: 0.92;
 }
 
+.t-card--recent {
+  border-top-color: var(--gold);
+  background: #fffdf5;
+}
+
 /* Featured "Up Next" internals */
 .t-card--next .t-card-left {
   display: flex;
@@ -383,8 +389,9 @@ table.data-table td.highlight { font-weight: 600; }
   border-bottom: 1px solid var(--border);
 }
 
-.t-card--next .t-card-top  { border-bottom-color: rgba(184,146,58,0.2); }
-.t-card--past .t-card-top  { border-bottom-color: #e0e4dd; }
+.t-card--next   .t-card-top { border-bottom-color: rgba(184,146,58,0.2); }
+.t-card--past   .t-card-top { border-bottom-color: #e0e4dd; }
+.t-card--recent .t-card-top { border-bottom-color: rgba(184,146,58,0.2); }
 
 .t-date {
   background: var(--green);
@@ -398,8 +405,9 @@ table.data-table td.highlight { font-weight: 600; }
   text-align: center;
   flex-shrink: 0;
 }
-.t-card--next  .t-date { background: var(--gold); min-width: 72px; }
-.t-card--past  .t-date { background: #8a9e8a; }
+.t-card--next   .t-date { background: var(--gold); min-width: 72px; }
+.t-card--past   .t-date { background: #8a9e8a; }
+.t-card--recent .t-date { background: var(--gold); }
 
 .t-date .mo { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; }
 .t-date .dy { font-size: 1.65rem; font-weight: 800; line-height: 1; }

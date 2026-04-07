@@ -109,13 +109,16 @@
       const data = await res.json();
       const today = new Date();
 
-      /* Split tournaments into upcoming and past */
-      const upcoming = [];
-      const past     = [];
+      /* Split tournaments into upcoming, recently completed (≤7 days ago), and past */
+      const upcoming          = [];
+      const recentlyCompleted = [];
+      const past              = [];
       data.tournaments.forEach(t => {
         const d = new Date(t.date + 'T12:00:00');
-        if (d < today) past.push(t);
-        else           upcoming.push(t);
+        const daysSince = Math.round((today - d) / (1000 * 60 * 60 * 24));
+        if (d >= today)       upcoming.push(t);
+        else if (daysSince <= 7) recentlyCompleted.push(t);
+        else                  past.push(t);
       });
 
       /* Helper: build results panel for a completed tournament */
@@ -237,7 +240,37 @@
               </div>
             </div>`;
 
-            /* ── Item 9: Jump to Completed anchor ── */
+            /* ── Recently completed (within 7 days) — rendered right after Up Next ── */
+            recentlyCompleted.forEach(t => {
+              const { mo, dy } = dateBadge(t);
+              const rPanel = resultsPanel(t);
+              const noResults = !t.resultsPage
+                ? `<div class="t-card-results">
+                     <div class="t-card-results-label">Results</div>
+                     <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Posting soon — check back shortly.</div>
+                   </div>`
+                : '';
+              html += `
+              <div class="t-card t-card--recent">
+                <div class="t-card-top">
+                  <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
+                  <div class="t-card-title">
+                    <h3>${t.course}</h3>
+                    <div class="fmt">${t.format}</div>
+                  </div>
+                  <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-recent">Just Played</span></div>
+                </div>
+                <div class="t-card-body">
+                  <div class="t-detail"><span class="lbl">Date</span><span class="val">${t.displayDate}</span></div>
+                  <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
+                  <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
+                  <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
+                </div>
+                ${rPanel || noResults}
+              </div>`;
+            });
+
+            /* ── Jump to Completed anchor ── */
             if (past.length > 0) {
               html += `
               <div class="jump-completed-wrap">
@@ -270,7 +303,7 @@
         });
       }
 
-      /* ── COMPLETED SECTION (reverse chronological) ── */
+      /* ── COMPLETED SECTION (reverse chronological, 8+ days ago) ── */
       if (past.length > 0) {
         html += `
           <div class="section-divider" id="completed-section">
