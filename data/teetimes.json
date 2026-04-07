@@ -88,7 +88,7 @@
       ],
       "id" : 1,
       "name" : "player test",
-      "posted" : false,
+      "posted" : true,
       "startTime" : "9:29 PM",
       "year" : 2026
     },
