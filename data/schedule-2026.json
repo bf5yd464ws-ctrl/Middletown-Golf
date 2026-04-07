@@ -2,6 +2,28 @@
   "_note" : "2026 tournament schedule. To add a new year, create schedule-YYYY.json with the same structure.",
   "tournaments" : [
     {
+      "courseUrl" : "https:\/\/www.masongrizzly.com\/",
+      "date" : "2026-04-01",
+      "deadlineDate" : "2026-04-08",
+      "displayDate" : "April 1, 2026",
+      "entryDeadline" : "Wednesday, April 8",
+      "entryFee" : 50,
+      "firstTeeTime" : "7:25 PM",
+      "format" : "2 Man Stroke Play",
+      "id" : 1,
+      "month" : "April",
+      "name" : "Testing Tournament",
+      "newsletterPage" : null,
+      "notes" : "Cards not included in green fees",
+      "pairingsPosted" : "April 8, 2026",
+      "resultsPage" : null,
+      "signupFile" : "2026\/april-signup.html",
+      "signupNote" : "Sign as Twosome",
+      "status" : "upcoming",
+      "teeTimesPosted" : false,
+      "winner" : null
+    },
+    {
       "course" : "Hamilton Elks",
       "courseUrl" : "https:\/\/www.hamiltonelksgolfclub.com",
       "date" : "2026-04-18",
