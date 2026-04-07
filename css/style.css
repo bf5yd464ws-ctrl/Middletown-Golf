@@ -673,6 +673,188 @@ table.data-table td.highlight { font-weight: 600; }
   line-height: 1;
 }
 
+/* --- Results Detail Page --- */
+
+/* Winner banner */
+.rd-winner-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #fffbeb 0%, var(--gold-tint) 100%);
+  border: 1px solid #e8c96e;
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem;
+}
+
+.rd-winner-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+
+.rd-winner-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.rd-winner-names {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* Golfer results table enhancements */
+.rd-results-table .rd-col-num  { text-align: center; width: 58px; }
+.rd-results-table .rd-col-money { text-align: right; width: 72px; }
+.rd-results-table .rd-col-total { font-weight: 700; }
+.rd-results-table .rd-col-name  { font-weight: 600; }
+.rd-results-table .rd-note      { font-size: 0.78rem; color: var(--text-muted); }
+.rd-winner-mark  { color: var(--gold); font-size: 0.85rem; margin-left: 0.25rem; }
+
+.rd-row-winner td { background: #fffbeb; }
+.rd-row-winner .rd-col-name { color: var(--green); }
+.rd-row-top3 td   { background: var(--green-tint); }
+
+.rd-tee-detail { font-size: 0.8rem; color: var(--text-muted); font-weight: 400; }
+
+/* Awards grid */
+.rd-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.rd-award-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.rd-award-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.rd-award-icon  { font-size: 1rem; flex-shrink: 0; }
+
+.rd-award-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+}
+
+.rd-award-total {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  white-space: nowrap;
+}
+
+.rd-award-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+
+.rd-award-table td {
+  padding: 0.4rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.rd-award-table tr:last-child td { border-bottom: none; }
+.rd-award-table .rank  { width: 44px; font-weight: 700; color: var(--text-muted); font-size: 0.75rem; }
+.rd-award-table .amount { text-align: right; font-weight: 700; color: var(--green-mid); width: 60px; }
+.rd-award-note { display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+/* Teams grid */
+.rd-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.rd-team-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.rd-team-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.9rem;
+  background: var(--green);
+  color: #fff;
+}
+
+.rd-team-name  { font-size: 0.88rem; font-weight: 700; }
+.rd-team-total { font-size: 0.88rem; font-weight: 800; color: #fde68a; }
+
+.rd-team-members { padding: 0.4rem 0; }
+
+.rd-team-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.32rem 0.9rem;
+  font-size: 0.83rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.rd-team-member:last-child { border-bottom: none; }
+.rd-team-share { font-weight: 600; color: var(--green-mid); }
+
+/* Summary stats */
+.rd-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.6rem;
+}
+
+.rd-stat-tile {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+.rd-stat-val {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.rd-stat-lbl {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .rd-winner-names { font-size: 1rem; }
+  .rd-awards-grid  { grid-template-columns: 1fr; }
+  .rd-team-grid    { grid-template-columns: 1fr; }
+  .rd-stat-grid    { grid-template-columns: repeat(3, 1fr); }
+  .rd-results-table .rd-col-money { display: none; }
+  .rd-results-table .rd-col-total { display: table-cell !important; }
+}
+
 /* --- Past Tee Times (collapsible) --- */
 .tt-past-list { display: flex; flex-direction: column; gap: 0.4rem; }
 

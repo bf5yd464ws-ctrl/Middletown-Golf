@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tournament Results — Middletown Area Golf Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="app-header"></div>
+
+<section class="page-hero" id="rd-hero">
+  <div class="container">
+    <div class="page-breadcrumb">
+      <a href="results.html">Results</a>
+      <span class="sep">/</span>
+      <span id="rd-bc-year">—</span>
+      <span class="sep">/</span>
+      <span id="rd-bc-month">—</span>
+    </div>
+    <h1 id="rd-title">Loading&hellip;</h1>
+    <p id="rd-subtitle"></p>
+  </div>
+</section>
+
+<main class="page-content">
+  <div class="container">
+
+    <div id="rd-content">
+      <div style="color:var(--text-muted);padding:3rem;text-align:center;">Loading results&hellip;</div>
+    </div>
+
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<script src="js/nav.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════
+   MAGA Results Detail Page
+   Reads ?t=YYYY-month from URL, fetches data/results/YYYY-month.json
+   ═══════════════════════════════════════════════════════════ */
+
+  const params       = new URLSearchParams(window.location.search);
+  const tournamentId = params.get('t');
+
+  if (!tournamentId) {
+    showError('No tournament specified. Return to <a href="results.html">Results</a>.');
+  } else {
+    fetch('data/results/' + tournamentId + '.json?v=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error('Not found'); return r.json(); })
+      .then(data => renderAll(data))
+      .catch(() => showError('Results for this tournament could not be loaded. They may not be posted yet.'));
+  }
+
+  /* ── Utilities ─────────────────────────────────────────── */
+  function fmt$(v) {
+    if (v == null || v === 0) return '—';
+    const n = parseFloat(v);
+    if (isNaN(n)) return '—';
+    return '$' + (n % 1 === 0 ? n.toFixed(0) : n.toFixed(2));
+  }
+
+  function fmt1(v) {
+    if (v == null) return '—';
+    return parseFloat(v).toFixed(1);
+  }
+
+  function showError(msg) {
+    document.getElementById('rd-title').textContent = 'Results Unavailable';
+    document.getElementById('rd-content').innerHTML =
+      `<div class="info-box" style="margin-top:1rem;">${msg}</div>`;
+  }
+
+  /* ── Main render orchestrator ──────────────────────────── */
+  function renderAll(d) {
+    const t = d.tournament || {};
+
+    // Update page title + breadcrumb
+    document.title = (t.name || 'Results') + ' — MAGA';
+    document.getElementById('rd-title').textContent = t.name || 'Tournament Results';
+    document.getElementById('rd-subtitle').textContent = [t.course, t.courseCity].filter(Boolean).join(' · ');
+
+    const year  = (t.date || '').substring(0, 4) || '—';
+    const month = t.displayDate ? t.displayDate.split(' ')[0] : '—';
+    document.getElementById('rd-bc-year').textContent  = year;
+    document.getElementById('rd-bc-month').textContent = month;
+
+    let html = '';
+
+    html += renderMetaCard(t);
+    html += renderWinnerBanner(d.winners || []);
+    html += renderGolferResults(d.golferResults || []);
+    html += renderAwards(d.awards || {});
+
+    if (d.teams && d.teams.length > 0) {
+      html += renderTeams(d.teams);
+    }
+
+    html += renderSummary(d.summary || {}, t);
+    html += renderNav(year);
+
+    document.getElementById('rd-content').innerHTML = html;
+  }
+
+  /* ── 1. Tournament meta card ───────────────────────────── */
+  function renderMetaCard(t) {
+    // Tee info
+    let teeHtml = '';
+    if (t.teeName) {
+      let teeStr = t.teeName;
+      if (t.teeRating || t.teeSlope) {
+        teeStr += ' <span class="rd-tee-detail">(Rating: ' + (t.teeRating || '—') + ' / Slope: ' + (t.teeSlope || '—') + ')</span>';
+      }
+      if (t.secondTeeName) {
+        teeStr += ' + ' + t.secondTeeName;
+        if (t.secondTeeRating || t.secondTeeSlope) {
+          teeStr += ' <span class="rd-tee-detail">(Rating: ' + (t.secondTeeRating || '—') + ' / Slope: ' + (t.secondTeeSlope || '—') + ')</span>';
+        }
+      }
+      teeHtml = `<div class="event-meta-item"><span class="lbl">Tees</span><span class="val">${teeStr}</span></div>`;
+    }
+
+    const participantHtml = t.participantCount
+      ? `<div class="event-meta-item"><span class="lbl">Field</span><span class="val">${t.participantCount} golfers</span></div>`
+      : '';
+
+    return `
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="event-meta">
+            <div class="event-meta-item"><span class="lbl">Date</span><span class="val">${t.displayDate || '—'}</span></div>
+            <div class="event-meta-item"><span class="lbl">Course</span><span class="val">${t.course || '—'}</span></div>
+            <div class="event-meta-item"><span class="lbl">Format</span><span class="val">${t.format || '—'}</span></div>
+            ${teeHtml}
+            ${participantHtml}
+          </div>
+        </div>
+      </div>`;
+  }
+
+  /* ── 2. Winner banner ──────────────────────────────────── */
+  function renderWinnerBanner(winners) {
+    if (!winners || winners.length === 0) return '';
+    const names = winners.map(w => w.fullName || (w.firstName + ' ' + w.lastName)).join(' &amp; ');
+    const label = winners.length > 1 ? 'Tournament Winners' : 'Tournament Winner';
+    return `
+      <div class="rd-winner-banner mb-3">
+        <div class="rd-winner-icon">🏆</div>
+        <div class="rd-winner-body">
+          <div class="rd-winner-label">${label}</div>
+          <div class="rd-winner-names">${names}</div>
+        </div>
+      </div>`;
+  }
+
+  /* ── 3. Golfer results table ───────────────────────────── */
+  function renderGolferResults(results) {
+    if (!results || results.length === 0) return '';
+
+    const hasPoints   = results.some(r => r.netPoints != null);
+    const hasWinnings = results.some(r => r.totalWinnings > 0);
+    const hasNotes    = results.some(r => r.notes && r.notes.trim());
+
+    const extraCols = hasPoints
+      ? `<th class="rd-col-num">Pts</th>`
+      : '';
+
+    const winningsCols = hasWinnings ? `
+      <th class="rd-col-money">Tourn&nbsp;$</th>
+      <th class="rd-col-money">Side&nbsp;$</th>
+      <th class="rd-col-money rd-col-total">Total</th>` : '';
+
+    const noteCol = hasNotes ? `<th>Notes</th>` : '';
+
+    const rows = results.map(r => {
+      const g         = r.golfer || {};
+      const name      = g.fullName || [g.firstName, g.lastName].filter(Boolean).join(' ');
+      const winnerMark = r.isWinner ? ' <span class="rd-winner-mark">★</span>' : '';
+      const rowClass  = r.isWinner ? ' class="rd-row-winner"' : (r.rank <= 3 ? ' class="rd-row-top3"' : '');
+      const rankDisp  = r.rank || '—';
+
+      const pointsCell  = hasPoints   ? `<td class="rd-col-num">${r.netPoints != null ? r.netPoints : '—'}</td>` : '';
+      const winCells    = hasWinnings ? `
+        <td class="rd-col-money">${fmt$(r.tournamentWinnings)}</td>
+        <td class="rd-col-money">${fmt$(r.sideWinnings)}</td>
+        <td class="rd-col-money rd-col-total">${fmt$(r.totalWinnings)}</td>` : '';
+      const noteCell    = hasNotes    ? `<td class="rd-note">${r.notes || ''}</td>` : '';
+
+      return `<tr${rowClass}>
+        <td class="rank">${rankDisp}</td>
+        <td class="rd-col-name">${name}${winnerMark}</td>
+        <td class="rd-col-num">${r.grossScore ?? '—'}</td>
+        <td class="rd-col-num">${r.netScore ?? '—'}</td>
+        <td class="rd-col-num">${r.courseHandicap ?? '—'}</td>
+        ${pointsCell}
+        ${winCells}
+        ${noteCell}
+      </tr>`;
+    }).join('');
+
+    return `
+      <div class="section-head"><h2>Golfer Results</h2></div>
+      <div class="table-wrap mb-3">
+        <table class="data-table rd-results-table">
+          <thead>
+            <tr>
+              <th class="rank">Place</th>
+              <th>Player</th>
+              <th class="rd-col-num">Gross</th>
+              <th class="rd-col-num">Net</th>
+              <th class="rd-col-num">CH</th>
+              ${extraCols}
+              ${winningsCols}
+              ${noteCol}
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  /* ── 4. Awards section ─────────────────────────────────── */
+  function renderAwards(awards) {
+    const sections = [];
+
+    // Low Net
+    (awards.lowNet || []).forEach(a => {
+      sections.push(renderAwardBlock(a, 'place'));
+    });
+
+    // Skins
+    (awards.skins || []).forEach(a => {
+      sections.push(renderAwardBlock(a, 'skins'));
+    });
+
+    // Closest to Pin
+    (awards.closestToPin || []).forEach(a => {
+      sections.push(renderAwardBlock(a, 'ctp'));
+    });
+
+    // Longest Drive
+    (awards.longestDrive || []).forEach(a => {
+      sections.push(renderAwardBlock(a, 'ld'));
+    });
+
+    // Custom
+    (awards.customAwards || []).forEach(a => {
+      sections.push(renderAwardBlock(a, 'custom'));
+    });
+
+    if (sections.length === 0) return '';
+
+    return `
+      <div class="section-head"><h2>Awards &amp; Prizes</h2></div>
+      <div class="rd-awards-grid mb-3">
+        ${sections.join('')}
+      </div>`;
+  }
+
+  function renderAwardBlock(award, type) {
+    const title     = award.awardName || 'Award';
+    const total     = fmt$(award.prizeAmount);
+    const holeStr   = award.holeNumber ? ` — Hole ${award.holeNumber}` : '';
+    const winners   = award.winners || [];
+
+    const rows = winners.map(w => {
+      const name  = w.golfer ? (w.golfer.fullName || [w.golfer.firstName, w.golfer.lastName].filter(Boolean).join(' ')) : '—';
+      const place = w.placeOrdinal ? `<span class="rank">${w.placeOrdinal}</span>` : '';
+      const note  = w.notes ? `<span class="rd-award-note">${w.notes}</span>` : '';
+      return `<tr>
+        <td>${place}</td>
+        <td>${name} ${note}</td>
+        <td class="amount">${fmt$(w.amountWon)}</td>
+      </tr>`;
+    }).join('');
+
+    const iconMap = { place: '🏅', skins: '💰', ctp: '📍', ld: '💨', custom: '🎖️' };
+
+    return `
+      <div class="rd-award-card">
+        <div class="rd-award-head">
+          <span class="rd-award-icon">${iconMap[type] || '🎖️'}</span>
+          <span class="rd-award-title">${title}${holeStr}</span>
+          <span class="rd-award-total">${total}</span>
+        </div>
+        <table class="rd-award-table">
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  /* ── 5. Teams section ──────────────────────────────────── */
+  function renderTeams(teams) {
+    const sorted = [...teams].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+
+    const cards = sorted.map(team => {
+      const members = (team.members || []).map(m =>
+        `<div class="rd-team-member">
+          <span>${m.fullName || [m.firstName, m.lastName].filter(Boolean).join(' ')}</span>
+          <span class="rd-team-share">${fmt$(m.shareAmount)}</span>
+        </div>`
+      ).join('');
+
+      return `
+        <div class="rd-team-card">
+          <div class="rd-team-head">
+            <span class="rd-team-name">${team.teamName || 'Team'}</span>
+            <span class="rd-team-total">${fmt$(team.teamWinnings)}</span>
+          </div>
+          <div class="rd-team-members">${members}</div>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="section-head"><h2>Team Results</h2></div>
+      <div class="rd-team-grid mb-3">${cards}</div>`;
+  }
+
+  /* ── 6. Summary stats ──────────────────────────────────── */
+  function renderSummary(s, t) {
+    if (!s || Object.keys(s).length === 0) return '';
+
+    const tiles = [];
+
+    if (s.grandTotal)      tiles.push({ lbl: 'Total Paid Out',    val: fmt$(s.grandTotal) });
+    if (s.totalAwardMoney) tiles.push({ lbl: 'Award Money',       val: fmt$(s.totalAwardMoney) });
+    if (s.totalTeamMoney)  tiles.push({ lbl: 'Team Money',        val: fmt$(s.totalTeamMoney) });
+    if (s.totalGolfers)    tiles.push({ lbl: 'Participants',       val: s.totalGolfers });
+    if (s.lowestNet)       tiles.push({ lbl: 'Low Net',           val: s.lowestNet });
+    if (s.lowestGross)     tiles.push({ lbl: 'Low Gross',         val: s.lowestGross });
+    if (s.averageNet)      tiles.push({ lbl: 'Avg Net',           val: parseFloat(s.averageNet).toFixed(1) });
+    if (s.averageGross)    tiles.push({ lbl: 'Avg Gross',         val: parseFloat(s.averageGross).toFixed(1) });
+
+    if (tiles.length === 0) return '';
+
+    const tileHtml = tiles.map(tile => `
+      <div class="rd-stat-tile">
+        <div class="rd-stat-val">${tile.val}</div>
+        <div class="rd-stat-lbl">${tile.lbl}</div>
+      </div>`).join('');
+
+    return `
+      <div class="section-head"><h2>Summary</h2></div>
+      <div class="rd-stat-grid mb-3">${tileHtml}</div>`;
+  }
+
+  /* ── 7. Navigation ─────────────────────────────────────── */
+  function renderNav(year) {
+    return `
+      <div class="divider" style="margin:2rem 0;"></div>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <a href="results.html" class="btn btn-outline">← All Results</a>
+        <a href="results.html#results-${year}" class="btn btn-outline">${year} Season</a>
+      </div>`;
+  }
+</script>
+</body>
+</html>

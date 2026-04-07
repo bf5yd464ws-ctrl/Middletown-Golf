@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "_note" : "2026 tournament results index. Add an entry to the tournaments array each time results are posted. The page field must match the exact HTML filename in the 2026\/ folder.",
   "tournaments" : [
     {
@@ -11,3 +12,9 @@
   ],
   "year" : 2026
 }
+=======
+  "_note": "2026 results index. Each entry's page field points to results-detail.html?t=YYYY-month. The app appends an entry here each time results are posted. The JSON data file itself lives at data/results/YYYY-month.json.",
+  "year": 2026,
+  "tournaments": []
+}
+>>>>>>> Stashed changes

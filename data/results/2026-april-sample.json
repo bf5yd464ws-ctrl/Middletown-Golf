@@ -1,0 +1,194 @@
+{
+  "tournament": {
+    "name": "April 2026 — Hamilton Elks",
+    "date": "2026-04-18",
+    "displayDate": "April 18, 2026",
+    "course": "Hamilton Elks Golf Club",
+    "courseCity": "Hamilton, OH",
+    "format": "2 Man Single Best Ball",
+    "teeName": "White",
+    "teeRating": 71.2,
+    "teeSlope": 125,
+    "participantCount": 20
+  },
+
+  "winners": [
+    { "firstName": "Steve", "lastName": "Conway", "fullName": "Steve Conway" }
+  ],
+
+  "golferResults": [
+    {
+      "rank": 1,
+      "golfer": { "firstName": "Steve", "lastName": "Conway", "fullName": "Steve Conway" },
+      "grossScore": 88, "netScore": 75, "netPoints": null,
+      "courseHandicap": 13, "handicapIndex": 14.3, "usgaHandicapIndex": 12.7,
+      "tournamentWinnings": 120.00, "sideWinnings": 53.00, "teamWinnings": 60.00, "totalWinnings": 173.00,
+      "isWinner": true, "notes": ""
+    },
+    {
+      "rank": 2,
+      "golfer": { "firstName": "Don", "lastName": "Hartness", "fullName": "Don Hartness" },
+      "grossScore": 85, "netScore": 76, "netPoints": null,
+      "courseHandicap": 9, "handicapIndex": 10.1, "usgaHandicapIndex": 9.8,
+      "tournamentWinnings": 90.00, "sideWinnings": 20.00, "teamWinnings": 45.00, "totalWinnings": 110.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 3,
+      "golfer": { "firstName": "Roger", "lastName": "Campbell", "fullName": "Roger Campbell" },
+      "grossScore": 83, "netScore": 77, "netPoints": null,
+      "courseHandicap": 6, "handicapIndex": 7.1, "usgaHandicapIndex": 6.5,
+      "tournamentWinnings": 60.00, "sideWinnings": 53.00, "teamWinnings": 30.00, "totalWinnings": 113.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 4,
+      "golfer": { "firstName": "Mark", "lastName": "Willenbrink", "fullName": "Mark Willenbrink" },
+      "grossScore": 90, "netScore": 78, "netPoints": null,
+      "courseHandicap": 12, "handicapIndex": 13.0, "usgaHandicapIndex": 12.4,
+      "tournamentWinnings": 45.00, "sideWinnings": 0.00, "teamWinnings": 45.00, "totalWinnings": 45.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 5,
+      "golfer": { "firstName": "Russ", "lastName": "Yenser", "fullName": "Russ Yenser" },
+      "grossScore": 89, "netScore": 79, "netPoints": null,
+      "courseHandicap": 10, "handicapIndex": 11.0, "usgaHandicapIndex": 10.2,
+      "tournamentWinnings": 30.00, "sideWinnings": 13.00, "teamWinnings": 30.00, "totalWinnings": 43.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 6,
+      "golfer": { "firstName": "Rich", "lastName": "Mealey", "fullName": "Rich Mealey" },
+      "grossScore": 97, "netScore": 80, "netPoints": null,
+      "courseHandicap": 17, "handicapIndex": 18.2, "usgaHandicapIndex": 16.8,
+      "tournamentWinnings": 60.00, "sideWinnings": 13.00, "teamWinnings": 60.00, "totalWinnings": 73.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 7,
+      "golfer": { "firstName": "Herb", "lastName": "Holmes", "fullName": "Herb Holmes" },
+      "grossScore": 101, "netScore": 81, "netPoints": null,
+      "courseHandicap": 20, "handicapIndex": 21.4, "usgaHandicapIndex": 20.1,
+      "tournamentWinnings": 0.00, "sideWinnings": 26.00, "teamWinnings": 0.00, "totalWinnings": 26.00,
+      "isWinner": false, "notes": ""
+    },
+    {
+      "rank": 8,
+      "golfer": { "firstName": "Dave", "lastName": "Saniga", "fullName": "Dave Saniga" },
+      "grossScore": 98, "netScore": 82, "netPoints": null,
+      "courseHandicap": 16, "handicapIndex": 17.3, "usgaHandicapIndex": 16.0,
+      "tournamentWinnings": 0.00, "sideWinnings": 0.00, "teamWinnings": 0.00, "totalWinnings": 0.00,
+      "isWinner": false, "notes": ""
+    }
+  ],
+
+  "awards": {
+    "lowNet": [
+      {
+        "awardName": "Low Net",
+        "prizeAmount": 150.00,
+        "winners": [
+          { "golfer": { "fullName": "Steve Conway" }, "place": 1, "placeOrdinal": "1st", "amountWon": 60.00, "notes": "Net 75" },
+          { "golfer": { "fullName": "Don Hartness" }, "place": 2, "placeOrdinal": "2nd", "amountWon": 45.00, "notes": "Net 76" },
+          { "golfer": { "fullName": "Roger Campbell" }, "place": 3, "placeOrdinal": "3rd", "amountWon": 30.00, "notes": "Net 77" },
+          { "golfer": { "fullName": "Mark Willenbrink" }, "place": 4, "placeOrdinal": "4th", "amountWon": 15.00, "notes": "Net 78" }
+        ]
+      }
+    ],
+    "skins": [
+      {
+        "awardName": "Skins",
+        "prizeAmount": 52.00,
+        "winners": [
+          { "golfer": { "fullName": "Steve Conway" }, "place": 0, "placeOrdinal": "", "amountWon": 13.00, "notes": "Hole 4" },
+          { "golfer": { "fullName": "Roger Campbell" }, "place": 0, "placeOrdinal": "", "amountWon": 13.00, "notes": "Hole 9" },
+          { "golfer": { "fullName": "Herb Holmes" }, "place": 0, "placeOrdinal": "", "amountWon": 26.00, "notes": "Holes 12, 17" }
+        ]
+      }
+    ],
+    "closestToPin": [
+      {
+        "awardName": "Closest to Pin",
+        "holeNumber": 7,
+        "prizeAmount": 20.00,
+        "winners": [
+          { "golfer": { "fullName": "Russ Yenser" }, "place": 0, "placeOrdinal": "", "amountWon": 20.00, "notes": "4 ft 2 in" }
+        ]
+      },
+      {
+        "awardName": "Closest to Pin",
+        "holeNumber": 14,
+        "prizeAmount": 20.00,
+        "winners": [
+          { "golfer": { "fullName": "Rich Mealey" }, "place": 0, "placeOrdinal": "", "amountWon": 20.00, "notes": "2 ft 8 in" }
+        ]
+      }
+    ],
+    "longestDrive": [
+      {
+        "awardName": "Longest Drive",
+        "holeNumber": 18,
+        "prizeAmount": 15.00,
+        "winners": [
+          { "golfer": { "fullName": "Don Hartness" }, "place": 0, "placeOrdinal": "", "amountWon": 15.00, "notes": "292 yards" }
+        ]
+      }
+    ],
+    "customAwards": []
+  },
+
+  "teams": [
+    {
+      "teamName": "Conway / Mealey",
+      "teamWinnings": 120.00,
+      "sortOrder": 1,
+      "members": [
+        { "fullName": "Steve Conway", "shareAmount": 60.00 },
+        { "fullName": "Rich Mealey", "shareAmount": 60.00 }
+      ],
+      "memberCount": 2,
+      "memberNames": "Steve Conway, Rich Mealey"
+    },
+    {
+      "teamName": "Hartness / Willenbrink",
+      "teamWinnings": 90.00,
+      "sortOrder": 2,
+      "members": [
+        { "fullName": "Don Hartness", "shareAmount": 45.00 },
+        { "fullName": "Mark Willenbrink", "shareAmount": 45.00 }
+      ],
+      "memberCount": 2,
+      "memberNames": "Don Hartness, Mark Willenbrink"
+    },
+    {
+      "teamName": "Campbell / Yenser",
+      "teamWinnings": 60.00,
+      "sortOrder": 3,
+      "members": [
+        { "fullName": "Roger Campbell", "shareAmount": 30.00 },
+        { "fullName": "Russ Yenser", "shareAmount": 30.00 }
+      ],
+      "memberCount": 2,
+      "memberNames": "Roger Campbell, Russ Yenser"
+    }
+  ],
+
+  "summary": {
+    "totalGolfers": 20,
+    "totalAwardMoney": 257.00,
+    "totalTeamMoney": 270.00,
+    "grandTotal": 527.00,
+    "lowNetTotal": 150.00,
+    "skinsTotal": 52.00,
+    "ctpTotal": 40.00,
+    "longestDriveTotal": 15.00,
+    "customAwardsTotal": 0.00,
+    "averageGross": 91.4,
+    "averageNet": 78.5,
+    "lowestGross": 83,
+    "lowestNet": 75,
+    "highestGross": 101,
+    "highestNet": 82
+  }
+}
