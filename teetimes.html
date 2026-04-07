@@ -38,7 +38,9 @@
       <div style="color:var(--text-muted);padding:1rem;">Loading tee times&hellip;</div>
     </div>
 
-    <div class="divider"></div>
+    <div id="tt-past-section"></div>
+
+    <div class="divider mt-3"></div>
     <div class="info-box gold mt-2">
       <strong>Scoring categories:</strong> Net best ball &middot; Skins &middot; Association handicap &middot; USGA handicap &middot; Course handicap
     </div>
@@ -55,34 +57,120 @@
 
 <script src="js/nav.js"></script>
 <script>
-  fetch('data/teetimes.json').then(r => r.json()).then(data => {
-    const c = data.current;
+  fetch('data/teetimes.json?v=' + Date.now()).then(r => r.json()).then(data => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const all = data.tournaments || [];
 
-    if (!c.posted || !c.groups || c.groups.length === 0) {
+    /* ── Select active tournament ──────────────────────────────────────
+       Priority: posted tournament whose date is today or in the future,
+       closest to today. If none upcoming, fall back to the most recently
+       past posted tournament. */
+    const posted = all.filter(t => t.posted && t.groups && t.groups.length > 0);
+    posted.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    const upcoming = posted.filter(t => new Date(t.date + 'T00:00:00') >= today);
+    const past     = posted.filter(t => new Date(t.date + 'T00:00:00') <  today);
+
+    const active = upcoming.length > 0
+      ? upcoming[0]
+      : past.length > 0 ? past[past.length - 1] : null;
+
+    /* ── Past tee times list (all posted except active) ── */
+    const pastList = posted.filter(t => t !== active).reverse();
+
+    /* ── Helper functions ── */
+    function fmt1(v) {
+      if (v == null) return '—';
+      return parseFloat(v).toFixed(1);
+    }
+
+    function renderPlayer(p) {
+      if (typeof p === 'string') {
+        return `<div class="player-row">
+          <span class="player-name">${p}</span>
+          <span class="player-hdcp">—</span>
+          <span class="player-usga">—</span>
+          <span class="player-ch">—</span>
+          <span class="player-net-cell"></span>
+          <span class="player-skins-cell"></span>
+        </div>`;
+      }
+      const hdcp  = fmt1(p.handicapIndex);
+      const usga  = fmt1(p.usgaHandicapIndex);
+      const ch    = p.courseHandicap != null ? p.courseHandicap : '—';
+      const net   = p.isNet   ? `<span class="player-check--net">✓</span>`   : '';
+      const skins = p.isSkins ? `<span class="player-check--skins">✓</span>` : '';
+      return `<div class="player-row">
+        <span class="player-name">${p.name}</span>
+        <span class="player-hdcp">${hdcp}</span>
+        <span class="player-usga">${usga}</span>
+        <span class="player-ch">${ch}</span>
+        <span class="player-net-cell">${net}</span>
+        <span class="player-skins-cell">${skins}</span>
+      </div>`;
+    }
+
+    const colHeader = `<div class="player-row-header">
+      <span>Player</span>
+      <span>HDCP</span>
+      <span>USGA</span>
+      <span>CH</span>
+      <span>Net</span>
+      <span>Skins</span>
+    </div>`;
+
+    function renderGroups(t) {
+      return t.groups.map(g => `
+        <div class="tee-group">
+          <div class="tee-time-badge">${g.time}</div>
+          <div class="tee-players">
+            ${colHeader}
+            ${g.players.map(p => renderPlayer(p)).join('')}
+          </div>
+        </div>`).join('');
+    }
+
+    /* ── Render active tournament ── */
+    if (!active) {
       document.getElementById('event-card').style.display = 'none';
       document.getElementById('tt-groups').innerHTML = `
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;text-align:center;">
           <p style="font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.4rem;">No tee times posted yet</p>
           <p style="font-size:0.85rem;color:var(--text-muted);">Pairings are posted each Wednesday before the tournament. Check back closer to the event date.</p>
         </div>`;
-      return;
+    } else {
+      document.getElementById('tt-title').textContent = active.event;
+      document.getElementById('tt-meta').innerHTML = [
+        { lbl: 'Date',      val: active.displayDate },
+        { lbl: 'Course',    val: active.course },
+        { lbl: 'Format',    val: active.format },
+        { lbl: 'First Tee', val: active.startTime },
+      ].map(i => `<div class="event-meta-item"><span class="lbl">${i.lbl}</span><span class="val">${i.val}</span></div>`).join('');
+
+      document.getElementById('tt-groups').innerHTML = renderGroups(active);
     }
 
-    document.getElementById('tt-title').textContent = c.event;
-    document.getElementById('tt-meta').innerHTML = [
-      { lbl: 'Date',      val: c.displayDate },
-      { lbl: 'Course',    val: c.course },
-      { lbl: 'Format',    val: c.format },
-      { lbl: 'First Tee', val: c.startTime },
-    ].map(i => `<div class="event-meta-item"><span class="lbl">${i.lbl}</span><span class="val">${i.val}</span></div>`).join('');
+    /* ── Render past tee times section ── */
+    if (pastList.length > 0) {
+      const pastHtml = pastList.map(t => `
+        <div class="tt-past-item">
+          <button class="tt-past-toggle" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+            <span>${t.event}</span>
+            <span class="tt-past-date">${t.displayDate}</span>
+            <span class="tt-past-chevron">▸</span>
+          </button>
+          <div class="tt-past-body">
+            ${renderGroups(t)}
+          </div>
+        </div>`).join('');
 
-    document.getElementById('tt-groups').innerHTML = c.groups.map(g => `
-      <div class="tee-group">
-        <div class="tee-time-badge">${g.time}</div>
-        <div class="tee-players">
-          ${g.players.map(p => `<span class="player-tag">${p}</span>`).join('')}
-        </div>
-      </div>`).join('');
+      document.getElementById('tt-past-section').innerHTML = `
+        <div class="divider mt-3"></div>
+        <div class="section-head"><h2>Past Tee Times</h2></div>
+        <div class="tt-past-list">${pastHtml}</div>`;
+    }
+
   }).catch(() => {
     document.getElementById('event-card').style.display = 'none';
     document.getElementById('tt-groups').innerHTML = '<p style="color:var(--text-muted);">Pairings will appear here each Wednesday before the tournament.</p>';

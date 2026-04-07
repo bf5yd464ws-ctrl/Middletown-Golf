@@ -572,6 +572,7 @@ table.data-table td.highlight { font-weight: 600; }
   gap: 1rem;
   padding: 0.85rem 1.1rem;
   margin-bottom: 0.6rem;
+  max-width: 640px;
 }
 
 .tee-time-badge {
@@ -587,16 +588,131 @@ table.data-table td.highlight { font-weight: 600; }
   flex-shrink: 0;
 }
 
-.tee-players { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-
-.player-tag {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.8rem;
-  font-weight: 500;
+.tee-players {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
+
+/* Shared grid: Name | HDCP | USGA | CH | Net | Skins */
+.player-row-header,
+.player-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 1fr) 46px 46px 36px 30px 34px;
+  align-items: center;
+  gap: 0;
+}
+
+/* Header labels */
+.player-row-header {
+  padding: 0 0 0.3rem;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 0.15rem;
+}
+.player-row-header span {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  text-align: center;
+}
+.player-row-header span:first-child { text-align: left; }
+
+/* Player data rows */
+.player-row {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.player-row:last-child { border-bottom: none; }
+
+.player-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  padding-right: 0.4rem;
+}
+
+.player-hdcp,
+.player-usga,
+.player-ch {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Net / Skins — centered checkmark, color-coded, no text (header provides label) */
+.player-net-cell,
+.player-skins-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-check--net {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #16a34a;
+  line-height: 1;
+}
+
+.player-check--skins {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #d97706;
+  line-height: 1;
+}
+
+/* --- Past Tee Times (collapsible) --- */
+.tt-past-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.tt-past-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+.tt-past-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: var(--bg);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+  transition: background var(--transition);
+}
+.tt-past-toggle:hover { background: var(--green-tint); }
+
+.tt-past-date {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.tt-past-chevron {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tt-past-body {
+  display: none;
+  padding: 0.75rem 1rem 1rem;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+
+.tt-past-item.open .tt-past-chevron { transform: rotate(90deg); }
+.tt-past-item.open .tt-past-body    { display: block; }
+.tt-past-item.open .tt-past-toggle  { background: var(--green-tint); }
 
 /* --- Newsletter Grid --- */
 .nl-year { margin-bottom: 2rem; }
@@ -980,6 +1096,10 @@ table.data-table td.highlight { font-weight: 600; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .t-card-body { grid-template-columns: 1fr; }
   .tee-group { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .player-row-header,
+  .player-row { grid-template-columns: minmax(90px, 1fr) 40px 40px 32px 26px 30px; }
+  .player-name { font-size: 0.8rem; }
+  .player-hdcp, .player-usga, .player-ch { font-size: 0.75rem; }
   table.data-table th, table.data-table td { padding: 0.5rem 0.65rem; }
 }
 
