@@ -44,7 +44,7 @@
       "signupFile" : "2026\/april-player-test-signup.html",
       "signupNote" : "Sign as One",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null
     },
     {
