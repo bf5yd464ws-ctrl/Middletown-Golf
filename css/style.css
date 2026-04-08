@@ -1816,11 +1816,8 @@ table.data-table td.highlight { font-weight: 600; }
   background: var(--white);
 }
 
-/* Sticky thead */
+/* thead — NOT sticky (sticky + overflow-x:auto causes header/column misalignment) */
 .rpt-table thead {
-  position: sticky;
-  top: 62px;
-  z-index: 10;
   background: var(--green);
   color: #fff;
 }
@@ -1877,7 +1874,7 @@ table.data-table td.highlight { font-weight: 600; }
 .rpt-table .col-tourn { width: 100px; min-width: 85px; }
 
 /* min-width so it scrolls instead of cramping on mobile */
-.rpt-table          { min-width: 700px; }
+.rpt-table          { min-width: 860px; } /* 11 cols × actual widths ≈ 820px + padding */
 .rpt-table--pts     { min-width: 500px; } /* dynamic — grows with tournament count */
 
 /* ── Rank badge ── */
