@@ -1795,7 +1795,6 @@ table.data-table td.highlight { font-weight: 600; }
   align-items: flex-start;
   gap: 0.7rem;
 }
-.rpt-icon       { font-size: 1.55rem; line-height: 1; flex-shrink: 0; margin-top: 0.1rem; }
 .rpt-title      { font-size: 1.1rem; font-weight: 700; color: var(--text); margin: 0 0 0.1rem; }
 .rpt-subtitle   { font-size: 0.79rem; color: var(--text-muted); margin: 0; }
 .rpt-meta       { font-size: 0.74rem; color: var(--text-muted); white-space: nowrap; padding-top: 0.25rem; }
