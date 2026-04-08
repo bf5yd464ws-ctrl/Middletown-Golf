@@ -18,6 +18,12 @@
       "date" : "April 1, 2026",
       "month" : "April",
       "page" : "results-detail.html?t=2026-april"
+    },
+    {
+      "course" : "Kings Island",
+      "date" : "2026-04-01",
+      "month" : "April",
+      "page" : "results-detail.html?t=2026-april"
     }
   ],
   "year" : 2026
