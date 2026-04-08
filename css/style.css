@@ -15,11 +15,11 @@
   --bg:           #f7f8f6;
   --border:       #dde3d9;
   --text:         #1c2b1c;
-  --text-muted:   #637063;
+  --text-muted:   #4e5e4e;
   --shadow:       0 1px 4px rgba(0,0,0,0.07);
   --shadow-md:    0 3px 10px rgba(0,0,0,0.09);
   --radius:       8px;
-  --radius-sm:    5px;
+  --radius-sm:    8px;
   --font:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --transition:   0.15s ease;
 }
@@ -27,7 +27,7 @@
 /* --- Reset --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 15px; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 16px; }
 a { color: var(--green-mid); text-decoration: none; }
 a:hover { color: var(--green); text-decoration: underline; }
 img { max-width: 100%; display: block; }
@@ -94,12 +94,11 @@ img { max-width: 100%; display: block; }
 .nav-link.active { background: var(--green-mid); color: #fff; }
 
 /* Hamburger */
-.hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; padding: 0.4rem; background: none; border: none; }
-.hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: var(--transition); }
+.hamburger { display: none; flex-direction: row; align-items: center; gap: 7px; cursor: pointer; padding: 0.4rem 0.5rem; background: none; border: none; }
 
 /* --- Page Hero --- */
 .page-hero {
-  background: var(--green);
+  background: linear-gradient(150deg, #2e5c40 0%, #1a3d2b 60%, #142e20 100%);
   color: #fff;
   padding: 2.25rem 1.5rem 2rem;
 }
@@ -415,12 +414,12 @@ table.data-table td.highlight { font-weight: 600; }
 .t-card--next .t-date .dy { font-size: 1.9rem; }
 
 .t-card-title {
-  padding: 0.75rem 1rem;
+  padding: 0.9rem 1.15rem;
   flex: 1;
 }
-.t-card-title h3   { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.15rem; }
-.t-card-title .fmt { font-size: 0.75rem; color: var(--text-muted); }
-.t-card--next .t-card-title { padding: 1rem 1.25rem; }
+.t-card-title h3   { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.15rem; }
+.t-card-title .fmt { font-size: 0.78rem; color: var(--text-muted); }
+.t-card--next .t-card-title { padding: 1.1rem 1.35rem; }
 
 /* Inline row: course name + countdown pill side-by-side */
 .t-title-row {
@@ -435,19 +434,19 @@ table.data-table td.highlight { font-weight: 600; }
 }
 
 .t-card-body {
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.15rem;
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 0.75rem;
+  gap: 0.6rem 0.85rem;
 }
-.t-card--next .t-card-body { padding: 0.85rem 1.25rem 1rem; }
+.t-card--next .t-card-body { padding: 1rem 1.35rem 1.1rem; }
 
-.t-detail .lbl { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; }
-.t-detail .val { font-size: 0.82rem; font-weight: 500; }
+.t-detail .lbl { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; }
+.t-detail .val { font-size: 0.86rem; font-weight: 500; }
 
 .t-card-foot {
-  padding: 0.65rem 1rem;
+  padding: 0.8rem 1.15rem;
   background: rgba(0,0,0,0.03);
   border-top: 1px solid var(--border);
   display: flex;
@@ -1218,6 +1217,35 @@ table.data-table td.highlight { font-weight: 600; }
 .text-sm { font-size: 0.82rem; }
 .font-bold { font-weight: 700; }
 
+/* --- Back to Top button --- */
+.back-to-top {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.5rem;
+  z-index: 90;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.22);
+  display: none;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.back-to-top.visible { display: flex; }
+.back-to-top:hover { background: var(--green-mid); box-shadow: 0 4px 16px rgba(0,0,0,0.28); }
+
+/* --- Hamburger Menu label --- */
+.hamburger-bars { display: flex; flex-direction: column; gap: 4px; }
+.hamburger-bars span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: var(--transition); }
+.hamburger-label { color: #fff; font-size: 0.8rem; font-weight: 600; font-family: var(--font); letter-spacing: 0.02em; }
+
 /* --- Footer --- */
 .site-footer {
   background: var(--green);
@@ -1700,27 +1728,54 @@ table.data-table td.highlight { font-weight: 600; }
   gap: 0.75rem;
   background: var(--white);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--green-mid);
   border-radius: var(--radius);
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   text-decoration: none;
   color: var(--text);
-  transition: border-color var(--transition), box-shadow var(--transition), transform 0.1s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  transition: border-color var(--transition), box-shadow var(--transition), transform 0.12s ease;
 }
 .standings-ql-card:hover {
-  border-color: var(--green-mid);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  border-left-color: var(--green);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+  transform: translateY(-2px);
   text-decoration: none;
   color: var(--text);
 }
-.standings-ql-icon { font-size: 1.4rem; flex-shrink: 0; }
+.standings-ql-card:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
 .standings-ql-body { flex: 1; }
-.standings-ql-title { font-size: 0.88rem; font-weight: 700; color: var(--green); }
-.standings-ql-sub   { font-size: 0.74rem; color: var(--text-muted); margin-top: 0.05rem; }
-.standings-ql-arrow { font-size: 1rem; color: var(--text-muted); flex-shrink: 0; transition: transform var(--transition); }
-.standings-ql-card:hover .standings-ql-arrow { transform: translateX(3px); }
+.standings-ql-title { font-size: 0.92rem; font-weight: 700; color: var(--green); }
+.standings-ql-sub   { font-size: 0.76rem; color: var(--text-muted); margin-top: 0.05rem; }
+.standings-ql-arrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform var(--transition), color var(--transition);
+}
+.standings-ql-card:hover .standings-ql-arrow { transform: translateX(3px); color: var(--green-mid); }
+
+/* Mobile: stack cards and make arrow a proper green button */
 @media (max-width: 480px) {
   .standings-ql { grid-template-columns: 1fr; }
+  .standings-ql-card { padding: 1rem 1.1rem; }
+  .standings-ql-arrow {
+    background: var(--green-mid);
+    color: #fff;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+  }
+  .standings-ql-arrow::before { content: 'View '; }
+  .standings-ql-card:hover .standings-ql-arrow {
+    transform: none;
+    background: var(--green);
+    color: #fff;
+  }
 }
 
 /* ── Tab bar ── */
@@ -1943,4 +1998,40 @@ table.data-table td.highlight { font-weight: 600; }
   .rpt-tabs    { width: 100%; }
   .rpt-tab     { flex: 1; text-align: center; font-size: 0.79rem; padding: 0.4rem 0.5rem; }
   .rpt-year-sel { margin-left: 0; }
+}
+
+/* ── Mobile standings tables ── */
+@media (max-width: 768px) {
+
+  /* LEADERBOARD — strip to rank, name, points, total $
+     Hides: trend, rounds/wins/B/E, tourn$/side$/team$ */
+  #lb-table .col-trend                   { display: none; }
+  #lb-table .col-num                     { display: none; }
+  #lb-table .col-money:not(.col-total)   { display: none; }
+  #lb-table { min-width: 0; }
+
+  /* Spread remaining 4 columns across full width */
+  #lb-table .col-rank  { width: 48px; }
+  #lb-table .col-pts   { width: 72px; }
+  #lb-table .col-total { width: 84px; }
+
+  /* POINTS BREAKDOWN — narrow tournament columns so more fit on screen */
+  #pts-table .col-tourn { width: 64px; min-width: 56px; }
+  #pts-table .col-rank  { width: 44px; }
+  #pts-table .col-pts   { width: 60px; }
+  #pts-table { min-width: 0; font-size: 0.78rem; }
+
+  /* Scroll hint banner above the points table only */
+  .table-scroll--pts::before {
+    content: '← Swipe left or right to see all tournaments →';
+    display: block;
+    text-align: center;
+    font-size: 0.71rem;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    font-style: italic;
+    letter-spacing: 0.01em;
+  }
 }

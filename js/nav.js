@@ -47,7 +47,8 @@
           </div>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+          <div class="hamburger-bars"><span></span><span></span><span></span></div>
+          <span class="hamburger-label">Menu</span>
         </button>
         <nav class="main-nav" id="main-nav">
           ${navLinks.map(l => `<a href="${l.href}" class="nav-link${isActive(l.href) ? ' active' : ''}">${l.label}</a>`).join('')}
@@ -89,18 +90,30 @@
   if (hSlot) hSlot.outerHTML = headerHTML;
   if (fSlot) fSlot.outerHTML = footerHTML;
 
-  /* Mobile nav toggle */
+  /* Mobile nav toggle + Back to Top */
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('hamburger');
     const nav = document.getElementById('main-nav');
-    if (!btn || !nav) return;
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', e => {
-      if (!btn.contains(e.target) && !nav.contains(e.target)) nav.classList.remove('open');
-    });
+    if (btn && nav) {
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      document.addEventListener('click', e => {
+        if (!btn.contains(e.target) && !nav.contains(e.target)) nav.classList.remove('open');
+      });
+    }
+
+    /* Back to Top */
+    const btt = document.createElement('button');
+    btt.className = 'back-to-top';
+    btt.setAttribute('aria-label', 'Back to top');
+    btt.innerHTML = '&#8679; Back to Top';
+    document.body.appendChild(btt);
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
   });
 
   /* ── Item 7: Cross-link results ↔ newsletter on sub-pages ── */
