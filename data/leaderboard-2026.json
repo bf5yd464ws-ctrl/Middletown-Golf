@@ -1,6 +1,6 @@
 {
   "_note" : "Season leaderboard. Sorted by points descending. Updated after each tournament.",
-  "lastUpdated" : "2026-04-08T01:50:48Z",
+  "lastUpdated" : "2026-04-08T02:09:21Z",
   "leaderboard" : [
     {
       "birdies" : 9,
@@ -11,12 +11,12 @@
       "points" : 5,
       "rank" : 1,
       "roundsPlayed" : 3,
-      "sideWinnings" : 101,
-      "teamWinnings" : 50,
-      "totalWinnings" : 251,
+      "sideWinnings" : 0,
+      "teamWinnings" : 0,
+      "totalWinnings" : 0,
       "tournamentsWon" : 1,
-      "tournamentWinnings" : 100,
-      "trend" : "steady"
+      "tournamentWinnings" : 0,
+      "trend" : null
     },
     {
       "birdies" : 0,
@@ -204,8 +204,8 @@
       "rank" : 2,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 25,
-      "totalWinnings" : 25,
+      "teamWinnings" : 0,
+      "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : null
@@ -347,9 +347,9 @@
       "points" : 0,
       "rank" : 2,
       "roundsPlayed" : 1,
-      "sideWinnings" : 1,
+      "sideWinnings" : 0,
       "teamWinnings" : 0,
-      "totalWinnings" : 1,
+      "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : null
@@ -363,12 +363,12 @@
       "points" : 0,
       "rank" : 2,
       "roundsPlayed" : 3,
-      "sideWinnings" : 37,
-      "teamWinnings" : 130,
-      "totalWinnings" : 217,
+      "sideWinnings" : 0,
+      "teamWinnings" : 0,
+      "totalWinnings" : 0,
       "tournamentsWon" : 1,
-      "tournamentWinnings" : 50,
-      "trend" : "cold"
+      "tournamentWinnings" : 0,
+      "trend" : null
     },
     {
       "birdies" : 3,
@@ -379,11 +379,11 @@
       "points" : 0,
       "rank" : 2,
       "roundsPlayed" : 2,
-      "sideWinnings" : 9,
+      "sideWinnings" : 0,
       "teamWinnings" : 0,
-      "totalWinnings" : 53,
+      "totalWinnings" : 0,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 44,
+      "tournamentWinnings" : 0,
       "trend" : null
     },
     {
@@ -395,9 +395,9 @@
       "points" : 0,
       "rank" : 2,
       "roundsPlayed" : 2,
-      "sideWinnings" : 4,
+      "sideWinnings" : 0,
       "teamWinnings" : 0,
-      "totalWinnings" : 4,
+      "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : null
