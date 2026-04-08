@@ -285,8 +285,8 @@ table.data-table td.highlight { font-weight: 600; }
 .badge-gray   { background: #eee; color: #666; }
 .badge-upcoming { background: #d4ead9; color: #1a5c2e; }
 .badge-past     { background: #eee; color: #777; }
-.badge-next     { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
-.badge-recent   { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+.badge-next     { background: #d4ead9; color: #1a5c2e; border: 1px solid #b0d4bc; }
+.badge-recent   { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
 
 /* --- Info Box --- */
 .info-box {
@@ -331,8 +331,8 @@ table.data-table td.highlight { font-weight: 600; }
 /* Status variants */
 .t-card--next {
   grid-column: 1 / -1;               /* spans full width */
-  border-top: 4px solid var(--gold);
-  background: var(--gold-tint);
+  border-top: 4px solid var(--green-mid);
+  background: var(--green-tint);
   flex-direction: row;                /* two-column layout inside */
 }
 
@@ -347,8 +347,9 @@ table.data-table td.highlight { font-weight: 600; }
 }
 
 .t-card--recent {
-  border-top-color: var(--gold);
-  background: #fffdf5;
+  border-top: none;
+  border-left: 5px solid var(--gold);
+  background: var(--gold-tint);
 }
 
 /* Featured "Up Next" internals */
@@ -356,7 +357,7 @@ table.data-table td.highlight { font-weight: 600; }
   display: flex;
   flex-direction: column;
   flex: 1;
-  border-right: 1px solid rgba(184,146,58,0.2);
+  border-right: 1px solid rgba(46,107,71,0.2);
 }
 
 .t-card--next .t-card-right {
@@ -389,7 +390,7 @@ table.data-table td.highlight { font-weight: 600; }
   border-bottom: 1px solid var(--border);
 }
 
-.t-card--next   .t-card-top { border-bottom-color: rgba(184,146,58,0.2); }
+.t-card--next   .t-card-top { border-bottom-color: rgba(46,107,71,0.2); }
 .t-card--past   .t-card-top { border-bottom-color: #e0e4dd; }
 .t-card--recent .t-card-top { border-bottom-color: rgba(184,146,58,0.2); }
 
@@ -405,7 +406,7 @@ table.data-table td.highlight { font-weight: 600; }
   text-align: center;
   flex-shrink: 0;
 }
-.t-card--next   .t-date { background: var(--gold); min-width: 72px; }
+.t-card--next   .t-date { background: var(--green-mid); min-width: 72px; }
 .t-card--past   .t-date { background: #8a9e8a; }
 .t-card--recent .t-date { background: var(--gold); }
 
@@ -453,7 +454,7 @@ table.data-table td.highlight { font-weight: 600; }
   gap: 0.4rem;
   flex-wrap: wrap;
 }
-.t-card--next .t-card-foot { background: rgba(184,146,58,0.07); border-top-color: rgba(184,146,58,0.2); }
+.t-card--next .t-card-foot { background: rgba(46,107,71,0.07); border-top-color: rgba(46,107,71,0.2); }
 .t-card--past .t-card-foot { background: rgba(0,0,0,0.02); }
 
 /* Results panel — shown on completed cards in place of the generic footer */
@@ -566,7 +567,7 @@ table.data-table td.highlight { font-weight: 600; }
 /* Responsive: featured card stacks on mobile */
 @media (max-width: 640px) {
   .t-card--next { flex-direction: column; }
-  .t-card--next .t-card-left { border-right: none; border-bottom: 1px solid rgba(184,146,58,0.2); }
+  .t-card--next .t-card-left { border-right: none; border-bottom: 1px solid rgba(46,107,71,0.2); }
   .t-card--next .t-card-right { min-width: 0; border-top: none; }
 }
 
