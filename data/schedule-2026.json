@@ -17,12 +17,12 @@
       "newsletterPage" : null,
       "notes" : "Cards not included in green fees",
       "pairingsPosted" : "April 8, 2026",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-april",
       "signupFile" : "2026\/april-testing-tournament-signup.html",
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming",
+      "status" : "past",
       "teeTimesPosted" : false,
-      "winner" : null
+      "winner" : "Yenser \/ Yenser — Net 54"
     },
     {
       "course" : "Hamilton Elks",
