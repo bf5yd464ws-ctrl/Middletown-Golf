@@ -571,6 +571,108 @@ table.data-table td.highlight { font-weight: 600; }
   .t-card--next .t-card-right { min-width: 0; border-top: none; }
 }
 
+/* ── Just Played Hero Card ── */
+.t-card--jp-hero {
+  grid-column: 1 / -1;
+  border-top: 4px solid var(--gold);
+  background: var(--gold-tint);
+  display: flex;
+}
+.t-card--jp-hero .t-card-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  border-right: 1px solid rgba(184,146,58,0.22);
+}
+.t-card--jp-hero .t-card-top  { border-bottom-color: rgba(184,146,58,0.22); }
+.t-card--jp-hero .t-card-body { padding: 1rem 1.35rem 1.1rem; }
+.t-card--jp-hero .t-card-title { padding: 1.1rem 1.35rem; }
+.t-card--jp-hero .t-card-title h3 { font-size: 1.2rem; }
+.t-date--gold { background: var(--gold) !important; }
+
+.t-jp-label {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7d5a00;
+  background: rgba(184,146,58,0.18);
+  border: 1px solid rgba(184,146,58,0.35);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Right column: winner + actions */
+.jp-card-right {
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 230px;
+  max-width: 280px;
+}
+.jp-winner-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: rgba(184,146,58,0.12);
+  border: 1px solid rgba(184,146,58,0.28);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+}
+.jp-winner-lbl  { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #7d5a00; }
+.jp-winner-name { font-size: 1rem; font-weight: 700; color: var(--green); }
+.jp-actions { display: flex; flex-direction: column; gap: 0.5rem; }
+.btn-results-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.1rem;
+  background: var(--green-mid);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background var(--transition);
+  text-align: center;
+}
+.btn-results-hero:hover { background: var(--green); color: #fff; text-decoration: none; }
+.jp-posting-soon { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
+
+@media (max-width: 640px) {
+  .t-card--jp-hero { flex-direction: column; }
+  .t-card--jp-hero .t-card-left { border-right: none; border-bottom: 1px solid rgba(184,146,58,0.22); }
+  .jp-card-right { min-width: 0; max-width: none; padding: 1.1rem 1.35rem; }
+}
+
+/* ── Up Next Secondary Card (shown below JP hero during 7-day window) ── */
+.t-card--next-secondary {
+  border-top: 3px solid var(--green-mid);
+  background: var(--green-tint);
+}
+.t-card--next-secondary .t-card-top { border-bottom-color: rgba(46,107,71,0.18); }
+.t-card--next-secondary .t-next-label { margin-bottom: 0.3rem; }
+.t-card--next-secondary .t-card-foot { background: rgba(46,107,71,0.06); border-top-color: rgba(46,107,71,0.18); }
+
+/* Simplified countdown for secondary Up Next card */
+.t-countdown-simple {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  background: rgba(46,107,71,0.1);
+  border: 1px solid rgba(46,107,71,0.2);
+  border-radius: 20px;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+}
+.t-countdown-simple .t-countdown-num { font-size: 0.88rem; font-weight: 800; color: var(--green); }
+.t-countdown-simple .t-countdown-lbl { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; }
+
 /* --- Tee Times --- */
 .tee-group {
   background: var(--white);

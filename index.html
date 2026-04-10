@@ -151,9 +151,12 @@
 
       let html = '';
 
-      /* ── UPCOMING SECTION ── */
-      if (upcoming.length === 0 && past.length > 0) {
-        /* Off-season: all tournaments completed */
+      /* ── Determine rendering mode ── */
+      const featuredRecent   = recentlyCompleted.length > 0 ? recentlyCompleted[0] : null;
+      const upNextTournament = upcoming.length > 0 ? upcoming[0] : null;
+
+      /* ── OFF-SEASON: no upcoming and no recent event ── */
+      if (!upNextTournament && !featuredRecent && past.length > 0) {
         html += `
           <div class="season-complete-msg">
             <div class="season-complete-icon">🏆</div>
@@ -163,19 +166,159 @@
             </div>
             <a href="results.html" class="btn btn-sm btn-outline">Past Results</a>
           </div>`;
+
+      /* ══════════════════════════════════════════════════
+         JUST PLAYED FEATURED MODE (0–7 days post-event)
+         Recent tournament is the hero. Up Next is secondary.
+      ══════════════════════════════════════════════════ */
+      } else if (featuredRecent) {
+        const jt = featuredRecent;
+        const { mo: jmo, dy: jdy } = dateBadge(jt);
+
+        const jpWinner = jt.winner ? `
+          <div class="jp-winner-row">
+            <span class="jp-winner-lbl">Winner</span>
+            <span class="jp-winner-name">${jt.winner}</span>
+          </div>` : '';
+
+        const jpResultsBtn = jt.resultsPage
+          ? `<a href="${jt.resultsPage}" class="btn btn-results-hero">View Full Results →</a>`
+          : `<p class="jp-posting-soon">Results will be posted shortly — check back soon.</p>`;
+
+        const jpNewsletterBtn = jt.newsletterPage
+          ? `<a href="${jt.newsletterPage}" class="btn btn-outline">Newsletter</a>`
+          : '';
+
+        html += `
+        <div class="t-card t-card--jp-hero" id="jp-hero-card">
+          <div class="t-card-left">
+            <div class="t-card-top">
+              <div class="t-date t-date--gold"><span class="mo">${jmo}</span><span class="dy">${jdy}</span></div>
+              <div class="t-card-title">
+                <div class="t-jp-label">Just Played</div>
+                <div class="t-title-row">
+                  <h3>${jt.course}</h3>
+                </div>
+                <div class="fmt">${jt.format}</div>
+              </div>
+            </div>
+            <div class="t-card-body">
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${jt.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Format</span><span class="val">${jt.format}</span></div>
+              <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${jt.entryFee}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${jt.firstTeeTime}</span></div>
+            </div>
+          </div>
+          <div class="t-card-right jp-card-right">
+            ${jpWinner}
+            <div class="jp-actions">
+              ${jpResultsBtn}
+              ${jpNewsletterBtn}
+            </div>
+          </div>
+        </div>`;
+
+        /* ── Up Next secondary card ── */
+        if (upNextTournament) {
+          const ut = upNextTournament;
+          const { mo: umo, dy: udy } = dateBadge(ut);
+          const { daysUntil, deadlineDays, deadlineUrgent, deadlinePassed } = getCountdowns(ut);
+          const uSignupHref = ut.signupFile || 'signup.html';
+          const uTeetimeLink = ut.teeTimesPosted
+            ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+            : '';
+
+          const uAction = deadlinePassed
+            ? `<div class="signup-deadline-passed">
+                 <span class="sdp-icon" aria-hidden="true">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                 </span>
+                 <span class="sdp-text">Signup deadline has passed</span>
+                 <a href="mailto:russyenser@gmail.com" class="sdp-contact">Contact Russ →</a>
+               </div>`
+            : `<a href="${uSignupHref}" class="btn btn-signup">Sign Up →</a>`;
+
+          const uCountdown = daysUntil >= 0
+            ? `<div class="t-countdown-simple">
+                 <span class="t-countdown-num">${daysUntil === 0 ? 'Today' : daysUntil}</span>
+                 <span class="t-countdown-lbl">${daysUntil === 0 ? 'tournament day!' : 'day' + (daysUntil !== 1 ? 's' : '') + ' away'}</span>
+               </div>`
+            : '';
+
+          html += `
+          <div class="t-card t-card--next-secondary" id="up-next-card">
+            <div class="t-card-top">
+              <div class="t-date"><span class="mo">${umo}</span><span class="dy">${udy}</span></div>
+              <div class="t-card-title">
+                <div class="t-next-label">Up Next</div>
+                <div class="t-title-row">
+                  <h3>${ut.course}</h3>
+                  ${uCountdown}
+                </div>
+                <div class="fmt">${ut.format}</div>
+              </div>
+            </div>
+            <div class="t-card-body">
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${ut.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
+              <div class="t-detail"><span class="lbl">Deadline</span><span class="val${deadlinePassed ? ' text-warn' : deadlineUrgent ? ' text-warn' : ''}">${ut.entryDeadline || '10 days prior'}${deadlinePassed ? ' — Closed' : deadlineUrgent ? ' ⚠' : ''}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${ut.firstTeeTime}</span></div>
+            </div>
+            <div class="t-card-foot" style="gap:0.5rem;">
+              ${uAction}
+              ${uTeetimeLink}
+            </div>
+          </div>`;
+        }
+
+        /* ── Additional upcoming tournaments (2nd onward) ── */
+        upcoming.slice(1).forEach(ut => {
+          const { mo, dy } = dateBadge(ut);
+          const signupHref = ut.signupFile || 'signup.html';
+          html += `
+          <div class="t-card t-card--upcoming">
+            <div class="t-card-top">
+              <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
+              <div class="t-card-title">
+                <h3>${ut.course}</h3>
+                <div class="fmt">${ut.format}</div>
+              </div>
+              <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
+            </div>
+            <div class="t-card-body">
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${ut.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${ut.firstTeeTime}</span></div>
+              <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${ut.signupNote}</span></div>
+            </div>
+            <div class="t-card-foot"><a href="${signupHref}" class="btn btn-signup">Sign Up →</a></div>
+          </div>`;
+        });
+
+        /* ── Jump to completed ── */
+        if (past.length > 0) {
+          html += `
+          <div class="jump-completed-wrap">
+            <a href="#completed-section" class="jump-completed-link">
+              ↓ ${past.length} completed event${past.length !== 1 ? 's' : ''} this season
+            </a>
+          </div>`;
+        }
+
+      /* ══════════════════════════════════════════════════
+         NORMAL MODE: no recent event, Up Next is hero
+      ══════════════════════════════════════════════════ */
       } else {
         upcoming.forEach((t, i) => {
           const isNext = i === 0;
           const { mo, dy } = dateBadge(t);
           const signupHref  = t.signupFile || 'signup.html';
-          console.log('[MAGA Debug] T' + (i+1) + ' ' + t.course + ' → signupFile:', t.signupFile, '| href:', signupHref);
           const signupLink  = `<a href="${signupHref}" class="btn btn-signup">Sign Up →</a>`;
           const teetimeLink = (isNext && t.teeTimesPosted)
             ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
             : '';
 
           if (isNext) {
-            /* ── Items 3 & 4: Countdown + deadline warning ── */
             const { daysUntil, deadlineDays, deadlineUrgent, deadlinePassed } = getCountdowns(t);
 
             const countdownHtml = (() => {
@@ -241,36 +384,6 @@
                 </div>
               </div>
             </div>`;
-
-            /* ── Recently completed (within 7 days) — rendered right after Up Next ── */
-            recentlyCompleted.forEach(t => {
-              const { mo, dy } = dateBadge(t);
-              const rPanel = resultsPanel(t);
-              const noResults = !t.resultsPage
-                ? `<div class="t-card-results">
-                     <div class="t-card-results-label">Results</div>
-                     <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem;">Posting soon — check back shortly.</div>
-                   </div>`
-                : '';
-              html += `
-              <div class="t-card t-card--recent">
-                <div class="t-card-top">
-                  <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
-                  <div class="t-card-title">
-                    <h3>${t.course}</h3>
-                    <div class="fmt">${t.format}</div>
-                  </div>
-                  <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-recent">Just Played</span></div>
-                </div>
-                <div class="t-card-body">
-                  <div class="t-detail"><span class="lbl">Date</span><span class="val">${t.displayDate}</span></div>
-                  <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
-                  <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
-                  <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
-                </div>
-                ${rPanel || noResults}
-              </div>`;
-            });
 
             /* ── Jump to Completed anchor ── */
             if (past.length > 0) {
@@ -339,39 +452,59 @@
 
       grid.innerHTML = html;
 
-      /* ── Item 1: Sticky bar — populate + observe "Up Next" card ── */
-      if (stickyBar && upcoming.length > 0) {
-        const t = upcoming[0];
+      /* ── Sticky bar — JP featured mode or normal Up Next ── */
+      if (stickyBar) {
+        let stickyCardId = null;
 
-        /* Check if the Up Next tournament's signup deadline has passed */
-        const stickyNow = new Date(); stickyNow.setHours(0,0,0,0);
-        const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
-        const stickyDeadlinePassed = stickyDL && stickyDL < stickyNow;
+        if (featuredRecent) {
+          /* Just Played featured mode: sticky bar promotes results */
+          const jt = featuredRecent;
+          const stickyResultsAction = jt.resultsPage
+            ? `<a href="${jt.resultsPage}" class="btn btn-signup sticky-signup">View Results →</a>`
+            : `<span class="sticky-signup-closed">Results Posting Soon</span>`;
+          stickyBar.innerHTML = `
+            <div class="sticky-next-inner">
+              <span class="sticky-label">Just Played</span>
+              <span class="sticky-course">${jt.course}</span>
+              <span class="sticky-sep" aria-hidden="true">&middot;</span>
+              <span class="sticky-date">${jt.displayDate}</span>
+              ${stickyResultsAction}
+            </div>`;
+          stickyCardId = 'jp-hero-card';
 
-        /* Always route through signup.html — it handles all deadline/routing logic */
-        const stickyAction = stickyDeadlinePassed
-          ? `<span class="sticky-signup-closed">Signup Closed</span>`
-          : `<a href="signup.html" class="btn btn-signup sticky-signup">Sign Up →</a>`;
+        } else if (upNextTournament) {
+          /* Normal mode: sticky bar promotes the next tournament */
+          const t = upNextTournament;
+          const stickyNow = new Date(); stickyNow.setHours(0,0,0,0);
+          const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+          const stickyDeadlinePassed = stickyDL && stickyDL < stickyNow;
+          const stickyAction = stickyDeadlinePassed
+            ? `<span class="sticky-signup-closed">Signup Closed</span>`
+            : `<a href="signup.html" class="btn btn-signup sticky-signup">Sign Up →</a>`;
+          stickyBar.innerHTML = `
+            <div class="sticky-next-inner">
+              <span class="sticky-label">Up Next</span>
+              <span class="sticky-course">${t.course}</span>
+              <span class="sticky-sep" aria-hidden="true">&middot;</span>
+              <span class="sticky-date">${t.displayDate}</span>
+              ${stickyAction}
+            </div>`;
+          stickyCardId = 'up-next-card';
+        }
 
-        stickyBar.innerHTML = `
-          <div class="sticky-next-inner">
-            <span class="sticky-label">Up Next</span>
-            <span class="sticky-course">${t.course}</span>
-            <span class="sticky-sep" aria-hidden="true">&middot;</span>
-            <span class="sticky-date">${t.displayDate}</span>
-            ${stickyAction}
-          </div>`;
-
-        const nextCard = document.getElementById('up-next-card');
-        if (nextCard && 'IntersectionObserver' in window) {
-          const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              const show = !entry.isIntersecting;
-              stickyBar.classList.toggle('visible', show);
-              stickyBar.setAttribute('aria-hidden', String(!show));
-            });
-          }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
-          observer.observe(nextCard);
+        /* Observe whichever hero card is showing */
+        if (stickyCardId && 'IntersectionObserver' in window) {
+          const heroCard = document.getElementById(stickyCardId);
+          if (heroCard) {
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => {
+                const show = !entry.isIntersecting;
+                stickyBar.classList.toggle('visible', show);
+                stickyBar.setAttribute('aria-hidden', String(!show));
+              });
+            }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+            observer.observe(heroCard);
+          }
         }
       }
 
