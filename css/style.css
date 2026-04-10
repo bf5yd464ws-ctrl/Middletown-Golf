@@ -1626,6 +1626,20 @@ table.data-table td.highlight { font-weight: 600; }
   background: #fffdf8;
 }
 .signup-state-icon  { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+.signup-state-icon--lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 0.9rem;
+  background: rgba(184,146,58,0.1);
+  border: 1.5px solid rgba(184,146,58,0.3);
+  border-radius: 50%;
+  color: #9a7530;
+  font-size: inherit;
+}
+.signup-state-icon--lock svg { width: 22px; height: 22px; }
 .signup-state-title { font-size: 1.25rem; font-weight: 800; color: var(--green); margin: 0 0 0.6rem; }
 .signup-state-msg   { font-size: 0.9rem; color: var(--text-muted); margin: 0 0 1.25rem; line-height: 1.6; }
 
@@ -1686,8 +1700,20 @@ table.data-table td.highlight { font-weight: 600; }
   padding: 0.6rem 0.9rem;
   text-align: center;
 }
-.sdp-icon    { font-size: 1.1rem; }
-.sdp-text    { font-size: 0.78rem; font-weight: 700; color: #c86428; }
+.sdp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(184,146,58,0.12);
+  border: 1px solid rgba(184,146,58,0.3);
+  border-radius: 50%;
+  color: #9a7530;
+  flex-shrink: 0;
+}
+.sdp-icon svg { display: block; }
+.sdp-text    { font-size: 0.78rem; font-weight: 700; color: #7a5a1a; }
 .sdp-contact { font-size: 0.74rem; color: var(--green-mid); font-weight: 600; }
 .sdp-contact:hover { color: var(--green); }
 

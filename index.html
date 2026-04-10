@@ -230,7 +230,9 @@
                 <div style="display:flex;flex-direction:column;gap:0.45rem;">
                   ${deadlinePassed
                     ? `<div class="signup-deadline-passed">
-                         <span class="sdp-icon">🔒</span>
+                         <span class="sdp-icon" aria-hidden="true">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                         </span>
                          <span class="sdp-text">Signup deadline has passed</span>
                          <a href="mailto:russyenser@gmail.com" class="sdp-contact">Contact Russ →</a>
                        </div>`
@@ -340,13 +342,24 @@
       /* ── Item 1: Sticky bar — populate + observe "Up Next" card ── */
       if (stickyBar && upcoming.length > 0) {
         const t = upcoming[0];
+
+        /* Check if the Up Next tournament's signup deadline has passed */
+        const stickyNow = new Date(); stickyNow.setHours(0,0,0,0);
+        const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+        const stickyDeadlinePassed = stickyDL && stickyDL < stickyNow;
+
+        /* Always route through signup.html — it handles all deadline/routing logic */
+        const stickyAction = stickyDeadlinePassed
+          ? `<span class="sticky-signup-closed">Signup Closed</span>`
+          : `<a href="signup.html" class="btn btn-signup sticky-signup">Sign Up →</a>`;
+
         stickyBar.innerHTML = `
           <div class="sticky-next-inner">
             <span class="sticky-label">Up Next</span>
             <span class="sticky-course">${t.course}</span>
             <span class="sticky-sep" aria-hidden="true">&middot;</span>
             <span class="sticky-date">${t.displayDate}</span>
-            <a href="${t.signupFile || 'signup.html'}" class="btn btn-signup sticky-signup">Sign Up →</a>
+            ${stickyAction}
           </div>`;
 
         const nextCard = document.getElementById('up-next-card');
