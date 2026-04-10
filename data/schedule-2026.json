@@ -3,21 +3,26 @@
   "tournaments" : [
     {
       "course" : "Hamilton Elks",
-      "courseUrl" : "https:\/\/www.hamiltonelksgolfclub.com",
+      "courseUrl" : "https:\/\/www.hamiltonelksgolfclub.com\/",
       "date" : "2026-04-18",
       "deadlineDate" : "2026-04-08",
       "displayDate" : "April 18, 2026",
       "entryDeadline" : "Wednesday, April 8",
       "entryFee" : 69,
       "firstTeeTime" : "12:00 PM",
-      "format" : "2 Man Single Best Ball",
+      "format" : "2 Man Best Ball",
       "id" : 1,
       "month" : "April",
-      "notes" : "Carts not included in greens fee",
-      "pairingsPosted" : "Wednesday, April 15",
-      "signupFile" : "2026\/1-AprilSignup.htm",
-      "signupNote" : "Sign as Twosome",
-      "status" : "upcoming"
+      "name" : "Hamilton Elks",
+      "newsletterPage" : null,
+      "notes" : "Carts are included",
+      "pairingsPosted" : "Friday April 10",
+      "resultsPage" : null,
+      "signupFile" : "2026\/april-hamilton-elks-signup.html",
+      "signupNote" : "Sign as twosome",
+      "status" : "upcoming",
+      "teeTimesPosted" : true,
+      "winner" : null
     },
     {
       "course" : "Shaker Run",
