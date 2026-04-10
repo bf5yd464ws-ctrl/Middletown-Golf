@@ -51,45 +51,185 @@
       "year" : 2025
     },
     {
-      "date" : "2026-04-09",
-      "displayDate" : "April 9, 2026",
-      "event" : "player test",
-      "format" : "best ball",
+      "date" : "2026-04-18",
+      "displayDate" : "April 18, 2026",
+      "event" : "Hamilton Elks",
+      "format" : "2 Man Best Ball",
       "groups" : [
         {
           "players" : [
             {
-              "courseHandicap" : 25,
-              "handicapIndex" : 26.899999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Don Hartness",
-              "usgaHandicapIndex" : 27
-            },
-            {
-              "courseHandicap" : 11,
-              "handicapIndex" : 13.800000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Danny Hause",
-              "usgaHandicapIndex" : 0
-            },
-            {
-              "courseHandicap" : 17,
-              "handicapIndex" : 18.899999999999999,
+              "courseHandicap" : 14,
+              "handicapIndex" : 22.699999999999999,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Jamie Harrison",
-              "usgaHandicapIndex" : 0
+              "usgaHandicapIndex" : 15.9
+            },
+            {
+              "courseHandicap" : 18,
+              "handicapIndex" : 19.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "David Saniga",
+              "usgaHandicapIndex" : 20.800000000000001
+            },
+            {
+              "courseHandicap" : 14,
+              "handicapIndex" : 20.5,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Nick Edwards",
+              "usgaHandicapIndex" : 16.199999999999999
             }
           ],
-          "time" : "9:29 PM"
+          "time" : "12:00 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 20,
+              "handicapIndex" : 24.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Russ Yenser",
+              "usgaHandicapIndex" : 21.5
+            },
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 12.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Mark Mattingly",
+              "usgaHandicapIndex" : 13.5
+            },
+            {
+              "courseHandicap" : 13,
+              "handicapIndex" : 15.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Mark Willenbrink",
+              "usgaHandicapIndex" : 18.600000000000001
+            }
+          ],
+          "time" : "12:07 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 8,
+              "handicapIndex" : 11.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Steve Goertemiller",
+              "usgaHandicapIndex" : 10.9
+            },
+            {
+              "courseHandicap" : 9,
+              "handicapIndex" : 12.1,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Herb Holmes",
+              "usgaHandicapIndex" : 11.300000000000001
+            },
+            {
+              "courseHandicap" : 11,
+              "handicapIndex" : 16.100000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Roger Campbell",
+              "usgaHandicapIndex" : 13.1
+            },
+            {
+              "courseHandicap" : 18,
+              "handicapIndex" : 19.899999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Donnie Roberts",
+              "usgaHandicapIndex" : 20.5
+            }
+          ],
+          "time" : "12:15 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 21,
+              "handicapIndex" : 22.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Steve Harrison",
+              "usgaHandicapIndex" : 21.899999999999999
+            },
+            {
+              "courseHandicap" : 14,
+              "handicapIndex" : 22.5,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jason Harrison",
+              "usgaHandicapIndex" : 15.9
+            },
+            {
+              "courseHandicap" : 26,
+              "handicapIndex" : 26.899999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John Stanton",
+              "usgaHandicapIndex" : 28.399999999999999
+            },
+            {
+              "courseHandicap" : 6,
+              "handicapIndex" : 8.6999999999999993,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John O'Donnell",
+              "usgaHandicapIndex" : 16.699999999999999
+            }
+          ],
+          "time" : "12:22 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 19,
+              "handicapIndex" : 22.899999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Dick Freeman",
+              "usgaHandicapIndex" : 20.399999999999999
+            },
+            {
+              "courseHandicap" : 25,
+              "handicapIndex" : 25.899999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jim Wendel",
+              "usgaHandicapIndex" : 27.399999999999999
+            },
+            {
+              "courseHandicap" : 20,
+              "handicapIndex" : 21.600000000000001,
+              "isNet" : true,
+              "isSkins" : false,
+              "name" : "Steve Conway",
+              "usgaHandicapIndex" : 23.5
+            },
+            {
+              "courseHandicap" : 12,
+              "handicapIndex" : 14.4,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "David Simpson",
+              "usgaHandicapIndex" : 17.699999999999999
+            }
+          ],
+          "time" : "12:30 PM"
         }
       ],
       "id" : 1,
-      "name" : "player test",
-      "posted" : false,
-      "startTime" : "9:29 PM",
+      "name" : "Hamilton Elks",
+      "posted" : true,
+      "startTime" : "12:00 PM",
       "year" : 2026
     },
     {
