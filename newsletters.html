@@ -22,11 +22,22 @@
 <main class="page-content">
   <div class="container">
 
-    <!-- 2025 — most recent year -->
+    <!-- 2026 — most recent year -->
+    <div class="nl-year">
+      <div class="nl-year-header">
+        <h2>2026</h2>
+        <span class="badge badge-gold" style="margin-left:0.5rem;">Most Recent</span>
+        <div class="nl-rule"></div>
+      </div>
+      <div class="nl-pills" id="nl-2026">
+        <div style="color:var(--text-muted);font-size:0.85rem;">Loading&hellip;</div>
+      </div>
+    </div>
+
+    <!-- 2025 — previous year -->
     <div class="nl-year">
       <div class="nl-year-header">
         <h2>2025</h2>
-        <span class="badge badge-gold" style="margin-left:0.5rem;">Most Recent</span>
         <div class="nl-rule"></div>
       </div>
       <div class="nl-pills" id="nl-2025">
@@ -51,13 +62,23 @@
 
 <script src="js/nav.js"></script>
 <script>
-  // Load 2025 issues
-  fetch('data/newsletters-2025.json').then(r => r.json()).then(data => {
-    const pills = document.getElementById('nl-2025');
+  // Load 2026 issues (most recent)
+  fetch('data/newsletters-2026.json').then(r => r.json()).then(data => {
+    const pills = document.getElementById('nl-2026');
     pills.innerHTML = data.issues.map((issue, i) => {
       const isLatest = i === data.issues.length - 1;
       return `<a href="${issue.page}" class="nl-pill${isLatest ? ' current' : ''}">${issue.label}</a>`;
     }).join('');
+  });
+
+  // Load 2025 issues (previous year)
+  fetch('data/newsletters-2025.json').then(r => r.json()).then(data => {
+    const pills = document.getElementById('nl-2025');
+    pills.innerHTML = data.issues.map(issue =>
+      `<a href="${issue.page}" class="nl-pill">${issue.label}</a>`
+    ).join('');
+  }).catch(() => {
+    document.getElementById('nl-2025').innerHTML = '';
   });
 
   // Load archive years (2024 down to 2013) from newsletters.json — all local pages

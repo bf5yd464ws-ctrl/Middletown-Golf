@@ -1,3 +1,15 @@
+/* ── Google Analytics (GA4 — site-wide via nav.js) ── */
+(function () {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-92CJV5B0FE');
+  var _ga = document.createElement('script');
+  _ga.async = true;
+  _ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-92CJV5B0FE';
+  document.head.appendChild(_ga);
+})();
+
 /**
  * Shared header + footer injector
  * Detects year-subfolder depth so links work from both root pages and /YYYY/ subpages,

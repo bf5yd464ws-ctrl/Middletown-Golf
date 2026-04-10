@@ -1,0 +1,15 @@
+{
+  "_note": "2026 newsletter issues. Each issue links to its local HTML page. To add future years, create newsletters-YYYY.json. Add entries here as newsletters are published — the newsletters page loads this file for the current year.",
+  "year": 2026,
+  "title": "The 19th Hole",
+  "issues": [
+    { "month": "April",          "label": "April 2026",          "page": "2026/april-newsletter.html" },
+    { "month": "May - Shaker Run",   "label": "May 2026 — Shaker Run",   "page": "2026/may-shaker-newsletter.html" },
+    { "month": "May - Yankee Trace", "label": "May 2026 — Yankee Trace", "page": "2026/may-yankee-newsletter.html" },
+    { "month": "June",           "label": "June 2026",           "page": "2026/june-newsletter.html" },
+    { "month": "July",           "label": "July 2026",           "page": "2026/july-newsletter.html" },
+    { "month": "August",         "label": "August 2026",         "page": "2026/august-newsletter.html" },
+    { "month": "September",      "label": "September 2026",      "page": "2026/september-newsletter.html" },
+    { "month": "October",        "label": "October 2026",        "page": "2026/october-newsletter.html" }
+  ]
+}
