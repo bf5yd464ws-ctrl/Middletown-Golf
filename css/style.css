@@ -92,6 +92,7 @@ img { max-width: 100%; display: block; }
 
 .nav-link:hover { background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; }
 .nav-link.active { background: var(--green-mid); color: #fff; }
+.nav-link--disabled { opacity: 0.38; cursor: not-allowed; pointer-events: none; }
 
 /* Hamburger */
 .hamburger { display: none; flex-direction: row; align-items: center; gap: 7px; cursor: pointer; padding: 0.4rem 0.5rem; background: none; border: none; }
@@ -1446,6 +1447,14 @@ table.data-table td.highlight { font-weight: 600; }
   font-size: 0.82rem;
   color: rgba(255,255,255,0.75);
   white-space: nowrap;
+}
+.sticky-signup-closed {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .sticky-signup {
   margin-left: auto;

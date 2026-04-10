@@ -90,6 +90,39 @@
   if (hSlot) hSlot.outerHTML = headerHTML;
   if (fSlot) fSlot.outerHTML = footerHTML;
 
+  /* ── End-of-season Sign Up disable ── */
+  (async function () {
+    try {
+      const year = new Date().getFullYear();
+      const sched = await fetch(base + 'data/schedule-' + year + '.json').then(r => r.json());
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const hasOpenSignup = (sched.tournaments || []).some(t => {
+        if (!t.signupFile) return false;                          // no form = not signable
+        const dl = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+        return !dl || dl >= today;                                // no deadline, or deadline not yet passed
+      });
+      if (!hasOpenSignup) {
+        /* Find the Sign Up nav link and disable it.
+           Use a ready-state guard so it works whether fetch resolves
+           before or after DOMContentLoaded fires. */
+        const disableSignupLink = () => {
+          const signupLink = document.querySelector('.main-nav a[href$="signup.html"]');
+          if (signupLink) {
+            signupLink.removeAttribute('href');
+            signupLink.classList.add('nav-link--disabled');
+            signupLink.setAttribute('title', 'No open signups at this time');
+            signupLink.setAttribute('aria-disabled', 'true');
+          }
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', disableSignupLink);
+        } else {
+          disableSignupLink();
+        }
+      }
+    } catch (e) { /* fail silently — nav remains fully functional */ }
+  })();
+
   /* Mobile nav toggle + Back to Top */
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('hamburger');
