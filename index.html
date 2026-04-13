@@ -363,8 +363,8 @@
                   <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
                   <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
                   <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
-                  ${t.notes ? `<div class="t-detail" style="grid-column:1/-1"><span class="lbl">Notes</span><span class="val text-muted">${t.notes}</span></div>` : ''}
-                  <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Pairings Posted</span><span class="val">${t.pairingsPosted || '—'}</span></div>
+                  <div class="t-detail"><span class="lbl">Pairings Posted</span><span class="val">${t.pairingsPosted || '—'}</span></div>
+                  ${t.notes ? `<div class="t-detail"><span class="lbl">Notes</span><span class="val text-muted">${t.notes}</span></div>` : ''}
                 </div>
               </div>
               <div class="t-card-right">
