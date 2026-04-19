@@ -3,6 +3,7 @@
     "closestToPin" : [
       {
         "awardName" : "Closest to Pin",
+        "holeNumber" : 3,
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -582,18 +583,18 @@
   "teams" : [
     {
       "memberCount" : 2,
-      "memberNames" : "Herb Holmes, Steve Goertemiller",
+      "memberNames" : "Steve Goertemiller, Herb Holmes",
       "members" : [
-        {
-          "firstName" : "Herb",
-          "fullName" : "Herb Holmes",
-          "lastName" : "Holmes",
-          "shareAmount" : 50
-        },
         {
           "firstName" : "Steve",
           "fullName" : "Steve Goertemiller",
           "lastName" : "Goertemiller",
+          "shareAmount" : 50
+        },
+        {
+          "firstName" : "Herb",
+          "fullName" : "Herb Holmes",
+          "lastName" : "Holmes",
           "shareAmount" : 50
         }
       ],
@@ -603,18 +604,18 @@
     },
     {
       "memberCount" : 2,
-      "memberNames" : "Jamie Harrison, David Saniga",
+      "memberNames" : "David Saniga, Jamie Harrison",
       "members" : [
-        {
-          "firstName" : "Jamie",
-          "fullName" : "Jamie Harrison",
-          "lastName" : "Harrison",
-          "shareAmount" : 40
-        },
         {
           "firstName" : "David",
           "fullName" : "David Saniga",
           "lastName" : "Saniga",
+          "shareAmount" : 40
+        },
+        {
+          "firstName" : "Jamie",
+          "fullName" : "Jamie Harrison",
+          "lastName" : "Harrison",
           "shareAmount" : 40
         }
       ],
@@ -645,18 +646,18 @@
     },
     {
       "memberCount" : 2,
-      "memberNames" : "John O'Donnell, John Stanton",
+      "memberNames" : "John Stanton, John O'Donnell",
       "members" : [
-        {
-          "firstName" : "John",
-          "fullName" : "John O'Donnell",
-          "lastName" : "O'Donnell",
-          "shareAmount" : 20
-        },
         {
           "firstName" : "John",
           "fullName" : "John Stanton",
           "lastName" : "Stanton",
+          "shareAmount" : 20
+        },
+        {
+          "firstName" : "John",
+          "fullName" : "John O'Donnell",
+          "lastName" : "O'Donnell",
           "shareAmount" : 20
         }
       ],
@@ -666,18 +667,18 @@
     },
     {
       "memberCount" : 2,
-      "memberNames" : "Russ Yenser, Mark Mattingly",
+      "memberNames" : "Mark Mattingly, Russ Yenser",
       "members" : [
-        {
-          "firstName" : "Russ",
-          "fullName" : "Russ Yenser",
-          "lastName" : "Yenser",
-          "shareAmount" : 0
-        },
         {
           "firstName" : "Mark",
           "fullName" : "Mark Mattingly",
           "lastName" : "Mattingly",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Russ",
+          "fullName" : "Russ Yenser",
+          "lastName" : "Yenser",
           "shareAmount" : 0
         }
       ],
