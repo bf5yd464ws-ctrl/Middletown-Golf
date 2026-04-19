@@ -582,18 +582,18 @@
   "teams" : [
     {
       "memberCount" : 2,
-      "memberNames" : "Steve Goertemiller, Herb Holmes",
+      "memberNames" : "Herb Holmes, Steve Goertemiller",
       "members" : [
-        {
-          "firstName" : "Steve",
-          "fullName" : "Steve Goertemiller",
-          "lastName" : "Goertemiller",
-          "shareAmount" : 50
-        },
         {
           "firstName" : "Herb",
           "fullName" : "Herb Holmes",
           "lastName" : "Holmes",
+          "shareAmount" : 50
+        },
+        {
+          "firstName" : "Steve",
+          "fullName" : "Steve Goertemiller",
+          "lastName" : "Goertemiller",
           "shareAmount" : 50
         }
       ],
@@ -603,18 +603,18 @@
     },
     {
       "memberCount" : 2,
-      "memberNames" : "David Saniga, Jamie Harrison",
+      "memberNames" : "Jamie Harrison, David Saniga",
       "members" : [
-        {
-          "firstName" : "David",
-          "fullName" : "David Saniga",
-          "lastName" : "Saniga",
-          "shareAmount" : 40
-        },
         {
           "firstName" : "Jamie",
           "fullName" : "Jamie Harrison",
           "lastName" : "Harrison",
+          "shareAmount" : 40
+        },
+        {
+          "firstName" : "David",
+          "fullName" : "David Saniga",
+          "lastName" : "Saniga",
           "shareAmount" : 40
         }
       ],
@@ -645,24 +645,129 @@
     },
     {
       "memberCount" : 2,
-      "memberNames" : "John Stanton, John O'Donnell",
+      "memberNames" : "John O'Donnell, John Stanton",
       "members" : [
-        {
-          "firstName" : "John",
-          "fullName" : "John Stanton",
-          "lastName" : "Stanton",
-          "shareAmount" : 20
-        },
         {
           "firstName" : "John",
           "fullName" : "John O'Donnell",
           "lastName" : "O'Donnell",
+          "shareAmount" : 20
+        },
+        {
+          "firstName" : "John",
+          "fullName" : "John Stanton",
+          "lastName" : "Stanton",
           "shareAmount" : 20
         }
       ],
       "sortOrder" : 5,
       "teamName" : "John Stanton & John O'Donnell",
       "teamWinnings" : 40
+    },
+    {
+      "memberCount" : 2,
+      "memberNames" : "Russ Yenser, Mark Mattingly",
+      "members" : [
+        {
+          "firstName" : "Russ",
+          "fullName" : "Russ Yenser",
+          "lastName" : "Yenser",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Mark",
+          "fullName" : "Mark Mattingly",
+          "lastName" : "Mattingly",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 6,
+      "teamName" : "Mark Mattingly & Russ Yenser",
+      "teamWinnings" : 0
+    },
+    {
+      "memberCount" : 2,
+      "memberNames" : "Mark Willenbrink, Nick Edwards",
+      "members" : [
+        {
+          "firstName" : "Mark",
+          "fullName" : "Mark Willenbrink",
+          "lastName" : "Willenbrink",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Nick",
+          "fullName" : "Nick Edwards",
+          "lastName" : "Edwards",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 7,
+      "teamName" : "Nick Edwards & Mark Willenbrink",
+      "teamWinnings" : 0
+    },
+    {
+      "memberCount" : 2,
+      "memberNames" : "Dick Freeman, Jim Wendel",
+      "members" : [
+        {
+          "firstName" : "Dick",
+          "fullName" : "Dick Freeman",
+          "lastName" : "Freeman",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Jim",
+          "fullName" : "Jim Wendel",
+          "lastName" : "Wendel",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 8,
+      "teamName" : "Jim Wendel & Dick Freeman",
+      "teamWinnings" : 0
+    },
+    {
+      "memberCount" : 2,
+      "memberNames" : "Steve Harrison, Jason Harrison",
+      "members" : [
+        {
+          "firstName" : "Steve",
+          "fullName" : "Steve Harrison",
+          "lastName" : "Harrison",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Jason",
+          "fullName" : "Jason Harrison",
+          "lastName" : "Harrison",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 9,
+      "teamName" : "Steve Harrison & Jason Harrison",
+      "teamWinnings" : 0
+    },
+    {
+      "memberCount" : 2,
+      "memberNames" : "Donnie Roberts, Roger Campbell",
+      "members" : [
+        {
+          "firstName" : "Donnie",
+          "fullName" : "Donnie Roberts",
+          "lastName" : "Roberts",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Roger",
+          "fullName" : "Roger Campbell",
+          "lastName" : "Campbell",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 10,
+      "teamName" : "Donnie Roberts & Roger Campbell",
+      "teamWinnings" : 0
     }
   ],
   "tournament" : {
