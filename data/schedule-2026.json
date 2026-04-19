@@ -17,12 +17,12 @@
       "newsletterPage" : null,
       "notes" : "Carts are included",
       "pairingsPosted" : "Friday April 10",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-april",
       "signupFile" : "2026\/april-hamilton-elks-signup.html",
       "signupNote" : "Sign as twosome",
-      "status" : "upcoming",
-      "teeTimesPosted" : true,
-      "winner" : null
+      "status" : "past",
+      "teeTimesPosted" : false,
+      "winner" : "Goertemiller \/ Holmes — Net 75"
     },
     {
       "course" : "Shaker Run",
