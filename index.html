@@ -175,11 +175,10 @@
         const jt = featuredRecent;
         const { mo: jmo, dy: jdy } = dateBadge(jt);
 
-        const jpWinner = jt.winner ? `
-          <div class="jp-winner-row">
-            <span class="jp-winner-lbl">Winner</span>
-            <span class="jp-winner-name">${jt.winner}</span>
-          </div>` : '';
+        const jpWinnerNames = jt.winner || '';
+        const jpWinnerScore = jt.winnerScore
+          ? `<div class="jp-winner-score">Combined Net &middot; ${jt.winnerScore}</div>`
+          : '';
 
         const jpResultsBtn = jt.resultsPage
           ? `<a href="${jt.resultsPage}" class="btn btn-results-hero">View Full Results →</a>`
@@ -191,30 +190,21 @@
 
         html += `
         <div class="t-card t-card--jp-hero" id="jp-hero-card">
-          <div class="t-card-left">
-            <div class="t-card-top">
-              <div class="t-date t-date--gold"><span class="mo">${jmo}</span><span class="dy">${jdy}</span></div>
-              <div class="t-card-title">
-                <div class="t-jp-label">Just Played</div>
-                <div class="t-title-row">
-                  <h3>${jt.course}</h3>
-                </div>
-                <div class="fmt">${jt.format}</div>
-              </div>
-            </div>
-            <div class="t-card-body">
-              <div class="t-detail"><span class="lbl">Date</span><span class="val">${jt.displayDate}</span></div>
-              <div class="t-detail"><span class="lbl">Format</span><span class="val">${jt.format}</span></div>
-              <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${jt.entryFee}</span></div>
-              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${jt.firstTeeTime}</span></div>
-            </div>
+          <div class="jp-info-bar">
+            <span class="t-jp-label">Just Played</span>
+            <span class="jp-info-course">${jt.course}</span>
+            <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+            <span class="jp-info-date">${jt.displayDate}</span>
           </div>
-          <div class="t-card-right jp-card-right">
-            ${jpWinner}
-            <div class="jp-actions">
-              ${jpResultsBtn}
-              ${jpNewsletterBtn}
-            </div>
+          <div class="jp-winner-zone">
+            <div class="jp-trophy" aria-hidden="true">🏆</div>
+            <div class="jp-winner-lbl">Tournament Winners</div>
+            <div class="jp-winner-names">${jpWinnerNames || 'Results Posting Soon'}</div>
+            ${jpWinnerScore}
+          </div>
+          <div class="jp-hero-actions">
+            ${jpResultsBtn}
+            ${jpNewsletterBtn}
           </div>
         </div>`;
 
