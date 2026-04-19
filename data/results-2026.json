@@ -1,7 +1,12 @@
 {
   "_note" : "2026 tournament results index.",
   "tournaments" : [
-
+    {
+      "course" : "Hamilton Elks - Red\/White",
+      "date" : "2026-04-18",
+      "month" : "April",
+      "page" : "results-detail.html?t=2026-april"
+    }
   ],
   "year" : 2026
 }
