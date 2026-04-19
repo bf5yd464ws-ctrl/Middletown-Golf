@@ -21,6 +21,7 @@
       },
       {
         "awardName" : "Closest to Pin",
+        "holeNumber" : 5,
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -38,6 +39,7 @@
       },
       {
         "awardName" : "Closest to Pin",
+        "holeNumber" : 12,
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -55,6 +57,7 @@
       },
       {
         "awardName" : "Closest to Pin",
+        "holeNumber" : 14,
         "prizeAmount" : 20,
         "winners" : [
           {
