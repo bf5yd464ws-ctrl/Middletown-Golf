@@ -597,7 +597,7 @@ table.data-table td.highlight { font-weight: 600; }
 /* Top info bar */
 .jp-info-bar {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   border-bottom: 1px solid rgba(184,146,58,0.22);
 }
 .jp-info-content {
@@ -663,7 +663,7 @@ table.data-table td.highlight { font-weight: 600; }
 .jp-posting-soon { font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; padding: 0.2rem 0; }
 
 @media (max-width: 640px) {
-  .jp-info-bar     { padding: 0.65rem 1.1rem; }
+  .jp-info-content { padding: 0.65rem 1rem; }
   .jp-winner-zone  { padding: 0.75rem 1.1rem; }
   .jp-hero-actions { padding: 0.65rem 1.1rem; }
   .jp-winner-names { font-size: 0.92rem; }
@@ -1896,22 +1896,27 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .standings-ql-card:hover .standings-ql-arrow { transform: translateX(3px); color: var(--green-mid); }
 
-/* Mobile: keep side by side, make arrow a proper green button */
+/* Mobile: pill button style, side by side */
 @media (max-width: 480px) {
-  .standings-ql-card { padding: 0.75rem 0.85rem; }
-  .standings-ql-arrow {
-    background: var(--green-mid);
-    color: #fff;
-    padding: 0.4rem 0.85rem;
-    border-radius: var(--radius-sm);
-    font-size: 0.78rem;
-  }
-  .standings-ql-arrow::before { content: 'View '; }
-  .standings-ql-card:hover .standings-ql-arrow {
-    transform: none;
+  .standings-ql-card {
     background: var(--green);
-    color: #fff;
+    border: none;
+    border-left: none;
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 0.5rem;
+    justify-content: center;
+    box-shadow: none;
   }
+  .standings-ql-card:hover {
+    background: var(--green-mid);
+    border-left-color: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+  .standings-ql-body  { flex: none; text-align: center; }
+  .standings-ql-title { font-size: 0.8rem; color: #fff; }
+  .standings-ql-sub   { display: none; }
+  .standings-ql-arrow { display: none; }
 }
 
 /* ── Tab bar ── */
@@ -2091,9 +2096,10 @@ table.data-table td.highlight { font-weight: 600; }
 .text-money { color: #4A7C59; font-weight: 600; }
 
 /* ── Trend indicators ── */
-.trend-hot    { color: #2e7d32; font-weight: 600; font-size: 0.79rem; }
-.trend-steady { color: #b45309; font-weight: 600; font-size: 0.79rem; }
-.trend-cold   { color: #c62828; font-weight: 600; font-size: 0.79rem; }
+.trend-up     { color: #2e7d32; font-weight: 700; font-size: 0.79rem; }
+.trend-down   { color: #c62828; font-weight: 700; font-size: 0.79rem; }
+.trend-stable { color: var(--text-muted); font-weight: 600; font-size: 0.79rem; }
+.trend-new    { color: #b45309; font-weight: 700; font-size: 0.79rem; }
 .trend-none   { color: var(--text-muted); font-size: 0.79rem; }
 
 /* ── Sort buttons in breakdown thead ── */

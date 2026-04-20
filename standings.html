@@ -139,13 +139,16 @@
     return `<span class="rank-badge${cls}">${label}</span>`;
   }
   function trendHtml(trend) {
-    const map = {
-      hot:    ['↑ Hot',    'trend-hot'],
-      steady: ['→ Steady', 'trend-steady'],
-      cold:   ['↓ Cold',   'trend-cold'],
+    if (!trend || !trend.status) return '<span class="trend-none">—</span>';
+    const clsMap = {
+      up:     'trend-up',
+      down:   'trend-down',
+      stable: 'trend-stable',
+      new:    'trend-new',
     };
-    const t = map[trend];
-    return t ? `<span class="${t[1]}">${t[0]}</span>` : '<span class="trend-none">—</span>';
+    const cls  = clsMap[trend.status] || 'trend-none';
+    const text = trend.description || '—';
+    return `<span class="${cls}">${text}</span>`;
   }
   function rowCls(rank) {
     return rank === 1 ? 'row-gold' : rank === 2 ? 'row-silver' : rank === 3 ? 'row-bronze' : '';
