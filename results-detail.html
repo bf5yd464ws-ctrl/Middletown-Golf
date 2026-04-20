@@ -271,17 +271,30 @@
   function renderAwardBlock(award, type) {
     const title     = award.awardName || 'Award';
     const total     = fmt$(award.prizeAmount);
-    const holeStr   = award.holeNumber ? ` — Hole ${award.holeNumber}` : '';
+    const holeStr   = award.holeNumber != null && award.holeNumber !== ''
+      ? ` — ${isNaN(award.holeNumber) ? award.holeNumber : 'Hole ' + award.holeNumber}`
+      : '';
     const winners   = award.winners || [];
 
-    const showRank = (type === 'place');
+    const showRank  = (type === 'place');
+    const showScore = (type === 'place');
     const rows = winners.map(w => {
       const name  = w.golfer ? (w.golfer.fullName || [w.golfer.firstName, w.golfer.lastName].filter(Boolean).join(' ')) : '—';
       const place = (showRank && w.placeOrdinal) ? `<span class="rank">${w.placeOrdinal}</span>` : '';
-      const note  = w.notes ? `<span class="rd-award-note">${w.notes}</span>` : '';
+
+      /* Winner-level hole label — used for Skins where each winner has their own hole(s) */
+      const winnerHole = (type === 'skins' && w.holeNumber != null && w.holeNumber !== '')
+        ? `<span class="rd-award-hole">${isNaN(w.holeNumber) ? w.holeNumber : 'Hole ' + w.holeNumber}</span>`
+        : '';
+
+      const note  = (!winnerHole && w.notes) ? `<span class="rd-award-note">${w.notes}</span>` : '';
+      const scoreCell = showScore
+        ? `<td class="rd-award-score">${w.score != null ? w.score : '—'}</td>`
+        : '';
       return `<tr>
         <td>${place}</td>
-        <td>${name} ${note}</td>
+        <td>${name} ${winnerHole}${note}</td>
+        ${scoreCell}
         <td class="amount">${fmt$(w.amountWon)}</td>
       </tr>`;
     }).join('');

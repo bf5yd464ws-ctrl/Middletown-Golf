@@ -893,9 +893,11 @@ table.data-table td.highlight { font-weight: 600; }
 }
 
 .rd-award-table tr:last-child td { border-bottom: none; }
-.rd-award-table .rank  { width: 44px; font-weight: 700; color: var(--text-muted); font-size: 0.75rem; }
-.rd-award-table .amount { text-align: right; font-weight: 700; color: var(--green-mid); width: 60px; }
+.rd-award-table .rank        { width: 44px; font-weight: 700; color: var(--text-muted); font-size: 0.75rem; }
+.rd-award-table .amount      { text-align: right; font-weight: 700; color: var(--green-mid); width: 60px; }
+.rd-award-score              { width: 52px; font-weight: 700; color: var(--green); font-size: 0.85rem; text-align: center; }
 .rd-award-note { display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }
+.rd-award-hole { display: block; font-size: 0.72rem; font-weight: 600; color: var(--green-mid); margin-top: 0.1rem; }
 
 /* Teams leaderboard table */
 .rd-team-tname         { font-size: 0.88rem; font-weight: 700; }
