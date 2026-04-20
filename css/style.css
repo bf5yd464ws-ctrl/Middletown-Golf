@@ -597,10 +597,16 @@ table.data-table td.highlight { font-weight: 600; }
 /* Top info bar */
 .jp-info-bar {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.75rem 1.5rem;
+  align-items: stretch;
   border-bottom: 1px solid rgba(184,146,58,0.22);
+}
+.jp-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  flex: 1;
 }
 .jp-info-top {
   display: flex;
@@ -618,7 +624,6 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .jp-info-course { font-weight: 700; font-size: 0.95rem; color: var(--green); }
 .jp-info-sep    { color: rgba(184,146,58,0.4); }
-.jp-info-date   { font-size: 0.88rem; color: var(--text-muted); }
 
 /* Winner zone — compact single horizontal row */
 .jp-winner-zone {
@@ -892,56 +897,27 @@ table.data-table td.highlight { font-weight: 600; }
 .rd-award-table .amount { text-align: right; font-weight: 700; color: var(--green-mid); width: 60px; }
 .rd-award-note { display: block; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }
 
-/* Teams grid */
-.rd-team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 0.75rem;
+/* Teams leaderboard table */
+.rd-team-tname         { font-size: 0.88rem; font-weight: 700; }
+.rd-team-members-inline {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
 }
 
-.rd-team-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.rd-team-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.6rem 0.9rem;
-  background: var(--green);
-  color: #fff;
-}
-
-.rd-team-head-left  { display: flex; align-items: center; gap: 0.4rem; }
-.rd-team-head-right { display: flex; align-items: center; gap: 0.5rem; }
-.rd-team-rank  {
-  font-size: 0.7rem; font-weight: 800;
-  width: 20px; height: 20px;
-  background: rgba(255,255,255,0.18);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.rd-team-name  { font-size: 0.88rem; font-weight: 700; }
-.rd-team-net   { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.65); }
-.rd-team-total { font-size: 0.88rem; font-weight: 800; color: #fde68a; }
-
-.rd-team-members { padding: 0.4rem 0; }
-
-.rd-team-member {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.32rem 0.9rem;
-  font-size: 0.83rem;
+/* Awards sections */
+.rd-awards-section { margin-bottom: 1.25rem; }
+.rd-awards-section:last-child { margin-bottom: 0; }
+.rd-awards-section-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   border-bottom: 1px solid var(--border);
 }
-
-.rd-team-member:last-child { border-bottom: none; }
-.rd-team-share { font-weight: 600; color: var(--green-mid); }
 
 /* Summary stats */
 .rd-stat-grid {
@@ -977,7 +953,6 @@ table.data-table td.highlight { font-weight: 600; }
 @media (max-width: 600px) {
   .rd-winner-names { font-size: 1rem; }
   .rd-awards-grid  { grid-template-columns: 1fr; }
-  .rd-team-grid    { grid-template-columns: 1fr; }
   .rd-stat-grid    { grid-template-columns: repeat(3, 1fr); }
   .rd-results-table .rd-col-money { display: none; }
   .rd-results-table .rd-col-total { display: table-cell !important; }
@@ -1921,10 +1896,9 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .standings-ql-card:hover .standings-ql-arrow { transform: translateX(3px); color: var(--green-mid); }
 
-/* Mobile: stack cards and make arrow a proper green button */
+/* Mobile: keep side by side, make arrow a proper green button */
 @media (max-width: 480px) {
-  .standings-ql { grid-template-columns: 1fr; }
-  .standings-ql-card { padding: 1rem 1.1rem; }
+  .standings-ql-card { padding: 0.75rem 0.85rem; }
   .standings-ql-arrow {
     background: var(--green-mid);
     color: #fff;

@@ -191,18 +191,19 @@
         html += `
         <div class="t-card t-card--jp-hero" id="jp-hero-card">
           <div class="jp-info-bar">
-            <div class="jp-info-top">
-              <span class="t-jp-label">Just Played</span>
-              <span class="jp-info-course">${jt.course}</span>
-              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
-              <span class="jp-info-date">${jt.displayDate}</span>
-            </div>
-            <div class="jp-info-details">
-              <span>${jt.format}</span>
-              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
-              <span>$${jt.entryFee}</span>
-              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
-              <span>First Tee ${jt.firstTeeTime}</span>
+            <div class="t-date t-date--gold"><span class="mo">${jmo}</span><span class="dy">${jdy}</span></div>
+            <div class="jp-info-content">
+              <div class="jp-info-top">
+                <span class="t-jp-label">Just Played</span>
+                <span class="jp-info-course">${jt.course}</span>
+              </div>
+              <div class="jp-info-details">
+                <span>${jt.format}</span>
+                <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+                <span>$${jt.entryFee}</span>
+                <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+                <span>First Tee ${jt.firstTeeTime}</span>
+              </div>
             </div>
           </div>
           <div class="jp-winner-zone">
