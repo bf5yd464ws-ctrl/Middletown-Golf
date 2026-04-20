@@ -93,13 +93,13 @@
 
     html += renderMetaCard(t);
     html += renderWinnerBanner(d.winners || []);
-    html += renderGolferResults(d.golferResults || []);
-    html += renderAwards(d.awards || {});
 
     if (d.teams && d.teams.length > 0) {
       html += renderTeams(d.teams, d.golferResults || []);
     }
 
+    html += renderAwards(d.awards || {});
+    html += renderGolferResults(d.golferResults || []);
     html += renderSummary(d.summary || {}, t);
     html += renderNav(year);
 
@@ -227,38 +227,45 @@
   function renderAwards(awards) {
     const sections = [];
 
-    // Low Net
-    (awards.lowNet || []).forEach(a => {
-      sections.push(renderAwardBlock(a, 'place'));
-    });
+    // Placement — Low Net
+    const placementCards = (awards.lowNet || []).map(a => renderAwardBlock(a, 'place'));
+    if (placementCards.length > 0) {
+      sections.push(`
+        <div class="rd-awards-section">
+          <div class="rd-awards-section-label">Placement</div>
+          <div class="rd-awards-grid">${placementCards.join('')}</div>
+        </div>`);
+    }
 
-    // Skins
-    (awards.skins || []).forEach(a => {
-      sections.push(renderAwardBlock(a, 'skins'));
-    });
+    // Side Games — Skins, Closest to Pin, Longest Drive
+    const sideCards = [
+      ...(awards.skins        || []).map(a => renderAwardBlock(a, 'skins')),
+      ...(awards.closestToPin || []).map(a => renderAwardBlock(a, 'ctp')),
+      ...(awards.longestDrive || []).map(a => renderAwardBlock(a, 'ld')),
+    ];
+    if (sideCards.length > 0) {
+      sections.push(`
+        <div class="rd-awards-section">
+          <div class="rd-awards-section-label">Side Games</div>
+          <div class="rd-awards-grid">${sideCards.join('')}</div>
+        </div>`);
+    }
 
-    // Closest to Pin
-    (awards.closestToPin || []).forEach(a => {
-      sections.push(renderAwardBlock(a, 'ctp'));
-    });
-
-    // Longest Drive
-    (awards.longestDrive || []).forEach(a => {
-      sections.push(renderAwardBlock(a, 'ld'));
-    });
-
-    // Custom
-    (awards.customAwards || []).forEach(a => {
-      sections.push(renderAwardBlock(a, 'custom'));
-    });
+    // Special Awards — custom
+    const specialCards = (awards.customAwards || []).map(a => renderAwardBlock(a, 'custom'));
+    if (specialCards.length > 0) {
+      sections.push(`
+        <div class="rd-awards-section">
+          <div class="rd-awards-section-label">Special Awards</div>
+          <div class="rd-awards-grid">${specialCards.join('')}</div>
+        </div>`);
+    }
 
     if (sections.length === 0) return '';
 
     return `
       <div class="section-head"><h2>Awards &amp; Prizes</h2></div>
-      <div class="rd-awards-grid mb-3">
-        ${sections.join('')}
-      </div>`;
+      <div class="mb-3">${sections.join('')}</div>`;
   }
 
   function renderAwardBlock(award, type) {
@@ -298,8 +305,9 @@
   function renderTeams(teams, golferResults) {
     const sorted = [...teams].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 
-    const cards = sorted.map((team, idx) => {
+    const rows = sorted.map((team, idx) => {
       const rank = idx + 1;
+      const rowClass = rank === 1 ? ' class="rd-row-winner"' : rank <= 3 ? ' class="rd-row-top3"' : '';
 
       /* Combined net: use explicit field from app if present,
          otherwise compute by summing each member's netScore from golferResults */
@@ -317,36 +325,36 @@
         if (found > 0 && found === (team.members || []).length) combinedNet = total;
       }
 
-      const netHtml = combinedNet != null
-        ? `<span class="rd-team-net">Net ${combinedNet}</span>`
-        : '';
+      const memberNames = (team.members || [])
+        .map(m => m.fullName || [m.firstName, m.lastName].filter(Boolean).join(' '))
+        .join(' · ');
 
-      const members = (team.members || []).map(m =>
-        `<div class="rd-team-member">
-          <span>${m.fullName || [m.firstName, m.lastName].filter(Boolean).join(' ')}</span>
-          <span class="rd-team-share">${fmt$(m.shareAmount)}</span>
-        </div>`
-      ).join('');
-
-      return `
-        <div class="rd-team-card">
-          <div class="rd-team-head">
-            <div class="rd-team-head-left">
-              <span class="rd-team-rank">${rank}</span>
-              <span class="rd-team-name">${team.teamName || 'Team'}</span>
-            </div>
-            <div class="rd-team-head-right">
-              ${netHtml}
-              <span class="rd-team-total">${fmt$(team.teamWinnings)}</span>
-            </div>
-          </div>
-          <div class="rd-team-members">${members}</div>
-        </div>`;
+      return `<tr${rowClass}>
+        <td class="rank">${rank}</td>
+        <td>
+          <div class="rd-team-tname">${team.teamName || 'Team'}</div>
+          ${memberNames ? `<div class="rd-team-members-inline">${memberNames}</div>` : ''}
+        </td>
+        <td class="rd-col-num">${combinedNet != null ? combinedNet : '—'}</td>
+        <td class="rd-col-money rd-col-total">${fmt$(team.teamWinnings)}</td>
+      </tr>`;
     }).join('');
 
     return `
       <div class="section-head"><h2>Team Results</h2></div>
-      <div class="rd-team-grid mb-3">${cards}</div>`;
+      <div class="table-wrap mb-3">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="rank">#</th>
+              <th>Team</th>
+              <th class="rd-col-num">Net</th>
+              <th class="rd-col-money">Winnings</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
   }
 
   /* ── 6. Summary stats ──────────────────────────────────── */
