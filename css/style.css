@@ -597,61 +597,71 @@ table.data-table td.highlight { font-weight: 600; }
 /* Top info bar */
 .jp-info-bar {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.5rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1.5rem;
   border-bottom: 1px solid rgba(184,146,58,0.22);
+}
+.jp-info-top {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+.jp-info-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
   flex-wrap: wrap;
 }
 .jp-info-course { font-weight: 700; font-size: 0.95rem; color: var(--green); }
-.jp-info-sep    { color: rgba(184,146,58,0.45); }
+.jp-info-sep    { color: rgba(184,146,58,0.4); }
 .jp-info-date   { font-size: 0.88rem; color: var(--text-muted); }
 
-/* Winner zone — centered, prominent */
+/* Winner zone — compact single horizontal row */
 .jp-winner-zone {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem 1.5rem 1.75rem;
-  text-align: center;
-  gap: 0.3rem;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  flex-wrap: wrap;
 }
-.jp-trophy      { font-size: 2rem; line-height: 1; margin-bottom: 0.2rem; }
-.jp-winner-lbl  { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #7d5a00; }
-.jp-winner-names { font-size: 1.45rem; font-weight: 800; color: var(--green); line-height: 1.25; }
-.jp-winner-score { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin-top: 0.1rem; }
+.jp-trophy      { font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
+.jp-winner-lbl  { font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #7d5a00; white-space: nowrap; }
+.jp-winner-names { font-size: 1rem; font-weight: 800; color: var(--green); }
+.jp-winner-score { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
 
 /* Action button row */
 .jp-hero-actions {
   display: flex;
-  gap: 0.75rem;
-  padding: 1.1rem 1.5rem 1.35rem;
+  gap: 0.65rem;
+  padding: 0.75rem 1.5rem;
   border-top: 1px solid rgba(184,146,58,0.22);
-  justify-content: center;
   flex-wrap: wrap;
 }
 .btn-results-hero {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1.4rem;
+  padding: 0.5rem 1.2rem;
   background: var(--green);
   color: #fff;
   border-radius: var(--radius-sm);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
   transition: background var(--transition);
 }
 .btn-results-hero:hover { background: var(--green-mid); color: #fff; text-decoration: none; }
-.jp-posting-soon { font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; padding: 0.4rem 0; text-align: center; }
+.jp-posting-soon { font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; padding: 0.2rem 0; }
 
 @media (max-width: 640px) {
-  .jp-winner-names { font-size: 1.15rem; }
-  .jp-info-bar     { padding: 0.75rem 1.1rem; }
-  .jp-winner-zone  { padding: 1.5rem 1.1rem 1.35rem; }
-  .jp-hero-actions { padding: 0.9rem 1.1rem 1.1rem; }
+  .jp-info-bar     { padding: 0.65rem 1.1rem; }
+  .jp-winner-zone  { padding: 0.75rem 1.1rem; }
+  .jp-hero-actions { padding: 0.65rem 1.1rem; }
+  .jp-winner-names { font-size: 0.92rem; }
 }
 
 /* ── Up Next Secondary Card (shown below JP hero during 7-day window) ── */
@@ -905,7 +915,18 @@ table.data-table td.highlight { font-weight: 600; }
   color: #fff;
 }
 
+.rd-team-head-left  { display: flex; align-items: center; gap: 0.4rem; }
+.rd-team-head-right { display: flex; align-items: center; gap: 0.5rem; }
+.rd-team-rank  {
+  font-size: 0.7rem; font-weight: 800;
+  width: 20px; height: 20px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
 .rd-team-name  { font-size: 0.88rem; font-weight: 700; }
+.rd-team-net   { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.65); }
 .rd-team-total { font-size: 0.88rem; font-weight: 800; color: #fde68a; }
 
 .rd-team-members { padding: 0.4rem 0; }

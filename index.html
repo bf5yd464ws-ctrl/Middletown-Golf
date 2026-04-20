@@ -191,20 +191,30 @@
         html += `
         <div class="t-card t-card--jp-hero" id="jp-hero-card">
           <div class="jp-info-bar">
-            <span class="t-jp-label">Just Played</span>
-            <span class="jp-info-course">${jt.course}</span>
-            <span class="jp-info-sep" aria-hidden="true">&middot;</span>
-            <span class="jp-info-date">${jt.displayDate}</span>
+            <div class="jp-info-top">
+              <span class="t-jp-label">Just Played</span>
+              <span class="jp-info-course">${jt.course}</span>
+              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+              <span class="jp-info-date">${jt.displayDate}</span>
+            </div>
+            <div class="jp-info-details">
+              <span>${jt.format}</span>
+              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+              <span>$${jt.entryFee}</span>
+              <span class="jp-info-sep" aria-hidden="true">&middot;</span>
+              <span>First Tee ${jt.firstTeeTime}</span>
+            </div>
           </div>
           <div class="jp-winner-zone">
-            <div class="jp-trophy" aria-hidden="true">🏆</div>
-            <div class="jp-winner-lbl">Tournament Winners</div>
-            <div class="jp-winner-names">${jpWinnerNames || 'Results Posting Soon'}</div>
-            ${jpWinnerScore}
+            <span class="jp-trophy" aria-hidden="true">🏆</span>
+            <span class="jp-winner-lbl">Tournament Winners</span>
+            <span class="jp-winner-names">${jpWinnerNames || 'Results Posting Soon'}</span>
+            ${jt.winnerScore ? `<span class="jp-winner-score">Combined Net &middot; ${jt.winnerScore}</span>` : ''}
           </div>
           <div class="jp-hero-actions">
             ${jpResultsBtn}
             ${jpNewsletterBtn}
+            ${jt.teeTimesPosted ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>` : ''}
           </div>
         </div>`;
 

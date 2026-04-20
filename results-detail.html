@@ -97,7 +97,7 @@
     html += renderAwards(d.awards || {});
 
     if (d.teams && d.teams.length > 0) {
-      html += renderTeams(d.teams);
+      html += renderTeams(d.teams, d.golferResults || []);
     }
 
     html += renderSummary(d.summary || {}, t);
@@ -267,9 +267,10 @@
     const holeStr   = award.holeNumber ? ` — Hole ${award.holeNumber}` : '';
     const winners   = award.winners || [];
 
+    const showRank = (type === 'place');
     const rows = winners.map(w => {
       const name  = w.golfer ? (w.golfer.fullName || [w.golfer.firstName, w.golfer.lastName].filter(Boolean).join(' ')) : '—';
-      const place = w.placeOrdinal ? `<span class="rank">${w.placeOrdinal}</span>` : '';
+      const place = (showRank && w.placeOrdinal) ? `<span class="rank">${w.placeOrdinal}</span>` : '';
       const note  = w.notes ? `<span class="rd-award-note">${w.notes}</span>` : '';
       return `<tr>
         <td>${place}</td>
@@ -294,10 +295,32 @@
   }
 
   /* ── 5. Teams section ──────────────────────────────────── */
-  function renderTeams(teams) {
+  function renderTeams(teams, golferResults) {
     const sorted = [...teams].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 
-    const cards = sorted.map(team => {
+    const cards = sorted.map((team, idx) => {
+      const rank = idx + 1;
+
+      /* Combined net: use explicit field from app if present,
+         otherwise compute by summing each member's netScore from golferResults */
+      let combinedNet = team.combinedNetScore != null ? team.combinedNetScore : null;
+      if (combinedNet == null) {
+        let total = 0, found = 0;
+        (team.members || []).forEach(m => {
+          const mName = m.fullName || [m.firstName, m.lastName].filter(Boolean).join(' ');
+          const result = (golferResults || []).find(r => {
+            const rName = r.golfer ? (r.golfer.fullName || [r.golfer.firstName, r.golfer.lastName].filter(Boolean).join(' ')) : '';
+            return rName === mName;
+          });
+          if (result && result.netScore != null) { total += result.netScore; found++; }
+        });
+        if (found > 0 && found === (team.members || []).length) combinedNet = total;
+      }
+
+      const netHtml = combinedNet != null
+        ? `<span class="rd-team-net">Net ${combinedNet}</span>`
+        : '';
+
       const members = (team.members || []).map(m =>
         `<div class="rd-team-member">
           <span>${m.fullName || [m.firstName, m.lastName].filter(Boolean).join(' ')}</span>
@@ -308,8 +331,14 @@
       return `
         <div class="rd-team-card">
           <div class="rd-team-head">
-            <span class="rd-team-name">${team.teamName || 'Team'}</span>
-            <span class="rd-team-total">${fmt$(team.teamWinnings)}</span>
+            <div class="rd-team-head-left">
+              <span class="rd-team-rank">${rank}</span>
+              <span class="rd-team-name">${team.teamName || 'Team'}</span>
+            </div>
+            <div class="rd-team-head-right">
+              ${netHtml}
+              <span class="rd-team-total">${fmt$(team.teamWinnings)}</span>
+            </div>
           </div>
           <div class="rd-team-members">${members}</div>
         </div>`;
