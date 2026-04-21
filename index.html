@@ -83,7 +83,7 @@
     let deadlineDays = null, deadlineUrgent = false, deadlinePassed = false;
     let dlDate = null;
     if (t.deadlineDate) {
-      dlDate = new Date(t.deadlineDate + 'T00:00:00');
+      dlDate = new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00');
     } else if (t.entryDeadline) {
       const m = t.entryDeadline.match(/,\s*(.+)/);
       if (m) dlDate = new Date(m[1] + ', ' + new Date().getFullYear());
@@ -478,7 +478,7 @@
           /* Normal mode: sticky bar promotes the next tournament */
           const t = upNextTournament;
           const stickyNow = new Date(); stickyNow.setHours(0,0,0,0);
-          const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+          const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00') : null;
           const stickyDeadlinePassed = stickyDL && stickyDL < stickyNow;
           const stickyAction = stickyDeadlinePassed
             ? `<span class="sticky-signup-closed">Signup Closed</span>`

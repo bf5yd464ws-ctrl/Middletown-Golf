@@ -1129,6 +1129,12 @@ table.data-table td.highlight { font-weight: 600; }
 .page-breadcrumb a { color: var(--green-mid); }
 .page-breadcrumb .sep { color: var(--border); }
 
+/* Breadcrumb inside the green page-hero needs light colors */
+.page-hero .page-breadcrumb { color: rgba(255,255,255,0.65); }
+.page-hero .page-breadcrumb a { color: rgba(255,255,255,0.9); text-decoration: underline; text-underline-offset: 2px; }
+.page-hero .page-breadcrumb a:hover { color: #fff; }
+.page-hero .page-breadcrumb .sep { color: rgba(255,255,255,0.4); }
+
 /* --- Result page layout --- */
 .result-section { margin-bottom: 2rem; }
 .result-section h3 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
