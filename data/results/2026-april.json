@@ -3,7 +3,7 @@
     "closestToPin" : [
       {
         "awardName" : "Closest to Pin",
-        "holeNumber" : 3,
+        "holeNumber" : "3",
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -21,7 +21,7 @@
       },
       {
         "awardName" : "Closest to Pin",
-        "holeNumber" : 5,
+        "holeNumber" : "5",
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -39,7 +39,7 @@
       },
       {
         "awardName" : "Closest to Pin",
-        "holeNumber" : 12,
+        "holeNumber" : "12",
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -57,7 +57,7 @@
       },
       {
         "awardName" : "Closest to Pin",
-        "holeNumber" : 14,
+        "holeNumber" : "14",
         "prizeAmount" : 20,
         "winners" : [
           {
@@ -94,7 +94,8 @@
             },
             "notes" : "",
             "place" : 1,
-            "placeOrdinal" : "1st"
+            "placeOrdinal" : "1st",
+            "score" : 73
           }
         ]
       },
@@ -111,7 +112,8 @@
             },
             "notes" : "",
             "place" : 1,
-            "placeOrdinal" : "1st"
+            "placeOrdinal" : "1st",
+            "score" : 74
           }
         ]
       },
@@ -128,7 +130,8 @@
             },
             "notes" : "",
             "place" : 1,
-            "placeOrdinal" : "1st"
+            "placeOrdinal" : "1st",
+            "score" : 74
           }
         ]
       }
@@ -145,6 +148,7 @@
               "fullName" : "David Saniga",
               "lastName" : "Saniga"
             },
+            "holeNumber" : null,
             "notes" : "",
             "place" : 1,
             "placeOrdinal" : "1st"
@@ -162,6 +166,7 @@
               "fullName" : "Nick Edwards",
               "lastName" : "Edwards"
             },
+            "holeNumber" : null,
             "notes" : "",
             "place" : 1,
             "placeOrdinal" : "1st"
@@ -179,6 +184,7 @@
               "fullName" : "John O'Donnell",
               "lastName" : "O'Donnell"
             },
+            "holeNumber" : null,
             "notes" : "",
             "place" : 1,
             "placeOrdinal" : "1st"
@@ -196,6 +202,7 @@
               "fullName" : "Jamie Harrison",
               "lastName" : "Harrison"
             },
+            "holeNumber" : null,
             "notes" : "",
             "place" : 1,
             "placeOrdinal" : "1st"
@@ -585,6 +592,7 @@
   },
   "teams" : [
     {
+      "combinedNetScore" : 65,
       "memberCount" : 2,
       "memberNames" : "Steve Goertemiller, Herb Holmes",
       "members" : [
@@ -606,6 +614,7 @@
       "teamWinnings" : 100
     },
     {
+      "combinedNetScore" : 67,
       "memberCount" : 2,
       "memberNames" : "David Saniga, Jamie Harrison",
       "members" : [
@@ -627,6 +636,7 @@
       "teamWinnings" : 80
     },
     {
+      "combinedNetScore" : 69,
       "memberCount" : 2,
       "memberNames" : "Steve Conway, David Simpson",
       "members" : [
@@ -648,6 +658,7 @@
       "teamWinnings" : 60
     },
     {
+      "combinedNetScore" : 70,
       "memberCount" : 2,
       "memberNames" : "John Stanton, John O'Donnell",
       "members" : [
@@ -669,6 +680,7 @@
       "teamWinnings" : 40
     },
     {
+      "combinedNetScore" : 72,
       "memberCount" : 2,
       "memberNames" : "Mark Mattingly, Russ Yenser",
       "members" : [
@@ -690,6 +702,7 @@
       "teamWinnings" : 0
     },
     {
+      "combinedNetScore" : 73,
       "memberCount" : 2,
       "memberNames" : "Mark Willenbrink, Nick Edwards",
       "members" : [
@@ -711,6 +724,7 @@
       "teamWinnings" : 0
     },
     {
+      "combinedNetScore" : 75,
       "memberCount" : 2,
       "memberNames" : "Dick Freeman, Jim Wendel",
       "members" : [
@@ -732,6 +746,7 @@
       "teamWinnings" : 0
     },
     {
+      "combinedNetScore" : 75,
       "memberCount" : 2,
       "memberNames" : "Steve Harrison, Jason Harrison",
       "members" : [
@@ -753,6 +768,7 @@
       "teamWinnings" : 0
     },
     {
+      "combinedNetScore" : 75,
       "memberCount" : 2,
       "memberNames" : "Donnie Roberts, Roger Campbell",
       "members" : [
