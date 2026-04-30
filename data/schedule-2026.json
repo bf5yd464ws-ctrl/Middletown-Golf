@@ -22,7 +22,8 @@
       "signupNote" : "Sign as twosome",
       "status" : "past",
       "teeTimesPosted" : false,
-      "winner" : "Goertemiller \/ Holmes — Net 75"
+      "winner" : "Goertemiller \/ Holmes — Net 65",
+      "winnerScore" : 65
     },
     {
       "course" : "Shaker Run",
