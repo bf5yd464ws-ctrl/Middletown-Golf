@@ -272,6 +272,16 @@
       }
     },
     {
+      "firstName" : "Sam",
+      "isTied" : true,
+      "lastName" : "Nelson",
+      "rank" : 19,
+      "totalPoints" : 0,
+      "tournamentPoints" : {
+        "t1" : null
+      }
+    },
+    {
       "firstName" : "Scott",
       "isTied" : true,
       "lastName" : "Shaw",
@@ -332,7 +342,7 @@
       }
     }
   ],
-  "lastUpdated" : "2026-04-19T19:56:50Z",
+  "lastUpdated" : "2026-04-30T21:23:27Z",
   "tournaments" : [
     {
       "date" : "2026-04-18",
