@@ -111,8 +111,8 @@
               "lastName" : "Conway"
             },
             "notes" : "",
-            "place" : 1,
-            "placeOrdinal" : "1st",
+            "place" : 2,
+            "placeOrdinal" : "2nd",
             "score" : 74
           }
         ]
@@ -129,8 +129,8 @@
               "lastName" : "Stanton"
             },
             "notes" : "",
-            "place" : 1,
-            "placeOrdinal" : "1st",
+            "place" : 2,
+            "placeOrdinal" : "2nd",
             "score" : 74
           }
         ]
