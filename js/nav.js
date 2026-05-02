@@ -160,23 +160,41 @@
     }, { passive: true });
   });
 
-  /* ── Item 7: Cross-link results ↔ newsletter on sub-pages ── */
-  const xMap = {
-    '-results.html':    { icon: '📰', to: '-newsletter.html', label: 'Read the newsletter from this event',        cta: 'View Newsletter →' },
-    '-newsletter.html': { icon: '🏌️', to: '-results.html',    label: 'View the full results from this tournament', cta: 'View Results →'    },
-  };
-  let xConf = null;
-  for (const [suffix, conf] of Object.entries(xMap)) {
-    if (page.endsWith(suffix)) { xConf = { suffix, ...conf }; break; }
+  /* ── Cross-link results ↔ newsletter ── */
+  /* Results live at results-detail.html?t=YYYY-slug, newsletters at YYYY/slug-newsletter.html */
+  const tParam = new URLSearchParams(window.location.search).get('t'); // e.g. "2026-april"
+  let xBar = null;
+
+  if (page.endsWith('-newsletter.html') && inSub) {
+    /* On a newsletter page: build link to results-detail */
+    const slug  = page.replace('-newsletter.html', '');   // e.g. "april", "may-shaker"
+    const tId   = parentSeg + '-' + slug;                 // e.g. "2026-april"
+    xBar = {
+      icon:  '🏌️',
+      label: 'View the full results from this tournament',
+      cta:   'View Results →',
+      href:  base + 'results-detail.html?t=' + tId,
+    };
+  } else if (page === 'results-detail.html' && tParam) {
+    /* On results-detail: build link to matching newsletter */
+    const dashIdx      = tParam.indexOf('-');
+    const tYear        = tParam.substring(0, dashIdx);    // e.g. "2026"
+    const tSlug        = tParam.substring(dashIdx + 1);   // e.g. "april", "may-shaker"
+    xBar = {
+      icon:  '📰',
+      label: 'Read the newsletter from this event',
+      cta:   'View Newsletter →',
+      href:  tYear + '/' + tSlug + '-newsletter.html',
+    };
   }
-  if (xConf) {
-    const targetPage = page.replace(xConf.suffix, xConf.to);
+
+  if (xBar) {
     const bar = document.createElement('div');
     bar.className = 'crosslink-bar';
     bar.innerHTML = `
-      <span class="crosslink-icon">${xConf.icon}</span>
-      <span class="crosslink-text">${xConf.label}:</span>
-      <a href="${targetPage}" class="crosslink-link">${xConf.cta}</a>`;
+      <span class="crosslink-icon">${xBar.icon}</span>
+      <span class="crosslink-text">${xBar.label}:</span>
+      <a href="${xBar.href}" class="crosslink-link">${xBar.cta}</a>`;
     document.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('.page-hero');
       if (hero) hero.insertAdjacentElement('afterend', bar);
