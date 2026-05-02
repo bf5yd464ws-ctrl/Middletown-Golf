@@ -43,9 +43,8 @@
   ];
 
   const golferSVG = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="4" r="2.5"/>
-    <path d="M9 9h6l1 5H8L9 9zm-1 5l-2 7h12l-2-7"/>
-    <path d="M12 14v6M8 20h8" stroke-width="0.5"/>
+    <rect x="10.5" y="2" width="1.5" height="20" rx="0.75"/>
+    <path d="M12 3 L20 7 L12 11 Z"/>
   </svg>`;
 
   const headerHTML = `
