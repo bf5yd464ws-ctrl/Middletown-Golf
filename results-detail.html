@@ -85,7 +85,7 @@
     document.getElementById('rd-subtitle').textContent = [t.course, t.courseCity].filter(Boolean).join(' · ');
 
     const year  = (t.date || '').substring(0, 4) || '—';
-    const month = t.displayDate ? t.displayDate.split(' ')[0] : '—';
+    const month = t.date ? GolfFmt.month(t.date) : (t.displayDate ? t.displayDate.split(' ')[0] : '—');
     document.getElementById('rd-bc-year').textContent  = year;
     document.getElementById('rd-bc-month').textContent = month;
 
@@ -132,7 +132,7 @@
       <div class="card mb-3">
         <div class="card-body">
           <div class="event-meta">
-            <div class="event-meta-item"><span class="lbl">Date</span><span class="val">${t.displayDate || '—'}</span></div>
+            <div class="event-meta-item"><span class="lbl">Date</span><span class="val">${t.date ? GolfFmt.long(t.date) : (t.displayDate || '—')}</span></div>
             <div class="event-meta-item"><span class="lbl">Course</span><span class="val">${t.course || '—'}</span></div>
             <div class="event-meta-item"><span class="lbl">Format</span><span class="val">${t.format || '—'}</span></div>
             ${teeHtml}

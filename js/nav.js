@@ -24,6 +24,61 @@
   document.head.appendChild(link);
 })();
 
+/* ── Golf date/time formatters ─────────────────────────────────────────────
+   Available globally as GolfFmt on every page (loaded via nav.js).
+   Defensive: handles both v1.0 (human strings / 12-hr times / deadlineDate)
+   and v2.0 (ISO dates / 24-hr times / entryDeadline ISO) data formats.
+──────────────────────────────────────────────────────────────────────────── */
+window.GolfFmt = (function () {
+  /* Parse ISO date string safely using noon local time to avoid UTC-offset
+     day-shift issues (e.g. "2026-05-04" → May 4, not May 3). */
+  function _d(str) {
+    if (!str) return null;
+    var d = new Date(str.includes('T') ? str : str + 'T12:00:00');
+    return isNaN(d) ? null : d;
+  }
+
+  return {
+    /* "Monday, May 4, 2026" */
+    long: function (isoDate) {
+      var d = _d(isoDate);
+      return d ? d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : (isoDate || '');
+    },
+    /* "May 4, 2026" */
+    short: function (isoDate) {
+      var d = _d(isoDate);
+      return d ? d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : (isoDate || '');
+    },
+    /* "May" */
+    month: function (isoDate) {
+      var d = _d(isoDate);
+      return d ? d.toLocaleDateString('en-US', { month: 'long' }) : (isoDate || '');
+    },
+    /* "12:00 PM" — accepts 24-hr "12:00" (v2.0) or existing "12:00 PM" (v1.0) */
+    time: function (t) {
+      if (!t || t === 'TBD') return t || '';
+      if (/[AP]M/i.test(t)) return t;              // already 12-hour, pass through
+      var parts = t.split(':');
+      if (parts.length < 2) return t;
+      var d = new Date();
+      d.setHours(parseInt(parts[0], 10), parseInt(parts[1], 10), 0);
+      return isNaN(d) ? t : d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    },
+    /* Returns a Date object for deadline math.
+       v2.0: reads t.entryDeadline as ISO "2026-04-10"
+       v1.0: falls back to t.deadlineDate (ISO with optional timestamp) */
+    deadlineDate: function (t) {
+      if (t.entryDeadline && /^\d{4}-\d{2}-\d{2}$/.test(t.entryDeadline)) {
+        return new Date(t.entryDeadline + 'T00:00:00');
+      }
+      if (t.deadlineDate) {
+        return new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00');
+      }
+      return null;
+    }
+  };
+})();
+
 /**
  * Shared header + footer injector
  * Detects year-subfolder depth so links work from both root pages and /YYYY/ subpages,
@@ -123,7 +178,7 @@
       const today = new Date(); today.setHours(0, 0, 0, 0);
       const hasOpenSignup = (sched.tournaments || []).some(t => {
         if (!t.signupFile) return false;                          // no form = not signable
-        const dl = t.deadlineDate ? new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00') : null;
+        const dl = GolfFmt.deadlineDate(t);
         return !dl || dl >= today;                                // no deadline, or deadline not yet passed
       });
       if (!hasOpenSignup) {

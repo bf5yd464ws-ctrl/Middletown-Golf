@@ -112,7 +112,7 @@
     if (data.tournaments && data.tournaments.length > 0) {
       document.getElementById('results-2026-months').innerHTML =
         data.tournaments.map(t =>
-          `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month}</a>`
+          `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month || GolfFmt.month(t.date)}</a>`
         ).join('');
     }
   }).catch(() => {});

@@ -79,15 +79,9 @@
     const tournDate = new Date(t.date + 'T00:00:00');
     const daysUntil = Math.round((tournDate - now) / (1000 * 60 * 60 * 24));
 
-    /* Use reliable ISO deadlineDate field first, fall back to parsing entryDeadline string */
+    /* Deadline date — GolfFmt.deadlineDate() handles both v1.0 and v2.0 data */
     let deadlineDays = null, deadlineUrgent = false, deadlinePassed = false;
-    let dlDate = null;
-    if (t.deadlineDate) {
-      dlDate = new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00');
-    } else if (t.entryDeadline) {
-      const m = t.entryDeadline.match(/,\s*(.+)/);
-      if (m) dlDate = new Date(m[1] + ', ' + new Date().getFullYear());
-    }
+    let dlDate = GolfFmt.deadlineDate(t);
     if (dlDate && !isNaN(dlDate)) {
       deadlineDays   = Math.round((dlDate - now) / (1000 * 60 * 60 * 24));
       deadlinePassed = deadlineDays < 0;
@@ -124,11 +118,16 @@
         else                  past.push(t);
       });
 
-      /* Helper: build results panel for a completed tournament */
+      /* Helper: build results panel for a completed tournament.
+         Shows if either resultsPage or newsletterPage is available.
+         Newsletter button renders independently — does not require resultsPage. */
       function resultsPanel(t) {
-        if (!t.resultsPage) return '';
+        if (!t.resultsPage && !t.newsletterPage) return '';
         const winnerHtml = t.winner
           ? `<div class="t-card-results-winner">${t.winner}</div>`
+          : '';
+        const resultsBtn = t.resultsPage
+          ? `<a href="${t.resultsPage}" class="btn btn-sm btn-primary">Full Results</a>`
           : '';
         const nlBtn = t.newsletterPage
           ? `<a href="${t.newsletterPage}" class="btn btn-sm btn-outline">Newsletter</a>`
@@ -138,7 +137,7 @@
             <div class="t-card-results-label">Final Results</div>
             ${winnerHtml}
             <div class="t-card-results-actions">
-              <a href="${t.resultsPage}" class="btn btn-sm btn-primary">Full Results</a>
+              ${resultsBtn}
               ${nlBtn}
             </div>
           </div>`;
@@ -205,7 +204,7 @@
                 <span class="jp-info-sep" aria-hidden="true">&middot;</span>
                 <span>$${jt.entryFee}</span>
                 <span class="jp-info-sep" aria-hidden="true">&middot;</span>
-                <span>First Tee ${jt.firstTeeTime}</span>
+                <span>First Tee ${GolfFmt.time(jt.firstTeeTime)}</span>
               </div>
             </div>
           </div>
@@ -263,10 +262,10 @@
               </div>
             </div>
             <div class="t-card-body">
-              <div class="t-detail"><span class="lbl">Date</span><span class="val">${ut.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.long(ut.date)}</span></div>
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
-              <div class="t-detail"><span class="lbl">Deadline</span><span class="val${deadlinePassed ? ' text-warn' : deadlineUrgent ? ' text-warn' : ''}">${ut.entryDeadline || '10 days prior'}${deadlinePassed ? ' — Closed' : deadlineUrgent ? ' ⚠' : ''}</span></div>
-              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${ut.firstTeeTime}</span></div>
+              <div class="t-detail"><span class="lbl">Deadline</span><span class="val${deadlinePassed ? ' text-warn' : deadlineUrgent ? ' text-warn' : ''}">${ut.entryDeadline ? GolfFmt.short(ut.entryDeadline) : '10 days prior'}${deadlinePassed ? ' — Closed' : deadlineUrgent ? ' ⚠' : ''}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(ut.firstTeeTime)}</span></div>
               ${ut.notes ? `<div class="t-detail" style="grid-column:1/-1"><span class="lbl">Notes</span><span class="val text-muted">${ut.notes}</span></div>` : ''}
             </div>
             <div class="t-card-foot" style="gap:0.5rem;">
@@ -291,9 +290,9 @@
               <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
             </div>
             <div class="t-card-body">
-              <div class="t-detail"><span class="lbl">Date</span><span class="val">${ut.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.long(ut.date)}</span></div>
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
-              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${ut.firstTeeTime}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(ut.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${ut.signupNote}</span></div>
             </div>
             <div class="t-card-foot"><a href="${signupHref}" class="btn btn-signup">Sign Up →</a></div>
@@ -363,17 +362,17 @@
                   </div>
                 </div>
                 <div class="t-card-body">
-                  <div class="t-detail"><span class="lbl">Date</span><span class="val">${t.displayDate}</span></div>
+                  <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.long(t.date)}</span></div>
                   <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
-                  <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
+                  <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
                   <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
-                  <div class="t-detail"><span class="lbl">Pairings Posted</span><span class="val">${t.pairingsPosted || '—'}</span></div>
+                  <div class="t-detail"><span class="lbl">Pairings Posted</span><span class="val">${t.pairingsPosted ? GolfFmt.short(t.pairingsPosted) : '—'}</span></div>
                   ${t.notes ? `<div class="t-detail"><span class="lbl">Notes</span><span class="val text-muted">${t.notes}</span></div>` : ''}
                 </div>
               </div>
               <div class="t-card-right">
                 <div class="t-right-details">
-                  <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${deadlinePassed ? ' text-warn' : deadlineUrgent ? ' text-warn' : ''}">${t.entryDeadline || '10 days prior'}${deadlinePassed ? ' — Closed' : deadlineUrgent ? ' ⚠' : ''}</span></div>
+                  <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${deadlinePassed ? ' text-warn' : deadlineUrgent ? ' text-warn' : ''}">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}${deadlinePassed ? ' — Closed' : deadlineUrgent ? ' ⚠' : ''}</span></div>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:0.45rem;">
                   ${deadlinePassed
@@ -412,9 +411,9 @@
                 <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
               </div>
               <div class="t-card-body">
-                <div class="t-detail"><span class="lbl">Date</span><span class="val">${t.displayDate}</span></div>
+                <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.long(t.date)}</span></div>
                 <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
-                <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
+                <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
                 <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
               </div>
               <div class="t-card-foot">${signupLink}</div>
@@ -445,9 +444,9 @@
               <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-past">Completed</span></div>
             </div>
             <div class="t-card-body">
-              <div class="t-detail"><span class="lbl">Date</span><span class="val">${t.displayDate}</span></div>
+              <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.short(t.date)}</span></div>
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
-              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
+              <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
             </div>
             ${rPanel || '<div class="t-card-foot"></div>'}
@@ -472,7 +471,7 @@
               <span class="sticky-label">Just Played</span>
               <span class="sticky-course">${jt.course}</span>
               <span class="sticky-sep" aria-hidden="true">&middot;</span>
-              <span class="sticky-date">${jt.displayDate}</span>
+              <span class="sticky-date">${GolfFmt.short(jt.date)}</span>
               ${stickyResultsAction}
             </div>`;
           stickyCardId = 'jp-hero-card';
@@ -481,7 +480,7 @@
           /* Normal mode: sticky bar promotes the next tournament */
           const t = upNextTournament;
           const stickyNow = new Date(); stickyNow.setHours(0,0,0,0);
-          const stickyDL  = t.deadlineDate ? new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00') : null;
+          const stickyDL  = GolfFmt.deadlineDate(t);
           const stickyDeadlinePassed = stickyDL && stickyDL < stickyNow;
           const stickyAction = stickyDeadlinePassed
             ? `<span class="sticky-signup-closed">Signup Closed</span>`
@@ -491,7 +490,7 @@
               <span class="sticky-label">Up Next</span>
               <span class="sticky-course">${t.course}</span>
               <span class="sticky-sep" aria-hidden="true">&middot;</span>
-              <span class="sticky-date">${t.displayDate}</span>
+              <span class="sticky-date">${GolfFmt.short(t.date)}</span>
               ${stickyAction}
             </div>`;
           stickyCardId = 'up-next-card';

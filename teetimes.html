@@ -123,7 +123,7 @@
     function renderGroups(t) {
       return t.groups.map(g => `
         <div class="tee-group">
-          <div class="tee-time-badge">${g.time}</div>
+          <div class="tee-time-badge">${GolfFmt.time(g.time)}</div>
           <div class="tee-players">
             ${colHeader}
             ${g.players.map(p => renderPlayer(p)).join('')}
@@ -142,10 +142,10 @@
     } else {
       document.getElementById('tt-title').textContent = active.event;
       document.getElementById('tt-meta').innerHTML = [
-        { lbl: 'Date',      val: active.displayDate },
+        { lbl: 'Date',      val: GolfFmt.long(active.date) },
         { lbl: 'Course',    val: active.course },
         { lbl: 'Format',    val: active.format },
-        { lbl: 'First Tee', val: active.startTime },
+        { lbl: 'First Tee', val: GolfFmt.time(active.startTime) },
       ].map(i => `<div class="event-meta-item"><span class="lbl">${i.lbl}</span><span class="val">${i.val}</span></div>`).join('');
 
       document.getElementById('tt-groups').innerHTML = renderGroups(active);
@@ -157,7 +157,7 @@
         <div class="tt-past-item">
           <button class="tt-past-toggle" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
             <span>${t.event}</span>
-            <span class="tt-past-date">${t.displayDate}</span>
+            <span class="tt-past-date">${GolfFmt.short(t.date)}</span>
             <span class="tt-past-chevron">▸</span>
           </button>
           <div class="tt-past-body">

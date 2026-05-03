@@ -19,6 +19,7 @@
       "notes": "Carts not included in greens fee",
       "status": "upcoming",
       "signupFile": null,
+      "resultsPage": "results-detail.html?t=2026-april",
       "newsletterFile": "2026/april-newsletter.html",
       "newsletterReady": true
     },

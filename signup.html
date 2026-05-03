@@ -60,7 +60,7 @@
     }
 
     const upNext = future[0];
-    const deadlineDate  = upNext.deadlineDate ? new Date(upNext.deadlineDate + 'T00:00:00') : null;
+    const deadlineDate = GolfFmt.deadlineDate(upNext);
     const deadlinePassed = deadlineDate && deadlineDate < today;
 
     if (!deadlinePassed && upNext.signupFile) {
@@ -77,7 +77,7 @@
 
     // Deadline has passed — find the next tournament that's still open for signup
     const nextOpen = future.find(t => {
-      const dl = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+      const dl = GolfFmt.deadlineDate(t);
       return !dl || dl >= today;
     });
 
@@ -94,7 +94,7 @@
         <div class="signup-next-card">
           <div class="signup-next-label">Next Open Tournament</div>
           <div class="signup-next-course">${nextOpen.course}</div>
-          <div class="signup-next-meta">${nextOpen.displayDate}&nbsp;&middot;&nbsp;${nextOpen.format}</div>
+          <div class="signup-next-meta">${GolfFmt.short(nextOpen.date)}&nbsp;&middot;&nbsp;${nextOpen.format}</div>
           ${formLink}
         </div>`;
     } else {
@@ -109,7 +109,7 @@
         <h2 class="signup-state-title">Signup Deadline Has Passed</h2>
         <p class="signup-state-msg">
           The entry deadline for <strong>${closed.course}</strong>
-          (${closed.displayDate}) has passed.
+          (${GolfFmt.short(closed.date)}) has passed.
         </p>
         <div class="signup-contact-box">
           <p>Have a conflict or need to make a late entry? Contact Russ Yenser directly:</p>
@@ -128,13 +128,13 @@
         <div class="signup-state-icon">📋</div>
         <h2 class="signup-state-title">Signup Form Coming Soon</h2>
         <p class="signup-state-msg">
-          The entry form for <strong>${t.course}</strong> (${t.displayDate}) will be posted closer to the event.
+          The entry form for <strong>${t.course}</strong> (${GolfFmt.short(t.date)}) will be posted closer to the event.
         </p>
         <div class="signup-tourn-details">
           <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
           <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
-          <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${t.firstTeeTime}</span></div>
-          <div class="t-detail"><span class="lbl">Deadline</span><span class="val">${t.entryDeadline || '10 days prior'}</span></div>
+          <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
+          <div class="t-detail"><span class="lbl">Deadline</span><span class="val">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}</span></div>
         </div>
         <p style="font-size:0.83rem;color:var(--text-muted);margin-top:1rem;">
           Questions? Contact
