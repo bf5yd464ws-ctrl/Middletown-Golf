@@ -11,6 +11,20 @@
 })();
 
 /**
+ * Favicon injector — runs once, covers every page via nav.js
+ */
+(function () {
+  const segs = window.location.pathname.split('/').filter(Boolean);
+  const parent = segs.length >= 2 ? segs[segs.length - 2] : '';
+  const faviconBase = /^\d{4}$/.test(parent) ? '../' : '';
+  const link = document.createElement('link');
+  link.rel  = 'icon';
+  link.type = 'image/svg+xml';
+  link.href = faviconBase + 'favicon.svg';
+  document.head.appendChild(link);
+})();
+
+/**
  * Shared header + footer injector
  * Detects year-subfolder depth so links work from both root pages and /YYYY/ subpages,
  * whether hosted at the root (localhost) or in a subdirectory (GitHub Pages).
@@ -109,7 +123,7 @@
       const today = new Date(); today.setHours(0, 0, 0, 0);
       const hasOpenSignup = (sched.tournaments || []).some(t => {
         if (!t.signupFile) return false;                          // no form = not signable
-        const dl = t.deadlineDate ? new Date(t.deadlineDate + 'T00:00:00') : null;
+        const dl = t.deadlineDate ? new Date(t.deadlineDate.includes('T') ? t.deadlineDate : t.deadlineDate + 'T00:00:00') : null;
         return !dl || dl >= today;                                // no deadline, or deadline not yet passed
       });
       if (!hasOpenSignup) {

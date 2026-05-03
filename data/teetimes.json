@@ -1,335 +1,118 @@
 {
-  "_note" : "Tee times for all tournaments. The website displays the most relevant posted tournament (upcoming first, then most recently past).",
-  "tournaments" : [
+  "_note": "All tournaments for the season live in this array. To post tee times: find the tournament by id, fill in the groups array, and set posted to true. The tee times page automatically displays the most relevant posted tournament. Set posted back to false after the event if desired.",
+  "tournaments": [
     {
-      "course" : "Wildwood Golf Club",
-      "date" : "2025-10-18",
-      "displayDate" : "October 18, 2025",
-      "event" : "October 2025 — Wildwood Golf Club",
-      "format" : "2 Man Single Best Ball",
-      "groups" : [
-        {
-          "players" : [
-            "Steve Conway",
-            "Rich Mealey",
-            "Roger Campbell",
-            "Herb Holmes"
-          ],
-          "time" : "10:38 AM"
-        },
-        {
-          "players" : [
-            "Russ Yenser",
-            "Jamie Harrison",
-            "Jeff Zimmer",
-            "David Simpson"
-          ],
-          "time" : "10:46 AM"
-        },
-        {
-          "players" : [
-            "Dennis Daley",
-            "Dick Freeman",
-            "Dave Saniga",
-            "Scott Shaw"
-          ],
-          "time" : "10:54 AM"
-        },
-        {
-          "players" : [
-            "Mark Willenbrink",
-            "Steve Goertemiller",
-            "Don Hartness",
-            "John Stanton"
-          ],
-          "time" : "11:02 AM"
-        }
-      ],
-      "id" : 8,
-      "posted" : true,
-      "startTime" : "10:38 AM",
-      "year" : 2025
+      "id": 1,
+      "year": 2026,
+      "event": "April 2026 — Hamilton Elks",
+      "date": "2026-04-18",
+      "displayDate": "April 18, 2026",
+      "course": "Hamilton Elks",
+      "format": "2 Man Single Best Ball",
+      "startTime": "12:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Hamilton Elks",
-      "date" : "2026-04-18",
-      "displayDate" : "April 18, 2026",
-      "event" : "Hamilton Elks",
-      "format" : "2 Man Best Ball",
-      "groups" : [
-        {
-          "players" : [
-            {
-              "courseHandicap" : 14,
-              "handicapIndex" : 22.699999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Jamie Harrison",
-              "usgaHandicapIndex" : 15.9
-            },
-            {
-              "courseHandicap" : 18,
-              "handicapIndex" : 19.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "David Saniga",
-              "usgaHandicapIndex" : 20.800000000000001
-            },
-            {
-              "courseHandicap" : 14,
-              "handicapIndex" : 20.5,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Nick Edwards",
-              "usgaHandicapIndex" : 16.199999999999999
-            }
-          ],
-          "time" : "12:00 PM"
-        },
-        {
-          "players" : [
-            {
-              "courseHandicap" : 20,
-              "handicapIndex" : 24.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Russ Yenser",
-              "usgaHandicapIndex" : 21.5
-            },
-            {
-              "courseHandicap" : 10,
-              "handicapIndex" : 12.800000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Mark Mattingly",
-              "usgaHandicapIndex" : 13.5
-            },
-            {
-              "courseHandicap" : 13,
-              "handicapIndex" : 15.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Mark Willenbrink",
-              "usgaHandicapIndex" : 18.600000000000001
-            }
-          ],
-          "time" : "12:07 PM"
-        },
-        {
-          "players" : [
-            {
-              "courseHandicap" : 8,
-              "handicapIndex" : 11.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Steve Goertemiller",
-              "usgaHandicapIndex" : 10.9
-            },
-            {
-              "courseHandicap" : 9,
-              "handicapIndex" : 12.1,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Herb Holmes",
-              "usgaHandicapIndex" : 11.300000000000001
-            },
-            {
-              "courseHandicap" : 11,
-              "handicapIndex" : 16.100000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Roger Campbell",
-              "usgaHandicapIndex" : 13.1
-            },
-            {
-              "courseHandicap" : 18,
-              "handicapIndex" : 19.899999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Donnie Roberts",
-              "usgaHandicapIndex" : 20.5
-            }
-          ],
-          "time" : "12:15 PM"
-        },
-        {
-          "players" : [
-            {
-              "courseHandicap" : 21,
-              "handicapIndex" : 22.399999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Steve Harrison",
-              "usgaHandicapIndex" : 21.899999999999999
-            },
-            {
-              "courseHandicap" : 14,
-              "handicapIndex" : 22.5,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Jason Harrison",
-              "usgaHandicapIndex" : 15.9
-            },
-            {
-              "courseHandicap" : 26,
-              "handicapIndex" : 26.899999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "John Stanton",
-              "usgaHandicapIndex" : 28.399999999999999
-            },
-            {
-              "courseHandicap" : 6,
-              "handicapIndex" : 8.6999999999999993,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "John O'Donnell",
-              "usgaHandicapIndex" : 16.699999999999999
-            }
-          ],
-          "time" : "12:22 PM"
-        },
-        {
-          "players" : [
-            {
-              "courseHandicap" : 19,
-              "handicapIndex" : 22.899999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Dick Freeman",
-              "usgaHandicapIndex" : 20.399999999999999
-            },
-            {
-              "courseHandicap" : 25,
-              "handicapIndex" : 25.899999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Jim Wendel",
-              "usgaHandicapIndex" : 27.399999999999999
-            },
-            {
-              "courseHandicap" : 20,
-              "handicapIndex" : 21.600000000000001,
-              "isNet" : true,
-              "isSkins" : false,
-              "name" : "Steve Conway",
-              "usgaHandicapIndex" : 23.5
-            },
-            {
-              "courseHandicap" : 12,
-              "handicapIndex" : 14.4,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "David Simpson",
-              "usgaHandicapIndex" : 17.699999999999999
-            }
-          ],
-          "time" : "12:30 PM"
-        }
-      ],
-      "id" : 1,
-      "name" : "Hamilton Elks",
-      "posted" : false,
-      "startTime" : "12:00 PM",
-      "year" : 2026
+      "id": 2,
+      "year": 2026,
+      "event": "May 2026 — Shaker Run",
+      "date": "2026-05-16",
+      "displayDate": "May 16, 2026",
+      "course": "Shaker Run",
+      "format": "3 Man Single/Double/Triple Ball",
+      "startTime": "9:00 AM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Shaker Run",
-      "date" : "2026-05-16",
-      "displayDate" : "May 16, 2026",
-      "event" : "May 2026 — Shaker Run",
-      "format" : "3 Man Single\/Double\/Triple Ball",
-      "groups" : [
-
-      ],
-      "id" : 2,
-      "posted" : false,
-      "startTime" : "9:00 AM",
-      "year" : 2026
+      "id": 3,
+      "year": 2026,
+      "event": "May 2026 — Yankee Trace",
+      "date": "2026-05-17",
+      "displayDate": "May 17, 2026",
+      "course": "Yankee Trace",
+      "format": "2 Man Customized Stableford",
+      "startTime": "1:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Yankee Trace",
-      "date" : "2026-05-17",
-      "displayDate" : "May 17, 2026",
-      "event" : "May 2026 — Yankee Trace",
-      "format" : "2 Man Customized Stableford",
-      "groups" : [
-
-      ],
-      "id" : 3,
-      "posted" : false,
-      "startTime" : "1:00 PM",
-      "year" : 2026
+      "id": 4,
+      "year": 2026,
+      "event": "June 2026 — Hueston Woods",
+      "date": "2026-06-20",
+      "displayDate": "June 20, 2026",
+      "course": "Hueston Woods",
+      "format": "2 Man Both Balls",
+      "startTime": "9:00 AM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Hueston Woods",
-      "date" : "2026-06-20",
-      "displayDate" : "June 20, 2026",
-      "event" : "June 2026 — Hueston Woods",
-      "format" : "2 Man Both Balls",
-      "groups" : [
-
-      ],
-      "id" : 4,
-      "posted" : false,
-      "startTime" : "9:00 AM",
-      "year" : 2026
+      "id": 5,
+      "year": 2026,
+      "event": "July 2026 — Kings Island",
+      "date": "2026-07-18",
+      "displayDate": "July 18, 2026",
+      "course": "Kings Island",
+      "format": "3 Man Double Best Ball",
+      "startTime": "1:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Kings Island",
-      "date" : "2026-07-18",
-      "displayDate" : "July 18, 2026",
-      "event" : "July 2026 — Kings Island",
-      "format" : "3 Man Double Best Ball",
-      "groups" : [
-
-      ],
-      "id" : 5,
-      "posted" : false,
-      "startTime" : "1:00 PM",
-      "year" : 2026
+      "id": 6,
+      "year": 2026,
+      "event": "August 2026 — Heatherwoode",
+      "date": "2026-08-22",
+      "displayDate": "August 22, 2026",
+      "course": "Heatherwoode",
+      "format": "2 Man Single Best Ball",
+      "startTime": "1:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Heatherwoode",
-      "date" : "2026-08-22",
-      "displayDate" : "August 22, 2026",
-      "event" : "August 2026 — Heatherwoode",
-      "format" : "2 Man Single Best Ball",
-      "groups" : [
-
-      ],
-      "id" : 6,
-      "posted" : false,
-      "startTime" : "1:00 PM",
-      "year" : 2026
+      "id": 7,
+      "year": 2026,
+      "event": "September 2026 — Indian Ridge",
+      "date": "2026-09-19",
+      "displayDate": "September 19, 2026",
+      "course": "Indian Ridge",
+      "format": "2 Man Best Ball",
+      "startTime": "1:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Indian Ridge",
-      "date" : "2026-09-19",
-      "displayDate" : "September 19, 2026",
-      "event" : "September 2026 — Indian Ridge",
-      "format" : "2 Man Best Ball",
-      "groups" : [
-
-      ],
-      "id" : 7,
-      "posted" : false,
-      "startTime" : "1:00 PM",
-      "year" : 2026
+      "id": 8,
+      "year": 2026,
+      "event": "October 2026 — Wildwood",
+      "date": "2026-10-17",
+      "displayDate": "October 17, 2026",
+      "course": "Wildwood",
+      "format": "2 Man Best Ball",
+      "startTime": "12:00 PM",
+      "posted": false,
+      "groups": []
     },
     {
-      "course" : "Wildwood",
-      "date" : "2026-10-17",
-      "displayDate" : "October 17, 2026",
-      "event" : "October 2026 — Wildwood",
-      "format" : "2 Man Best Ball",
-      "groups" : [
-
-      ],
-      "id" : 8,
-      "posted" : false,
-      "startTime" : "12:00 PM",
-      "year" : 2026
+      "id": 9,
+      "year": 2025,
+      "event": "October 2025 — Wildwood Golf Club",
+      "date": "2025-10-18",
+      "displayDate": "October 18, 2025",
+      "course": "Wildwood Golf Club",
+      "format": "2 Man Single Best Ball",
+      "startTime": "10:38 AM",
+      "posted": true,
+      "groups": [
+        { "time": "10:38 AM", "players": ["Steve Conway", "Rich Mealey", "Roger Campbell", "Herb Holmes"] },
+        { "time": "10:46 AM", "players": ["Russ Yenser", "Jamie Harrison", "Jeff Zimmer", "David Simpson"] },
+        { "time": "10:54 AM", "players": ["Dennis Daley", "Dick Freeman", "Dave Saniga", "Scott Shaw"] },
+        { "time": "11:02 AM", "players": ["Mark Willenbrink", "Steve Goertemiller", "Don Hartness", "John Stanton"] }
+      ]
     }
   ]
 }
