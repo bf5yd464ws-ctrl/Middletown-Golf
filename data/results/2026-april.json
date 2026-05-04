@@ -83,24 +83,6 @@
     "lowNet" : [
       {
         "awardName" : "Low Net",
-        "prizeAmount" : 54,
-        "winners" : [
-          {
-            "amountWon" : 54,
-            "golfer" : {
-              "firstName" : "Herb",
-              "fullName" : "Herb Holmes",
-              "lastName" : "Holmes"
-            },
-            "notes" : "",
-            "place" : 1,
-            "placeOrdinal" : "1st",
-            "score" : 73
-          }
-        ]
-      },
-      {
-        "awardName" : "Low Net",
         "prizeAmount" : 18,
         "winners" : [
           {
@@ -111,8 +93,8 @@
               "lastName" : "Conway"
             },
             "notes" : "",
-            "place" : 2,
-            "placeOrdinal" : "2nd",
+            "place" : 1,
+            "placeOrdinal" : "1st",
             "score" : 74
           }
         ]
@@ -129,9 +111,27 @@
               "lastName" : "Stanton"
             },
             "notes" : "",
-            "place" : 2,
-            "placeOrdinal" : "2nd",
+            "place" : 1,
+            "placeOrdinal" : "1st",
             "score" : 74
+          }
+        ]
+      },
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 54,
+        "winners" : [
+          {
+            "amountWon" : 54,
+            "golfer" : {
+              "firstName" : "Herb",
+              "fullName" : "Herb Holmes",
+              "lastName" : "Holmes"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 73
           }
         ]
       }
