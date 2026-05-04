@@ -14,13 +14,17 @@
       "id" : 1,
       "month" : "April",
       "newsletterFile" : "2026\/april-newsletter.html",
+      "newsletterPage" : null,
       "newsletterReady" : true,
       "notes" : "Carts not included in greens fee",
       "pairingsPosted" : "Wednesday, April 15",
       "resultsPage" : "results-detail.html?t=2026-april",
       "signupFile" : null,
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming"
+      "status" : "past",
+      "teeTimesPosted" : false,
+      "winner" : "Goertemiller \/ Holmes — Net 65",
+      "winnerScore" : 65
     },
     {
       "course" : "Shaker Meadows\/Woodlands",
