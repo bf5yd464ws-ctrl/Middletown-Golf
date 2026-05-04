@@ -75,7 +75,8 @@
       "winnerScore" : null
     },
     {
-      "course" : "Hueston Woods",
+      "course" : "Hueston Woods Golf Resort",
+      "courseUrl" : "https:\/\/www.huestonwoodslodge.com\/recreation\/golf\/",
       "date" : "2026-06-20",
       "deadlineDate" : "2026-06-10",
       "displayDate" : "June 20, 2026",
@@ -83,14 +84,19 @@
       "entryFee" : 69,
       "firstTeeTime" : "9:00 AM",
       "format" : "2 Man Both Balls",
-      "id" : 4,
+      "id" : 3,
       "month" : "June",
-      "newsletterFile" : "2026\/june-newsletter.html",
-      "notes" : "Carts not included in greens fee",
-      "pairingsPosted" : "Wednesday, June 17",
-      "signupFile" : "2026\/june-signup.html",
+      "name" : "Hueston Woods",
+      "newsletterPage" : null,
+      "notes" : "Carts included with greens fee",
+      "pairingsPosted" : "2026-06-14",
+      "resultsPage" : null,
+      "signupFile" : "2026\/june-hueston-woods-signup.html",
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming"
+      "status" : "upcoming",
+      "teeTimesPosted" : false,
+      "winner" : null,
+      "winnerScore" : null
     },
     {
       "course" : "Kings Island",
