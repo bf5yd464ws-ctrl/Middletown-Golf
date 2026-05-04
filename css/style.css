@@ -443,8 +443,8 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .t-card--next .t-card-body { padding: 1rem 1.35rem 1.1rem; }
 
-.t-detail .lbl { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; }
-.t-detail .val { font-size: 0.86rem; font-weight: 500; }
+.t-detail .lbl { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; }
+.t-detail .val { font-size: 0.9rem; font-weight: 500; }
 
 .t-card-foot {
   padding: 0.8rem 1.15rem;
@@ -568,7 +568,37 @@ table.data-table td.highlight { font-weight: 600; }
 @media (max-width: 640px) {
   .t-card--next { flex-direction: column; }
   .t-card--next .t-card-left { border-right: none; border-bottom: 1px solid rgba(46,107,71,0.2); }
-  .t-card--next .t-card-right { min-width: 0; border-top: none; }
+
+  /* Right panel becomes a compact footer row: deadline left, button right */
+  .t-card--next .t-card-right {
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1.1rem;
+    background: rgba(46,107,71,0.05);
+    border-top: 1px solid rgba(46,107,71,0.2);
+  }
+
+  /* Deadline detail sits inline (label + value on one line) */
+  .t-card--next .t-right-details {
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+  .t-card--next .t-right-details .t-detail .lbl { display: inline; }
+  .t-card--next .t-right-details .t-detail .val { display: inline; font-size: 0.88rem; }
+
+  /* Buttons stay together as a row */
+  .t-card--next .t-card-right > div:last-child {
+    flex-direction: row;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
 }
 
 /* ── Just Played Hero Card ── */
