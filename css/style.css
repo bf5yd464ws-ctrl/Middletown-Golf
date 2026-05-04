@@ -1150,6 +1150,19 @@ table.data-table td.highlight { font-weight: 600; }
    ===================================================== */
 
 /* Masthead */
+/* Slim breadcrumb bar for newsletter pages — replaces the full page-hero */
+.nl-nav-bar {
+  background: var(--green);
+  padding: 0.6rem 1.5rem;
+}
+.nl-nav-bar .page-breadcrumb { color: rgba(255,255,255,0.65); margin: 0; }
+.nl-nav-bar .page-breadcrumb a { color: rgba(255,255,255,0.9); text-decoration: underline; text-underline-offset: 2px; }
+.nl-nav-bar .page-breadcrumb a:hover { color: #fff; }
+.nl-nav-bar .page-breadcrumb .sep { color: rgba(255,255,255,0.4); }
+
+/* Tighter top padding for newsletter — masthead provides the visual header */
+.page-content--nl { padding-top: 1.25rem; }
+
 .nl-masthead {
   text-align: center;
   border-top: 4px solid var(--green);
