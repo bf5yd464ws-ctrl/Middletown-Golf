@@ -213,6 +213,31 @@ window.GolfFmt = (function () {
     } catch (e) { /* fail silently — nav remains fully functional */ }
   })();
 
+  /* ── Signup page: inject notes from schedule JSON ──────────────────────────
+     Looks for <div id="signup-notes-box"> in the aside and replaces it with
+     the tournament's notes field from schedule-YYYY.json, matched by signupFile.
+     Keeps signup pages in sync with the schedule data without hardcoding. */
+  if (inSub && page.endsWith('-signup.html')) {
+    (async function () {
+      try {
+        const year     = new Date().getFullYear();
+        const sched    = await fetch(base + 'data/schedule-' + year + '.json').then(r => r.json());
+        const pageSlug = parentSeg + '/' + page;                    // e.g. "2026/may-shaker-signup.html"
+        const t        = (sched.tournaments || []).find(t => t.signupFile === pageSlug);
+        if (!t || !t.notes) return;
+        const inject = () => {
+          const slot = document.getElementById('signup-notes-box');
+          if (slot) slot.outerHTML = `<div class="info-box mb-2">${t.notes}</div>`;
+        };
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', inject);
+        } else {
+          inject();
+        }
+      } catch (e) { /* fail silently */ }
+    })();
+  }
+
   /* Mobile nav toggle + Back to Top */
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('hamburger');
