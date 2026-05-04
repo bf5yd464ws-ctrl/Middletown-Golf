@@ -44,10 +44,20 @@ window.GolfFmt = (function () {
       var d = _d(isoDate);
       return d ? d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : (isoDate || '');
     },
+    /* "Monday, May 4" — no year */
+    longNoYear: function (isoDate) {
+      var d = _d(isoDate);
+      return d ? d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) : (isoDate || '');
+    },
     /* "May 4, 2026" */
     short: function (isoDate) {
       var d = _d(isoDate);
       return d ? d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : (isoDate || '');
+    },
+    /* "May 4" — no year */
+    shortNoYear: function (isoDate) {
+      var d = _d(isoDate);
+      return d ? d.toLocaleDateString('en-US', { month: 'long', day: 'numeric' }) : (isoDate || '');
     },
     /* "May" */
     month: function (isoDate) {

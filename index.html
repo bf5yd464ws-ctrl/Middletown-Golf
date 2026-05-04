@@ -197,7 +197,7 @@
             <div class="jp-info-content">
               <div class="jp-info-top">
                 <span class="t-jp-label">Just Played</span>
-                <span class="jp-info-course">${jt.course}</span>
+                <span class="jp-info-course">${jt.name || jt.course}</span>
               </div>
               <div class="jp-info-details">
                 <span>${jt.format}</span>
@@ -255,7 +255,7 @@
               <div class="t-card-title">
                 <div class="t-next-label">Up Next</div>
                 <div class="t-title-row">
-                  <h3>${ut.course}</h3>
+                  <h3>${ut.name || ut.course}</h3>
                   ${uCountdown}
                 </div>
                 <div class="fmt">${ut.format}</div>
@@ -284,7 +284,7 @@
             <div class="t-card-top">
               <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
               <div class="t-card-title">
-                <h3>${ut.course}</h3>
+                <h3>${ut.name || ut.course}</h3>
                 <div class="fmt">${ut.format}</div>
               </div>
               <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
@@ -355,7 +355,7 @@
                   <div class="t-card-title">
                     <div class="t-next-label">Up Next</div>
                     <div class="t-title-row">
-                      <h3>${t.course}</h3>
+                      <h3>${t.name || t.course}</h3>
                       ${countdownHtml}
                     </div>
                     <div class="fmt">${t.format}</div>
@@ -405,7 +405,7 @@
               <div class="t-card-top">
                 <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
                 <div class="t-card-title">
-                  <h3>${t.course}</h3>
+                  <h3>${t.name || t.course}</h3>
                   <div class="fmt">${t.format}</div>
                 </div>
                 <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
@@ -438,7 +438,7 @@
             <div class="t-card-top">
               <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
               <div class="t-card-title">
-                <h3>${t.course}</h3>
+                <h3>${t.name || t.course}</h3>
                 <div class="fmt">${t.format}</div>
               </div>
               <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-past">Completed</span></div>
@@ -469,7 +469,7 @@
           stickyBar.innerHTML = `
             <div class="sticky-next-inner">
               <span class="sticky-label">Just Played</span>
-              <span class="sticky-course">${jt.course}</span>
+              <span class="sticky-course">${jt.name || jt.course}</span>
               <span class="sticky-sep" aria-hidden="true">&middot;</span>
               <span class="sticky-date">${GolfFmt.shortNoYear(jt.date)}</span>
               ${stickyResultsAction}
@@ -488,7 +488,7 @@
           stickyBar.innerHTML = `
             <div class="sticky-next-inner">
               <span class="sticky-label">Up Next</span>
-              <span class="sticky-course">${t.course}</span>
+              <span class="sticky-course">${t.name || t.course}</span>
               <span class="sticky-sep" aria-hidden="true">&middot;</span>
               <span class="sticky-date">${GolfFmt.shortNoYear(t.date)}</span>
               ${stickyAction}

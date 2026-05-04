@@ -88,12 +88,12 @@
     let nextCard = '';
     if (nextOpen) {
       const formLink = nextOpen.signupFile
-        ? `<a href="${nextOpen.signupFile}" class="btn btn-signup" style="margin-top:1.1rem;display:block;text-align:center;">Sign Up for ${nextOpen.course} →</a>`
+        ? `<a href="${nextOpen.signupFile}" class="btn btn-signup" style="margin-top:1.1rem;display:block;text-align:center;">Sign Up for ${nextOpen.name || nextOpen.course} →</a>`
         : `<p class="text-muted text-sm" style="margin-top:0.75rem;">Signup form for this event opens closer to the date.</p>`;
       nextCard = `
         <div class="signup-next-card">
           <div class="signup-next-label">Next Open Tournament</div>
-          <div class="signup-next-course">${nextOpen.course}</div>
+          <div class="signup-next-course">${nextOpen.name || nextOpen.course}</div>
           <div class="signup-next-meta">${GolfFmt.short(nextOpen.date)}&nbsp;&middot;&nbsp;${nextOpen.format}</div>
           ${formLink}
         </div>`;
@@ -108,7 +108,7 @@
         </div>
         <h2 class="signup-state-title">Signup Deadline Has Passed</h2>
         <p class="signup-state-msg">
-          The entry deadline for <strong>${closed.course}</strong>
+          The entry deadline for <strong>${closed.name || closed.course}</strong>
           (${GolfFmt.short(closed.date)}) has passed.
         </p>
         <div class="signup-contact-box">
@@ -128,7 +128,7 @@
         <div class="signup-state-icon">📋</div>
         <h2 class="signup-state-title">Signup Form Coming Soon</h2>
         <p class="signup-state-msg">
-          The entry form for <strong>${t.course}</strong> (${GolfFmt.short(t.date)}) will be posted closer to the event.
+          The entry form for <strong>${t.name || t.course}</strong> (${GolfFmt.short(t.date)}) will be posted closer to the event.
         </p>
         <div class="signup-tourn-details">
           <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
