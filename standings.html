@@ -89,6 +89,8 @@
         <span class="rpt-meta" id="pts-meta"></span>
       </div>
 
+      <p class="pts-tap-hint">Tap any row to see tournament details</p>
+
       <div class="table-scroll table-scroll--pts">
         <table class="rpt-table rpt-table--pts" id="pts-table">
           <thead id="pts-thead">
@@ -285,13 +287,14 @@
     }
 
     /* Header */
-    const totalCols = 2 + tournaments.length + 1;
+    const totalCols = 2 + tournaments.length + 1 + 1; /* +1 for expand column */
     thead.innerHTML = `
       <tr>
         <th class="col-rank">Rank</th>
         <th class="col-name">${sh('name', 'Name')}</th>
         ${tournaments.map(t => `<th class="col-tourn">${tournHeader(t)}</th>`).join('')}
         <th class="col-pts">${sh('total', 'Total')}</th>
+        <th class="col-expand"></th>
       </tr>`;
 
     /* Empty state */
@@ -309,23 +312,19 @@
       const summaryRow = `
         <tr class="${rc} pts-summary-row" data-detail="${uid}">
           <td class="col-rank">${rankBadge(p._rank, p._tied)}</td>
-          <td class="col-name">
-            ${p.firstName} ${p.lastName}
-            <button class="pts-expand-btn" aria-label="Show breakdown" aria-expanded="false" aria-controls="${uid}">
-              Details <span class="pts-expand-icon" aria-hidden="true">▾</span>
-            </button>
-          </td>
+          <td class="col-name">${p.firstName} ${p.lastName}</td>
           ${tournaments.map(t => {
             const v = p.tournamentPoints[t.id];
             return `<td class="col-tourn">${v != null ? v : '<span class="pts-none">—</span>'}</td>`;
           }).join('')}
           <td class="col-pts text-pts">${p.totalPoints}</td>
+          <td class="col-expand"><span class="pts-chevron" aria-hidden="true">▾</span></td>
         </tr>`;
 
       /* Per-tournament breakdown — visible only on mobile when expanded */
       const detailRow = `
         <tr class="pts-detail-row ${rc}" id="${uid}" hidden>
-          <td colspan="3" class="pts-detail-cell">
+          <td colspan="${totalCols}" class="pts-detail-cell">
             <div class="pts-detail-grid">
               ${tournaments.map(t => {
                 const parts = t.name.split(' · ');
@@ -354,11 +353,8 @@
       if (!detailRow) return;
       const opening = detailRow.hidden;
       detailRow.hidden = !opening;
-      const btn = row.querySelector('.pts-expand-btn');
-      if (btn) {
-        btn.setAttribute('aria-expanded', opening);
-        btn.querySelector('.pts-expand-icon').textContent = opening ? '▴' : '▾';
-      }
+      const chevron = row.querySelector('.pts-chevron');
+      if (chevron) chevron.textContent = opening ? '▴' : '▾';
     };
 
     /* Footer — column totals */
@@ -373,6 +369,7 @@
         <td class="col-name col-name--total">Total Awarded</td>
         ${tournaments.map(t => `<td class="col-tourn">${colTotals[t.id] || 0}</td>`).join('')}
         <td class="col-pts">${grand}</td>
+        <td class="col-expand"></td>
       </tr>`;
   }
 

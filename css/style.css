@@ -2217,29 +2217,16 @@ table.data-table td.highlight { font-weight: 600; }
 /* ── Missing points indicator ── */
 .pts-none { color: var(--border); font-size: 0.85rem; }
 
-/* ── Points breakdown — expand button (desktop: hidden) ── */
-.pts-expand-btn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-  margin-left: 0.5rem;
-  padding: 0.3rem 0.65rem;
-  background: var(--green);
-  border: 1px solid var(--green-mid);
-  border-radius: 99px;
-  color: rgba(255,255,255,0.85);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  vertical-align: middle;
+/* ── Points breakdown — tap hint (desktop: hidden) ── */
+.pts-tap-hint { display: none; }
+
+/* ── Points breakdown — expand chevron column (desktop: hidden) ── */
+.col-expand { display: none; }
+.pts-chevron {
+  color: var(--green-mid);
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
-  white-space: nowrap;
-}
-.pts-expand-btn:active {
-  background: var(--green-mid, #2e6b47);
-  color: #fff;
 }
 
 /* ── Points breakdown — detail row (desktop: always hidden) ── */
@@ -2299,12 +2286,23 @@ table.data-table td.highlight { font-weight: 600; }
   /* Remove swipe hint — no longer needed */
   .table-scroll--pts::before { display: none; }
 
-  /* Show expand button in name cell */
-  .pts-expand-btn { display: inline-flex; }
+  /* Tap hint above the table */
+  .pts-tap-hint {
+    display: block;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: -0.25rem 0 0.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* Show chevron column */
+  #pts-table .col-expand { display: table-cell; width: 36px; text-align: center; }
+  #pts-table tfoot .col-expand { display: table-cell; }
 
   /* Make the whole summary row feel tappable */
   .pts-summary-row { cursor: pointer; }
-  .pts-summary-row:active { background: rgba(26,61,43,0.08) !important; }
+  .pts-summary-row:active > td { background-color: rgba(26,61,43,0.14) !important; }
 
   /* Show detail row when expanded (hidden attribute removed by JS) */
   .pts-detail-row:not([hidden]) { display: table-row; }
