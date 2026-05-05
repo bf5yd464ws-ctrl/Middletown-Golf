@@ -1268,6 +1268,7 @@ table.data-table td.highlight { font-weight: 600; }
 /* Article within the newsletter */
 .nl-article {
   margin-bottom: 1.5rem;
+  min-width: 0; /* Prevent grid item from overflowing its column */
 }
 
 .nl-article h2 {
@@ -1355,6 +1356,14 @@ table.data-table td.highlight { font-weight: 600; }
   .nl-body > *:nth-child(odd):not(.nl-full) { border-right: none; padding-right: 0; }
   .nl-full { grid-column: 1; }
   .nl-article.lead > p:first-of-type::first-letter { font-size: 2.4rem; }
+  /* Allow wide tables to scroll horizontally within their article rather than
+     pushing the page wider — covers tables without an explicit table-wrap div */
+  .nl-article table.data-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
 }
 
 /* --- Divider --- */
