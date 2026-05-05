@@ -83,19 +83,19 @@
     "lowNet" : [
       {
         "awardName" : "Low Net",
-        "prizeAmount" : 18,
+        "prizeAmount" : 54,
         "winners" : [
           {
-            "amountWon" : 18,
+            "amountWon" : 54,
             "golfer" : {
-              "firstName" : "Steve",
-              "fullName" : "Steve Conway",
-              "lastName" : "Conway"
+              "firstName" : "Herb",
+              "fullName" : "Herb Holmes",
+              "lastName" : "Holmes"
             },
             "notes" : "",
-            "place" : 2,
-            "placeOrdinal" : "2nd",
-            "score" : 74
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 73
           }
         ]
       },
@@ -119,19 +119,19 @@
       },
       {
         "awardName" : "Low Net",
-        "prizeAmount" : 54,
+        "prizeAmount" : 18,
         "winners" : [
           {
-            "amountWon" : 54,
+            "amountWon" : 18,
             "golfer" : {
-              "firstName" : "Herb",
-              "fullName" : "Herb Holmes",
-              "lastName" : "Holmes"
+              "firstName" : "Steve",
+              "fullName" : "Steve Conway",
+              "lastName" : "Conway"
             },
             "notes" : "",
-            "place" : 1,
-            "placeOrdinal" : "1st",
-            "score" : 73
+            "place" : 2,
+            "placeOrdinal" : "2nd",
+            "score" : 74
           }
         ]
       }
