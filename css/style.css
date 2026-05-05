@@ -2222,18 +2222,25 @@ table.data-table td.highlight { font-weight: 600; }
   display: none;
   align-items: center;
   justify-content: center;
-  margin-left: 0.4rem;
-  padding: 0.1rem 0.3rem;
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text-muted);
-  font-size: 0.75rem;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--green);
+  border: 1px solid var(--green-mid);
+  border-radius: 99px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   cursor: pointer;
   vertical-align: middle;
   line-height: 1;
+  white-space: nowrap;
 }
-.pts-expand-btn:hover { background: var(--bg); }
+.pts-expand-btn:active {
+  background: var(--green-mid, #2e6b47);
+  color: #fff;
+}
 
 /* ── Points breakdown — detail row (desktop: always hidden) ── */
 .pts-detail-row { display: none; }
