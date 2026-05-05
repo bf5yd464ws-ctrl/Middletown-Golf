@@ -2183,6 +2183,29 @@ table.data-table td.highlight { font-weight: 600; }
 .sort-icon { font-size: 0.68rem; }
 .sort-dim   { opacity: 0.3; }
 
+/* Two-line tournament column header */
+.sort-btn--tourn {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.2;
+}
+.col-tourn-mo {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.5);
+}
+.col-tourn-nm {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
 /* ── Empty / loading states ── */
 .rpt-loading, .rpt-empty {
   text-align: center;
@@ -2193,6 +2216,49 @@ table.data-table td.highlight { font-weight: 600; }
 
 /* ── Missing points indicator ── */
 .pts-none { color: var(--border); font-size: 0.85rem; }
+
+/* ── Points breakdown — expand button (desktop: hidden) ── */
+.pts-expand-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.3rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+}
+.pts-expand-btn:hover { background: var(--bg); }
+
+/* ── Points breakdown — detail row (desktop: always hidden) ── */
+.pts-detail-row { display: none; }
+
+/* ── Points breakdown — detail cell & grid ── */
+.pts-detail-cell {
+  padding: 0.6rem 0.75rem 0.85rem !important;
+  background: var(--bg);
+  border-top: none !important;
+}
+.pts-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.pts-dl-row {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+}
+.pts-dl-mo   { color: var(--text-muted); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.pts-dl-name { color: var(--text); }
+.pts-dl-val  { font-weight: 700; font-size: 0.88rem; min-width: 2rem; text-align: right; }
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
@@ -2217,23 +2283,25 @@ table.data-table td.highlight { font-weight: 600; }
   #lb-table .col-pts   { width: 72px; }
   #lb-table .col-total { width: 84px; }
 
-  /* POINTS BREAKDOWN — narrow tournament columns so more fit on screen */
-  #pts-table .col-tourn { width: 64px; min-width: 56px; }
+  /* POINTS BREAKDOWN — hide tournament columns; replaced by expandable detail rows */
+  #pts-table .col-tourn { display: none; }
   #pts-table .col-rank  { width: 44px; }
   #pts-table .col-pts   { width: 60px; }
-  #pts-table { min-width: 0; font-size: 0.78rem; }
+  #pts-table { min-width: 0; }
 
-  /* Scroll hint banner above the points table only */
-  .table-scroll--pts::before {
-    content: '← Swipe left or right to see all tournaments →';
-    display: block;
-    text-align: center;
-    font-size: 0.71rem;
-    color: var(--text-muted);
-    background: var(--bg);
-    padding: 0.4rem 0.75rem;
-    border-bottom: 1px solid var(--border);
-    font-style: italic;
-    letter-spacing: 0.01em;
-  }
+  /* Remove swipe hint — no longer needed */
+  .table-scroll--pts::before { display: none; }
+
+  /* Show expand button in name cell */
+  .pts-expand-btn { display: inline-flex; }
+
+  /* Make the whole summary row feel tappable */
+  .pts-summary-row { cursor: pointer; }
+  .pts-summary-row:active { background: rgba(26,61,43,0.08) !important; }
+
+  /* Show detail row when expanded (hidden attribute removed by JS) */
+  .pts-detail-row:not([hidden]) { display: table-row; }
+
+  /* Footer totals row — hide tournament columns too */
+  #pts-table tfoot .col-tourn { display: none; }
 }

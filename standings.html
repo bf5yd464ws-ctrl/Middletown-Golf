@@ -273,6 +273,16 @@
     function sh(col, label) {
       return `<button class="sort-btn" onclick="sortBreakdown('${col}')">${label} ${si(col)}</button>`;
     }
+    /* Two-line tournament header: "Apr · Hamilton Elks" → month on top, name+icon below */
+    function tournHeader(t) {
+      const parts = t.name.split(' · ');
+      const mo = parts.length > 1 ? parts[0] : '';
+      const nm = parts.length > 1 ? parts.slice(1).join(' · ') : t.name;
+      return `<button class="sort-btn sort-btn--tourn" onclick="sortBreakdown('${t.id}')">
+        ${mo ? `<span class="col-tourn-mo">${mo}</span>` : ''}
+        <span class="col-tourn-nm">${nm} ${si(t.id)}</span>
+      </button>`;
+    }
 
     /* Header */
     const totalCols = 2 + tournaments.length + 1;
@@ -280,7 +290,7 @@
       <tr>
         <th class="col-rank">Rank</th>
         <th class="col-name">${sh('name', 'Name')}</th>
-        ${tournaments.map(t => `<th class="col-tourn">${sh(t.id, t.name)}</th>`).join('')}
+        ${tournaments.map(t => `<th class="col-tourn">${tournHeader(t)}</th>`).join('')}
         <th class="col-pts">${sh('total', 'Total')}</th>
       </tr>`;
 
@@ -291,20 +301,65 @@
       return;
     }
 
-    /* Body */
-    tbody.innerHTML = sorted.map(p => {
-      const rc = rowCls(p._rank);
-      return `
-        <tr class="${rc}">
+    /* Body — each golfer gets a summary row + a hidden detail row for mobile */
+    tbody.innerHTML = sorted.flatMap((p, i) => {
+      const rc  = rowCls(p._rank);
+      const uid = 'pts-detail-' + i;
+
+      const summaryRow = `
+        <tr class="${rc} pts-summary-row" data-detail="${uid}">
           <td class="col-rank">${rankBadge(p._rank, p._tied)}</td>
-          <td class="col-name">${p.firstName} ${p.lastName}</td>
+          <td class="col-name">
+            ${p.firstName} ${p.lastName}
+            <button class="pts-expand-btn" aria-label="Show breakdown" aria-expanded="false" aria-controls="${uid}">
+              <span class="pts-expand-icon" aria-hidden="true">▾</span>
+            </button>
+          </td>
           ${tournaments.map(t => {
             const v = p.tournamentPoints[t.id];
             return `<td class="col-tourn">${v != null ? v : '<span class="pts-none">—</span>'}</td>`;
           }).join('')}
           <td class="col-pts text-pts">${p.totalPoints}</td>
         </tr>`;
+
+      /* Per-tournament breakdown — visible only on mobile when expanded */
+      const detailRow = `
+        <tr class="pts-detail-row ${rc}" id="${uid}" hidden>
+          <td colspan="3" class="pts-detail-cell">
+            <div class="pts-detail-grid">
+              ${tournaments.map(t => {
+                const parts = t.name.split(' · ');
+                const mo    = parts.length > 1 ? parts[0] : '';
+                const name  = parts.length > 1 ? parts[1] : t.name;
+                const v     = p.tournamentPoints[t.id];
+                const valCls = v != null ? 'pts-dl-val text-pts' : 'pts-dl-val pts-none';
+                return `<div class="pts-dl-row">
+                  <span class="pts-dl-mo">${mo}</span>
+                  <span class="pts-dl-name">${name}</span>
+                  <span class="${valCls}">${v != null ? v : '—'}</span>
+                </div>`;
+              }).join('')}
+            </div>
+          </td>
+        </tr>`;
+
+      return [summaryRow, detailRow];
     }).join('');
+
+    /* Row expand/collapse — whole summary row is tappable on mobile */
+    document.getElementById('pts-body').onclick = function (e) {
+      const row = e.target.closest('.pts-summary-row');
+      if (!row) return;
+      const detailRow = document.getElementById(row.dataset.detail);
+      if (!detailRow) return;
+      const opening = detailRow.hidden;
+      detailRow.hidden = !opening;
+      const btn = row.querySelector('.pts-expand-btn');
+      if (btn) {
+        btn.setAttribute('aria-expanded', opening);
+        btn.querySelector('.pts-expand-icon').textContent = opening ? '▴' : '▾';
+      }
+    };
 
     /* Footer — column totals */
     const colTotals = {};
