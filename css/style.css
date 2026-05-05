@@ -410,9 +410,9 @@ table.data-table td.highlight { font-weight: 600; }
 .t-card--past   .t-date { background: #8a9e8a; }
 .t-card--recent .t-date { background: var(--gold); }
 
-.t-date .mo { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; }
-.t-date .dy { font-size: 1.65rem; font-weight: 800; line-height: 1; }
-.t-card--next .t-date .dy { font-size: 1.9rem; }
+.t-date .mo { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; }
+.t-date .dy { font-size: 1.85rem; font-weight: 800; line-height: 1; }
+.t-card--next .t-date .dy { font-size: 2.1rem; }
 
 .t-card-title {
   padding: 0.9rem 1.15rem;
@@ -443,7 +443,7 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .t-card--next .t-card-body { padding: 1rem 1.35rem 1.1rem; }
 
-.t-detail .lbl { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; }
+.t-detail .lbl { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--green-mid); display: block; }
 .t-detail .val { font-size: 0.9rem; font-weight: 500; }
 
 .t-card-foot {
@@ -494,10 +494,14 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .t-card-results-actions {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   padding-left: calc(7px + 0.4rem);
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
+}
+.t-card-results-actions .btn {
+  font-size: 0.88rem;
+  padding: 0.5rem 1.15rem;
 }
 
 /* --- Schedule section divider (between upcoming and completed) --- */
@@ -582,7 +586,7 @@ table.data-table td.highlight { font-weight: 600; }
     border-top: 1px solid rgba(46,107,71,0.2);
   }
 
-  /* Deadline detail sits inline (label + value on one line) */
+  /* Deadline detail sits inline (label + value on one line, colon separator) */
   .t-card--next .t-right-details {
     margin-bottom: 0;
     flex-direction: row;
@@ -591,6 +595,7 @@ table.data-table td.highlight { font-weight: 600; }
     flex-wrap: wrap;
   }
   .t-card--next .t-right-details .t-detail .lbl { display: inline; }
+  .t-card--next .t-right-details .t-detail .lbl::after { content: ":"; margin-right: 0.2rem; }
   .t-card--next .t-right-details .t-detail .val { display: inline; font-size: 0.88rem; }
 
   /* Buttons stay together as a row */
@@ -1476,7 +1481,7 @@ table.data-table td.highlight { font-weight: 600; }
   .two-col, .two-col-wide { grid-template-columns: 1fr; }
   .perks-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-  .t-card-body { grid-template-columns: 1fr; }
+  .t-card-body { grid-template-columns: 1fr 1fr; }
   .tee-group { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .player-row-header,
   .player-row { grid-template-columns: minmax(90px, 1fr) 40px 40px 32px 26px 30px; }
@@ -1521,6 +1526,8 @@ table.data-table td.highlight { font-weight: 600; }
   .t-card-results-actions .btn {
     width: 100%;
     justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
   }
   /* Countdown wraps gracefully */
   .t-countdown {
