@@ -332,8 +332,8 @@
                 <div class="t-countdown-divider"></div>
                 <div class="t-countdown-item${deadlineUrgent ? ' t-countdown-item--urgent' : ''}">
                   ${deadlineUrgent ? '<span class="t-countdown-warn">⚠</span>' : ''}
-                  <span class="t-countdown-num">${deadlineDays}</span>
-                  <span class="t-countdown-lbl">day${deadlineDays !== 1 ? 's' : ''} to deadline</span>
+                  <span class="t-countdown-num">${deadlineDays === 0 ? 'Deadline' : deadlineDays}</span>
+                  <span class="t-countdown-lbl">${deadlineDays === 0 ? 'Today' : 'day' + (deadlineDays !== 1 ? 's' : '') + ' to deadline'}</span>
                 </div>` : '';
               return `
                 <div class="t-countdown${urgentClass}">
