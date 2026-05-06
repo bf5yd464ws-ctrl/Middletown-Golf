@@ -66,12 +66,11 @@
               <th class="col-num" title="Birdies / Eagles">B&thinsp;/&thinsp;E</th>
               <th class="col-money">Tourn&nbsp;$</th>
               <th class="col-money">Side&nbsp;$</th>
-              <th class="col-money">Team&nbsp;$</th>
               <th class="col-money col-total">Total&nbsp;$</th>
             </tr>
           </thead>
           <tbody id="lb-body">
-            <tr><td colspan="11" class="rpt-loading">Loading&hellip;</td></tr>
+            <tr><td colspan="10" class="rpt-loading">Loading&hellip;</td></tr>
           </tbody>
         </table>
       </div>
@@ -162,7 +161,7 @@
   /* ── Season Leaderboard ── */
   async function renderLeaderboard(year) {
     const tbody = document.getElementById('lb-body');
-    tbody.innerHTML = '<tr><td colspan="11" class="rpt-loading">Loading&hellip;</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="10" class="rpt-loading">Loading&hellip;</td></tr>';
     document.getElementById('lb-subtitle').textContent = 'Rankings for ' + year + ' Season';
     document.getElementById('lb-meta').textContent = '';
 
@@ -175,7 +174,7 @@
         (data.lastUpdated ? ' · Updated ' + fmtDate(data.lastUpdated) : '');
 
       if (!rows.length) {
-        tbody.innerHTML = `<tr><td colspan="11" class="rpt-empty">No data yet for the ${year} season — check back after the first tournament.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="rpt-empty">No data yet for the ${year} season — check back after the first tournament.</td></tr>`;
         return;
       }
 
@@ -190,11 +189,10 @@
           <td class="col-num">${p.birdies}/${p.eagles}</td>
           <td class="col-money">${fmt$(p.tournamentWinnings)}</td>
           <td class="col-money">${fmt$(p.sideWinnings)}</td>
-          <td class="col-money">${fmt$(p.teamWinnings)}</td>
           <td class="col-money col-total text-money">${fmt$(p.totalWinnings)}</td>
         </tr>`).join('');
     } catch(e) {
-      tbody.innerHTML = `<tr><td colspan="11" class="rpt-empty">Could not load standings for ${year}.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="10" class="rpt-empty">Could not load standings for ${year}.</td></tr>`;
     }
   }
 
