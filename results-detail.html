@@ -347,7 +347,7 @@
           <div class="rd-team-tname">${team.teamName || 'Team'}</div>
         </td>
         <td class="rd-col-num">${combinedNet != null ? combinedNet : '—'}</td>
-        <td class="rd-col-money rd-col-total">${fmt$(team.teamWinnings)}</td>
+        <td class="rd-col-money rd-col-total">${fmt$(team.members?.[0]?.shareAmount)}</td>
       </tr>`;
     }).join('');
 
@@ -360,7 +360,7 @@
               <th class="rank">#</th>
               <th>Team</th>
               <th class="rd-col-num">Net</th>
-              <th class="rd-col-money">Winnings</th>
+              <th class="rd-col-money">Winnings (ea.)</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
