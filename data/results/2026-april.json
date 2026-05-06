@@ -578,7 +578,7 @@
     "averageNet" : 81.799999999999997,
     "ctpTotal" : 80,
     "customAwardsTotal" : 0,
-    "grandTotal" : 535,
+    "grandTotal" : 815,
     "highestGross" : 110,
     "highestNet" : 95,
     "longestDriveTotal" : 0,
@@ -588,7 +588,7 @@
     "skinsTotal" : 85,
     "totalAwardMoney" : 255,
     "totalGolfers" : 18,
-    "totalTeamMoney" : 280
+    "totalTeamMoney" : 560
   },
   "teams" : [
     {
@@ -600,18 +600,18 @@
           "firstName" : "Steve",
           "fullName" : "Steve Goertemiller",
           "lastName" : "Goertemiller",
-          "shareAmount" : 50
+          "shareAmount" : 100
         },
         {
           "firstName" : "Herb",
           "fullName" : "Herb Holmes",
           "lastName" : "Holmes",
-          "shareAmount" : 50
+          "shareAmount" : 100
         }
       ],
       "sortOrder" : 2,
       "teamName" : "Steve Goertemiller & Herb Holmes",
-      "teamWinnings" : 100
+      "teamWinnings" : 200
     },
     {
       "combinedNetScore" : 67,
@@ -622,18 +622,18 @@
           "firstName" : "David",
           "fullName" : "David Saniga",
           "lastName" : "Saniga",
-          "shareAmount" : 40
+          "shareAmount" : 80
         },
         {
           "firstName" : "Jamie",
           "fullName" : "Jamie Harrison",
           "lastName" : "Harrison",
-          "shareAmount" : 40
+          "shareAmount" : 80
         }
       ],
       "sortOrder" : 3,
       "teamName" : "David Saniga & Jamie Harrison",
-      "teamWinnings" : 80
+      "teamWinnings" : 160
     },
     {
       "combinedNetScore" : 69,
@@ -644,18 +644,18 @@
           "firstName" : "Steve",
           "fullName" : "Steve Conway",
           "lastName" : "Conway",
-          "shareAmount" : 30
+          "shareAmount" : 60
         },
         {
           "firstName" : "David",
           "fullName" : "David Simpson",
           "lastName" : "Simpson",
-          "shareAmount" : 30
+          "shareAmount" : 60
         }
       ],
       "sortOrder" : 4,
       "teamName" : "Steve Conway & David Simpson",
-      "teamWinnings" : 60
+      "teamWinnings" : 120
     },
     {
       "combinedNetScore" : 70,
@@ -666,18 +666,18 @@
           "firstName" : "John",
           "fullName" : "John Stanton",
           "lastName" : "Stanton",
-          "shareAmount" : 20
+          "shareAmount" : 40
         },
         {
           "firstName" : "John",
           "fullName" : "John O'Donnell",
           "lastName" : "O'Donnell",
-          "shareAmount" : 20
+          "shareAmount" : 40
         }
       ],
       "sortOrder" : 5,
       "teamName" : "John Stanton & John O'Donnell",
-      "teamWinnings" : 40
+      "teamWinnings" : 80
     },
     {
       "combinedNetScore" : 72,
