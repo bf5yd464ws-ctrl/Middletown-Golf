@@ -337,7 +337,13 @@ table.data-table td.highlight { font-weight: 600; }
 }
 
 .t-card--upcoming {
+  position: relative;
   border-top-color: var(--green-mid);
+}
+.t-upcoming-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
 }
 
 .t-card--past {
