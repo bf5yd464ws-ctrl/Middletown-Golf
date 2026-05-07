@@ -327,16 +327,16 @@
               <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
               <div class="t-card-title">
                 <h3>${ut.name || ut.course}</h3>
-                <div class="fmt">${ut.format}</div>
               </div>
               <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
             </div>
+            <div class="t-upcoming-format">${ut.format}</div>
             <div class="t-card-body">
               <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.longNoYear(ut.date)}</span></div>
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
               <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(ut.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${ut.signupNote}</span></div>
-              <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${utPassed ? ' text-warn' : utUrgent ? ' text-warn' : ''}">${ut.entryDeadline ? GolfFmt.short(ut.entryDeadline) : '10 days prior'}${utPassed ? ' — Closed' : utUrgent ? ' ⚠' : ''}</span></div>
+              <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${utPassed ? ' text-warn' : utUrgent ? ' text-warn' : ''}">${ut.entryDeadline ? GolfFmt.short(ut.entryDeadline) : '10 days prior'}${utPassed ? ' — Closed' : utUrgent ? ' ⚠' : ''}</span></div>
             </div>
             <div class="t-card-foot" style="gap:0.5rem;">
               ${utSignupAction}
@@ -465,16 +465,16 @@
                 <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
                 <div class="t-card-title">
                   <h3>${t.name || t.course}</h3>
-                  <div class="fmt">${t.format}</div>
                 </div>
                 <div style="padding:0.75rem 0.75rem 0.75rem 0;"><span class="badge badge-upcoming">Upcoming</span></div>
               </div>
+              <div class="t-upcoming-format">${t.format}</div>
               <div class="t-card-body">
                 <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.longNoYear(t.date)}</span></div>
                 <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
                 <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
                 <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
-                <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${sPassed ? ' text-warn' : sUrgent ? ' text-warn' : ''}">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}${sPassed ? ' — Closed' : sUrgent ? ' ⚠' : ''}</span></div>
+                <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${sPassed ? ' text-warn' : sUrgent ? ' text-warn' : ''}">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}${sPassed ? ' — Closed' : sUrgent ? ' ⚠' : ''}</span></div>
               </div>
               <div class="t-card-foot" style="gap:0.5rem;">
                 ${sSignupAction}

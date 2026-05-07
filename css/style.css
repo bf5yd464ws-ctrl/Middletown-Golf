@@ -420,6 +420,15 @@ table.data-table td.highlight { font-weight: 600; }
 }
 .t-card-title h3   { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.15rem; }
 .t-card-title .fmt { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Full-width format strip on upcoming cards */
+.t-upcoming-format {
+  padding: 0.35rem 1.15rem 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
 .t-card--next .t-card-title { padding: 1.1rem 1.35rem; }
 
 /* Inline row: course name + countdown pill side-by-side */
