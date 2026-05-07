@@ -704,6 +704,18 @@ table.data-table td.highlight { font-weight: 600; }
   .jp-winner-names { font-size: 0.92rem; }
 }
 
+/* ── Also Just Played Secondary Card (double-header support) ── */
+.t-card--jp-secondary {
+  border-top: 3px solid var(--gold);
+  background: var(--gold-tint);
+}
+.t-card--jp-secondary .t-card-top {
+  border-bottom: 1px solid rgba(184,146,58,0.22);
+}
+.t-card--jp-secondary .jp-winner-zone {
+  border-bottom: 1px solid rgba(184,146,58,0.22);
+}
+
 /* ── Up Next Secondary Card (shown below JP hero during 7-day window) ── */
 .t-card--next-secondary {
   border-top: 3px solid var(--green-mid);

@@ -221,6 +221,35 @@
           </div>
         </div>`;
 
+        /* ── Also Just Played secondary cards (double-header support) ── */
+        recentlyCompleted.slice(1).forEach(jt2 => {
+          const { mo: j2mo, dy: j2dy } = dateBadge(jt2);
+          html += `
+          <div class="t-card t-card--jp-secondary">
+            <div class="t-card-top">
+              <div class="t-date t-date--gold"><span class="mo">${j2mo}</span><span class="dy">${j2dy}</span></div>
+              <div class="t-card-title">
+                <div class="t-jp-label">Also Just Played</div>
+                <h3>${jt2.name || jt2.course}</h3>
+                <div class="fmt">${jt2.format}</div>
+              </div>
+            </div>
+            <div class="jp-winner-zone">
+              <span class="jp-trophy" aria-hidden="true">🏆</span>
+              <span class="jp-winner-lbl">Tournament Winners</span>
+              <span class="jp-winner-names">${jt2.winner || 'Results Posting Soon'}</span>
+              ${jt2.winnerScore ? `<span class="jp-winner-score">Combined Net &middot; ${jt2.winnerScore}</span>` : ''}
+            </div>
+            <div class="jp-hero-actions">
+              ${jt2.resultsPage
+                ? `<a href="${jt2.resultsPage}" class="btn btn-results-hero">View Full Results →</a>`
+                : `<p class="jp-posting-soon">Results will be posted shortly — check back soon.</p>`}
+              ${jt2.newsletterPage ? `<a href="${jt2.newsletterPage}" class="btn btn-outline">Newsletter</a>` : ''}
+              ${jt2.teeTimesPosted ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>` : ''}
+            </div>
+          </div>`;
+        });
+
         /* ── Up Next secondary card ── */
         if (upNextTournament) {
           const ut = upNextTournament;
@@ -279,6 +308,19 @@
         upcoming.slice(1).forEach(ut => {
           const { mo, dy } = dateBadge(ut);
           const signupHref = ut.signupFile || 'signup.html';
+          const { deadlineDays: utDL, deadlineUrgent: utUrgent, deadlinePassed: utPassed } = getCountdowns(ut);
+          const utTeetimeLink = ut.teeTimesPosted
+            ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+            : '';
+          const utSignupAction = utPassed
+            ? `<div class="signup-deadline-passed">
+                 <span class="sdp-icon" aria-hidden="true">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                 </span>
+                 <span class="sdp-text">Signup deadline has passed</span>
+                 <a href="mailto:russyenser@gmail.com" class="sdp-contact">Contact Russ →</a>
+               </div>`
+            : `<a href="${signupHref}" class="btn btn-signup">Sign Up →</a>`;
           html += `
           <div class="t-card t-card--upcoming">
             <div class="t-card-top">
@@ -294,8 +336,12 @@
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
               <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(ut.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${ut.signupNote}</span></div>
+              <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${utPassed ? ' text-warn' : utUrgent ? ' text-warn' : ''}">${ut.entryDeadline ? GolfFmt.short(ut.entryDeadline) : '10 days prior'}${utPassed ? ' — Closed' : utUrgent ? ' ⚠' : ''}</span></div>
             </div>
-            <div class="t-card-foot"><a href="${signupHref}" class="btn btn-signup">Sign Up →</a></div>
+            <div class="t-card-foot" style="gap:0.5rem;">
+              ${utSignupAction}
+              ${utTeetimeLink}
+            </div>
           </div>`;
         });
 
@@ -400,6 +446,19 @@
             }
 
           } else {
+            const { deadlineDays: sDL, deadlineUrgent: sUrgent, deadlinePassed: sPassed } = getCountdowns(t);
+            const sTeetimeLink = t.teeTimesPosted
+              ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+              : '';
+            const sSignupAction = sPassed
+              ? `<div class="signup-deadline-passed">
+                   <span class="sdp-icon" aria-hidden="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                   </span>
+                   <span class="sdp-text">Signup deadline has passed</span>
+                   <a href="mailto:russyenser@gmail.com" class="sdp-contact">Contact Russ →</a>
+                 </div>`
+              : signupLink;
             html += `
             <div class="t-card t-card--upcoming">
               <div class="t-card-top">
@@ -415,8 +474,12 @@
                 <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
                 <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
                 <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
+                <div class="t-detail"><span class="lbl">Entry Deadline</span><span class="val${sPassed ? ' text-warn' : sUrgent ? ' text-warn' : ''}">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}${sPassed ? ' — Closed' : sUrgent ? ' ⚠' : ''}</span></div>
               </div>
-              <div class="t-card-foot">${signupLink}</div>
+              <div class="t-card-foot" style="gap:0.5rem;">
+                ${sSignupAction}
+                ${sTeetimeLink}
+              </div>
             </div>`;
           }
         });
