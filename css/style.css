@@ -344,6 +344,8 @@ table.data-table td.highlight { font-weight: 600; }
   position: absolute;
   top: 0;
   right: 0;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
 }
 
 .t-card--past {
