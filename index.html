@@ -336,7 +336,7 @@
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${ut.entryFee}</span></div>
               <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(ut.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${ut.signupNote}</span></div>
-              <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${utPassed ? ' text-warn' : utUrgent ? ' text-warn' : ''}">${ut.entryDeadline ? GolfFmt.short(ut.entryDeadline) : '10 days prior'}${utPassed ? ' — Closed' : utUrgent ? ' ⚠' : ''}</span></div>
+              <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${utPassed ? ' text-warn' : utUrgent ? ' text-warn' : ''}">${ut.entryDeadline || '10 days prior'}${utPassed ? ' — Closed' : utUrgent ? ' ⚠' : ''}</span></div>
             </div>
             <div class="t-card-foot" style="gap:0.5rem;">
               ${utSignupAction}
@@ -474,7 +474,7 @@
                 <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
                 <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
                 <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
-                <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${sPassed ? ' text-warn' : sUrgent ? ' text-warn' : ''}">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}${sPassed ? ' — Closed' : sUrgent ? ' ⚠' : ''}</span></div>
+                <div class="t-detail" style="grid-column:1/-1"><span class="lbl">Entry Deadline</span><span class="val${sPassed ? ' text-warn' : sUrgent ? ' text-warn' : ''}">${t.entryDeadline || '10 days prior'}${sPassed ? ' — Closed' : sUrgent ? ' ⚠' : ''}</span></div>
               </div>
               <div class="t-card-foot" style="gap:0.5rem;">
                 ${sSignupAction}
