@@ -13,7 +13,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 54,
       "teamWinnings" : 50,
-      "totalWinnings" : 154,
+      "totalWinnings" : 104,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
       "trend" : {
@@ -34,7 +34,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 18,
       "teamWinnings" : 30,
-      "totalWinnings" : 78,
+      "totalWinnings" : 48,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 30,
       "trend" : {
@@ -55,7 +55,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 18,
       "teamWinnings" : 20,
-      "totalWinnings" : 58,
+      "totalWinnings" : 38,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
@@ -76,7 +76,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
       "teamWinnings" : 50,
-      "totalWinnings" : 100,
+      "totalWinnings" : 50,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
       "trend" : {
@@ -97,9 +97,9 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 34,
       "teamWinnings" : 40,
-      "totalWinnings" : 134,
+      "totalWinnings" : 74,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 60,
+      "tournamentWinnings" : 40,
       "trend" : {
         "description" : "New",
         "icon" : "star.circle.fill",
@@ -118,7 +118,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 17,
       "teamWinnings" : 40,
-      "totalWinnings" : 97,
+      "totalWinnings" : 57,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
       "trend" : {
@@ -286,7 +286,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
       "teamWinnings" : 30,
-      "totalWinnings" : 80,
+      "totalWinnings" : 50,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 50,
       "trend" : {
@@ -328,7 +328,7 @@
       "roundsPlayed" : 1,
       "sideWinnings" : 17,
       "teamWinnings" : 20,
-      "totalWinnings" : 57,
+      "totalWinnings" : 37,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
