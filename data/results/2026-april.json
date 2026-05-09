@@ -88,11 +88,11 @@
           {
             "amountWon" : 18,
             "golfer" : {
-              "firstName" : "Steve",
-              "fullName" : "Steve Conway",
-              "lastName" : "Conway"
+              "firstName" : "John",
+              "fullName" : "John Stanton",
+              "lastName" : "Stanton"
             },
-            "notes" : "",
+            "notes" : "Net: 74",
             "place" : 1,
             "placeOrdinal" : "1st",
             "score" : 74
@@ -106,11 +106,11 @@
           {
             "amountWon" : 18,
             "golfer" : {
-              "firstName" : "John",
-              "fullName" : "John Stanton",
-              "lastName" : "Stanton"
+              "firstName" : "Steve",
+              "fullName" : "Steve Conway",
+              "lastName" : "Conway"
             },
-            "notes" : "",
+            "notes" : "Net: 74",
             "place" : 1,
             "placeOrdinal" : "1st",
             "score" : 74
@@ -128,7 +128,7 @@
               "fullName" : "Herb Holmes",
               "lastName" : "Holmes"
             },
-            "notes" : "",
+            "notes" : "Net: 73",
             "place" : 1,
             "placeOrdinal" : "1st",
             "score" : 73
