@@ -1,6 +1,55 @@
 {
-  "_note" : "All tournaments for the season live in this array. To post tee times: find the tournament by id, fill in the groups array, and set posted to true. The tee times page automatically displays the most relevant posted tournament. Set posted back to false after the event if desired.",
+  "_note" : "Tee times for all tournaments. The website displays the most relevant posted tournament (upcoming first, then most recently past).",
   "tournaments" : [
+    {
+      "course" : "Wildwood Golf Club",
+      "date" : "2025-10-18",
+      "displayDate" : "October 18, 2025",
+      "event" : "October 2025 — Wildwood Golf Club",
+      "format" : "2 Man Single Best Ball",
+      "groups" : [
+        {
+          "players" : [
+            "Steve Conway",
+            "Rich Mealey",
+            "Roger Campbell",
+            "Herb Holmes"
+          ],
+          "time" : "10:38 AM"
+        },
+        {
+          "players" : [
+            "Russ Yenser",
+            "Jamie Harrison",
+            "Jeff Zimmer",
+            "David Simpson"
+          ],
+          "time" : "10:46 AM"
+        },
+        {
+          "players" : [
+            "Dennis Daley",
+            "Dick Freeman",
+            "Dave Saniga",
+            "Scott Shaw"
+          ],
+          "time" : "10:54 AM"
+        },
+        {
+          "players" : [
+            "Mark Willenbrink",
+            "Steve Goertemiller",
+            "Don Hartness",
+            "John Stanton"
+          ],
+          "time" : "11:02 AM"
+        }
+      ],
+      "id" : 9,
+      "posted" : true,
+      "startTime" : "10:38 AM",
+      "year" : 2025
+    },
     {
       "course" : "Hamilton Elks",
       "date" : "2026-04-18",
@@ -16,17 +65,186 @@
       "year" : 2026
     },
     {
-      "course" : "Shaker Run",
+      "course" : "Shaker Meadows\/Woodlands",
       "date" : "2026-05-16",
       "displayDate" : "May 16, 2026",
-      "event" : "May 2026 — Shaker Run",
-      "format" : "3 Man Single\/Double\/Triple Ball",
+      "event" : "Shaker Run",
+      "format" : "3 Man 1 Ball Par 5 - 2 Man Par 4 - 3 Man Par 3",
       "groups" : [
-
+        {
+          "players" : [
+            {
+              "courseHandicap" : 14,
+              "handicapIndex" : 17.600000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jeff Young",
+              "usgaHandicapIndex" : 17.600000000000001
+            },
+            {
+              "courseHandicap" : 23,
+              "handicapIndex" : 27.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Chris Wyler",
+              "usgaHandicapIndex" : 26.5
+            },
+            {
+              "courseHandicap" : 4,
+              "handicapIndex" : 8.6999999999999993,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John O'Donnell",
+              "usgaHandicapIndex" : 16.699999999999999
+            },
+            {
+              "courseHandicap" : 23,
+              "handicapIndex" : 26.600000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John Stanton",
+              "usgaHandicapIndex" : 28.300000000000001
+            }
+          ],
+          "time" : "8:00 AM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 18,
+              "handicapIndex" : 24.100000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Russ Yenser",
+              "usgaHandicapIndex" : 21.699999999999999
+            },
+            {
+              "courseHandicap" : 9,
+              "handicapIndex" : 12.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Mark Mattingly",
+              "usgaHandicapIndex" : 14.6
+            },
+            {
+              "courseHandicap" : 12,
+              "handicapIndex" : 15.6,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Mark Willenbrink",
+              "usgaHandicapIndex" : 18.100000000000001
+            }
+          ],
+          "time" : "8:10 AM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 17,
+              "handicapIndex" : 23.199999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Dick Freeman",
+              "usgaHandicapIndex" : 20.399999999999999
+            },
+            {
+              "courseHandicap" : 5,
+              "handicapIndex" : 9,
+              "isNet" : false,
+              "isSkins" : false,
+              "name" : "Sam Nelson",
+              "usgaHandicapIndex" : 0
+            },
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 13.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Danny Hause",
+              "usgaHandicapIndex" : 13.800000000000001
+            }
+          ],
+          "time" : "8:20 AM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 18,
+              "handicapIndex" : 21.5,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Steve Conway",
+              "usgaHandicapIndex" : 23.5
+            },
+            {
+              "courseHandicap" : 11,
+              "handicapIndex" : 15.199999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "David Simpson",
+              "usgaHandicapIndex" : 17.699999999999999
+            },
+            {
+              "courseHandicap" : 7,
+              "handicapIndex" : 11.9,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Herb Holmes",
+              "usgaHandicapIndex" : 11.300000000000001
+            },
+            {
+              "courseHandicap" : 7,
+              "handicapIndex" : 11.4,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Steve Goertemiller",
+              "usgaHandicapIndex" : 11.6
+            }
+          ],
+          "time" : "8:30 AM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 16,
+              "handicapIndex" : 19.699999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Scott Shaw",
+              "usgaHandicapIndex" : 19.699999999999999
+            },
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 15.4,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jeff Zimmer",
+              "usgaHandicapIndex" : 13.6
+            },
+            {
+              "courseHandicap" : 16,
+              "handicapIndex" : 20,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Donnie Roberts",
+              "usgaHandicapIndex" : 20.5
+            },
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 16.100000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Roger Campbell",
+              "usgaHandicapIndex" : 13.6
+            }
+          ],
+          "time" : "8:40 AM"
+        }
       ],
       "id" : 2,
-      "posted" : false,
-      "startTime" : "9:00 AM",
+      "name" : "Shaker Run",
+      "posted" : true,
+      "startTime" : "8:00 AM",
       "year" : 2026
     },
     {
@@ -112,55 +330,6 @@
       "posted" : false,
       "startTime" : "12:00 PM",
       "year" : 2026
-    },
-    {
-      "course" : "Wildwood Golf Club",
-      "date" : "2025-10-18",
-      "displayDate" : "October 18, 2025",
-      "event" : "October 2025 — Wildwood Golf Club",
-      "format" : "2 Man Single Best Ball",
-      "groups" : [
-        {
-          "players" : [
-            "Steve Conway",
-            "Rich Mealey",
-            "Roger Campbell",
-            "Herb Holmes"
-          ],
-          "time" : "10:38 AM"
-        },
-        {
-          "players" : [
-            "Russ Yenser",
-            "Jamie Harrison",
-            "Jeff Zimmer",
-            "David Simpson"
-          ],
-          "time" : "10:46 AM"
-        },
-        {
-          "players" : [
-            "Dennis Daley",
-            "Dick Freeman",
-            "Dave Saniga",
-            "Scott Shaw"
-          ],
-          "time" : "10:54 AM"
-        },
-        {
-          "players" : [
-            "Mark Willenbrink",
-            "Steve Goertemiller",
-            "Don Hartness",
-            "John Stanton"
-          ],
-          "time" : "11:02 AM"
-        }
-      ],
-      "id" : 9,
-      "posted" : true,
-      "startTime" : "10:38 AM",
-      "year" : 2025
     }
   ]
 }
