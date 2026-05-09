@@ -1,6 +1,6 @@
 {
   "_note" : "Season leaderboard. Sorted by points descending. Updated after each tournament.",
-  "lastUpdated" : "2026-05-09T20:51:20Z",
+  "lastUpdated" : "2026-05-09T20:55:05Z",
   "leaderboard" : [
     {
       "birdies" : 2,
@@ -15,7 +15,12 @@
       "totalWinnings" : 104,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -30,7 +35,12 @@
       "totalWinnings" : 48,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 30,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -45,7 +55,12 @@
       "totalWinnings" : 38,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 1,
@@ -60,7 +75,12 @@
       "totalWinnings" : 50,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 2,
@@ -75,7 +95,12 @@
       "totalWinnings" : 74,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -90,7 +115,12 @@
       "totalWinnings" : 57,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -105,7 +135,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 1,
@@ -120,7 +155,12 @@
       "totalWinnings" : 37,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -135,7 +175,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -150,7 +195,12 @@
       "totalWinnings" : 20,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -165,7 +215,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -180,7 +235,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -195,7 +255,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -210,7 +275,12 @@
       "totalWinnings" : 50,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 50,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -225,7 +295,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 1,
@@ -240,7 +315,12 @@
       "totalWinnings" : 37,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -255,7 +335,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -270,7 +355,12 @@
       "totalWinnings" : 20,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -285,7 +375,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -300,7 +395,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -315,7 +415,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -330,7 +435,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -345,7 +455,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -360,7 +475,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -375,7 +495,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -390,7 +515,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -405,7 +535,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -420,7 +555,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -435,7 +575,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -450,7 +595,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -465,7 +615,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -480,7 +635,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -495,7 +655,12 @@
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     }
   ],
   "year" : 2026
