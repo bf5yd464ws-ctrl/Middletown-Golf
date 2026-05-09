@@ -83,42 +83,6 @@
     "lowNet" : [
       {
         "awardName" : "Low Net",
-        "prizeAmount" : 18,
-        "winners" : [
-          {
-            "amountWon" : 18,
-            "golfer" : {
-              "firstName" : "John",
-              "fullName" : "John Stanton",
-              "lastName" : "Stanton"
-            },
-            "notes" : "Net: 74",
-            "place" : 1,
-            "placeOrdinal" : "1st",
-            "score" : 74
-          }
-        ]
-      },
-      {
-        "awardName" : "Low Net",
-        "prizeAmount" : 18,
-        "winners" : [
-          {
-            "amountWon" : 18,
-            "golfer" : {
-              "firstName" : "Steve",
-              "fullName" : "Steve Conway",
-              "lastName" : "Conway"
-            },
-            "notes" : "Net: 74",
-            "place" : 1,
-            "placeOrdinal" : "1st",
-            "score" : 74
-          }
-        ]
-      },
-      {
-        "awardName" : "Low Net",
         "prizeAmount" : 54,
         "winners" : [
           {
@@ -135,6 +99,42 @@
           }
         ]
       }
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 18,
+        "winners" : [
+          {
+            "amountWon" : 18,
+            "golfer" : {
+              "firstName" : "John",
+              "fullName" : "John Stanton",
+              "lastName" : "Stanton"
+            },
+            "notes" : "Net: 74",
+            "place" : 2,
+            "placeOrdinal" : "2nd",
+            "score" : 74
+          }
+        ]
+      },
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 18,
+        "winners" : [
+          {
+            "amountWon" : 18,
+            "golfer" : {
+              "firstName" : "Steve",
+              "fullName" : "Steve Conway",
+              "lastName" : "Conway"
+            },
+            "notes" : "Net: 74",
+            "place" : 2,
+            "placeOrdinal" : "2nd",
+            "score" : 74
+          }
+        ]
+      },
     ],
     "skins" : [
       {
