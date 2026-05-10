@@ -87,53 +87,6 @@
       </div>
     </div>
 
-    <div class="divider"></div>
-
-    <!-- 2025 Season — most recent complete year -->
-    <div class="section-head mt-3">
-      <h2>2025 Season</h2>
-      <span class="badge badge-past">Completed</span>
-      <a href="2025/season.html" style="margin-left:auto;">View season standings &rarr;</a>
-    </div>
-
-    <div class="card mb-3">
-      <div class="card-head"><h3>Season Standings</h3></div>
-      <div class="card-body">
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
-          <a href="2025/season.html" class="btn btn-primary btn-sm">All Standings</a>
-          <a href="2025/season.html#money" class="btn btn-outline btn-sm">Money List</a>
-          <a href="2025/season.html#net" class="btn btn-outline btn-sm">Net Points</a>
-          <a href="2025/season.html#side" class="btn btn-outline btn-sm">Side Money</a>
-          <a href="2025/season.html#career" class="btn btn-outline btn-sm">Career Totals</a>
-        </div>
-        <div class="divider"></div>
-        <div class="section-head" style="margin-bottom:0.75rem;"><h3 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">Monthly Results</h3></div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;" id="results-2025-months"></div>
-      </div>
-    </div>
-
-    <!-- 2025 Snapshot -->
-    <div class="section-head mt-3"><h2>2025 Money Leaders</h2></div>
-    <div class="card mb-3">
-      <div class="table-wrap">
-        <table class="data-table">
-          <thead><tr><th>Rank</th><th>Player</th><th>Winnings</th><th>Side Money</th><th>Net Points</th></tr></thead>
-          <tbody>
-            <tr><td class="rank">1</td><td class="highlight">Steve Goertemiller</td><td class="amount">$249</td><td>$142</td><td>179</td></tr>
-            <tr><td class="rank">2</td><td class="highlight">David Simpson</td><td class="amount">$199</td><td>$67</td><td>180</td></tr>
-            <tr><td class="rank">3T</td><td>Roger Campbell</td><td class="amount">$167</td><td>$91</td><td>176</td></tr>
-            <tr><td class="rank">3T</td><td>Russ Yenser</td><td class="amount">$167</td><td>$40</td><td>173</td></tr>
-            <tr><td class="rank">5T</td><td>Don Hartness</td><td class="amount">$123</td><td>$16</td><td>135</td></tr>
-            <tr><td class="rank">5T</td><td>Mark Willenbrink</td><td class="amount">$123</td><td>$65</td><td>101</td></tr>
-            <tr><td class="rank">7</td><td>Herb Holmes</td><td class="amount">$119</td><td>$139</td><td>187</td></tr>
-            <tr><td class="rank">8</td><td>Jeff Zimmer</td><td class="amount">$110</td><td>$91</td><td>76</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
     <!-- Archive -->
     <div class="section-head">
       <h2>Results Archive</h2>
@@ -166,14 +119,6 @@
         ).join('');
     }
   }).catch(() => {});
-
-  // Load 2025 monthly result links
-  fetch('data/results-2025.json').then(r => r.json()).then(data => {
-    document.getElementById('results-2025-months').innerHTML =
-      data.tournaments.map(t =>
-        `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month}${t.note ? ' *' : ''}</a>`
-      ).join('');
-  });
 
   // Load 2026 Money List and Side Money from leaderboard
   fetch('data/leaderboard-2026.json?v=' + Date.now()).then(r => r.json()).then(data => {
