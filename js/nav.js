@@ -116,7 +116,7 @@ window.GolfFmt = (function () {
     { href: base + 'index.html',       label: 'Schedule'     },
     { href: base + 'standings.html',   label: 'Standings'    },
     { href: base + 'signup.html',      label: 'Sign Up'      },
-    { href: base + 'results.html',     label: 'Past Results' },
+    { href: base + 'results.html',     label: 'Results'      },
     { href: base + 'newsletters.html', label: 'Newsletter'   },
     { href: base + 'application.html', label: 'Membership'   },
   ];
