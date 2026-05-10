@@ -38,18 +38,6 @@
       <div style="color:var(--text-muted);padding:1rem;">Loading tee times&hellip;</div>
     </div>
 
-    <div id="tt-past-section"></div>
-
-    <div class="divider mt-3"></div>
-    <div class="info-box gold mt-2">
-      <strong>Scoring categories:</strong> Net best ball &middot; Skins &middot; Association handicap &middot; USGA handicap &middot; Course handicap
-    </div>
-
-    <div class="info-box mt-2">
-      Looking for historical tee times? They are archived at the
-      <a href="https://www.tjcope.net/maga/TeeTimes.htm" target="_blank" rel="noopener">original site archive</a>.
-    </div>
-
   </div>
 </main>
 
@@ -149,26 +137,6 @@
       ].map(i => `<div class="event-meta-item"><span class="lbl">${i.lbl}</span><span class="val">${i.val}</span></div>`).join('');
 
       document.getElementById('tt-groups').innerHTML = renderGroups(active);
-    }
-
-    /* ── Render past tee times section ── */
-    if (pastList.length > 0) {
-      const pastHtml = pastList.map(t => `
-        <div class="tt-past-item">
-          <button class="tt-past-toggle" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
-            <span>${t.event}</span>
-            <span class="tt-past-date">${GolfFmt.short(t.date)}</span>
-            <span class="tt-past-chevron">▸</span>
-          </button>
-          <div class="tt-past-body">
-            ${renderGroups(t)}
-          </div>
-        </div>`).join('');
-
-      document.getElementById('tt-past-section').innerHTML = `
-        <div class="divider mt-3"></div>
-        <div class="section-head"><h2>Past Tee Times</h2></div>
-        <div class="tt-past-list">${pastHtml}</div>`;
     }
 
   }).catch(() => {
