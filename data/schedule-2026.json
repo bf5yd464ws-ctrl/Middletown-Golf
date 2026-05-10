@@ -46,7 +46,7 @@
       "signupFile" : "2026\/may-shaker-run-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     },
@@ -70,7 +70,7 @@
       "signupFile" : "2026\/may-yankee-trace-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     },

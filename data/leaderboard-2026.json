@@ -1,6 +1,6 @@
 {
   "_note" : "Season leaderboard. Sorted by points descending. Updated after each tournament.",
-  "lastUpdated" : "2026-05-04T16:25:06Z",
+  "lastUpdated" : "2026-05-09T20:55:05Z",
   "leaderboard" : [
     {
       "birdies" : 2,
@@ -12,7 +12,6 @@
       "rank" : 1,
       "roundsPlayed" : 1,
       "sideWinnings" : 54,
-      "teamWinnings" : 50,
       "totalWinnings" : 104,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
@@ -33,7 +32,6 @@
       "rank" : 2,
       "roundsPlayed" : 1,
       "sideWinnings" : 18,
-      "teamWinnings" : 30,
       "totalWinnings" : 48,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 30,
@@ -54,7 +52,6 @@
       "rank" : 2,
       "roundsPlayed" : 1,
       "sideWinnings" : 18,
-      "teamWinnings" : 20,
       "totalWinnings" : 38,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
@@ -75,7 +72,6 @@
       "rank" : 4,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 50,
       "totalWinnings" : 50,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 50,
@@ -96,7 +92,6 @@
       "rank" : 5,
       "roundsPlayed" : 1,
       "sideWinnings" : 34,
-      "teamWinnings" : 40,
       "totalWinnings" : 74,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
@@ -117,7 +112,6 @@
       "rank" : 6,
       "roundsPlayed" : 1,
       "sideWinnings" : 17,
-      "teamWinnings" : 40,
       "totalWinnings" : 57,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
@@ -138,7 +132,6 @@
       "rank" : 7,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -159,7 +152,6 @@
       "rank" : 8,
       "roundsPlayed" : 1,
       "sideWinnings" : 17,
-      "teamWinnings" : 0,
       "totalWinnings" : 37,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
@@ -180,7 +172,6 @@
       "rank" : 9,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -201,7 +192,6 @@
       "rank" : 10,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 20,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
@@ -222,7 +212,6 @@
       "rank" : 11,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -243,7 +232,6 @@
       "rank" : 12,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -264,7 +252,6 @@
       "rank" : 13,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -285,7 +272,6 @@
       "rank" : 14,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 30,
       "totalWinnings" : 50,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 50,
@@ -306,7 +292,6 @@
       "rank" : 15,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -327,7 +312,6 @@
       "rank" : 15,
       "roundsPlayed" : 1,
       "sideWinnings" : 17,
-      "teamWinnings" : 20,
       "totalWinnings" : 37,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
@@ -348,7 +332,6 @@
       "rank" : 17,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
@@ -369,10 +352,9 @@
       "rank" : 18,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
-      "totalWinnings" : 0,
+      "totalWinnings" : 20,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 0,
+      "tournamentWinnings" : 20,
       "trend" : {
         "description" : "New",
         "icon" : "star.circle.fill",
@@ -390,11 +372,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -406,11 +392,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -422,11 +412,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -438,11 +432,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -454,11 +452,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -470,11 +472,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -486,11 +492,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -502,11 +512,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -518,11 +532,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -534,11 +552,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -550,11 +572,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -566,11 +592,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -582,11 +612,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -598,11 +632,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     },
     {
       "birdies" : 0,
@@ -614,11 +652,15 @@
       "rank" : 19,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
-      "teamWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
-      "trend" : null
+      "trend" : {
+        "description" : "New",
+        "icon" : "star.circle.fill",
+        "positionChange" : null,
+        "status" : "new"
+      }
     }
   ],
   "year" : 2026
