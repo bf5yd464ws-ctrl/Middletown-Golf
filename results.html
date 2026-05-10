@@ -28,12 +28,62 @@
       <span class="badge badge-green">In Progress</span>
     </div>
 
-    <div class="card mb-3" id="results-2026-card">
-      <div class="card-head"><h3>Monthly Results</h3></div>
+    <div class="card mb-3">
+      <div class="card-head"><h3>Season Standings</h3></div>
       <div class="card-body">
-        <div id="results-2026-months">
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;">
+          <a href="standings.html" class="btn btn-primary btn-sm">All Standings</a>
+          <a href="#money-2026" class="btn btn-outline btn-sm">Money List</a>
+          <a href="#side-2026" class="btn btn-outline btn-sm">Side Money</a>
+          <a href="standings.html#points" class="btn btn-outline btn-sm">Net Points</a>
+        </div>
+        <div class="divider"></div>
+        <div class="section-head" style="margin-bottom:0.75rem;"><h3 style="font-size:0.85rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">Monthly Results</h3></div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;" id="results-2026-months">
           <p style="font-size:0.85rem;color:var(--text-muted);">No results posted yet. Check back after each tournament.</p>
         </div>
+      </div>
+    </div>
+
+    <!-- 2026 Money List -->
+    <div class="section-head mt-3" id="money-2026">
+      <h2>2026 Money List</h2>
+    </div>
+    <div class="card mb-3">
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="rank">Rank</th>
+              <th>Golfer</th>
+              <th class="amount">Tournament Winnings</th>
+            </tr>
+          </thead>
+          <tbody id="money-2026-body">
+            <tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:1.5rem;">Loading&hellip;</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2026 Side Money -->
+    <div class="section-head mt-3" id="side-2026">
+      <h2>2026 Side Money</h2>
+    </div>
+    <div class="card mb-3">
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="rank">Rank</th>
+              <th>Golfer</th>
+              <th class="amount">Side Winnings</th>
+            </tr>
+          </thead>
+          <tbody id="side-2026-body">
+            <tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:1.5rem;">Loading&hellip;</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -123,6 +173,70 @@
       data.tournaments.map(t =>
         `<a href="${t.page}" class="btn btn-sm btn-outline">${t.month}${t.note ? ' *' : ''}</a>`
       ).join('');
+  });
+
+  // Load 2026 Money List and Side Money from leaderboard
+  fetch('data/leaderboard-2026.json?v=' + Date.now()).then(r => r.json()).then(data => {
+    const lb = data.leaderboard || [];
+
+    function fmt$(n) {
+      return n != null ? '$' + Number(n).toLocaleString() : '—';
+    }
+
+    function buildRankedRows(sorted, field) {
+      // Assign ranks with tie detection
+      const rows = [];
+      let rank = 1;
+      for (let i = 0; i < sorted.length; i++) {
+        const val = sorted[i][field] || 0;
+        const isTied = (i + 1 < sorted.length && (sorted[i + 1][field] || 0) === val) ||
+                       (i > 0 && (sorted[i - 1][field] || 0) === val);
+        rows.push({ golfer: sorted[i], rank, isTied, val });
+        if (i + 1 < sorted.length && (sorted[i + 1][field] || 0) !== val) {
+          rank = i + 2;
+        }
+      }
+      return rows;
+    }
+
+    // Money List
+    const moneyList = lb.filter(g => (g.tournamentWinnings || 0) > 0)
+      .sort((a, b) => (b.tournamentWinnings || 0) - (a.tournamentWinnings || 0));
+    const moneyBody = document.getElementById('money-2026-body');
+    if (moneyList.length === 0) {
+      moneyBody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:1.5rem;">No winnings recorded yet.</td></tr>';
+    } else {
+      const moneyRows = buildRankedRows(moneyList, 'tournamentWinnings');
+      moneyBody.innerHTML = moneyRows.map(r =>
+        `<tr>
+          <td class="rank">${r.rank}${r.isTied ? 'T' : ''}</td>
+          <td${r.rank === 1 ? ' class="highlight"' : ''}>${r.golfer.firstName} ${r.golfer.lastName}</td>
+          <td class="amount">${fmt$(r.val)}</td>
+        </tr>`
+      ).join('');
+    }
+
+    // Side Money
+    const sideList = lb.filter(g => (g.sideWinnings || 0) > 0)
+      .sort((a, b) => (b.sideWinnings || 0) - (a.sideWinnings || 0));
+    const sideBody = document.getElementById('side-2026-body');
+    if (sideList.length === 0) {
+      sideBody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:1.5rem;">No side winnings recorded yet.</td></tr>';
+    } else {
+      const sideRows = buildRankedRows(sideList, 'sideWinnings');
+      sideBody.innerHTML = sideRows.map(r =>
+        `<tr>
+          <td class="rank">${r.rank}${r.isTied ? 'T' : ''}</td>
+          <td${r.rank === 1 ? ' class="highlight"' : ''}>${r.golfer.firstName} ${r.golfer.lastName}</td>
+          <td class="amount">${fmt$(r.val)}</td>
+        </tr>`
+      ).join('');
+    }
+  }).catch(() => {
+    ['money-2026-body', 'side-2026-body'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-muted);padding:1.5rem;">Data unavailable.</td></tr>';
+    });
   });
 
   // Archive grid — all years 2024 back to 2001, linking to local pages

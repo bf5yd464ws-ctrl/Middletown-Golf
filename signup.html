@@ -134,7 +134,7 @@
           <div class="t-detail"><span class="lbl">Format</span><span class="val">${t.format}</span></div>
           <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
           <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
-          <div class="t-detail"><span class="lbl">Deadline</span><span class="val">${t.entryDeadline ? GolfFmt.short(t.entryDeadline) : '10 days prior'}</span></div>
+          <div class="t-detail"><span class="lbl">Deadline</span><span class="val">${t.entryDeadline || '10 days prior'}</span></div>
         </div>
         <p style="font-size:0.83rem;color:var(--text-muted);margin-top:1rem;">
           Questions? Contact
