@@ -182,59 +182,9 @@
       }
     },
     {
-      "firstName" : "Jim",
-      "isTied" : false,
-      "lastName" : "Drury",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Terry",
-      "isTied" : true,
-      "lastName" : "Halderman",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Don",
-      "isTied" : true,
-      "lastName" : "Hartness",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
       "firstName" : "Danny",
-      "isTied" : true,
+      "isTied" : false,
       "lastName" : "Hause",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Jeff",
-      "isTied" : true,
-      "lastName" : "Kinsel",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Carl",
-      "isTied" : true,
-      "lastName" : "Kohs",
       "rank" : 19,
       "totalPoints" : 0,
       "tournamentPoints" : {
@@ -245,26 +195,6 @@
       "firstName" : "Dave",
       "isTied" : true,
       "lastName" : "Lainhart",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Brad",
-      "isTied" : true,
-      "lastName" : "Mattingly",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Rich",
-      "isTied" : true,
-      "lastName" : "Mealey",
       "rank" : 19,
       "totalPoints" : 0,
       "tournamentPoints" : {
@@ -302,16 +232,6 @@
       }
     },
     {
-      "firstName" : "Bret",
-      "isTied" : true,
-      "lastName" : "Yenser",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
       "firstName" : "Jeff",
       "isTied" : true,
       "lastName" : "Young",
@@ -332,7 +252,7 @@
       }
     }
   ],
-  "lastUpdated" : "2026-05-09T20:55:06Z",
+  "lastUpdated" : "2026-05-17T23:47:39Z",
   "tournaments" : [
     {
       "date" : "2026-04-18",
