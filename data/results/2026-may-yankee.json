@@ -1,0 +1,363 @@
+{
+  "awards" : {
+    "closestToPin" : [
+
+    ],
+    "customAwards" : [
+
+    ],
+    "longestDrive" : [
+
+    ],
+    "lowNet" : [
+
+    ],
+    "skins" : [
+
+    ]
+  },
+  "golferResults" : [
+    {
+      "courseHandicap" : 9,
+      "golfer" : {
+        "firstName" : "Jeff",
+        "fullName" : "Jeff Zimmer",
+        "lastName" : "Zimmer"
+      },
+      "grossScore" : 78,
+      "handicapIndex" : 12.5,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 66,
+      "notes" : "",
+      "rank" : 1,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 13.6
+    },
+    {
+      "courseHandicap" : 15,
+      "golfer" : {
+        "firstName" : "Scott",
+        "fullName" : "Scott Shaw",
+        "lastName" : "Shaw"
+      },
+      "grossScore" : 88,
+      "handicapIndex" : 18.600000000000001,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 69,
+      "notes" : "",
+      "rank" : 2,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 19.699999999999999
+    },
+    {
+      "courseHandicap" : 14,
+      "golfer" : {
+        "firstName" : "Jeff",
+        "fullName" : "Jeff Young",
+        "lastName" : "Young"
+      },
+      "grossScore" : 88,
+      "handicapIndex" : 17.5,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 70,
+      "notes" : "",
+      "rank" : 3,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 17.600000000000001
+    },
+    {
+      "courseHandicap" : 9,
+      "golfer" : {
+        "firstName" : "Danny",
+        "fullName" : "Danny Hause",
+        "lastName" : "Hause"
+      },
+      "grossScore" : 82,
+      "handicapIndex" : 12.4,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 70,
+      "notes" : "",
+      "rank" : 4,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 13.800000000000001
+    },
+    {
+      "courseHandicap" : 12,
+      "golfer" : {
+        "firstName" : "Mark",
+        "fullName" : "Mark Willenbrink",
+        "lastName" : "Willenbrink"
+      },
+      "grossScore" : 86,
+      "handicapIndex" : 15.199999999999999,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 71,
+      "notes" : "",
+      "rank" : 5,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 18.100000000000001
+    },
+    {
+      "courseHandicap" : 23,
+      "golfer" : {
+        "firstName" : "John",
+        "fullName" : "John Stanton",
+        "lastName" : "Stanton"
+      },
+      "grossScore" : 99,
+      "handicapIndex" : 26,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 72,
+      "notes" : "",
+      "rank" : 6,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 28.300000000000001
+    },
+    {
+      "courseHandicap" : 16,
+      "golfer" : {
+        "firstName" : "David",
+        "fullName" : "David Saniga",
+        "lastName" : "Saniga"
+      },
+      "grossScore" : 94,
+      "handicapIndex" : 19.199999999999999,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 75,
+      "notes" : "",
+      "rank" : 7,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 21.5
+    },
+    {
+      "courseHandicap" : 8,
+      "golfer" : {
+        "firstName" : "Steve",
+        "fullName" : "Steve Goertemiller",
+        "lastName" : "Goertemiller"
+      },
+      "grossScore" : 87,
+      "handicapIndex" : 11.300000000000001,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 76,
+      "notes" : "",
+      "rank" : 8,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 11.6
+    },
+    {
+      "courseHandicap" : 10,
+      "golfer" : {
+        "firstName" : "Roger",
+        "fullName" : "Roger Campbell",
+        "lastName" : "Campbell"
+      },
+      "grossScore" : 86,
+      "handicapIndex" : 16,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 77,
+      "notes" : "",
+      "rank" : 9,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 13.6
+    },
+    {
+      "courseHandicap" : 17,
+      "golfer" : {
+        "firstName" : "Donnie",
+        "fullName" : "Donnie Roberts",
+        "lastName" : "Roberts"
+      },
+      "grossScore" : 95,
+      "handicapIndex" : 20.5,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 78,
+      "notes" : "",
+      "rank" : 10,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 20.5
+    },
+    {
+      "courseHandicap" : 19,
+      "golfer" : {
+        "firstName" : "Russ",
+        "fullName" : "Russ Yenser",
+        "lastName" : "Yenser"
+      },
+      "grossScore" : 97,
+      "handicapIndex" : 24,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 78,
+      "notes" : "",
+      "rank" : 11,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 21.699999999999999
+    },
+    {
+      "courseHandicap" : 9,
+      "golfer" : {
+        "firstName" : "Mark",
+        "fullName" : "Mark Mattingly",
+        "lastName" : "Mattingly"
+      },
+      "grossScore" : 87,
+      "handicapIndex" : 12.9,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 78,
+      "notes" : "",
+      "rank" : 12,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 14.6
+    },
+    {
+      "courseHandicap" : 6,
+      "golfer" : {
+        "firstName" : "John",
+        "fullName" : "John O'Donnell",
+        "lastName" : "O'Donnell"
+      },
+      "grossScore" : 90,
+      "handicapIndex" : 9.5,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 81,
+      "notes" : "",
+      "rank" : 13,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 16.699999999999999
+    },
+    {
+      "courseHandicap" : 18,
+      "golfer" : {
+        "firstName" : "Jamie",
+        "fullName" : "Jamie Harrison",
+        "lastName" : "Harrison"
+      },
+      "grossScore" : 104,
+      "handicapIndex" : 22.600000000000001,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 82,
+      "notes" : "",
+      "rank" : 14,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 21.100000000000001
+    },
+    {
+      "courseHandicap" : 8,
+      "golfer" : {
+        "firstName" : "Herb",
+        "fullName" : "Herb Holmes",
+        "lastName" : "Holmes"
+      },
+      "grossScore" : 96,
+      "handicapIndex" : 11.9,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 85,
+      "notes" : "",
+      "rank" : 15,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 11.300000000000001
+    },
+    {
+      "courseHandicap" : 24,
+      "golfer" : {
+        "firstName" : "Chris",
+        "fullName" : "Chris Wyler",
+        "lastName" : "Wyler"
+      },
+      "grossScore" : 116,
+      "handicapIndex" : 27.300000000000001,
+      "isWinner" : false,
+      "netPoints" : null,
+      "netScore" : 88,
+      "notes" : "",
+      "rank" : 16,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 26.5
+    }
+  ],
+  "summary" : {
+    "averageGross" : 92.099999999999994,
+    "averageNet" : 76,
+    "ctpTotal" : 0,
+    "customAwardsTotal" : 0,
+    "grandTotal" : 0,
+    "highestGross" : 116,
+    "highestNet" : 88,
+    "longestDriveTotal" : 0,
+    "lowestGross" : 78,
+    "lowestNet" : 66,
+    "lowNetTotal" : 0,
+    "skinsTotal" : 0,
+    "totalAwardMoney" : 0,
+    "totalGolfers" : 16,
+    "totalTeamMoney" : 0
+  },
+  "teams" : [
+
+  ],
+  "tournament" : {
+    "course" : "Yankee Trace Heritage \/ Legend",
+    "courseCity" : "Centerville",
+    "date" : "2026-05-17",
+    "displayDate" : "May 17, 2026",
+    "format" : "2 Man Customized Stableford",
+    "name" : "Yankee Trace",
+    "participantCount" : 16,
+    "secondTeeName" : null,
+    "secondTeeRating" : null,
+    "secondTeeSlope" : null,
+    "teeName" : "Gold",
+    "teeRating" : 67.599999999999994,
+    "teeSlope" : 120
+  },
+  "winners" : [
+
+  ]
+}
