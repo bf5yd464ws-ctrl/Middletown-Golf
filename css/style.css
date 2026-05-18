@@ -285,6 +285,7 @@ table.data-table td.highlight { font-weight: 600; }
 .badge-gray   { background: #eee; color: #666; }
 .badge-upcoming { background: #d4ead9; color: #1a5c2e; }
 .badge-past     { background: #eee; color: #777; }
+.badge-rainout  { background: #fff3cd; color: #7d5500; border: 1px solid #f0c040; }
 .badge-next     { background: #d4ead9; color: #1a5c2e; border: 1px solid #b0d4bc; }
 .badge-recent   { background: var(--gold-tint); color: #7d5a00; border: 1px solid #e8c96e; }
 

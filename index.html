@@ -113,9 +113,10 @@
 
         const d = new Date(t.date + 'T12:00:00');
         const daysSince = Math.round((today - d) / (1000 * 60 * 60 * 24));
-        if (d >= today)       upcoming.push(t);
-        else if (daysSince <= 7) recentlyCompleted.push(t);
-        else                  past.push(t);
+        if (t.status === 'past')    past.push(t);           // manual override (e.g. rained out)
+        else if (d >= today)        upcoming.push(t);
+        else if (daysSince <= 7)    recentlyCompleted.push(t);
+        else                        past.push(t);
       });
 
       /* Helper: build results panel for a completed tournament.
@@ -497,20 +498,23 @@
           const { mo, dy } = dateBadge(t);
           const rPanel = resultsPanel(t);
           html += `
-          <div class="t-card t-card--past">
+          <div class="t-card t-card--past${t.rainedOut ? ' t-card--rainout' : ''}">
             <div class="t-card-top">
               <div class="t-date"><span class="mo">${mo}</span><span class="dy">${dy}</span></div>
               <div class="t-card-title">
                 <h3>${t.name || t.course}</h3>
                 <div class="fmt">${t.format}</div>
               </div>
-              <span class="badge badge-past t-past-badge">Completed</span>
+              ${t.rainedOut
+                ? `<span class="badge badge-rainout t-past-badge">Rained Out</span>`
+                : `<span class="badge badge-past t-past-badge">Completed</span>`}
             </div>
             <div class="t-card-body">
               <div class="t-detail"><span class="lbl">Date</span><span class="val">${GolfFmt.shortNoYear(t.date)}</span></div>
               <div class="t-detail"><span class="lbl">Entry Fee</span><span class="val">$${t.entryFee}</span></div>
               <div class="t-detail"><span class="lbl">First Tee</span><span class="val">${GolfFmt.time(t.firstTeeTime)}</span></div>
               <div class="t-detail"><span class="lbl">Sign As</span><span class="val">${t.signupNote}</span></div>
+              ${t.rainedOut ? `<div class="t-detail" style="grid-column:1/-1"><span class="lbl">Note</span><span class="val text-muted">Tournament was rained out and not completed.</span></div>` : ''}
             </div>
             ${rPanel || '<div class="t-card-foot"></div>'}
           </div>`;
