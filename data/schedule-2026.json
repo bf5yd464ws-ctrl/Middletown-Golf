@@ -42,11 +42,11 @@
       "newsletterPage" : null,
       "notes" : "Blind Draw After Golf",
       "pairingsPosted" : "2026-05-10",
+      "rainedOut" : true,
       "resultsPage" : null,
       "signupFile" : "2026\/may-shaker-run-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "past",
-      "rainedOut" : true,
       "teeTimesPosted" : false,
       "winner" : null,
       "winnerScore" : null
@@ -67,13 +67,13 @@
       "newsletterPage" : null,
       "notes" : "Carts included with greens fee",
       "pairingsPosted" : "2026-05-10",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-may-yankee",
       "signupFile" : "2026\/may-yankee-trace-signup.html",
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming",
+      "status" : "past",
       "teeTimesPosted" : false,
-      "winner" : null,
-      "winnerScore" : null
+      "winner" : "Shaw \/ Zimmer — Net 54",
+      "winnerScore" : 54
     },
     {
       "course" : "Hueston Woods Golf Resort",
