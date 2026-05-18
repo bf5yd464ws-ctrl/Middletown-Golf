@@ -113,7 +113,7 @@
 
         const d = new Date(t.date + 'T12:00:00');
         const daysSince = Math.round((today - d) / (1000 * 60 * 60 * 24));
-        if (t.status === 'past')    past.push(t);           // manual override (e.g. rained out)
+        if (t.rainedOut)            past.push(t);           // manual override — rained out / cancelled
         else if (d >= today)        upcoming.push(t);
         else if (daysSince <= 7)    recentlyCompleted.push(t);
         else                        past.push(t);
