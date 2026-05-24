@@ -2,262 +2,292 @@
   "_note" : "Points breakdown per tournament. Use null for players who did not participate. totalPoints equals the sum of all non-null values.",
   "breakdown" : [
     {
-      "firstName" : "Herb",
-      "isTied" : false,
-      "lastName" : "Holmes",
-      "rank" : 1,
-      "totalPoints" : 36,
-      "tournamentPoints" : {
-        "t1" : 36
-      }
-    },
-    {
-      "firstName" : "Steve",
-      "isTied" : false,
-      "lastName" : "Conway",
-      "rank" : 2,
-      "totalPoints" : 34,
-      "tournamentPoints" : {
-        "t1" : 34
-      }
-    },
-    {
       "firstName" : "John",
-      "isTied" : true,
+      "isTied" : false,
       "lastName" : "Stanton",
-      "rank" : 2,
-      "totalPoints" : 34,
+      "rank" : 1,
+      "totalPoints" : 56,
       "tournamentPoints" : {
-        "t1" : 34
-      }
-    },
-    {
-      "firstName" : "Steve",
-      "isTied" : false,
-      "lastName" : "Goertemiller",
-      "rank" : 4,
-      "totalPoints" : 30,
-      "tournamentPoints" : {
-        "t1" : 30
-      }
-    },
-    {
-      "firstName" : "Jamie",
-      "isTied" : false,
-      "lastName" : "Harrison",
-      "rank" : 5,
-      "totalPoints" : 28,
-      "tournamentPoints" : {
-        "t1" : 28
+        "t1" : 34,
+        "t2" : 22
       }
     },
     {
       "firstName" : "David",
       "isTied" : false,
       "lastName" : "Saniga",
-      "rank" : 6,
-      "totalPoints" : 26,
+      "rank" : 2,
+      "totalPoints" : 42,
       "tournamentPoints" : {
-        "t1" : 26
+        "t1" : 26,
+        "t2" : 16
       }
     },
     {
-      "firstName" : "Russ",
-      "isTied" : false,
-      "lastName" : "Yenser",
-      "rank" : 7,
-      "totalPoints" : 24,
+      "firstName" : "Mark",
+      "isTied" : true,
+      "lastName" : "Willenbrink",
+      "rank" : 2,
+      "totalPoints" : 42,
       "tournamentPoints" : {
-        "t1" : 24
-      }
-    },
-    {
-      "firstName" : "Nick",
-      "isTied" : false,
-      "lastName" : "Edwards",
-      "rank" : 8,
-      "totalPoints" : 22,
-      "tournamentPoints" : {
-        "t1" : 22
+        "t1" : 16,
+        "t2" : 26
       }
     },
     {
       "firstName" : "Roger",
       "isTied" : false,
       "lastName" : "Campbell",
-      "rank" : 9,
-      "totalPoints" : 20,
+      "rank" : 4,
+      "totalPoints" : 40,
       "tournamentPoints" : {
-        "t1" : 20
+        "t1" : 20,
+        "t2" : 20
       }
     },
     {
-      "firstName" : "Jim",
-      "isTied" : false,
-      "lastName" : "Wendel",
-      "rank" : 10,
-      "totalPoints" : 18,
+      "firstName" : "Steve",
+      "isTied" : true,
+      "lastName" : "Goertemiller",
+      "rank" : 4,
+      "totalPoints" : 40,
       "tournamentPoints" : {
-        "t1" : 18
+        "t1" : 30,
+        "t2" : 10
       }
     },
     {
-      "firstName" : "Mark",
-      "isTied" : false,
-      "lastName" : "Willenbrink",
-      "rank" : 11,
-      "totalPoints" : 16,
+      "firstName" : "Herb",
+      "isTied" : true,
+      "lastName" : "Holmes",
+      "rank" : 4,
+      "totalPoints" : 40,
       "tournamentPoints" : {
-        "t1" : 16
+        "t1" : 36,
+        "t2" : 4
+      }
+    },
+    {
+      "firstName" : "Russ",
+      "isTied" : true,
+      "lastName" : "Yenser",
+      "rank" : 4,
+      "totalPoints" : 40,
+      "tournamentPoints" : {
+        "t1" : 24,
+        "t2" : 16
       }
     },
     {
       "firstName" : "Steve",
       "isTied" : false,
-      "lastName" : "Harrison",
-      "rank" : 12,
-      "totalPoints" : 14,
+      "lastName" : "Conway",
+      "rank" : 8,
+      "totalPoints" : 34,
       "tournamentPoints" : {
-        "t1" : 14
+        "t1" : 34,
+        "t2" : null
       }
     },
     {
-      "firstName" : "Mark",
-      "isTied" : false,
-      "lastName" : "Mattingly",
-      "rank" : 13,
-      "totalPoints" : 12,
-      "tournamentPoints" : {
-        "t1" : 12
-      }
-    },
-    {
-      "firstName" : "David",
-      "isTied" : false,
-      "lastName" : "Simpson",
-      "rank" : 14,
-      "totalPoints" : 10,
-      "tournamentPoints" : {
-        "t1" : 10
-      }
-    },
-    {
-      "firstName" : "Dick",
-      "isTied" : false,
-      "lastName" : "Freeman",
-      "rank" : 15,
-      "totalPoints" : 8,
-      "tournamentPoints" : {
-        "t1" : 8
-      }
-    },
-    {
-      "firstName" : "John",
+      "firstName" : "Jamie",
       "isTied" : true,
-      "lastName" : "O'Donnell",
-      "rank" : 15,
-      "totalPoints" : 8,
-      "tournamentPoints" : {
-        "t1" : 8
-      }
-    },
-    {
-      "firstName" : "Donnie",
-      "isTied" : false,
-      "lastName" : "Roberts",
-      "rank" : 17,
-      "totalPoints" : 4,
-      "tournamentPoints" : {
-        "t1" : 4
-      }
-    },
-    {
-      "firstName" : "Jason",
-      "isTied" : false,
       "lastName" : "Harrison",
-      "rank" : 18,
-      "totalPoints" : 2,
+      "rank" : 8,
+      "totalPoints" : 34,
       "tournamentPoints" : {
-        "t1" : 2
+        "t1" : 28,
+        "t2" : 6
+      }
+    },
+    {
+      "firstName" : "Jeff",
+      "isTied" : false,
+      "lastName" : "Zimmer",
+      "rank" : 10,
+      "totalPoints" : 32,
+      "tournamentPoints" : {
+        "t1" : null,
+        "t2" : 32
       }
     },
     {
       "firstName" : "Danny",
       "isTied" : false,
       "lastName" : "Hause",
-      "rank" : 19,
-      "totalPoints" : 0,
+      "rank" : 11,
+      "totalPoints" : 30,
       "tournamentPoints" : {
-        "t1" : null
+        "t1" : null,
+        "t2" : 30
       }
     },
     {
-      "firstName" : "Dave",
+      "firstName" : "Mark",
       "isTied" : true,
-      "lastName" : "Lainhart",
-      "rank" : 19,
-      "totalPoints" : 0,
+      "lastName" : "Mattingly",
+      "rank" : 11,
+      "totalPoints" : 30,
       "tournamentPoints" : {
-        "t1" : null
-      }
-    },
-    {
-      "firstName" : "Sam",
-      "isTied" : true,
-      "lastName" : "Nelson",
-      "rank" : 19,
-      "totalPoints" : 0,
-      "tournamentPoints" : {
-        "t1" : null
+        "t1" : 12,
+        "t2" : 18
       }
     },
     {
       "firstName" : "Scott",
       "isTied" : true,
       "lastName" : "Shaw",
-      "rank" : 19,
-      "totalPoints" : 0,
+      "rank" : 11,
+      "totalPoints" : 30,
       "tournamentPoints" : {
-        "t1" : null
+        "t1" : null,
+        "t2" : 30
+      }
+    },
+    {
+      "firstName" : "Jeff",
+      "isTied" : false,
+      "lastName" : "Young",
+      "rank" : 14,
+      "totalPoints" : 24,
+      "tournamentPoints" : {
+        "t1" : null,
+        "t2" : 24
+      }
+    },
+    {
+      "firstName" : "Nick",
+      "isTied" : false,
+      "lastName" : "Edwards",
+      "rank" : 15,
+      "totalPoints" : 22,
+      "tournamentPoints" : {
+        "t1" : 22,
+        "t2" : null
+      }
+    },
+    {
+      "firstName" : "Donnie",
+      "isTied" : false,
+      "lastName" : "Roberts",
+      "rank" : 16,
+      "totalPoints" : 20,
+      "tournamentPoints" : {
+        "t1" : 4,
+        "t2" : 16
+      }
+    },
+    {
+      "firstName" : "Jim",
+      "isTied" : false,
+      "lastName" : "Wendel",
+      "rank" : 17,
+      "totalPoints" : 18,
+      "tournamentPoints" : {
+        "t1" : 18,
+        "t2" : null
+      }
+    },
+    {
+      "firstName" : "John",
+      "isTied" : false,
+      "lastName" : "O'Donnell",
+      "rank" : 18,
+      "totalPoints" : 16,
+      "tournamentPoints" : {
+        "t1" : 8,
+        "t2" : 8
+      }
+    },
+    {
+      "firstName" : "Steve",
+      "isTied" : false,
+      "lastName" : "Harrison",
+      "rank" : 19,
+      "totalPoints" : 14,
+      "tournamentPoints" : {
+        "t1" : 14,
+        "t2" : null
+      }
+    },
+    {
+      "firstName" : "David",
+      "isTied" : false,
+      "lastName" : "Simpson",
+      "rank" : 20,
+      "totalPoints" : 10,
+      "tournamentPoints" : {
+        "t1" : 10,
+        "t2" : null
+      }
+    },
+    {
+      "firstName" : "Dick",
+      "isTied" : false,
+      "lastName" : "Freeman",
+      "rank" : 21,
+      "totalPoints" : 8,
+      "tournamentPoints" : {
+        "t1" : 8,
+        "t2" : null
+      }
+    },
+    {
+      "firstName" : "Jason",
+      "isTied" : false,
+      "lastName" : "Harrison",
+      "rank" : 22,
+      "totalPoints" : 2,
+      "tournamentPoints" : {
+        "t1" : 2,
+        "t2" : null
       }
     },
     {
       "firstName" : "Chris",
       "isTied" : true,
       "lastName" : "Wyler",
-      "rank" : 19,
-      "totalPoints" : 0,
+      "rank" : 22,
+      "totalPoints" : 2,
       "tournamentPoints" : {
-        "t1" : null
+        "t1" : null,
+        "t2" : 2
       }
     },
     {
-      "firstName" : "Jeff",
-      "isTied" : true,
-      "lastName" : "Young",
-      "rank" : 19,
+      "firstName" : "Dave",
+      "isTied" : false,
+      "lastName" : "Lainhart",
+      "rank" : 24,
       "totalPoints" : 0,
       "tournamentPoints" : {
-        "t1" : null
+        "t1" : null,
+        "t2" : null
       }
     },
     {
-      "firstName" : "Jeff",
+      "firstName" : "Sam",
       "isTied" : true,
-      "lastName" : "Zimmer",
-      "rank" : 19,
+      "lastName" : "Nelson",
+      "rank" : 24,
       "totalPoints" : 0,
       "tournamentPoints" : {
-        "t1" : null
+        "t1" : null,
+        "t2" : null
       }
     }
   ],
-  "lastUpdated" : "2026-05-18T16:13:09Z",
+  "lastUpdated" : "2026-05-24T16:29:58Z",
   "tournaments" : [
     {
       "date" : "2026-04-18",
       "id" : "t1",
       "name" : "Apr · Hamilton Elks"
+    },
+    {
+      "date" : "2026-05-17",
+      "id" : "t2",
+      "name" : "May · Yankee Trace"
     }
   ],
   "year" : 2026
