@@ -237,17 +237,41 @@
         </div>`);
     }
 
-    // Side Games — Skins, Closest to Pin, Longest Drive
-    const sideCards = [
-      ...(awards.skins        || []).map(a => renderAwardBlock(a, 'skins')),
-      ...(awards.closestToPin || []).map(a => renderAwardBlock(a, 'ctp')),
-      ...(awards.longestDrive || []).map(a => renderAwardBlock(a, 'ld')),
-    ];
-    if (sideCards.length > 0) {
+    // Side Games — Skins, Closest to Pin, Longest Drive (each as its own sub-section)
+    const sideSubSections = [];
+
+    const skinsCards = (awards.skins || []).map(a => renderAwardBlock(a, 'skins'));
+    if (skinsCards.length > 0) {
+      sideSubSections.push(`
+        <div class="rd-awards-subsection">
+          <div class="rd-awards-subsection-label">Skins</div>
+          <div class="rd-awards-grid">${skinsCards.join('')}</div>
+        </div>`);
+    }
+
+    const ctpCards = (awards.closestToPin || []).map(a => renderAwardBlock(a, 'ctp'));
+    if (ctpCards.length > 0) {
+      sideSubSections.push(`
+        <div class="rd-awards-subsection">
+          <div class="rd-awards-subsection-label">Closest to Pin</div>
+          <div class="rd-awards-grid">${ctpCards.join('')}</div>
+        </div>`);
+    }
+
+    const ldCards = (awards.longestDrive || []).map(a => renderAwardBlock(a, 'ld'));
+    if (ldCards.length > 0) {
+      sideSubSections.push(`
+        <div class="rd-awards-subsection">
+          <div class="rd-awards-subsection-label">Longest Drive</div>
+          <div class="rd-awards-grid">${ldCards.join('')}</div>
+        </div>`);
+    }
+
+    if (sideSubSections.length > 0) {
       sections.push(`
         <div class="rd-awards-section">
           <div class="rd-awards-section-label">Side Games</div>
-          <div class="rd-awards-grid">${sideCards.join('')}</div>
+          ${sideSubSections.join('')}
         </div>`);
     }
 
@@ -271,7 +295,8 @@
   function renderAwardBlock(award, type) {
     const title     = award.awardName || 'Award';
     const total     = fmt$(award.prizeAmount);
-    const holeStr   = award.holeNumber != null && award.holeNumber !== ''
+    // CTP: hole number moves under the golfer name — don't append to title
+    const holeStr   = (type !== 'ctp') && award.holeNumber != null && award.holeNumber !== ''
       ? ` — ${isNaN(award.holeNumber) ? award.holeNumber : 'Hole ' + award.holeNumber}`
       : '';
     const winners   = award.winners || [];
@@ -282,9 +307,14 @@
       const name  = w.golfer ? (w.golfer.fullName || [w.golfer.firstName, w.golfer.lastName].filter(Boolean).join(' ')) : '—';
       const place = (showRank && w.placeOrdinal) ? `<span class="rank">${w.placeOrdinal}</span>` : '';
 
-      /* Winner-level hole label — used for Skins where each winner has their own hole(s) */
-      const winnerHole = (type === 'skins' && w.holeNumber != null && w.holeNumber !== '')
-        ? `<span class="rd-award-hole">${isNaN(w.holeNumber) ? w.holeNumber : 'Hole ' + w.holeNumber}</span>`
+      /* Winner-level hole label:
+         - Skins: use the winner's own holeNumber
+         - CTP:   use the award-level holeNumber (one hole per award entry) */
+      const holeSource = (type === 'skins') ? w.holeNumber
+                       : (type === 'ctp')   ? award.holeNumber
+                       : null;
+      const winnerHole = (holeSource != null && holeSource !== '')
+        ? `<span class="rd-award-hole">${isNaN(holeSource) ? holeSource : 'Hole ' + holeSource}</span>`
         : '';
 
       const note  = (!winnerHole && w.notes) ? `<span class="rd-award-note">${w.notes}</span>` : '';

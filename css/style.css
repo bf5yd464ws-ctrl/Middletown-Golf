@@ -994,6 +994,17 @@ table.data-table td.highlight { font-weight: 600; }
   margin-bottom: 0.6rem;
   border-bottom: 1px solid var(--border);
 }
+.rd-awards-subsection { margin-bottom: 0.9rem; }
+.rd-awards-subsection:last-child { margin-bottom: 0; }
+.rd-awards-subsection-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  opacity: 0.75;
+}
 
 /* Summary stats */
 .rd-stat-grid {
