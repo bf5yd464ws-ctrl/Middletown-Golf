@@ -277,7 +277,7 @@
       "usgaHandicapIndex" : 18.100000000000001
     },
     {
-      "courseHandicap" : 13,
+      "courseHandicap" : 14,
       "golfer" : {
         "firstName" : "Jeff",
         "fullName" : "Jeff Young",
@@ -293,7 +293,7 @@
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentWinnings" : 0,
-      "usgaHandicapIndex" : 17.600000000000001
+      "usgaHandicapIndex" : 17.800000000000001
     },
     {
       "courseHandicap" : 23,
@@ -315,7 +315,7 @@
       "usgaHandicapIndex" : 28.300000000000001
     },
     {
-      "courseHandicap" : 9,
+      "courseHandicap" : 10,
       "golfer" : {
         "firstName" : "Roger",
         "fullName" : "Roger Campbell",
@@ -331,7 +331,7 @@
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentWinnings" : 0,
-      "usgaHandicapIndex" : 13.6
+      "usgaHandicapIndex" : 14.1
     },
     {
       "courseHandicap" : 9,
@@ -369,10 +369,10 @@
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentWinnings" : 0,
-      "usgaHandicapIndex" : 20.5
+      "usgaHandicapIndex" : 20.800000000000001
     },
     {
-      "courseHandicap" : 18,
+      "courseHandicap" : 19,
       "golfer" : {
         "firstName" : "Russ",
         "fullName" : "Russ Yenser",
@@ -388,7 +388,7 @@
       "sideWinnings" : 0,
       "totalWinnings" : 40,
       "tournamentWinnings" : 40,
-      "usgaHandicapIndex" : 21.699999999999999
+      "usgaHandicapIndex" : 23.100000000000001
     },
     {
       "courseHandicap" : 15,
@@ -407,7 +407,7 @@
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentWinnings" : 0,
-      "usgaHandicapIndex" : 21.5
+      "usgaHandicapIndex" : 21.600000000000001
     },
     {
       "courseHandicap" : 7,
@@ -426,7 +426,7 @@
       "sideWinnings" : 20,
       "totalWinnings" : 20,
       "tournamentWinnings" : 0,
-      "usgaHandicapIndex" : 11.6
+      "usgaHandicapIndex" : 11.699999999999999
     },
     {
       "courseHandicap" : 5,
@@ -445,7 +445,7 @@
       "sideWinnings" : 20,
       "totalWinnings" : 40,
       "tournamentWinnings" : 20,
-      "usgaHandicapIndex" : 16.699999999999999
+      "usgaHandicapIndex" : 17.100000000000001
     },
     {
       "courseHandicap" : 17,
