@@ -97,7 +97,7 @@
       "signupFile" : "2026\/june-hueston-woods-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     },
