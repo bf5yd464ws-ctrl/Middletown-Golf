@@ -268,7 +268,7 @@
               "usgaHandicapIndex" : 28.199999999999999
             }
           ],
-          "time" : "12:00 PM"
+          "time" : "9:00 AM"
         },
         {
           "players" : [
@@ -305,7 +305,7 @@
               "usgaHandicapIndex" : 15.1
             }
           ],
-          "time" : "12:09 PM"
+          "time" : "9:09 AM"
         },
         {
           "players" : [
@@ -342,25 +342,17 @@
               "usgaHandicapIndex" : 11.300000000000001
             }
           ],
-          "time" : "12:18 PM"
+          "time" : "9:18 AM"
         },
         {
           "players" : [
             {
-              "courseHandicap" : 22,
-              "handicapIndex" : 27.300000000000001,
+              "courseHandicap" : 11,
+              "handicapIndex" : 22.5,
               "isNet" : true,
               "isSkins" : true,
-              "name" : "Chris Wyler",
-              "usgaHandicapIndex" : 26.5
-            },
-            {
-              "courseHandicap" : 18,
-              "handicapIndex" : 22.399999999999999,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Steve Harrison",
-              "usgaHandicapIndex" : 22.800000000000001
+              "name" : "Jason Harrison",
+              "usgaHandicapIndex" : 15.9
             },
             {
               "courseHandicap" : 13,
@@ -371,15 +363,23 @@
               "usgaHandicapIndex" : 17.800000000000001
             },
             {
-              "courseHandicap" : 11,
-              "handicapIndex" : 22.5,
+              "courseHandicap" : 18,
+              "handicapIndex" : 22.399999999999999,
               "isNet" : true,
               "isSkins" : true,
-              "name" : "Jason Harrison",
-              "usgaHandicapIndex" : 15.9
+              "name" : "Steve Harrison",
+              "usgaHandicapIndex" : 22.800000000000001
+            },
+            {
+              "courseHandicap" : 22,
+              "handicapIndex" : 27.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Chris Wyler",
+              "usgaHandicapIndex" : 26.5
             }
           ],
-          "time" : "12:27 PM"
+          "time" : "9:27 AM"
         },
         {
           "players" : [
@@ -416,7 +416,7 @@
               "usgaHandicapIndex" : 20.800000000000001
             }
           ],
-          "time" : "12:36 PM"
+          "time" : "9:36 AM"
         }
       ],
       "id" : 3,
