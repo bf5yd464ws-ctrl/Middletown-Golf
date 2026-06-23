@@ -131,7 +131,7 @@
           ? `<a href="${t.resultsPage}" class="btn btn-sm btn-primary">Full Results</a>`
           : '';
         const nlBtn = t.newsletterPage
-          ? `<a href="${t.newsletterPage}" class="btn btn-sm btn-outline">Newsletter</a>`
+          ? `<a href="${t.newsletterPage}" class="btn btn-sm btn-primary">Newsletter</a>`
           : '';
         return `
           <div class="t-card-results">
@@ -188,7 +188,7 @@
           : `<p class="jp-posting-soon">Results will be posted shortly — check back soon.</p>`;
 
         const jpNewsletterBtn = jt.newsletterPage
-          ? `<a href="${jt.newsletterPage}" class="btn btn-outline">Newsletter</a>`
+          ? `<a href="${jt.newsletterPage}" class="btn btn-primary">Newsletter</a>`
           : '';
 
         html += `
@@ -245,7 +245,7 @@
               ${jt2.resultsPage
                 ? `<a href="${jt2.resultsPage}" class="btn btn-results-hero">View Full Results →</a>`
                 : `<p class="jp-posting-soon">Results will be posted shortly — check back soon.</p>`}
-              ${jt2.newsletterPage ? `<a href="${jt2.newsletterPage}" class="btn btn-outline">Newsletter</a>` : ''}
+              ${jt2.newsletterPage ? `<a href="${jt2.newsletterPage}" class="btn btn-primary">Newsletter</a>` : ''}
               ${jt2.teeTimesPosted ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>` : ''}
             </div>
           </div>`;
