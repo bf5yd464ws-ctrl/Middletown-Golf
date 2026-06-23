@@ -356,8 +356,18 @@
   function renderTeams(teams, golferResults) {
     const sorted = [...teams].sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
 
+    // Pre-compute display ranks — prefix "T" when two or more teams share the same combinedNetScore
+    const rankDisps = sorted.map((team, idx) => {
+      const score = team.combinedNetScore;
+      if (score == null) return String(idx + 1);
+      const firstIdx = sorted.findIndex(t => t.combinedNetScore === score);
+      const isTied   = sorted.filter(t => t.combinedNetScore === score).length > 1;
+      return isTied ? 'T' + (firstIdx + 1) : String(firstIdx + 1);
+    });
+
     const rows = sorted.map((team, idx) => {
-      const rank = idx + 1;
+      const rank     = idx + 1;
+      const rankDisp = rankDisps[idx];
       const rowClass = rank === 1 ? ' class="rd-row-winner"' : rank <= 3 ? ' class="rd-row-top3"' : '';
 
       /* Combined net: use explicit field from app if present,
@@ -381,7 +391,7 @@
         .join(' · ');
 
       return `<tr${rowClass}>
-        <td class="rank">${rank}</td>
+        <td class="rank">${rankDisp}</td>
         <td>
           <div class="rd-team-tname">${team.teamName || 'Team'}</div>
         </td>
