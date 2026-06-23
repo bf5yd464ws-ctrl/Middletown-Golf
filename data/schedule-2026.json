@@ -98,10 +98,10 @@
       "resultsPage" : "results-detail.html?t=2026-june",
       "signupFile" : "2026\/june-hueston-woods-signup.html",
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming",
+      "status" : "past",
       "teeTimesPosted" : false,
-      "winner" : null,
-      "winnerScore" : null
+      "winner" : "Willenbrink \/ Hause — Net 144",
+      "winnerScore" : 144
     },
     {
       "course" : "Kings Island",
