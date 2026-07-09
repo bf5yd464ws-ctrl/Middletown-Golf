@@ -426,17 +426,186 @@
       "year" : 2026
     },
     {
-      "course" : "Hueston Woods",
-      "date" : "2026-06-20",
-      "displayDate" : "June 20, 2026",
-      "event" : "June 2026 — Hueston Woods",
-      "format" : "2 Man Both Balls",
+      "course" : "Kings Island",
+      "date" : "2026-07-18",
+      "displayDate" : "July 18, 2026",
+      "event" : "Kings Island",
+      "format" : "3 Man Double Best Ball",
       "groups" : [
-
+        {
+          "players" : [
+            {
+              "courseHandicap" : 18,
+              "handicapIndex" : 21.800000000000001,
+              "isNet" : true,
+              "isSkins" : false,
+              "name" : "Steve Conway",
+              "usgaHandicapIndex" : 24.600000000000001
+            },
+            {
+              "courseHandicap" : 11,
+              "handicapIndex" : 14.699999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "David Simpson",
+              "usgaHandicapIndex" : 18
+            },
+            {
+              "courseHandicap" : 20,
+              "handicapIndex" : 24,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Russ Yenser",
+              "usgaHandicapIndex" : 24.899999999999999
+            },
+            {
+              "courseHandicap" : 11,
+              "handicapIndex" : 14.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Mark Willenbrink",
+              "usgaHandicapIndex" : 15.800000000000001
+            }
+          ],
+          "time" : "1:00 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 8,
+              "handicapIndex" : 12,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Steve Goertemiller",
+              "usgaHandicapIndex" : 12.300000000000001
+            },
+            {
+              "courseHandicap" : 7,
+              "handicapIndex" : 11.9,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Herb Holmes",
+              "usgaHandicapIndex" : 11.300000000000001
+            },
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 13.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Danny Hause",
+              "usgaHandicapIndex" : 15
+            }
+          ],
+          "time" : "1:10 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 10,
+              "handicapIndex" : 14.5,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Dave Lainhart",
+              "usgaHandicapIndex" : 15.6
+            },
+            {
+              "courseHandicap" : 20,
+              "handicapIndex" : 23.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Dick Freeman",
+              "usgaHandicapIndex" : 23.600000000000001
+            },
+            {
+              "courseHandicap" : 12,
+              "handicapIndex" : 19.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Nick Edwards",
+              "usgaHandicapIndex" : 16.300000000000001
+            }
+          ],
+          "time" : "1:20 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 24,
+              "handicapIndex" : 27.800000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Chris Wyler",
+              "usgaHandicapIndex" : 27.199999999999999
+            },
+            {
+              "courseHandicap" : 13,
+              "handicapIndex" : 17.5,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jeff Young",
+              "usgaHandicapIndex" : 17.399999999999999
+            },
+            {
+              "courseHandicap" : 6,
+              "handicapIndex" : 10.1,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John O'Donnell",
+              "usgaHandicapIndex" : 17.899999999999999
+            },
+            {
+              "courseHandicap" : 23,
+              "handicapIndex" : 26.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "John Stanton",
+              "usgaHandicapIndex" : 28.100000000000001
+            }
+          ],
+          "time" : "1:30 PM"
+        },
+        {
+          "players" : [
+            {
+              "courseHandicap" : 12,
+              "handicapIndex" : 16.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Roger Campbell",
+              "usgaHandicapIndex" : 16.800000000000001
+            },
+            {
+              "courseHandicap" : 17,
+              "handicapIndex" : 20.399999999999999,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Donnie Roberts",
+              "usgaHandicapIndex" : 20.399999999999999
+            },
+            {
+              "courseHandicap" : 16,
+              "handicapIndex" : 19.600000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "David Saniga",
+              "usgaHandicapIndex" : 20.100000000000001
+            },
+            {
+              "courseHandicap" : 16,
+              "handicapIndex" : 22.100000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Jamie Harrison",
+              "usgaHandicapIndex" : 19.399999999999999
+            }
+          ],
+          "time" : "1:40 PM"
+        }
       ],
       "id" : 4,
-      "posted" : false,
-      "startTime" : "9:00 AM",
+      "name" : "Kings Island",
+      "posted" : true,
+      "startTime" : "1:00 PM",
       "year" : 2026
     },
     {
