@@ -119,13 +119,13 @@
       "newsletterPage" : null,
       "notes" : "Blind Draw for Team after Golf",
       "pairingsPosted" : "2026-07-12",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-july",
       "signupFile" : "2026\/july-kings-island-signup.html",
       "signupNote" : "Sign as Foursome",
-      "status" : "upcoming",
-      "teeTimesPosted" : true,
-      "winner" : null,
-      "winnerScore" : null
+      "status" : "past",
+      "teeTimesPosted" : false,
+      "winner" : "Goertemiller \/ Conway \/ Edwards — Net 138",
+      "winnerScore" : 138
     },
     {
       "course" : "Heatherwoode",
