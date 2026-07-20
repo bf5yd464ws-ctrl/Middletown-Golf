@@ -5,6 +5,7 @@
   "issues": [
     { "month": "April", "label": "April 2026", "page": "2026/april-newsletter.html" },
     { "month": "May",   "label": "May 2026",   "page": "2026/may-yankee-newsletter.html" },
-    { "month": "June",  "label": "June 2026",  "page": "2026/june-newsletter.html" }
+    { "month": "June",  "label": "June 2026",  "page": "2026/june-newsletter.html" },
+    { "month": "July",  "label": "July 2026",  "page": "2026/july-newsletter.html" }
   ]
 }
