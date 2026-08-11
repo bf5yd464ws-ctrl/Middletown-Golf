@@ -149,7 +149,7 @@
       "signupFile" : "2026\/august-heatherwoode-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     },
