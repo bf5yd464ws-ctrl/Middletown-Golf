@@ -1,6 +1,6 @@
 {
   "_note" : "Season leaderboard. Sorted by points descending. Updated after each tournament.",
-  "lastUpdated" : "2026-07-19T22:30:57Z",
+  "lastUpdated" : "2026-08-23T22:38:22Z",
   "leaderboard" : [
     {
       "birdies" : 1,
@@ -8,13 +8,13 @@
       "firstName" : "John",
       "isTied" : false,
       "lastName" : "Stanton",
-      "points" : 90,
+      "points" : 116,
       "rank" : 1,
-      "roundsPlayed" : 4,
+      "roundsPlayed" : 5,
       "sideWinnings" : 49,
-      "totalWinnings" : 69,
+      "totalWinnings" : 89,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 20,
+      "tournamentWinnings" : 40,
       "trend" : {
         "description" : "—",
         "icon" : "minus.circle.fill",
@@ -23,23 +23,63 @@
       }
     },
     {
-      "birdies" : 0,
+      "birdies" : 1,
       "eagles" : 0,
       "firstName" : "David",
       "isTied" : false,
       "lastName" : "Saniga",
-      "points" : 89,
+      "points" : 115,
       "rank" : 2,
-      "roundsPlayed" : 4,
-      "sideWinnings" : 71,
-      "totalWinnings" : 131,
+      "roundsPlayed" : 5,
+      "sideWinnings" : 84,
+      "totalWinnings" : 164,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 60,
+      "tournamentWinnings" : 80,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑1",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 1,
+        "status" : "up"
+      }
+    },
+    {
+      "birdies" : 5,
+      "eagles" : 0,
+      "firstName" : "Steve",
+      "isTied" : false,
+      "lastName" : "Goertemiller",
+      "points" : 114,
+      "rank" : 3,
+      "roundsPlayed" : 5,
+      "sideWinnings" : 146,
+      "totalWinnings" : 311,
+      "tournamentsWon" : 0,
+      "tournamentWinnings" : 165,
+      "trend" : {
+        "description" : "↑3",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 3,
+        "status" : "up"
+      }
+    },
+    {
+      "birdies" : 1,
+      "eagles" : 0,
+      "firstName" : "Danny",
+      "isTied" : false,
+      "lastName" : "Hause",
+      "points" : 96,
+      "rank" : 4,
+      "roundsPlayed" : 4,
+      "sideWinnings" : 40,
+      "totalWinnings" : 130,
+      "tournamentsWon" : 1,
+      "tournamentWinnings" : 90,
+      "trend" : {
+        "description" : "↑4",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 4,
+        "status" : "up"
       }
     },
     {
@@ -48,33 +88,133 @@
       "firstName" : "Mark",
       "isTied" : false,
       "lastName" : "Willenbrink",
-      "points" : 86,
-      "rank" : 3,
-      "roundsPlayed" : 4,
+      "points" : 94,
+      "rank" : 5,
+      "roundsPlayed" : 5,
       "sideWinnings" : 60,
-      "totalWinnings" : 190,
+      "totalWinnings" : 210,
       "tournamentsWon" : 1,
-      "tournamentWinnings" : 130,
+      "tournamentWinnings" : 150,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
       "birdies" : 3,
       "eagles" : 0,
+      "firstName" : "Jeff",
+      "isTied" : false,
+      "lastName" : "Young",
+      "points" : 93,
+      "rank" : 6,
+      "roundsPlayed" : 4,
+      "sideWinnings" : 60,
+      "totalWinnings" : 120,
+      "tournamentsWon" : 0,
+      "tournamentWinnings" : 60,
+      "trend" : {
+        "description" : "↑4",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 4,
+        "status" : "up"
+      }
+    },
+    {
+      "birdies" : 3,
+      "eagles" : 0,
+      "firstName" : "Nick",
+      "isTied" : false,
+      "lastName" : "Edwards",
+      "points" : 88,
+      "rank" : 7,
+      "roundsPlayed" : 4,
+      "sideWinnings" : 66,
+      "totalWinnings" : 148,
+      "tournamentsWon" : 1,
+      "tournamentWinnings" : 82,
+      "trend" : {
+        "description" : "↑7",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 7,
+        "status" : "up"
+      }
+    },
+    {
+      "birdies" : 2,
+      "eagles" : 0,
+      "firstName" : "David",
+      "isTied" : true,
+      "lastName" : "Simpson",
+      "points" : 88,
+      "rank" : 7,
+      "roundsPlayed" : 4,
+      "sideWinnings" : 60,
+      "totalWinnings" : 265,
+      "tournamentsWon" : 1,
+      "tournamentWinnings" : 205,
+      "trend" : {
+        "description" : "↑5",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 5,
+        "status" : "up"
+      }
+    },
+    {
+      "birdies" : 0,
+      "eagles" : 0,
       "firstName" : "Steve",
       "isTied" : false,
-      "lastName" : "Goertemiller",
-      "points" : 80,
-      "rank" : 4,
+      "lastName" : "Conway",
+      "points" : 78,
+      "rank" : 9,
       "roundsPlayed" : 4,
-      "sideWinnings" : 55,
-      "totalWinnings" : 165,
+      "sideWinnings" : 18,
+      "totalWinnings" : 163,
       "tournamentsWon" : 1,
-      "tournamentWinnings" : 110,
+      "tournamentWinnings" : 145,
+      "trend" : {
+        "description" : "↓2",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 2,
+        "status" : "down"
+      }
+    },
+    {
+      "birdies" : 1,
+      "eagles" : 0,
+      "firstName" : "Russ",
+      "isTied" : true,
+      "lastName" : "Yenser",
+      "points" : 78,
+      "rank" : 9,
+      "roundsPlayed" : 5,
+      "sideWinnings" : 0,
+      "totalWinnings" : 62,
+      "tournamentsWon" : 0,
+      "tournamentWinnings" : 62,
+      "trend" : {
+        "description" : "↓7",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 7,
+        "status" : "down"
+      }
+    },
+    {
+      "birdies" : 3,
+      "eagles" : 0,
+      "firstName" : "Herb",
+      "isTied" : false,
+      "lastName" : "Holmes",
+      "points" : 76,
+      "rank" : 11,
+      "roundsPlayed" : 5,
+      "sideWinnings" : 71,
+      "totalWinnings" : 156,
+      "tournamentsWon" : 1,
+      "tournamentWinnings" : 85,
       "trend" : {
         "description" : "—",
         "icon" : "minus.circle.fill",
@@ -89,157 +229,17 @@
       "isTied" : false,
       "lastName" : "Campbell",
       "points" : 75,
-      "rank" : 5,
+      "rank" : 12,
       "roundsPlayed" : 4,
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 3,
-      "eagles" : 0,
-      "firstName" : "Nick",
-      "isTied" : false,
-      "lastName" : "Edwards",
-      "points" : 72,
-      "rank" : 6,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 66,
-      "totalWinnings" : 148,
-      "tournamentsWon" : 1,
-      "tournamentWinnings" : 82,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 2,
-      "eagles" : 0,
-      "firstName" : "Jeff",
-      "isTied" : false,
-      "lastName" : "Young",
-      "points" : 67,
-      "rank" : 7,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 47,
-      "totalWinnings" : 107,
-      "tournamentsWon" : 0,
-      "tournamentWinnings" : 60,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 1,
-      "eagles" : 0,
-      "firstName" : "Danny",
-      "isTied" : false,
-      "lastName" : "Hause",
-      "points" : 66,
-      "rank" : 8,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 36,
-      "totalWinnings" : 126,
-      "tournamentsWon" : 1,
-      "tournamentWinnings" : 90,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 0,
-      "eagles" : 0,
-      "firstName" : "Steve",
-      "isTied" : false,
-      "lastName" : "Conway",
-      "points" : 62,
-      "rank" : 9,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 18,
-      "totalWinnings" : 118,
-      "tournamentsWon" : 1,
-      "tournamentWinnings" : 100,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 3,
-      "eagles" : 0,
-      "firstName" : "Herb",
-      "isTied" : false,
-      "lastName" : "Holmes",
-      "points" : 60,
-      "rank" : 10,
-      "roundsPlayed" : 4,
-      "sideWinnings" : 71,
-      "totalWinnings" : 121,
-      "tournamentsWon" : 1,
-      "tournamentWinnings" : 50,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 1,
-      "eagles" : 0,
-      "firstName" : "Russ",
-      "isTied" : false,
-      "lastName" : "Yenser",
-      "points" : 58,
-      "rank" : 11,
-      "roundsPlayed" : 4,
-      "sideWinnings" : 0,
-      "totalWinnings" : 62,
-      "tournamentsWon" : 0,
-      "tournamentWinnings" : 62,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 1,
-      "eagles" : 0,
-      "firstName" : "David",
-      "isTied" : false,
-      "lastName" : "Simpson",
-      "points" : 56,
-      "rank" : 12,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 22,
-      "totalWinnings" : 182,
-      "tournamentsWon" : 0,
-      "tournamentWinnings" : 160,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑4",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 4,
+        "status" : "up"
       }
     },
     {
@@ -248,18 +248,38 @@
       "firstName" : "Jamie",
       "isTied" : false,
       "lastName" : "Harrison",
-      "points" : 52,
+      "points" : 72,
       "rank" : 13,
-      "roundsPlayed" : 4,
+      "roundsPlayed" : 5,
       "sideWinnings" : 34,
-      "totalWinnings" : 74,
+      "totalWinnings" : 94,
+      "tournamentsWon" : 0,
+      "tournamentWinnings" : 60,
+      "trend" : {
+        "description" : "↓9",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 9,
+        "status" : "down"
+      }
+    },
+    {
+      "birdies" : 2,
+      "eagles" : 0,
+      "firstName" : "John",
+      "isTied" : false,
+      "lastName" : "O'Donnell",
+      "points" : 50,
+      "rank" : 14,
+      "roundsPlayed" : 5,
+      "sideWinnings" : 37,
+      "totalWinnings" : 77,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 40,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑2",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 2,
+        "status" : "up"
       }
     },
     {
@@ -269,17 +289,17 @@
       "isTied" : false,
       "lastName" : "Mattingly",
       "points" : 48,
-      "rank" : 14,
+      "rank" : 15,
       "roundsPlayed" : 3,
       "sideWinnings" : 36,
       "totalWinnings" : 78,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 42,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓10",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 10,
+        "status" : "down"
       }
     },
     {
@@ -289,32 +309,32 @@
       "isTied" : false,
       "lastName" : "Roberts",
       "points" : 47,
-      "rank" : 15,
+      "rank" : 16,
       "roundsPlayed" : 4,
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
-      "birdies" : 2,
+      "birdies" : 0,
       "eagles" : 0,
-      "firstName" : "John",
+      "firstName" : "Dave",
       "isTied" : false,
-      "lastName" : "O'Donnell",
-      "points" : 44,
-      "rank" : 16,
-      "roundsPlayed" : 4,
-      "sideWinnings" : 37,
-      "totalWinnings" : 77,
+      "lastName" : "Lainhart",
+      "points" : 32,
+      "rank" : 17,
+      "roundsPlayed" : 2,
+      "sideWinnings" : 4,
+      "totalWinnings" : 49,
       "tournamentsWon" : 0,
-      "tournamentWinnings" : 40,
+      "tournamentWinnings" : 45,
       "trend" : {
         "description" : "—",
         "icon" : "minus.circle.fill",
@@ -326,7 +346,7 @@
       "birdies" : 1,
       "eagles" : 0,
       "firstName" : "Jeff",
-      "isTied" : false,
+      "isTied" : true,
       "lastName" : "Zimmer",
       "points" : 32,
       "rank" : 17,
@@ -336,10 +356,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 40,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓2",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 2,
+        "status" : "down"
       }
     },
     {
@@ -349,37 +369,17 @@
       "isTied" : false,
       "lastName" : "Shaw",
       "points" : 30,
-      "rank" : 18,
+      "rank" : 19,
       "roundsPlayed" : 1,
       "sideWinnings" : 16,
       "totalWinnings" : 56,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 40,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 0,
-      "eagles" : 0,
-      "firstName" : "Dick",
-      "isTied" : false,
-      "lastName" : "Freeman",
-      "points" : 24,
-      "rank" : 19,
-      "roundsPlayed" : 3,
-      "sideWinnings" : 0,
-      "totalWinnings" : 22,
-      "tournamentsWon" : 0,
-      "tournamentWinnings" : 22,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓2",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 2,
+        "status" : "down"
       }
     },
     {
@@ -388,38 +388,38 @@
       "firstName" : "Steve",
       "isTied" : false,
       "lastName" : "Harrison",
-      "points" : 18,
+      "points" : 28,
       "rank" : 20,
-      "roundsPlayed" : 2,
+      "roundsPlayed" : 3,
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
       "birdies" : 0,
       "eagles" : 0,
       "firstName" : "Jim",
-      "isTied" : true,
+      "isTied" : false,
       "lastName" : "Wendel",
       "points" : 18,
-      "rank" : 20,
+      "rank" : 21,
       "roundsPlayed" : 1,
       "sideWinnings" : 0,
       "totalWinnings" : 20,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -430,7 +430,7 @@
       "lastName" : "Wyler",
       "points" : 14,
       "rank" : 22,
-      "roundsPlayed" : 3,
+      "roundsPlayed" : 4,
       "sideWinnings" : 17,
       "totalWinnings" : 37,
       "tournamentsWon" : 0,
@@ -448,9 +448,9 @@
       "firstName" : "Jason",
       "isTied" : false,
       "lastName" : "Harrison",
-      "points" : 3,
+      "points" : 7,
       "rank" : 23,
-      "roundsPlayed" : 2,
+      "roundsPlayed" : 3,
       "sideWinnings" : 0,
       "totalWinnings" : 20,
       "tournamentsWon" : 0,
@@ -465,41 +465,21 @@
     {
       "birdies" : 0,
       "eagles" : 0,
-      "firstName" : "Dave",
-      "isTied" : false,
-      "lastName" : "Lainhart",
-      "points" : 2,
-      "rank" : 24,
-      "roundsPlayed" : 1,
-      "sideWinnings" : 0,
-      "totalWinnings" : 0,
-      "tournamentsWon" : 0,
-      "tournamentWinnings" : 0,
-      "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
-      }
-    },
-    {
-      "birdies" : 0,
-      "eagles" : 0,
       "firstName" : "Sam",
       "isTied" : false,
       "lastName" : "Nelson",
       "points" : 0,
-      "rank" : 25,
+      "rank" : 24,
       "roundsPlayed" : 0,
       "sideWinnings" : 0,
       "totalWinnings" : 0,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     }
   ],
