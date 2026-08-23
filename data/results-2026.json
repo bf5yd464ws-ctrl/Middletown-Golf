@@ -24,6 +24,12 @@
       "date" : "2026-07-18",
       "month" : "July",
       "page" : "results-detail.html?t=2026-july"
+    },
+    {
+      "course" : "Heatherwoode",
+      "date" : "2026-08-22",
+      "month" : "August",
+      "page" : "results-detail.html?t=2026-august"
     }
   ],
   "year" : 2026
