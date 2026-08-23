@@ -145,13 +145,13 @@
       "newsletterPage" : null,
       "notes" : "Carts include with greens fee",
       "pairingsPosted" : "2026-08-16",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-august",
       "signupFile" : "2026\/august-heatherwoode-signup.html",
       "signupNote" : "Sign as Twosome",
-      "status" : "upcoming",
-      "teeTimesPosted" : true,
-      "winner" : null,
-      "winnerScore" : null
+      "status" : "past",
+      "teeTimesPosted" : false,
+      "winner" : "Conway \/ Simpson — Net 62",
+      "winnerScore" : 62
     },
     {
       "course" : "Indian Ridge",
