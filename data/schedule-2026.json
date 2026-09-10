@@ -175,7 +175,7 @@
       "signupFile" : "2026\/september-indian-ridge-signup.html",
       "signupNote" : "Sign as Twosome",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     },
