@@ -852,20 +852,20 @@
         {
           "players" : [
             {
-              "courseHandicap" : 27,
-              "handicapIndex" : 28.300000000000001,
-              "isNet" : true,
-              "isSkins" : true,
-              "name" : "Chris Wyler",
-              "usgaHandicapIndex" : 28.199999999999999
-            },
-            {
               "courseHandicap" : 16,
               "handicapIndex" : 17.600000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Jeff Young",
               "usgaHandicapIndex" : 17.600000000000001
+            },
+            {
+              "courseHandicap" : 27,
+              "handicapIndex" : 28.300000000000001,
+              "isNet" : true,
+              "isSkins" : true,
+              "name" : "Chris Wyler",
+              "usgaHandicapIndex" : 28.199999999999999
             },
             {
               "courseHandicap" : 14,
@@ -884,7 +884,7 @@
               "usgaHandicapIndex" : 17.199999999999999
             }
           ],
-          "time" : "TBD"
+          "time" : "10:15 AM"
         },
         {
           "players" : [
