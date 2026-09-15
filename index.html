@@ -218,7 +218,7 @@
           <div class="jp-hero-actions">
             ${jpResultsBtn}
             ${jpNewsletterBtn}
-            ${jt.teeTimesPosted ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>` : ''}
+            ${jt.teeTimesPosted ? `<a href="teetimes.html?t=${jt.date}" class="btn btn-teetimes">Tee Times →</a>` : ''}
           </div>
         </div>`;
 
@@ -246,7 +246,7 @@
                 ? `<a href="${jt2.resultsPage}" class="btn btn-results-hero">View Full Results →</a>`
                 : `<p class="jp-posting-soon">Results will be posted shortly — check back soon.</p>`}
               ${jt2.newsletterPage ? `<a href="${jt2.newsletterPage}" class="btn btn-primary">Newsletter</a>` : ''}
-              ${jt2.teeTimesPosted ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>` : ''}
+              ${jt2.teeTimesPosted ? `<a href="teetimes.html?t=${jt2.date}" class="btn btn-teetimes">Tee Times →</a>` : ''}
             </div>
           </div>`;
         });
@@ -258,7 +258,7 @@
           const { daysUntil, deadlineDays, deadlineUrgent, deadlinePassed } = getCountdowns(ut);
           const uSignupHref = ut.signupFile || 'signup.html';
           const uTeetimeLink = ut.teeTimesPosted
-            ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+            ? `<a href="teetimes.html?t=${ut.date}" class="btn btn-teetimes">Tee Times →</a>`
             : '';
 
           const uAction = deadlinePassed
@@ -311,7 +311,7 @@
           const signupHref = ut.signupFile || 'signup.html';
           const { deadlineDays: utDL, deadlineUrgent: utUrgent, deadlinePassed: utPassed } = getCountdowns(ut);
           const utTeetimeLink = ut.teeTimesPosted
-            ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+            ? `<a href="teetimes.html?t=${ut.date}" class="btn btn-teetimes">Tee Times →</a>`
             : '';
           const utSignupAction = utPassed
             ? `<div class="signup-deadline-passed">
@@ -366,7 +366,7 @@
           const signupHref  = t.signupFile || 'signup.html';
           const signupLink  = `<a href="${signupHref}" class="btn btn-signup">Sign Up →</a>`;
           const teetimeLink = (isNext && t.teeTimesPosted)
-            ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+            ? `<a href="teetimes.html?t=${t.date}" class="btn btn-teetimes">Tee Times →</a>`
             : '';
 
           if (isNext) {
@@ -449,7 +449,7 @@
           } else {
             const { deadlineDays: sDL, deadlineUrgent: sUrgent, deadlinePassed: sPassed } = getCountdowns(t);
             const sTeetimeLink = t.teeTimesPosted
-              ? `<a href="teetimes.html" class="btn btn-teetimes">Tee Times →</a>`
+              ? `<a href="teetimes.html?t=${t.date}" class="btn btn-teetimes">Tee Times →</a>`
               : '';
             const sSignupAction = sPassed
               ? `<div class="signup-deadline-passed">

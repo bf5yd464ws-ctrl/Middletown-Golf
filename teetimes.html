@@ -60,9 +60,15 @@
     const upcoming = posted.filter(t => new Date(t.date + 'T00:00:00') >= today);
     const past     = posted.filter(t => new Date(t.date + 'T00:00:00') <  today);
 
-    const active = upcoming.length > 0
-      ? upcoming[0]
-      : past.length > 0 ? past[past.length - 1] : null;
+    /* ── If ?t=YYYY-MM-DD is in the URL, pin to that specific tournament ── */
+    const tParam = new URLSearchParams(window.location.search).get('t');
+    const pinned = tParam ? all.find(t => t.date === tParam && t.groups && t.groups.length > 0) : null;
+
+    const active = pinned
+      ? pinned
+      : upcoming.length > 0
+        ? upcoming[0]
+        : past.length > 0 ? past[past.length - 1] : null;
 
     /* ── Past tee times list (all posted except active) ── */
     const pastList = posted.filter(t => t !== active).reverse();
