@@ -806,7 +806,7 @@
       "event" : "September 2026 — Indian Ridge",
       "format" : "2 Man Best Ball",
       "groups" : [
-{
+        {
           "players" : [
             {
               "courseHandicap" : 14,
@@ -814,11 +814,11 @@
               "isNet" : true,
               "isSkins" : true,
               "name" : "Mark Willenbrink",
-              "usgaHandicapIndex" : 15.500000000000001
+              "usgaHandicapIndex" : 15.500000000000002
             },
             {
               "courseHandicap" : 14,
-              "handicapIndex" : 16.4,
+              "handicapIndex" : 16.399999999999999,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Roger Campbell",
@@ -830,7 +830,7 @@
               "isNet" : true,
               "isSkins" : true,
               "name" : "Russ Yenser",
-              "usgaHandicapIndex" : 25.1
+              "usgaHandicapIndex" : 25.100000000000001
             }
           ],
           "time" : "10:06 AM"
@@ -839,7 +839,7 @@
           "players" : [
             {
               "courseHandicap" : 16,
-              "handicapIndex" : 17.6,
+              "handicapIndex" : 17.600000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Jeff Young",
@@ -851,7 +851,7 @@
               "isNet" : true,
               "isSkins" : true,
               "name" : "Chris Wyler",
-              "usgaHandicapIndex" : 28.2
+              "usgaHandicapIndex" : 28.199999999999999
             },
             {
               "courseHandicap" : 14,
@@ -867,7 +867,7 @@
               "isNet" : true,
               "isSkins" : true,
               "name" : "Dave Lainhart",
-              "usgaHandicapIndex" : 17.200000000000001
+              "usgaHandicapIndex" : 17.199999999999999
             }
           ],
           "time" : "10:15 AM"
@@ -892,7 +892,7 @@
             },
             {
               "courseHandicap" : 9,
-              "handicapIndex" : 10.8,
+              "handicapIndex" : 10.800000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "John O'Donnell",
@@ -900,11 +900,11 @@
             },
             {
               "courseHandicap" : 27,
-              "handicapIndex" : 27.8,
+              "handicapIndex" : 27.800000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "John Stanton",
-              "usgaHandicapIndex" : 28.1
+              "usgaHandicapIndex" : 28.100000000000001
             }
           ],
           "time" : "10:24 AM"
@@ -913,11 +913,11 @@
           "players" : [
             {
               "courseHandicap" : 20,
-              "handicapIndex" : 21.8,
+              "handicapIndex" : 21.800000000000001,
               "isNet" : false,
               "isSkins" : false,
               "name" : "Steve Conway",
-              "usgaHandicapIndex" : 24.700000000000001
+              "usgaHandicapIndex" : 24.699999999999999
             },
             {
               "courseHandicap" : 12,
@@ -925,11 +925,11 @@
               "isNet" : true,
               "isSkins" : true,
               "name" : "David Simpson",
-              "usgaHandicapIndex" : 17.1
+              "usgaHandicapIndex" : 17.100000000000001
             },
             {
               "courseHandicap" : 16,
-              "handicapIndex" : 18.8,
+              "handicapIndex" : 18.800000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "David Saniga",
@@ -937,11 +937,11 @@
             },
             {
               "courseHandicap" : 18,
-              "handicapIndex" : 22.2,
+              "handicapIndex" : 22.199999999999999,
               "isNet" : true,
               "isSkins" : true,
               "name" : "John Harrison",
-              "usgaHandicapIndex" : 19.3
+              "usgaHandicapIndex" : 19.300000000000001
             }
           ],
           "time" : "10:33 AM"
@@ -1065,7 +1065,7 @@
       ],
       "id" : 6,
       "name" : "Shaker Run",
-      "posted" : true,
+      "posted" : false,
       "startTime" : "8:00 AM",
       "year" : 2026
     },
