@@ -36,6 +36,12 @@
       "date" : "2026-09-19",
       "month" : "September",
       "page" : "results-detail.html?t=2026-september"
+    },
+    {
+      "course" : "Shaker Lakeside \/ Meadows",
+      "date" : "2026-09-20",
+      "month" : "September",
+      "page" : "results-detail.html?t=2026-september-shaker"
     }
   ],
   "year" : 2026
