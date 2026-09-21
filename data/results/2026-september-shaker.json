@@ -1,0 +1,637 @@
+{
+  "awards" : {
+    "closestToPin" : [
+      {
+        "awardName" : "Closest to Pin",
+        "holeNumber" : "#2",
+        "prizeAmount" : 20,
+        "winners" : [
+          {
+            "amountWon" : 20,
+            "golfer" : {
+              "firstName" : "Roger",
+              "fullName" : "Roger Campbell",
+              "lastName" : "Campbell"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Closest to Pin",
+        "holeNumber" : "#5",
+        "prizeAmount" : 20,
+        "winners" : [
+          {
+            "amountWon" : 20,
+            "golfer" : {
+              "firstName" : "David",
+              "fullName" : "David Saniga",
+              "lastName" : "Saniga"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Closest to Pin",
+        "holeNumber" : "#12",
+        "prizeAmount" : 20,
+        "winners" : [
+          {
+            "amountWon" : 20,
+            "golfer" : {
+              "firstName" : "Steve",
+              "fullName" : "Steve Goertemiller",
+              "lastName" : "Goertemiller"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Closest to Pin",
+        "holeNumber" : "#12",
+        "prizeAmount" : 20,
+        "winners" : [
+          {
+            "amountWon" : 20,
+            "golfer" : {
+              "firstName" : "Russ",
+              "fullName" : "Russ Yenser",
+              "lastName" : "Yenser"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Closest to Pin",
+        "holeNumber" : "#17",
+        "prizeAmount" : 20,
+        "winners" : [
+          {
+            "amountWon" : 20,
+            "golfer" : {
+              "firstName" : "Roger",
+              "fullName" : "Roger Campbell",
+              "lastName" : "Campbell"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      }
+    ],
+    "customAwards" : [
+
+    ],
+    "longestDrive" : [
+
+    ],
+    "lowNet" : [
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 36,
+        "winners" : [
+          {
+            "amountWon" : 36,
+            "golfer" : {
+              "firstName" : "Dave",
+              "fullName" : "Dave Lainhart",
+              "lastName" : "Lainhart"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 72
+          }
+        ]
+      },
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 18,
+        "winners" : [
+          {
+            "amountWon" : 18,
+            "golfer" : {
+              "firstName" : "Steve",
+              "fullName" : "Steve Goertemiller",
+              "lastName" : "Goertemiller"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 74
+          }
+        ]
+      },
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 3,
+        "winners" : [
+          {
+            "amountWon" : 3,
+            "golfer" : {
+              "firstName" : "Mark",
+              "fullName" : "Mark Willenbrink",
+              "lastName" : "Willenbrink"
+            },
+            "notes" : "Net: 75",
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 75
+          }
+        ]
+      },
+      {
+        "awardName" : "Low Net",
+        "prizeAmount" : 3,
+        "winners" : [
+          {
+            "amountWon" : 3,
+            "golfer" : {
+              "firstName" : "David",
+              "fullName" : "David Saniga",
+              "lastName" : "Saniga"
+            },
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st",
+            "score" : 75
+          }
+        ]
+      }
+    ],
+    "skins" : [
+      {
+        "awardName" : "Skins",
+        "holeNumber" : "#1",
+        "prizeAmount" : 15,
+        "winners" : [
+          {
+            "amountWon" : 15,
+            "golfer" : {
+              "firstName" : "Sam",
+              "fullName" : "Sam Nelson",
+              "lastName" : "Nelson"
+            },
+            "holeNumber" : "#1",
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Skins",
+        "holeNumber" : "#3",
+        "prizeAmount" : 15,
+        "winners" : [
+          {
+            "amountWon" : 15,
+            "golfer" : {
+              "firstName" : "Dave",
+              "fullName" : "Dave Lainhart",
+              "lastName" : "Lainhart"
+            },
+            "holeNumber" : "#3",
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Skins",
+        "holeNumber" : "#6",
+        "prizeAmount" : 15,
+        "winners" : [
+          {
+            "amountWon" : 15,
+            "golfer" : {
+              "firstName" : "Jamie",
+              "fullName" : "Jamie Harrison",
+              "lastName" : "Harrison"
+            },
+            "holeNumber" : "#6",
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      },
+      {
+        "awardName" : "Skins",
+        "holeNumber" : "#18",
+        "prizeAmount" : 15,
+        "winners" : [
+          {
+            "amountWon" : 15,
+            "golfer" : {
+              "firstName" : "Sam",
+              "fullName" : "Sam Nelson",
+              "lastName" : "Nelson"
+            },
+            "holeNumber" : "#18",
+            "notes" : "",
+            "place" : 1,
+            "placeOrdinal" : "1st"
+          }
+        ]
+      }
+    ]
+  },
+  "golferResults" : [
+    {
+      "courseHandicap" : 12,
+      "golfer" : {
+        "firstName" : "Dave",
+        "fullName" : "Dave Lainhart",
+        "lastName" : "Lainhart"
+      },
+      "grossScore" : 84,
+      "handicapIndex" : 16.100000000000001,
+      "isWinner" : true,
+      "netPoints" : 33,
+      "netScore" : 72,
+      "notes" : "",
+      "rank" : 1,
+      "sideWinnings" : 51,
+      "totalWinnings" : 91,
+      "tournamentWinnings" : 40,
+      "usgaHandicapIndex" : 17.199999999999999
+    },
+    {
+      "courseHandicap" : 15,
+      "golfer" : {
+        "firstName" : "David",
+        "fullName" : "David Saniga",
+        "lastName" : "Saniga"
+      },
+      "grossScore" : 90,
+      "handicapIndex" : 18.5,
+      "isWinner" : true,
+      "netPoints" : 27,
+      "netScore" : 75,
+      "notes" : "",
+      "rank" : 2,
+      "sideWinnings" : 3,
+      "totalWinnings" : 63,
+      "tournamentWinnings" : 60,
+      "usgaHandicapIndex" : 18.100000000000001
+    },
+    {
+      "courseHandicap" : 7,
+      "golfer" : {
+        "firstName" : "Steve",
+        "fullName" : "Steve Goertemiller",
+        "lastName" : "Goertemiller"
+      },
+      "grossScore" : 81,
+      "handicapIndex" : 10.9,
+      "isWinner" : false,
+      "netPoints" : 30,
+      "netScore" : 74,
+      "notes" : "",
+      "rank" : 3,
+      "sideWinnings" : 18,
+      "totalWinnings" : 58,
+      "tournamentWinnings" : 40,
+      "usgaHandicapIndex" : 11
+    },
+    {
+      "courseHandicap" : 12,
+      "golfer" : {
+        "firstName" : "Mark",
+        "fullName" : "Mark Willenbrink",
+        "lastName" : "Willenbrink"
+      },
+      "grossScore" : 87,
+      "handicapIndex" : 15.800000000000001,
+      "isWinner" : false,
+      "netPoints" : 27,
+      "netScore" : 75,
+      "notes" : "",
+      "rank" : 4,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 15.5
+    },
+    {
+      "courseHandicap" : 9,
+      "golfer" : {
+        "firstName" : "David",
+        "fullName" : "David Simpson",
+        "lastName" : "Simpson"
+      },
+      "grossScore" : 86,
+      "handicapIndex" : 13.1,
+      "isWinner" : false,
+      "netPoints" : 21,
+      "netScore" : 77,
+      "notes" : "",
+      "rank" : 5,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 17.100000000000001
+    },
+    {
+      "courseHandicap" : 12,
+      "golfer" : {
+        "firstName" : "Roger",
+        "fullName" : "Roger Campbell",
+        "lastName" : "Campbell"
+      },
+      "grossScore" : 89,
+      "handicapIndex" : 16.199999999999999,
+      "isWinner" : false,
+      "netPoints" : 18,
+      "netScore" : 77,
+      "notes" : "",
+      "rank" : 6,
+      "sideWinnings" : 0,
+      "totalWinnings" : 40,
+      "tournamentWinnings" : 40,
+      "usgaHandicapIndex" : 16
+    },
+    {
+      "courseHandicap" : 4,
+      "golfer" : {
+        "firstName" : "Sam",
+        "fullName" : "Sam Nelson",
+        "lastName" : "Nelson"
+      },
+      "grossScore" : 82,
+      "handicapIndex" : 8.4000000000000004,
+      "isWinner" : false,
+      "netPoints" : 18,
+      "netScore" : 78,
+      "notes" : "",
+      "rank" : 7,
+      "sideWinnings" : 30,
+      "totalWinnings" : 30,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 10.9
+    },
+    {
+      "courseHandicap" : 21,
+      "golfer" : {
+        "firstName" : "Russ",
+        "fullName" : "Russ Yenser",
+        "lastName" : "Yenser"
+      },
+      "grossScore" : 101,
+      "handicapIndex" : 24,
+      "isWinner" : false,
+      "netPoints" : 12,
+      "netScore" : 80,
+      "notes" : "",
+      "rank" : 8,
+      "sideWinnings" : 0,
+      "totalWinnings" : 40,
+      "tournamentWinnings" : 40,
+      "usgaHandicapIndex" : 25.100000000000001
+    },
+    {
+      "courseHandicap" : 7,
+      "golfer" : {
+        "firstName" : "Herb",
+        "fullName" : "Herb Holmes",
+        "lastName" : "Holmes"
+      },
+      "grossScore" : 88,
+      "handicapIndex" : 11.6,
+      "isWinner" : false,
+      "netPoints" : 9,
+      "netScore" : 81,
+      "notes" : "",
+      "rank" : 9,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 11.300000000000001
+    },
+    {
+      "courseHandicap" : 16,
+      "golfer" : {
+        "firstName" : "Jamie",
+        "fullName" : "Jamie Harrison",
+        "lastName" : "Harrison"
+      },
+      "grossScore" : 101,
+      "handicapIndex" : 22.100000000000001,
+      "isWinner" : false,
+      "netPoints" : 6,
+      "netScore" : 85,
+      "notes" : "",
+      "rank" : 10,
+      "sideWinnings" : 15,
+      "totalWinnings" : 15,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 19.300000000000001
+    },
+    {
+      "courseHandicap" : 12,
+      "golfer" : {
+        "firstName" : "Nick",
+        "fullName" : "Nick Edwards",
+        "lastName" : "Edwards"
+      },
+      "grossScore" : 97,
+      "handicapIndex" : 19.199999999999999,
+      "isWinner" : false,
+      "netPoints" : 6,
+      "netScore" : 85,
+      "notes" : "",
+      "rank" : 11,
+      "sideWinnings" : 0,
+      "totalWinnings" : 0,
+      "tournamentWinnings" : 0,
+      "usgaHandicapIndex" : 15.4
+    }
+  ],
+  "summary" : {
+    "averageGross" : 89.599999999999994,
+    "averageNet" : 78.099999999999994,
+    "ctpTotal" : 100,
+    "customAwardsTotal" : 0,
+    "grandTotal" : 340,
+    "highestGross" : 101,
+    "highestNet" : 85,
+    "longestDriveTotal" : 0,
+    "lowestGross" : 81,
+    "lowestNet" : 72,
+    "lowNetTotal" : 60,
+    "skinsTotal" : 60,
+    "totalAwardMoney" : 220,
+    "totalGolfers" : 11,
+    "totalTeamMoney" : 120
+  },
+  "teams" : [
+    {
+      "combinedNetScore" : 78,
+      "memberCount" : 2,
+      "memberNames" : "Dave Lainhart, David Saniga",
+      "members" : [
+        {
+          "firstName" : "Dave",
+          "fullName" : "Dave Lainhart",
+          "lastName" : "Lainhart",
+          "shareAmount" : 40
+        },
+        {
+          "firstName" : "David",
+          "fullName" : "David Saniga",
+          "lastName" : "Saniga",
+          "shareAmount" : 40
+        }
+      ],
+      "sortOrder" : 2,
+      "teamName" : "David Saniga & Dave Lainhart",
+      "teamWinnings" : 80
+    },
+    {
+      "combinedNetScore" : 81,
+      "memberCount" : 2,
+      "memberNames" : "Steve Goertemiller, Russ Yenser",
+      "members" : [
+        {
+          "firstName" : "Steve",
+          "fullName" : "Steve Goertemiller",
+          "lastName" : "Goertemiller",
+          "shareAmount" : 20
+        },
+        {
+          "firstName" : "Russ",
+          "fullName" : "Russ Yenser",
+          "lastName" : "Yenser",
+          "shareAmount" : 20
+        }
+      ],
+      "sortOrder" : 3,
+      "teamName" : "Steve Goertemiller & Russ Yenser",
+      "teamWinnings" : 40
+    },
+    {
+      "combinedNetScore" : 84,
+      "memberCount" : 2,
+      "memberNames" : "David Simpson, Jamie Harrison",
+      "members" : [
+        {
+          "firstName" : "David",
+          "fullName" : "David Simpson",
+          "lastName" : "Simpson",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Jamie",
+          "fullName" : "Jamie Harrison",
+          "lastName" : "Harrison",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 4,
+      "teamName" : "Jamie Harrison & David Simpson",
+      "teamWinnings" : 0
+    },
+    {
+      "combinedNetScore" : 89,
+      "memberCount" : 2,
+      "memberNames" : "Roger Campbell, Nick Edwards",
+      "members" : [
+        {
+          "firstName" : "Roger",
+          "fullName" : "Roger Campbell",
+          "lastName" : "Campbell",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Nick",
+          "fullName" : "Nick Edwards",
+          "lastName" : "Edwards",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 5,
+      "teamName" : "Nick Edwards & Roger Campbell",
+      "teamWinnings" : 0
+    },
+    {
+      "combinedNetScore" : 89,
+      "memberCount" : 2,
+      "memberNames" : "Mark Willenbrink, Herb Holmes",
+      "members" : [
+        {
+          "firstName" : "Mark",
+          "fullName" : "Mark Willenbrink",
+          "lastName" : "Willenbrink",
+          "shareAmount" : 0
+        },
+        {
+          "firstName" : "Herb",
+          "fullName" : "Herb Holmes",
+          "lastName" : "Holmes",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 6,
+      "teamName" : "Mark Willenbrink & Herb Holmes",
+      "teamWinnings" : 0
+    },
+    {
+      "combinedNetScore" : 91,
+      "memberCount" : 1,
+      "memberNames" : "Sam Nelson",
+      "members" : [
+        {
+          "firstName" : "Sam",
+          "fullName" : "Sam Nelson",
+          "lastName" : "Nelson",
+          "shareAmount" : 0
+        }
+      ],
+      "sortOrder" : 7,
+      "teamName" : "Sam Nelson",
+      "teamWinnings" : 0
+    }
+  ],
+  "tournament" : {
+    "course" : "Shaker Lakeside \/ Meadows",
+    "courseCity" : "Lebanon",
+    "date" : "2026-09-20",
+    "displayDate" : "September 20, 2026",
+    "format" : "2 Man 1 Ball par 5 - 1 Ball Par 4 - 2 Ball Par 3",
+    "name" : "Shaker Run",
+    "participantCount" : 11,
+    "secondTeeName" : null,
+    "secondTeeRating" : null,
+    "secondTeeSlope" : null,
+    "teeName" : "Yellow",
+    "teeRating" : 67,
+    "teeSlope" : 122
+  },
+  "winners" : [
+    {
+      "firstName" : "Dave",
+      "fullName" : "Dave Lainhart",
+      "lastName" : "Lainhart"
+    },
+    {
+      "firstName" : "David",
+      "fullName" : "David Saniga",
+      "lastName" : "Saniga"
+    }
+  ]
+}
