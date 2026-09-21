@@ -7,6 +7,7 @@
     { "month": "May",   "label": "May 2026",   "page": "2026/may-yankee-newsletter.html" },
     { "month": "June",  "label": "June 2026",  "page": "2026/june-newsletter.html" },
     { "month": "July",  "label": "July 2026",  "page": "2026/july-newsletter.html" },
-    { "month": "August", "label": "August 2026", "page": "2026/august-newsletter.html" }
+    { "month": "August",    "label": "August 2026",    "page": "2026/august-newsletter.html" },
+    { "month": "September", "label": "September 2026", "page": "2026/september-newsletter.html" }
   ]
 }
