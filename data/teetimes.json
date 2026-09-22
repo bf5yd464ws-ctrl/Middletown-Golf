@@ -971,7 +971,7 @@
             },
             {
               "courseHandicap" : 12,
-              "handicapIndex" : 16.399999999999999,
+              "handicapIndex" : 16.199999999999999,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Roger Campbell",
@@ -979,7 +979,7 @@
             },
             {
               "courseHandicap" : 7,
-              "handicapIndex" : 11,
+              "handicapIndex" : 10.9,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Steve Goertemiller",
@@ -992,7 +992,7 @@
           "players" : [
             {
               "courseHandicap" : 7,
-              "handicapIndex" : 12,
+              "handicapIndex" : 11.6,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Herb Holmes",
@@ -1000,7 +1000,7 @@
             },
             {
               "courseHandicap" : 12,
-              "handicapIndex" : 15.800000000000001,
+              "handicapIndex" : 16.100000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Dave Lainhart",
@@ -1008,7 +1008,7 @@
             },
             {
               "courseHandicap" : 12,
-              "handicapIndex" : 18.800000000000001,
+              "handicapIndex" : 19.199999999999999,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Nick Edwards",
@@ -1016,7 +1016,7 @@
             },
             {
               "courseHandicap" : 15,
-              "handicapIndex" : 18.800000000000001,
+              "handicapIndex" : 18.5,
               "isNet" : true,
               "isSkins" : true,
               "name" : "David Saniga",
@@ -1029,23 +1029,23 @@
           "players" : [
             {
               "courseHandicap" : 16,
-              "handicapIndex" : 22.199999999999999,
+              "handicapIndex" : 22.100000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Jamie Harrison",
               "usgaHandicapIndex" : 19.300000000000001
             },
             {
-              "courseHandicap" : 5,
-              "handicapIndex" : 9,
+              "courseHandicap" : 4,
+              "handicapIndex" : 8.4000000000000004,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Sam Nelson",
               "usgaHandicapIndex" : 10.9
             },
             {
-              "courseHandicap" : 10,
-              "handicapIndex" : 14.1,
+              "courseHandicap" : 9,
+              "handicapIndex" : 13.1,
               "isNet" : true,
               "isSkins" : true,
               "name" : "David Simpson",
@@ -1053,7 +1053,7 @@
             },
             {
               "courseHandicap" : 12,
-              "handicapIndex" : 15.5,
+              "handicapIndex" : 15.800000000000001,
               "isNet" : true,
               "isSkins" : true,
               "name" : "Mark Willenbrink",
@@ -1065,7 +1065,7 @@
       ],
       "id" : 6,
       "name" : "Shaker Run",
-      "posted" : false,
+      "posted" : true,
       "startTime" : "8:00 AM",
       "year" : 2026
     },
