@@ -227,7 +227,7 @@
       "signupFile" : "2026\/october-wildwood-signup.html",
       "signupNote" : "Sign as Individual",
       "status" : "upcoming",
-      "teeTimesPosted" : false,
+      "teeTimesPosted" : true,
       "winner" : null,
       "winnerScore" : null
     }
