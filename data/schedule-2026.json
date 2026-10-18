@@ -223,13 +223,13 @@
       "newsletterPage" : null,
       "notes" : "Blind Draw Before Golf",
       "pairingsPosted" : "2026-10-11",
-      "resultsPage" : null,
+      "resultsPage" : "results-detail.html?t=2026-october",
       "signupFile" : "2026\/october-wildwood-signup.html",
       "signupNote" : "Sign as Individual",
-      "status" : "upcoming",
-      "teeTimesPosted" : true,
-      "winner" : null,
-      "winnerScore" : null
+      "status" : "past",
+      "teeTimesPosted" : false,
+      "winner" : "Yenser \/ Zimmer — Net 67",
+      "winnerScore" : 67
     }
   ],
   "year" : 2026
