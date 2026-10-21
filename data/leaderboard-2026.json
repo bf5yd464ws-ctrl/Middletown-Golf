@@ -1,6 +1,6 @@
 {
   "_note" : "Season leaderboard. Sorted by points descending. Updated after each tournament.",
-  "lastUpdated" : "2026-10-18T01:40:35Z",
+  "lastUpdated" : "2026-10-21T21:03:51Z",
   "leaderboard" : [
     {
       "birdies" : 12,
@@ -16,10 +16,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 225,
       "trend" : {
-        "description" : "↑1",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 1,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -36,10 +36,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 150,
       "trend" : {
-        "description" : "↑1",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 1,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -56,10 +56,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 50,
       "trend" : {
-        "description" : "↓2",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 2,
-        "status" : "down"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -71,15 +71,15 @@
       "points" : 159,
       "rank" : 4,
       "roundsPlayed" : 8,
-      "sideWinnings" : 79,
-      "totalWinnings" : 289,
+      "sideWinnings" : 60,
+      "totalWinnings" : 270,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 210,
       "trend" : {
-        "description" : "↑2",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 2,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -91,15 +91,15 @@
       "points" : 151,
       "rank" : 5,
       "roundsPlayed" : 7,
-      "sideWinnings" : 113,
-      "totalWinnings" : 418,
+      "sideWinnings" : 132,
+      "totalWinnings" : 437,
       "tournamentsWon" : 1,
       "tournamentWinnings" : 305,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -116,10 +116,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 60,
       "trend" : {
-        "description" : "↑1",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 1,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -136,10 +136,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 85,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑1",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 1,
+        "status" : "up"
       }
     },
     {
@@ -156,10 +156,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 120,
       "trend" : {
-        "description" : "↓1",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
-        "status" : "down"
+        "description" : "↑2",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 2,
+        "status" : "up"
       }
     },
     {
@@ -176,10 +176,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 112,
       "trend" : {
-        "description" : "↑1",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 1,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -196,10 +196,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 60,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑2",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 2,
+        "status" : "up"
       }
     },
     {
@@ -216,10 +216,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 167,
       "trend" : {
-        "description" : "↑3",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 3,
-        "status" : "up"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -236,9 +236,9 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 60,
       "trend" : {
-        "description" : "↓2",
+        "description" : "↓5",
         "icon" : "arrow.down.circle.fill",
-        "positionChange" : 2,
+        "positionChange" : 5,
         "status" : "down"
       }
     },
@@ -256,10 +256,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 215,
       "trend" : {
-        "description" : "↓2",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 2,
-        "status" : "down"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -271,15 +271,15 @@
       "points" : 98,
       "rank" : 13,
       "roundsPlayed" : 7,
-      "sideWinnings" : 46,
-      "totalWinnings" : 116,
+      "sideWinnings" : 55,
+      "totalWinnings" : 125,
       "tournamentsWon" : 0,
       "tournamentWinnings" : 70,
       "trend" : {
-        "description" : "↓1",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
-        "status" : "down"
+        "description" : "↑2",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 2,
+        "status" : "up"
       }
     },
     {
@@ -296,10 +296,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 105,
       "trend" : {
-        "description" : "↑3",
-        "icon" : "arrow.up.circle.fill",
-        "positionChange" : 3,
-        "status" : "up"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -316,10 +316,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 42,
       "trend" : {
-        "description" : "↓1",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
-        "status" : "down"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -336,10 +336,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 105,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↑1",
+        "icon" : "arrow.up.circle.fill",
+        "positionChange" : 1,
+        "status" : "up"
       }
     },
     {
@@ -376,9 +376,9 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "↓1",
+        "description" : "↓2",
         "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
+        "positionChange" : 2,
         "status" : "down"
       }
     },
@@ -396,10 +396,10 @@
       "tournamentsWon" : 1,
       "tournamentWinnings" : 40,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -416,10 +416,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 0,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -436,10 +436,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
-        "description" : "—",
-        "icon" : "minus.circle.fill",
-        "positionChange" : null,
-        "status" : "stable"
+        "description" : "↓1",
+        "icon" : "arrow.down.circle.fill",
+        "positionChange" : 1,
+        "status" : "down"
       }
     },
     {
@@ -456,10 +456,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
-        "description" : "↓1",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
-        "status" : "down"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     },
     {
@@ -476,10 +476,10 @@
       "tournamentsWon" : 0,
       "tournamentWinnings" : 20,
       "trend" : {
-        "description" : "↓1",
-        "icon" : "arrow.down.circle.fill",
-        "positionChange" : 1,
-        "status" : "down"
+        "description" : "—",
+        "icon" : "minus.circle.fill",
+        "positionChange" : null,
+        "status" : "stable"
       }
     }
   ],
