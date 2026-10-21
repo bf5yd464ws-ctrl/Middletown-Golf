@@ -195,17 +195,17 @@
       },
       {
         "awardName" : "Skins",
-        "holeNumber" : "#10",
+        "holeNumber" : "#16",
         "prizeAmount" : 19,
         "winners" : [
           {
             "amountWon" : 19,
             "golfer" : {
-              "firstName" : "Mark",
-              "fullName" : "Mark Willenbrink",
-              "lastName" : "Willenbrink"
+              "firstName" : "David",
+              "fullName" : "David Simpson",
+              "lastName" : "Simpson"
             },
-            "holeNumber" : "#10",
+            "holeNumber" : "#16",
             "notes" : "",
             "place" : 1,
             "placeOrdinal" : "1st"
@@ -267,8 +267,8 @@
       "netScore" : 77,
       "notes" : "",
       "rank" : 3,
-      "sideWinnings" : 9,
-      "totalWinnings" : 19,
+      "sideWinnings" : 18,
+      "totalWinnings" : 28,
       "tournamentWinnings" : 10,
       "usgaHandicapIndex" : 14.1
     },
@@ -438,8 +438,8 @@
       "netScore" : 83,
       "notes" : "",
       "rank" : 12,
-      "sideWinnings" : 19,
-      "totalWinnings" : 49,
+      "sideWinnings" : 0,
+      "totalWinnings" : 30,
       "tournamentWinnings" : 30,
       "usgaHandicapIndex" : 15.6
     },
@@ -495,8 +495,8 @@
       "netScore" : 84,
       "notes" : "",
       "rank" : 15,
-      "sideWinnings" : 0,
-      "totalWinnings" : 20,
+      "sideWinnings" : 19,
+      "totalWinnings" : 39,
       "tournamentWinnings" : 20,
       "usgaHandicapIndex" : 15
     },
